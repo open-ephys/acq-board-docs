@@ -1,26 +1,17 @@
 :notoc:
 
-Open Ephys Documentation
+Open Ephys Acquisition Board
 =================================================
 
 .. **Date**: |today|
 
 .. **Download documentation**: `PDF Version <open-ephys-documentation.pdf>`__ | `Zipped HTML <open-ephys-documentation.zip>`__
 
-This site provides documentation for [INSERT PROJECT HERE].
+This is the new documentation site for the Open Ephys Acquisition Board, an open-source USB interface for acquiring extracellular electrophysiology data.
 
-IT IS CURRENTLY UNDER CONSTRUCTION
-##################################
+The Acquisition Board was designed by neuroscientists to make their experiments more flexible and enjoyable. It works equally well on macOS, Linux, and Windows. 
 
-It will eventually include the following information:
-
-* Point 1
-* Point 2
-* Point 3
-
-Additional documentation lives on the `Open Ephys Wiki
-<https://open-ephys.atlassian.net/wiki/spaces/OEW/overview?mode=global>`__ and 
-the `Open Ephys Forum <https://groups.google.com/forum/#!forum/open-ephys>`__
+Previously, the Acquisition Boards's documentation lived on the `Open Ephys wiki <https://open-ephys.atlassian.net/wiki/spaces/OEW/pages/491597/Open+Ephys+Acquisition+Board>`__. We are planning to migrate all of the docs to this site over time.
 
 .. raw:: html
 
@@ -35,7 +26,7 @@ the `Open Ephys Forum <https://groups.google.com/forum/#!forum/open-ephys>`__
 
 .. container:: custom-button
 
-    :ref:`Go to the about page<about>`
+    :ref:`Quickstart Guide <quickstartguide>`
 
 .. raw:: html
 
@@ -51,7 +42,7 @@ the `Open Ephys Forum <https://groups.google.com/forum/#!forum/open-ephys>`__
 
 .. container:: custom-button
 
-    :ref:`Go to the about page<about>`
+    :ref:`Acquisition software<acquisitionsoftware>`
 
 .. raw:: html
 
@@ -67,7 +58,7 @@ the `Open Ephys Forum <https://groups.google.com/forum/#!forum/open-ephys>`__
 
 .. container:: custom-button
 
-    :ref:`Go to the API reference<about>`
+    :ref:`Assembly instructions<buildinstructions>`
 
 .. raw:: html
 
@@ -83,7 +74,7 @@ the `Open Ephys Forum <https://groups.google.com/forum/#!forum/open-ephys>`__
 
 .. container:: custom-button
 
-    :ref:`Go to the software guide<about>`
+    :ref:`Tutorials<tutorials>`
 
 .. raw:: html
 
@@ -98,4 +89,7 @@ the `Open Ephys Forum <https://groups.google.com/forum/#!forum/open-ephys>`__
     :maxdepth: 2
     :titlesonly:
 
-    About/index
+    User-Manual/index
+    Build-Instructions/index
+    Tutorials/index
+    FAQ/index
