@@ -5,7 +5,7 @@
 Build Instructions
 =================================================
 
-If you didn't receive an assembled acquisition board from Open Ephys, but you still want to use one, do not fear! This page will guide you through the steps necessary to build as many as you need. The amount of time and money invested will vary depending on your approach. But it's unlikely that you'll end up devoting more than 2-3 days of work and $1000 per board (please correct us if these numbers differ from what you actually spend). Given that you'll end up with a fully functional 256-channel electrophysiology acquisition interface at the end of the process, this seems like a pretty good deal!
+If you didn't receive an assembled acquisition board from Open Ephys, but you still want to use one, do not fear! This page will guide you through the steps necessary to build as many as you need. The amount of time and money invested will vary depending on your approach. But it's unlikely that you'll end up devoting more than 2-3 days of work and $1000 per board (please correct us if these numbers differ from what you actually spend).
 
 There are two general approaches:
 
@@ -15,7 +15,7 @@ There are two general approaches:
 
 We've done both with great results.
 
-For the instructions below, we'll make it clear which steps are only necessary if you're building the board yourself, or only if you're outsourcing the assembly process.
+For the instructions in this section, we'll make it clear which steps are only necessary if you're building the board yourself, or only if you're outsourcing the assembly process.
 
 .. toctree::
     :hidden:
@@ -25,3 +25,4 @@ For the instructions below, we'll make it clear which steps are only necessary i
     Ordering-parts
     Assembling-the-PCB
     Putting-it-all-together
+    Assembling-the-IO-board
