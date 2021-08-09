@@ -2,10 +2,10 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
+***********************************
 Build Instructions
-=================================================
-
-If you didn't receive an assembled acquisition board from Open Ephys, but you still want to use one, do not fear! This page will guide you through the steps necessary to build as many as you need. The amount of time and money invested will vary depending on your approach. But it's unlikely that you'll end up devoting more than 2-3 days of work and $1000 per board (please correct us if these numbers differ from what you actually spend).
+***********************************
+This page will guide you through the steps necessary to build as many Open Ephys acquisition boards as you need. The amount of time and money invested will vary depending on your approach, but it's unlikely that you'll end up devoting more than 2-3 days of work and $1000 per board (please correct us if these numbers differ from what you actually spend!).
 
 There are two general approaches:
 

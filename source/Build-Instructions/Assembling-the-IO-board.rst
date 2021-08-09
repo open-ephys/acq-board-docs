@@ -2,11 +2,12 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
+***********************************
 Assembling the I/O Board
-==============================
+***********************************
 
 Necessary supplies
-###################
+###################################
 
 Each board can serve as digital input, digital output, analog input, or analog output, but it can only perform one of those functions at any given time. You choose its function by plugging it in to one of the four HDMI connectors on the acquisition board. If you want to use all four functions at once, you'll need to build four boards.
 
@@ -16,9 +17,9 @@ For each I/O board you build, you'll need:
 
 * One thin, passive HDMI cable (type A to type A)
 
-* Eight through-hole vertical BNC connectors ($2.40 each, DigiKey part #A97557-ND) 
+* Eight through-hole vertical BNC connectors ($2.40 each, DigiKey part #A97557-ND)
 
-* One surface-mount HDMI connector ($0.73, DigiKey part #609-4614-1-ND cut tape) 
+* One surface-mount HDMI connector ($0.73, DigiKey part #609-4614-1-ND cut tape)
 
 Depending on what you're planning on connecting, you can also use screw terminals instead of (or in combination with) the BNC connectors. There are holes for 14 screw terminals, so you can solder on one each of 277-1279-ND and 277-1277-ND.
 
@@ -31,7 +32,7 @@ The following general lab supplies are necessary for assembly:
 * 5-minute Epoxy (such as Z-poxy)
 
 Obtaining the PCB
-##################
+###################################
 
 The easiest (and cheapest) way is to order the I/O board PCB it through the `Open Ephys store <https://open-ephys.org/acquisition-system/io-board-pcb>`__. However, if you made any changes to the design, you can follow the instructions below to order bare PCBs boards using Sunstone's `ValueProto <https://www.sunstone.com/pcb-products/pcb-manufacturing/valueproto>`__ service. If you have success with another company, please let us know!
 
@@ -50,7 +51,7 @@ The easiest (and cheapest) way is to order the I/O board PCB it through the `Ope
     * Top solder mask - gerber/io-board.smt
 
     * Top copper - gerber/io-board.top
-    
+
     * Bottom copper - gerber/io-board.bot
 
     * Bottom soldermask - gerber/io-board.smb
@@ -69,8 +70,7 @@ With Sunstone, the cost should be about $80 for one board, or about $240 for fou
 
 
 Putting it together
-#####################
-
+###################################
 
 Solder the 8 BNC connectors into place on the I/O board. There are also holes for screw terminals (for example, Digikey 277-1279-ND) if you'd prefer that method of connection.
 

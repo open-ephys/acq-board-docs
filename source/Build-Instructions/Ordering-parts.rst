@@ -2,16 +2,17 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
+***********************************
 Ordering parts
-=================================================
+***********************************
 
 Download the files
-############################
+###################################
 
 Clone the `acquisition-board <https://github.com/open-ephys/acquisition-board>`__ GitHub repository, or download it as a `zip file <https://github.com/open-ephys/acquisition-board/archive/master.zip>`__.
 
 Acquire the raw materials and tools
-#############################################
+###################################
 
 Open up BOM.csv in Excel or a text editor (or `view it on Google Docs <https://docs.google.com/spreadsheet/ccc?key=0An1VoeoG8K6AdHhqNjhneGZWWkR5R2hZcDFOd243dHc#gid=0>`__). This is a list of all the parts that are necessary to populate the acquisition board PCB. Most of them can be ordered from DigiKey, but some are only available from other distributors. The quantities (column B) are for one acquisition board, so take that into account if you're trying to build multiple boards.
 
@@ -31,7 +32,7 @@ Here is a link to a fully filled-out digikey cart. It includes 5-10% extra of th
 
 
 Order the PCB and Stencil
-#####################################
+###################################
 
 We recommend ordering your PCBs from Advanced Circuits, since that's what we're using, and we know they can handle our tolerances. The total cost will be about $260 for a single board, as long as you have an academic affiliation to qualify for a discount and a small run. Note that the board is just a bit too big to qualify for the $66 special on multi-layer boards that is prominently mentioned on Advanced Circuits' home page.
 
@@ -67,7 +68,7 @@ In general, Advanced Circuits' prices are pretty competitive with other fab hous
 If you're going to build the board yourself, you'll need to order a stencil and some solder paste. We recommend OSH Stencils, which are designed for small-run fabrications and are priced accordingly. You'll need to upload the same gerber.zip file that you used to print the PCB. Then identify the top solder paste file (*.tsp) as the top stencil and the board outline file (*.oln) as the board outline. Mark all other files, including all solder mask files, as unused. You don't need a bottom stencil because none of the components attach to the bottom of the board. The total cost should be about $21, with an option to buy a "jig" (which helps to position the stencil) for an additional $5. For the solder paste, do yourself a favor and buy SPE-0012 ZephPaste. It's by far the best solder paste we've used. Just remember to keep it refrigerated!
 
 Case components
-#################
+###################################
 
 The shape of the case is specified by an STL (stereolithography) file called acquisition-board-case.stl  (github). You can use it to have a case manufactured through a variety of methods, such as cast urethane (we recommend American Precision Prototyping), CNC machining (FirstCut), or 3D printing (Shapeways). Shapeways requires a .dae file, which is also included in the repository.
 

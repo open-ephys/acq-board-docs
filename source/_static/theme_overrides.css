@@ -334,14 +334,14 @@ form:focus {
 
 /* list line spacing */
 /* ol.simple {
-  margin-bottom: 1em; 
+  margin-bottom: 1em;
 }
 
 
 
 ul.simple {
-  margin-bottom: 1em; 
-} 
+  margin-bottom: 1em;
+}
 */
 ul,
 ol,
@@ -366,6 +366,13 @@ img {
   max-width: 100%;
 }
 
+/* allow center-aligned images*/
+
+img.align-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 /* change color of Twitter logo */
 i.fa-twitter-square:before {
   color: #333;

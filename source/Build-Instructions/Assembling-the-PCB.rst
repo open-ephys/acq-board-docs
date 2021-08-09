@@ -2,8 +2,9 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
+***********************************
 Assembling the PCB
-=================================================
+***********************************
 
 If you're outsourcing the assembly process, you'll need to supply Advanced Circuits with BOM.csv, centroid_file.csv, and fabrication_drawing.pdf. They'll take care of the rest, once they receive the components mentioned above.
 
@@ -28,6 +29,3 @@ If you're building it yourself, here's what you have to do after your PCBs and s
 * Next, add jumpers to the 3-pin headers near the ADC input HDMI (DigiKey part #A26228-ND). We've chosen the ±5V input range as the default by bridging the two pins closest to the edge of the board).
 
 * The final step is to put a drop of epoxy on either side of each Omnetics connector (be careful not the get glue on the pins) in order to keep them stable over many round of plugging/unplugging.
-
-
-
