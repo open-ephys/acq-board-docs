@@ -24,9 +24,7 @@ Using a behavioural camera with GPIO/ TTL output
 
 2) Open Ephys GUI Plugin
 
-There is a specific plugin for the Open Ephys GUI that uses the tracking capability of Bonsai and integrates this in the Open Ephys GUI for visualisation.
+There is a specific plugin for the Open Ephys GUI that uses the tracking capability of Bonsai and integrates this in the Open Ephys GUI for visualisation. Read the paper `here. <https://iopscience.iop.org/article/10.1088/1741-2552/aacf45#jneaacf45s2>`_
 
 .. image:: ../_static/images/tutorials/tracking.jpg
   :target: https://iopscience.iop.org/article/10.1088/1741-2552/aacf45#jneaacf45s2
-
-Read the paper `here. <https://iopscience.iop.org/article/10.1088/1741-2552/aacf45#jneaacf45s2>`_
