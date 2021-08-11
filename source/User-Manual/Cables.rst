@@ -104,17 +104,7 @@ This is an HDMI-HDMI cable. Note that the input is not an actual HDMI input, so 
 
 5. Commutators
 ####################################################
-Rotary commutators prevent cables from becoming twisted as the animal moves around.
-
-.. from Aaron's thesis, wait until he's submitted to make public: Besides the weight and thickness of the cable, to allow free movement of animals it is sometimes necessary to prevent the tether cable from becoming twisted. This is achieved through the use of rotary commutators, devices that divide a cable in two segments able to rotate independently.
-
-.. .. image:: ../_static/images/usermanual/cables/commutator.png
-  :align: center
-  :scale: 50
-
-.. Diagram (image and description by Aarón Cuevas López) of the internals of a rotary commutator. For non-coaxial cables, a rotary commutator uses a slip-ring structure with wires from one cable connected to rings in a cylindric structure and on the other side to brushes, laminar metal pads held against the rings by a spring mechanism ensuring continuous contact even when rotating. This structure is complex to manufacture and prone to failure, difficulties increasing with the number of wires.
-
-Available commutators that work with SPI cables are:
+Rotary commutators prevent cables from becoming twisted as the animal moves around. Available commutators that work with SPI cables are:
 
 - Adafruit 12-wire commutator (https://www.adafruit.com/product/1196) $20
 
