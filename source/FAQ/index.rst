@@ -15,7 +15,7 @@ What are the analog and digital inputs and outputs?
 `Here <_peripheraldevices>`_ is an overview of the various in- and outputs that the board supports.
 
 How can I synchronise electrophysiology acquisition with a behavioural camera?
-#########################################################################################################
+#####################################################################################
 Check out our `tutorial <_ephyswithbehaviouralcam>`_.
 
 Where can I learn more about electrophysiology acquisition?

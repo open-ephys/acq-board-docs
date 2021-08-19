@@ -39,11 +39,6 @@ The standardized interface cable for Intan RHD chips we use is ideal for this ap
 
 The current standard cable contains 2 MISO (headstage->computer) data lines, so it's possible to connect 2 headstages to one input on the acquisition board via one cable by using a `Y-adapter <https://intantech.com/RHD_SPI_cables.html?tabSelect=RHDdual&yPos=0>`_. For connectors we're using 12-pin Omnetics PZN-12 polarized nano connectors.
 
-.. future expansions of what/ which connector?
-
-This also means that it is easy to design a 64 channel headstage using two RHD chips.
-For future expansions, it's possible to simply add more Omnetics connector rows on the end of the connector.
-
 Intan cables
 ***********************************
 

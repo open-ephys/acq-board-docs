@@ -12,7 +12,7 @@ Tutorials
 
     Troubleshooting-noise
     Measuring-latency
-    Synchronizing-multiple-boards
+    Multiple-boards
     Ephys-with-behavioural-camera
 
 

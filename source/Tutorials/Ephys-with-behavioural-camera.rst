@@ -14,6 +14,7 @@ You can do this using a microcontroller such as an Arduino or a Teensy, running 
 The most appropriate pattern for your LED depends on your experiment, but this way you have an anchoring signal to link your behaviour and ephys data.
 
 .. image:: ../_static/images/tutorials/webcamled.png
+    :alt: webcam with LED
 
 Using a behavioural camera with GPIO/ TTL output
 ######################################################################

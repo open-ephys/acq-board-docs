@@ -6,6 +6,7 @@
 Compatible electrodes
 ***********************************
 .. will refer to skillhub for more general info on electrodes
+
 The neuronal signals are first detected by the electrode, which directly interfaces with the tissue we are recording from. This initial signal is very small and analog, which means it is sensitive to interference from electrical noise. Because of this, the distance between the electrode and the headstage is crucial, and must be kept as short as possible. The headstage will filter, amplify, and digitize the signal. After that point, the signal is far more robust and protected, and the length of wires becomes less critical.
 
 Several different types of electrode are compatible with the Open Ephys acquisition board. For any electrode, we must have a way of connecting the electrodes to the headstage. This is often done using an Electrode Interface Board (EIB), which has a connector compatible with the headstage on one end, and a board to which electrodes can be soldered or pinned.
@@ -19,6 +20,7 @@ How long will your recordings be, and will your animal be moving or performing o
 Tetrodes
 ###################################
 .. will refer to skillhub for more general info on Tetrodes
+
 Tetrode recordings with the Open Ephys Acquisition Board require matching the headstage with the correct EIB. Tetrodes are usually held in 'drives', which are implanted on the head of the animal and allow the lowering of tetrodes into the brain. The `Open Ephys ShuttleDrive <https://open-ephys.org/shuttledrive>`_ is a lightweight drive that can hold 16 tetrodes.
 
 Silicon probes
