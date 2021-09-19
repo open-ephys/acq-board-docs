@@ -22,7 +22,7 @@ Click `here <https://ahleighton.github.io/OE-ephys-course/EEA/theoryday3.html#wh
 
 Extra shielding
 ###################################
-A simple and fast solution to some otherwise unsolvable noise might be to add even a partial faraday cage to your recording sites. This is true even with implants that already have a complete shielding - as long as part of your animal is not shielded, it can still pick up noise.
+A simple and fast solution to some otherwise unsolvable noise might be to add even a partial Faraday cage to your recording sites. This is true even with implants that already have a complete shielding - as long as part of your animal is not shielded, it can still pick up noise.
 
 Line Noise caused by USB ground
 ###################################
@@ -34,7 +34,7 @@ If you're using the acquisition board with a laptop that's running off battery p
 
 Beware of bad power supplies
 ######################################################################
-Sometimes, aftermarket power supplies, mostly for laptops, but also for LED lights, or any other power brick, can cause a lot of line noise - try individually turning off equipment to isolate the offending one. If 60Hz is a president issue, it is worth trying powering the acquisition system from a high quality bench DC supply (5V) - this can significantly reduce noise in some cases.
+Sometimes, aftermarket power supplies, mostly for laptops, but also for LED lights, or any other power brick, can cause a lot of line noise - try individually turning off equipment to isolate the offending one. If 60 Hz is a president issue, it is worth trying powering the acquisition system from a high quality bench DC supply (5V) - this can significantly reduce noise in some cases.
 
 Line noise caused by different power circuits
 ######################################################################
@@ -51,7 +51,7 @@ Normally, we 'ground' equipment by attaching a single cable from the tool or shi
     :scale: 70
     :target: https://tinyurl.com/ygn4urcz
 
-In this simulator, (click on image to open) we have two sources, a square-wave at 1000Hz and a sinewave at 60Hz. Even when they are separately connected to ground, they are connected through the fact that there is only one ground 'point'; the upper and lower circuits are equivalent. If we connect the circuits, a loop is formed and their signals can interfere with each other. Even if these signals were not running, the physical loop of wire connecting them via ground can pick up magnetic fields (usually at utility frequency, 50 or 60Hz) and induce a current.
+In this simulator, (click on image to open) we have two sources, a square-wave at 1000 Hz and a sinewave at 60 Hz. Even when they are separately connected to ground, they are connected through the fact that there is only one ground 'point'; the upper and lower circuits are equivalent. If we connect the circuits, a loop is formed and their signals can interfere with each other. Even if these signals were not running, the physical loop of wire connecting them via ground can pick up magnetic fields (usually at utility frequency, 50 or 60Hz) and induce a current.
 
 Use a central grounding point to prevent this. Only connect each piece of equipment to this once, and do not interconnect equipment when avoidable.
 
