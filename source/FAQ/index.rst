@@ -32,4 +32,4 @@ Open Ephys has developed a course on extracellular electrophysiology. You can fo
 
 **What is Open Ephys?**
 
-Find out more `on the Open Ephys website <https://open-ephys.org/about-us-overview>`_!
+Open Ephys is an initiative that aims to advance our understanding of the brain by promoting community ownership of the tools we use to study it. This involves building designing open-source hardware and software, as well as making existing tools easier to access. Find out more `on the Open Ephys website <https://open-ephys.org/about-us-overview>`_!
