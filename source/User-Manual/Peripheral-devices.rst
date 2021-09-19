@@ -27,7 +27,7 @@ Peripheral devices
 Open Ephys I/O Board
 ###################################
 
-Need to sync your neural data with external triggers? Use an I/O board to connect up to 8 digital inputs to the acquisition board. Since its internal components are completely passive, the same I/O board can be also be used to relay digital outputs, analog inputs, and analog outputs. However, it can only perform one of these functions at a time, so you will need a separate I/O board if you want to, for instance, receive both analog and digital inputs.
+To sync your neural data with external triggers, use an I/O board to connect up to 8 digital inputs to the acquisition board. Since its internal components are completely passive, the same I/O board can be also be used to relay digital outputs, analog inputs, and analog outputs. However, it can only perform one of these functions at a time, so you will need multiple I/O boards if you want to, for instance, receive both analog and digital inputs.
 
 .. warning:: We use HDMI cables because they are convenient and cheap, but these are not real HDMI ports! Connecting real HDMI devices is likely to cause damage.
 
@@ -45,14 +45,18 @@ If you're interested in building your own I/O Board, follow the instructions :re
 
 Analog/Digital Inputs and Outputs
 ###################################
-ADC = Analog to Digital converter. These are necessary to convert continuous signals arriving at our board into digital signals that are less sensitive to noise and can be read by the FPGA.
-DAC = Digital to Analog converter. These are used to convert digital signals to analog, for instance if we want a channel of our electrophysiology recording (previously digitized in the headstage) to be played through a speaker.
+
+**ADC** = Analog to Digital converter. These are necessary to convert continuous signals arriving at our board into digital signals that are less sensitive to noise and can be read by the FPGA.
+
+|
+
+**DAC** = Digital to Analog converter. These are used to convert digital signals to analog, for instance if we want a channel of our electrophysiology recording (previously digitized in the headstage) to be played through a speaker.
 
 .. _analogout:
 
 Analog Output
 *************************************
-**Analog outputs are usually used to monitor headstage inputs, for instance by routing an ephys channels to an audio output to detect spikes**
+**Analog outputs are usually used to monitor headstage inputs, for instance by routing ephys channels to an audio output to detect spikes**
 
 There are eight analog outputs on the board, which use the 16-bit DAC8531 chip from Texas Instruments. The DACs (Digital to Analog converters) are controlled by the Rhythm interface.
 
@@ -64,15 +68,15 @@ Any of the channels can be programmed to deliver custom waveforms as well, but t
 
 Analog Input
 *************************************
-**Analog inputs are used for equipment that measures continuous signals, for instance a measurement distance or intensity. This could be anything from a power meter, thermometer, a running wheel etc.**
+**Analog inputs are used for equipment that measures continuous signals, for instance a measurement distance or intensity. This could be anything from a power meter, thermometer, a running wheel, etc.**
 
-There are eight analog inputs on the board, which use the 16-bit ADC161S262 chip from Texas Instruments. By sending this data to the acquisition board, the FPGA will timestamp the acquisition using the same clock as the ephys data and can display the incoming data alongside your ephys.
+There are eight analog inputs on the board, which use the 16-bit ADC161S262 chip from Texas Instruments. By sending this data to the acquisition board, the FPGA will timestamp the analog inputs using the same clock as the ephys data and can display the incoming data alongside your ephys.
 
 .. _analoginrange:
 
 Changing the Analog Input Range
 ---------------------------------------
-The default setting is to have the ADCs run from -5 to +5V, although in practice the actual range is ±4.5V (up through Acquisition Board version 2.2). If you need to go up to 5V, the ADC must be switched to 0-5V mode. To switch the ADC range, open up the case of the acquisition board and move the jumpers near the ADC input HDMI (marked 'analog input range selector') to the two pins farther away from the edge of the board. Different channels can have different jumper settings, but make sure you record which is which! There's no way for the software to know the setting for each channel. Channel 1 is the rightmost jumper (closer to the headstage inputs), Channel 8 is the leftmost jumper.
+The default setting is to have the ADCs run from -5 to +5V, although in practice the actual range is ±4.5V (up through Acquisition Board version 2.2). If you need to go up to 5V, the ADC must be switched to 0-5V mode. To switch the ADC range, open up the case of the acquisition board and move the jumpers near the ADC input HDMI (marked 'analog input range selector') to the two pins farther away from the edge of the board. Different channels can have different jumper settings, so make sure you record which is which! There's no way for the software to know the setting for each channel. Channel 1 is the rightmost jumper (closer to the headstage inputs), Channel 8 is the leftmost jumper.
 
 There are three settings for the analog input:
 
@@ -103,7 +107,7 @@ Digital Input
 *************************************
 **Digital inputs are used to synchronize acquisition across multiple tools.**
 
-In contrast to the analog inputs, digital inputs can only receive 'high' or 'low' signals. Peripheral devices can send a short 'high' pulse every time they make a measurement. By sending that pulse to the acquisition board, the FPGA will timestamp the moment of the pulse using the same clock as the ephys data, allowing precise synchronization of the recordings. The acquisition board has eight 5V digital inputs connected to an HDMI connector. These interface with a level shifter (Texas Instruments SN74LVC4245A) to prevent 5V inputs from damaging the FPGA (which runs on a 3.3V supply). There are eight additional inputs in the Rhythm firmware, which are connected to holes on the bottom of the board.
+In contrast to the analog inputs, digital inputs can only receive 'high' or 'low' signals. Peripheral devices can send a short 'high' pulse every time they make a measurement. By sending that pulse to the acquisition board, the FPGA will timestamp the moment of the pulse using the same clock as the ephys data, allowing precise synchronization of the recordings. The acquisition board has eight 5V digital inputs connected to an HDMI connector. These interface with a level shifter (Texas Instruments SN74LVC4245A) to prevent 5V inputs from damaging the FPGA (which runs on a 3.3V supply). There are eight additional inputs that can be detected by the Rhythm firmware, which are connected to holes on the bottom of the board.
 
 .. _hdmibreakout:
 
@@ -111,12 +115,12 @@ HDMI Breakout Boards
 ###################################
 There are also a variety of simple HDMI breakout boards available from various vendors - these work equivalently as I/O boards. See for instance `here <https://elabbay.myshopify.com/collections/breadboard/products/elabguy-hdmi-af-bo-v1a-hdmi-type-a-female-socket-breakout-board>`__.
 
-HMDI channel mapping
-1	DATA2+
-2	DATA2–
-3	DATA1+
-4	DATA1–
-5	DATA0+
-6	DATA0–
-7	CLOCK+
-8	CLOCK–
+**HMDI channel mapping**:
+| 1	DATA2+
+| 2	DATA2–
+| 3	DATA1+
+| 4	DATA1–
+| 5	DATA0+
+| 6	DATA0–
+| 7	CLOCK+
+| 8	CLOCK–

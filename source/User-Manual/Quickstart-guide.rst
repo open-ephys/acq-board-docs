@@ -6,7 +6,7 @@
 Quickstart guide
 ***********************************
 
-#. **Connecting the USB and power supply**
+#. **Connecting the USB cable and power supply**
 
     *Required components: USB cable, 5V power supply*
 
@@ -34,6 +34,8 @@ Quickstart guide
 
     External devices that generate digital or analog signals can interface with Open Ephys system through an I/O board. We use HDMI cables to connect to the I/O board, as these are cheap and have exactly the right number of shielded wires inside of them. Please note that these ports are not standard HDMI points; they will not work with any HDMI-compatible devices.
 
+|
+
     The HDMI connections on the acquisition board are as follows:
 
     .. image:: ../_static/images/usermanual/quickstart/in_out_label.png
@@ -41,13 +43,15 @@ Quickstart guide
 
 #. **Operation**
 
-    This section assumes you have software up and running (Open Ephys GUI or Bonsai). Check out :ref:`this page <acquisitionsoftware>` for more info.
+    This section assumes you have compatible acquisition software installed (likely the Open Ephys GUI or Bonsai). Check out :ref:`this page <acquisitionsoftware>` for more info.
 
     These are some things to keep in mind:
 
     *Using a laptop*
 
-    If you're using the acquisition board with a laptop that's running off battery power, you will have a "floating" ground. This will cause your signals to look extremely noisy. To fix the issue, connect the ground of the acquisition board to whatever ground you're using for your experimental setup (perhaps a wall socket or a Faraday cage). You can either do this via the BNC connector (alligator clips work well for this), or by attaching a wire to one of the two dedicated screw terminals on the side of the board. The screw terminals are preferred because someday we may do something with the BNC. If you use the BNC, ground the shell of it to the wall, not the center pin. Connecting center pin of the BNC to ground will short your board and may fry the FPGA.
+    If you're using the acquisition board with a laptop that's running off battery power, you will have a "floating" ground. This will cause your signals to look extremely noisy. To fix the issue, connect the ground of the acquisition board to whatever ground you're using for your experimental setup (perhaps a wall socket or a Faraday cage). You can either do this via the BNC connector (alligator clips work well for this), or by attaching a wire to one of the two dedicated screw terminals on the side of the board. The screw terminals are preferred because the BNC may be needed for another purpose. 
+    
+    .. caution:: If you use the BNC for grounding, be extra careful to attach your ground wire to the exterior shell, not the center pin. Connecting the center pin of the BNC to ground will short your board and may fry the FPGA.
 
     *Analog inputs*
 
@@ -59,4 +63,4 @@ Quickstart guide
 
     The LEDs on the acquisition board will flash during normal operation. Fast flashing of the left-most LED (analog output) is expected. The digital input LED should turn green when one of the digital input channels is high, which is useful for checking whether or not your synchronization is working.
 
-    It is possible that the LEDs can create noise in your recordings for some grounding configurations. You may also want to disable them if you're performing behavioral experiments in the dark. The LEDs can be turned off by clicking the "LED" button in the Rhythm FPGA module in the Open Ephys GUI.
+    It is possible that the LEDs can create noise in your recordings for some grounding configurations. You may also want to disable them if you're performing behavioral experiments in the dark. The LEDs can be turned off by clicking the "LED" button in the `Rhythm FPGA <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Rhythm-FPGA.html>`_ plugin in the Open Ephys GUI.

@@ -6,7 +6,7 @@
 Cables
 ***********************************
 
-The cables you will need are:
+To start using the Acquisition Board, you'll need the following cables:
 
 :ref:`1_powercable`
 
@@ -27,7 +27,7 @@ The cables you will need are:
 
 1. Power cable
 ###################################
-If you buy the Acquisition Board, it comes with a wall adapter (to 5V) power supply that you can safely use with the board. Though the most recent versions have over-voltage protection, this isn't limitless so be careful to use the correct adapter when powering the board.
+If you buy the Acquisition Board from the `Open Ephys store <https://open-ephys.org/store>_` it ships with a wall adapter (to 5V) power supply that you can safely use with the board. Though the most recent versions have over-voltage protection, this isn't limitless so be careful to use the correct adapter when powering the board.
 
 .. _2headstage:
 
@@ -93,7 +93,7 @@ To connect the Acquisition Board to a computer, use a USB-3 cable with a Micro-B
 
 4. Input/Output Board to Acquisition Board cable
 ####################################################
-This is an HDMI-HDMI cable. Note that the input is not an actual HDMI input, so don't connect real HDMI devices to the Acquisition Board ports.
+This is an HDMI Type A to HDMI Type A cable. Note that the input is not an actual HDMI input, so don't connect real HDMI devices to the Acquisition Board ports.
 
 .. _5comm:
 
@@ -103,4 +103,4 @@ Rotary commutators prevent cables from becoming twisted as the animal moves arou
 
 - Adafruit 12-wire commutator (https://www.adafruit.com/product/1196) $20
 
-- Doric - assisted electrical rotary joints (http://doriclenses.com/life-sciences/electrical-rotary-joints/959-assisted-electrical-rotary-joints.html)
+- Doric - assisted electrical rotary joints (https://neuro.doriclenses.com/collections/electrical-rotary-joints)

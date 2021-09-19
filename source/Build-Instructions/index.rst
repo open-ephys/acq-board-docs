@@ -5,7 +5,8 @@
 ***********************************
 Build Instructions
 ***********************************
-This page will guide you through the steps necessary to build as many Open Ephys acquisition boards as you need. The amount of time and money invested will vary depending on your approach, but it's unlikely that you'll end up devoting more than 2-3 days of work and $1000 per board (please correct us if these numbers differ from what you actually spend!).
+
+This section will guide you through the steps necessary to build as many Open Ephys acquisition boards as you need. The amount of time and money invested will vary depending on your approach, but it's unlikely that you'll end up devoting more than 2-3 days of work and $1000 per board. Please correct us if these numbers differ from the amount of time/money you actually spend!
 
 There are two general approaches:
 

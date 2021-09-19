@@ -1,31 +1,39 @@
 :notoc:
 
 *************************************************
-Open Ephys Acquisition Board Documentation
+Open Ephys Acquisition Board
 *************************************************
 
 .. **Date**: |today|
 
 .. **Download documentation**: `PDF Version <open-ephys-documentation.pdf>`__ | `Zipped HTML <open-ephys-documentation.zip>`__\
 
-*This is the current documentation site for the Open Ephys Acquisition Board, an open-source USB interface for acquiring extracellular electrophysiology data.*
+*This is the documentation site for the Open Ephys Acquisition Board, an open-source interface for acquiring up to 512 channels of extracellular electrophysiology data over a USB connection.*
 
 .. image:: _static/images/acquisition-board.jpg
   :alt: Photograph of the Open Ephys acquisition board
 
 |
 
-The Acquisition Board was designed by neuroscientists to make their experiments more flexible and enjoyable. It provides a convenient USB interface between up to 8 headstages and a computer, and works equally well on macOS, Linux, and Windows. It also allows you to connect to up to 8 digital and analog inputs via I/O boards, each of which can provide up to 8 channels of digital or analog input.
+Key Specifications
+###################
 
-How to get an OE Acquisition Board
-#################################################
-You can order an assembled Acquisition Board from `Open Ephys Production Site <https://open-ephys.org/acquisition-system/eux9baf6a5s8tid06hk1mw5aafjdz1>`_ , and headstages and cables can be purchased from Intan. You can also order an `Open Ephys Starter Kit <https://open-ephys.org/acquisition-system/starter-kit>`_, which contains everything you need to get started (except for electrodes and an a computer).
+* **Headstage connectors:** 4 (up to 2 64-channel headstages per connection)
+* **Maximum channel count:** 512
+* **Data interface:** USB
+* **Analog inputs**: 8
+* **Digital inputs**: 8
+* **Supported operating systems:** macOS, Linux, and Windows
+
+Where to buy one
+###################################
+You can order an assembled Acquisition Board from `Open Ephys Production Site <https://open-ephys.org/acquisition-system/eux9baf6a5s8tid06hk1mw5aafjdz1>`_ , and headstages and cables can be purchased from Intan. You can also order an `Open Ephys Starter Kit <https://open-ephys.org/acquisition-system/starter-kit>`_, which contains everything you need to get started (except for electrodes and a computer).
 
 Because all the designs are freely available, you can also build the Acquisition Board yourself. We estimate you'll spend about 2-3 days of work and about $1000. Follow the instructions :ref:`here <buildinstructions>` to learn how to build your own board.
 
 Getting Started
 #################################################
-Besides the acquisition board, you will need :ref:`these other components <acsystemparts>` to start collecting data. If you already have these components, follow the :ref:`quickstartguide` to learn how to start collecting data right away. Otherwise, we recommend reading through the sub-pages to help you decide which components to buy.
+Besides the acquisition board, you will need :ref:`these other components <acsystemparts>` to start collecting data. If you already have all of the necessary parts in your lab, follow the :ref:`quickstartguide` to learn how to start collecting data right away. Otherwise, we recommend reading through the sub-pages to help you decide which components to buy.
 
 .. raw:: html
 

@@ -6,7 +6,7 @@
 Assembling the PCB
 ***********************************
 
-If you're outsourcing the assembly process, you'll need to supply Advanced Circuits with BOM.csv, centroid_file.csv, and fabrication_drawing.pdf. They'll take care of the rest, once they receive the components mentioned above.
+If you're outsourcing the assembly process, you'll need to supply Advanced Circuits with :code:`BOM.csv`, :code:`centroid_file.csv`, and :code:`fabrication_drawing.pdf`. They'll take care of the rest, once they receive the components mentioned above.
 
 If you're building it yourself, here's what you have to do after your PCBs and stencil arrive:
 

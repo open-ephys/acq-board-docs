@@ -6,7 +6,7 @@
 Assembling the I/O Board
 ***********************************
 
-Necessary supplies
+Required materials
 ###################################
 
 Each board can serve as digital input, digital output, analog input, or analog output, but it can only perform one of those functions at any given time. You choose its function by plugging it in to one of the four HDMI connectors on the acquisition board. If you want to use all four functions at once, you'll need to build four boards.
@@ -46,21 +46,21 @@ The easiest (and cheapest) way is to order the I/O board PCB it through the `Ope
 
 #. The files for each layer might be recognized automatically. Double-check that it corresponds to the following:
 
-    * Top silkscreen - gerber/io-board.slk
+    * Top silkscreen - :code:`gerber/io-board.slk`
 
-    * Top solder mask - gerber/io-board.smt
+    * Top solder mask - :code:`gerber/io-board.smt`
 
-    * Top copper - gerber/io-board.top
+    * Top copper - :code:`gerber/io-board.top`
 
-    * Bottom copper - gerber/io-board.bot
+    * Bottom copper - :code:`gerber/io-board.bot`
 
-    * Bottom soldermask - gerber/io-board.smb
+    * Bottom soldermask - :code:`gerber/io-board.smb`
 
-    * Plated holes - gerber/io-board.drd
+    * Plated holes - :code:`gerber/io-board.drd`
 
-    * Tool size report - gerber/io-board.drl
+    * Tool size report - :code:`gerber/io-board.drl`
 
-    *  Board outline - gerber/io-board.oln
+    *  Board outline - :code:`gerber/io-board.oln`
 
 #. Click on the agreement checkbox, and then click the "Next step" button.
 

@@ -8,7 +8,7 @@ Other equipment you will need
 
 A complete data acquisition system consists of the following hardware:
 
-* An acquisition board, which you can either order or build yourself by following the :ref:`buildinstructions` section of this documentation.
+* An Acquisition Board, which you can either order from the `Open Ephys store <https://open-ephys.org/store>`_ or build yourself by following the :ref:`buildinstructions` section of this documentation.
 
 * USB 3.0 cable
 
