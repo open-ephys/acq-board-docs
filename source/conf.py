@@ -21,7 +21,7 @@ from datetime import datetime, timezone
 
 # -- Project information -----------------------------------------------------
 
-project = "Open Ephys Documentation"
+project = "Acquisition Board Docs"
 copyright = "2010-{}, Open Ephys & Contributors".format(datetime.now(timezone.utc).year)
 author = "Open Ephys & Contributors"
 
