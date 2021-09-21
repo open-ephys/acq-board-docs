@@ -19,11 +19,11 @@ The most appropriate pattern for your LED depends on your experiment, but this w
 Using a behavioural camera with GPIO/ TTL output
 ######################################################################
 
-1) You can acquire the camera data in its own software or Bonsai, and send a TTL to the digital input of the Acquisition Board, so that each frame of the camera is marked in time on the electrophysiology acquisition. Make sure to have your ephys recording before you start the camera, so that you know which is the first frame.
+You can acquire the camera data in its own software or Bonsai, and send a TTL to the digital input of the Acquisition Board, so that each frame of the camera is marked in time on the electrophysiology acquisition. Make sure to have your ephys recording before you start the camera, so that you know which is the first frame.
 
-1) Bonsai: Bonsai can handle inputs from many types of camera. You can record
 
-2) Open Ephys GUI Plugin
+Open Ephys GUI Plugin
+****************************
 
 There is a specific plugin for the Open Ephys GUI that uses the tracking capability of Bonsai and integrates this in the Open Ephys GUI for visualisation. Read the paper `here. <https://iopscience.iop.org/article/10.1088/1741-2552/aacf45#jneaacf45s2>`_
 
