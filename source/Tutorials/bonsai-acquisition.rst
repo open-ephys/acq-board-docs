@@ -4,9 +4,9 @@
 
 .. WORK IN PROGRESS
 
-***********************************
-Using Bonsai with the OE Board
-***********************************
+****************************************
+Using Bonsai with the Acquisition Board
+****************************************
 
 
 1. Install Bonsai from `here <https://bonsai-rx.org/>`_.
