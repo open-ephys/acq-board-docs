@@ -21,7 +21,7 @@ from datetime import datetime, timezone
 
 # -- Project information -----------------------------------------------------
 
-project = "Acquisition Board Docs"
+project = "Open Ephys Acquisition Board"
 copyright = "2010-{}, Open Ephys & Contributors".format(datetime.now(timezone.utc).year)
 author = "Open Ephys & Contributors"
 
@@ -82,7 +82,7 @@ todo_include_todos = True
 html_theme = "pydata_sphinx_theme"
 html_logo = "_static/images/oe_logo_name.svg"
 html_scaled_image_link = True
-
+html_title = project
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
