@@ -12,7 +12,7 @@ We're going to assume a basic understanding of electronic circuits. If you don't
 
 .. toctree::
     :hidden:
-    :maxdepth: 5
+    :maxdepth: 1
     :titlesonly:
 
     Quickstart-guide
@@ -21,6 +21,7 @@ We're going to assume a basic understanding of electronic circuits. If you don't
     Electrodes
     Headstages
     Cables
+    Custom-cables
     Peripheral-devices
     Computer-hardware
     Acquisition-software
