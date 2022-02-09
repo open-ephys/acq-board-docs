@@ -203,10 +203,6 @@
             <a href="#dual-headstage-adapter" class="nav-link">Dual-headstage adapter</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#custom-cables" class="nav-link">Custom cables</a>
-        </li>
-    
             </ul>
         </li>
     
@@ -253,30 +249,14 @@
 <p>For recordings in freely behaving mice, it is important to minimize the weight and torque applied by the cables. This is especially important for experiments that require natural behavior and becomes a real issue for channel counts over 32 where even light wire tethers become bulky.</p>
 <p>The standardized interface cable for Intan RHD chips we use is ideal for this application. Thanks to the <a class="reference external" href="https://en.wikipedia.org/wiki/Low-voltage_differential_signaling">digital LVDS signal</a>, only 12 conductors are needed for transmitting up to 64 channels of neural data. Cables that conform to this standard can be purchased from the Intan website in 3- or 6-foot lengths. The cables for the acquisition board must conform to the SPI standard specified by Intan: <a class="reference external" href="http://www.intantech.com/files/Intan_RHD2000_SPI_cable.pdf">http://www.intantech.com/files/Intan_RHD2000_SPI_cable.pdf</a></p>
 <p>The current standard cable contains 2 MISO (headstage-&gt;computer) data lines, so it’s possible to connect 2 headstages to one input on the acquisition board via one cable by using a <a class="reference external" href="https://intantech.com/RHD_SPI_cables.html?tabSelect=RHDdual&amp;yPos=0">Y-adapter</a>. For connectors we’re using 12-pin Omnetics PZN-12 polarized nano connectors.</p>
+<p>You can also make fine wire tethers <a class="reference internal" href="Custom-cables.html#custom-cables"><span class="std std-ref">yourself</span></a>.</p>
 <div class="section" id="intan-cables">
 <h3>Intan cables<a class="headerlink" href="#intan-cables" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://intantech.com/RHD_SPI_cables.html?tabSelect=RHDSPIcables&amp;yPos=100">Details are available on the Intan website</a>. Intan cables are available as standard or ultra-thin, and the choice will depend on how much cable mass (and subsequent weight and torque) will influence your experiments, as well as how long you need your cable to be.</p>
 </div>
 <div class="section" id="dual-headstage-adapter">
 <h3>Dual-headstage adapter<a class="headerlink" href="#dual-headstage-adapter" title="Permalink to this headline">¶</a></h3>
-<p>The <a class="reference external" href="https://intantech.com/RHD_SPI_cables.html?tabSelect=RHDdual&amp;yPos=100">dual-headstage adapter</a> takes advantage of the 2 headstage-computer data lines in the SPI cable and exposes each line to a separate Omnetics connector, so that you can run two headstages off one cable. If you plan to use this adapter with daisy-chained cables resulting in a cable longer than 1.8 meters, be sure to <a class="reference external" href="https://intantech.com/files/Intan_RHD2000_dual_headstage_adapter.pdf">read the documentation</a> to make the necessary adjustments to the resistors on the adapter, or you risk corrupting your data.</p>
-</div>
-<div class="section" id="custom-cables">
-<h3>Custom cables<a class="headerlink" href="#custom-cables" title="Permalink to this headline">¶</a></h3>
-<p>If you want something even more lightweight and flexible, it’s possible to build your own cables. We did this by soldering wires to two 12-pin Omnetics PZN-12 <a class="reference external" href="https://www.omnetics.com/products/polarized-nano">polarized nano connectors</a>. Here, we’ve used <a class="reference external" href="http://www.coonerwire.com/">Cooner</a> CZ 1187 wire, FEP Insulation 38AWG with 0.012” diameter and 0.720Ω/foot. This is the standard wire for analog tethers because it is very flexible and light, but also durable. The cables sold by Intan are 0.423Ω/ft for the LVDS and 0.172Ω/ft for ground and power, so we’re at the upper end of the possible resistance values, but it seems possible that the 40AWG version of the wire could work for the LVDS pairs. For the GND and VCC traces using two 38AWG wires or going to a thicker wire with &lt;0.2Ω/foot is recommended unless the tether is pretty short. This limit is more unforgiving if you’re intending to run two headstages on one cable.</p>
-<p>The wiring diagram of the cable is simple: There are two rows, each with 6 conductors. Each pair consists of a ‘top’ and ‘bottom’ conductor which must be wired straight to the same pair, except with the top and bottom cables switched at the opposite end. Alternatively, as shown below, if one connector is flipped upside down, then all wires just go straight to the opposing pin. This includes gnd/power.</p>
-<p>So, if one connector is laid facing the other back-to-back and one connector is upside-down, each pin needs to be connected with its opposite pin (see illustration below). The gnd/power wires looks different in the illustration because they’re not twisted - but no wires should be switched top/bottom if the connectors are flipped as shown in the illustration.</p>
-<img alt="../_images/lvds_tether_illustration2.png" class="align-center" src="../_images/lvds_tether_illustration2.png" />
-<p>Each tether will need 12 conductors total: 5 LVDS pairs, plus power and ground. To begin, securely clamp one of the connectors so there’s enough space to lay out wires in front of it. Measure out 12 equal lengths of wire.</p>
-<p>Now for each LVDS pair, de-insulate ~1 mm on one end of a wire (sharp forceps work well for the cooner wire), tin the wire, and solder it to one pin on the connector. Use plenty of flux when dealing with small wires like these and solder quickly to avoid heating up the plastic body of the connector.  Attach a label to one of the wires in each pair indicating the number (1-6) and which wire is top or bottom.</p>
-<p>For each LVDS pair, twist the wires (top and bottom) until they maintain contact even when the tether is bent. Don’t simply twist both wires together so that they remain under tension - instead move one wire around the other, without twisting each of the individual wires. Otherwise, the tether will twist around itself later. The ground and power wires don’t need to be twisted.</p>
-<img alt="../_images/lvds_tether_soldered.jpg" class="align-center" src="../_images/lvds_tether_soldered.jpg" />
-<p>Once all wires on one connector are soldered, fix the tether to the table with standard lab tape or Kapton tape about 1 cm from the connector. This way you can gently pull on the wires to ensure they are the same length, without the risk of breaking the solder joints. Next, lay out the tether so that the free end with the labelled wire ends can be soldered to the 2nd connector.</p>
-<p>Make sure the tether is straight and that all wires are tightly twisted with no open loops. Fix the free end to the table with another piece of tape, so that its easy to cut individual wires to the same length, and solder them to the 2nd connector. Make sure that all LVDS pairs remain well-twisted, and add a few more twists on the free end where needed.</p>
-<p>After soldering, carefully connect the tether to the acquisition system and headstage and verify that it’s working. Use a 64 channel headstage or a 2-to-1 adapter to test both of the 32 channel data lines.</p>
-<p>Remove the flux from the connectors with ethanol, and secure the solder joints with a thin coat of epoxy. Tie the wires together at the connectors, and at regular intervals throughout the cable. Add some more epoxy to the knot at each connector and to the sides of the connector to make a solid connection that can withstand handling.</p>
-<p>For added strength, it might be useful to add a thin string in parallel with the wires.</p>
-<p>Et voilà, 64 channels of neural data on a tether even lighter than those used for conventional 16-channel analog recordings.</p>
+<p>The <a class="reference external" href="https://intantech.com/RHD_SPI_cables.html?tabSelect=RHDdual&amp;yPos=100">dual-headstage adapter</a> takes advantage of the 2 headstage-computer data lines in the SPI cable and exposes each line to a separate Omnetics connector, so that you can run two headstages off one cable. If you plan to use this adapter with daisy-chained cables resulting in a cable longer than 1.8 meters, be sure to <a class="reference external" href="https://intantech.com/files/Intan_RHD2000_dual_headstage_adapter.pdf">read the documentation</a> to make the necessary adjustments to the resistors on the adapter, or you risk corrupting your data. You can also make dual headstage adapters <a class="reference internal" href="Custom-cables.html#custom-cables"><span class="std std-ref">yourself</span></a>.</p>
 </div>
 </div>
 <div class="section" id="usb-cable">
@@ -286,6 +266,8 @@
 <div class="section" id="input-output-board-to-acquisition-board-cable">
 <span id="iohdmi"></span><h2>4. Input/Output Board to Acquisition Board cable<a class="headerlink" href="#input-output-board-to-acquisition-board-cable" title="Permalink to this headline">¶</a></h2>
 <p>This is an HDMI Type A to HDMI Type A cable. Note that the input is not an actual HDMI input, so don’t connect real HDMI devices to the Acquisition Board ports.</p>
+<p>If you just need one or two channels in a hurry, you can <a class="reference internal" href="Custom-cables.html#custombnc"><span class="std std-ref">make a quick adapter cable</span></a> with pretty little effort.</p>
+<p>There are also a variety of simple HDMI breakout boards available from various vendors - these work equivalently as I/O boards. See for instance <a class="reference external" href="https://elabbay.myshopify.com/collections/breadboard/products/elabguy-hdmi-af-bo-v1a-hdmi-type-a-female-socket-breakout-board">here</a>.</p>
 </div>
 <div class="section" id="commutators">
 <span id="comm"></span><h2>5. Commutators<a class="headerlink" href="#commutators" title="Permalink to this headline">¶</a></h2>
@@ -318,7 +300,7 @@
     <footer class="footer mt-5 mt-md-0">
   <div class="container">
     <p>
-          &copy; Copyright 2010-2021, Open Ephys &amp; Contributors.<br/>
+          &copy; Copyright 2010-2022, Open Ephys &amp; Contributors.<br/>
         Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
     </p>
   </div>
