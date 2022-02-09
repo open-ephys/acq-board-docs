@@ -27,7 +27,7 @@ To start using the Acquisition Board, you'll need the following cables:
 
 1. Power cable
 ###################################
-If you buy the Acquisition Board from the `Open Ephys store <https://open-ephys.org/store>_` it ships with a wall adapter (to 5V) power supply that you can safely use with the board. Though the most recent versions have over-voltage protection, this isn't limitless so be careful to use the correct adapter when powering the board.
+If you buy the Acquisition Board from the `Open Ephys store <https://open-ephys.org/store>`_ it ships with a wall adapter (to 5V) power supply that you can safely use with the board. Though the most recent versions have over-voltage protection, this isn't limitless so be careful to use the correct adapter when powering the board.
 
 .. _2headstage:
 
@@ -35,7 +35,7 @@ If you buy the Acquisition Board from the `Open Ephys store <https://open-ephys.
 ######################################################################
 For recordings in freely behaving mice, it is important to minimize the weight and torque applied by the cables. This is especially important for experiments that require natural behavior and becomes a real issue for channel counts over 32 where even light wire tethers become bulky.
 
-The standardized interface cable for Intan RHD chips we use is ideal for this application. Thanks to the `digital LVDS signal <https://en.wikipedia.org/wiki/Low-voltage_differential_signaling>`__, only 12 conductors are needed for transmitting up to 64 channels of neural data. Cables that conform to this standard can be purchased from the Intan website in 3- or 6-foot lengths. The cables for the acquisition board must conform to the SPI standard specified by Intan: http://www.intantech.com/files/Intan_RHD2000_SPI_cable.pdf
+The standardized interface cable for Intan RHD chips we use is ideal for this application. Thanks to the `digital LVDS signal <https://en.wikipedia.org/wiki/Low-voltage_differential_signaling>`__, only 12 conductors are needed for transmitting up to 64 channels of neural data. Cables that conform to this standard can be purchased from the Intan website in 3- or 6-foot lengths. The cables for the acquisition board must conform to the SPI standard `specified by Intan <http://www.intantech.com/files/Intan_RHD2000_SPI_cable.pdf>`_
 
 The current standard cable contains 2 MISO (headstage->computer) data lines, so it's possible to connect 2 headstages to one input on the acquisition board via one cable by using a `Y-adapter <https://intantech.com/RHD_SPI_cables.html?tabSelect=RHDdual&yPos=0>`_. For connectors we're using 12-pin Omnetics PZN-12 polarized nano connectors.
 
