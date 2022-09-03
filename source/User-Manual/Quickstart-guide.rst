@@ -38,6 +38,8 @@ Quickstart guide
 
     The HDMI connections on the acquisition board are as follows:
 
+|
+
     .. image:: ../_static/images/usermanual/quickstart/in_out_label.png
 
 
