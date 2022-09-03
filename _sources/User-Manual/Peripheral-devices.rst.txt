@@ -11,7 +11,7 @@ Peripheral devices
 Open Ephys I/O Board
 ###################################
 
-To sync your neural data with external triggers, use an I/O board to connect up to 8 digital inputs to the acquisition board. Since its internal components are completely passive, the same I/O board can be also be used to relay digital outputs, analog inputs, and analog outputs. However, it can only perform one of these functions at a time, so you will need multiple I/O boards if you want to, for instance, receive both analog and digital inputs.
+To sync your neural data with external triggers, use an I/O board to connect up to 8 digital inputs to the acquisition board. Since its internal components are completely passive, the same I/O board can be also be used to relay digital outputs, analog inputs, and analog outputs. However, it can only perform one of these functions at a time, so you will need multiple I/O boards if you want to, for instance, receive both analog and digital inputs. If you're interested in building your own I/O Board, follow the instructions :ref:`here <assemblingtheioboard>`.
 
 .. image:: ../_static/images/usermanual/io-board.jpg
   :align: center
@@ -27,7 +27,12 @@ Specifications:
 
 * 4.9" x 3.6" PCB
 
-If you're interested in building your own I/O Board, follow the instructions :ref:`here <assemblingtheioboard>`.
+
+The following diagram illustrates where I/O boards should be connected to the acquisition board for different types of inputs and outputs:
+
+|
+
+    .. image:: ../_static/images/usermanual/quickstart/in_out_label.png
 
 Testing I/O modules
 ------------------------------------------

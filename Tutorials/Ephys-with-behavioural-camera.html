@@ -172,7 +172,7 @@
             <a href="#using-a-behavioural-camera-with-gpio-ttl-output" class="nav-link">Using a behavioural camera with GPIO/ TTL output</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h3">
-            <a href="#open-ephys-gui-plugin" class="nav-link">Open Ephys GUI Plugin</a>
+            <a href="#open-ephys-gui-tracking-plugin" class="nav-link">Open Ephys GUI Tracking Plugin</a>
         </li>
     
             </ul>
@@ -203,8 +203,15 @@ The most appropriate pattern for your LED depends on your experiment, but this w
 <div class="section" id="using-a-behavioural-camera-with-gpio-ttl-output">
 <h2>Using a behavioural camera with GPIO/ TTL output<a class="headerlink" href="#using-a-behavioural-camera-with-gpio-ttl-output" title="Permalink to this headline">¶</a></h2>
 <p>You can acquire the camera data in its own software or Bonsai, and send a TTL to the digital input of the Acquisition Board, so that each frame of the camera is marked in time on the electrophysiology acquisition. Make sure to have your ephys recording before you start the camera, so that you know which is the first frame.</p>
-<div class="section" id="open-ephys-gui-plugin">
-<h3>Open Ephys GUI Plugin<a class="headerlink" href="#open-ephys-gui-plugin" title="Permalink to this headline">¶</a></h3>
+<p>When synchronizing with TTL pulses, the I/O board should be connected to the Digital Input port of the acquisition board:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><img alt="../_images/ttl_port.png" src="../_images/ttl_port.png" />
+</div></blockquote>
+<div class="section" id="open-ephys-gui-tracking-plugin">
+<h3>Open Ephys GUI Tracking Plugin<a class="headerlink" href="#open-ephys-gui-tracking-plugin" title="Permalink to this headline">¶</a></h3>
 <p>There is a specific plugin for the Open Ephys GUI that uses the tracking capability of Bonsai and integrates this in the Open Ephys GUI for visualisation. Read the paper <a class="reference external" href="https://iopscience.iop.org/article/10.1088/1741-2552/aacf45#jneaacf45s2">here.</a></p>
 <a class="reference external image-reference" href="https://iopscience.iop.org/article/10.1088/1741-2552/aacf45#jneaacf45s2"><img alt="../_images/tracking.jpg" src="../_images/tracking.jpg" /></a>
 </div>

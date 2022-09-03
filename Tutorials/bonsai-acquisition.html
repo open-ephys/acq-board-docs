@@ -157,9 +157,40 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#install-bonsai" class="nav-link">Install Bonsai</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#install-the-bonsai-ephys-package" class="nav-link">Install the Bonsai Ephys package</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#open-the-ephys-example-workflow" class="nav-link">Open the Ephys example workflow</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#replace-the-fpga-bitfile" class="nav-link">Replace the FPGA bitfile</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#streaming-data" class="nav-link">Streaming data</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#customize-the-workflow" class="nav-link">Customize the workflow</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#check-that-your-data-is-being-saved" class="nav-link">Check that your data is being saved</a>
+        </li>
     
     </ul>
 </nav>
@@ -176,42 +207,47 @@
                 
   <span class="target" id="bonsaiacq"></span><div class="section" id="using-bonsai-with-the-acquisition-board">
 <h1>Using Bonsai with the Acquisition Board<a class="headerlink" href="#using-bonsai-with-the-acquisition-board" title="Permalink to this headline">¶</a></h1>
-<ol class="arabic simple">
-<li><p>Install Bonsai from <a class="reference external" href="https://bonsai-rx.org/">here</a>.</p></li>
-<li><p>Click on:   Tools/ Manage Packages/</p></li>
-</ol>
-<blockquote>
-<div><p>In the package manager, search for ‘Ephys’.</p>
-<p>Install the Ephys and Ephys Design Library.</p>
-</div></blockquote>
+<div class="section" id="install-bonsai">
+<h2>Install Bonsai<a class="headerlink" href="#install-bonsai" title="Permalink to this headline">¶</a></h2>
+<p>Installers are available at <a class="reference external" href="https://bonsai-rx.org/">bonsai-rx.org</a>.</p>
+</div>
+<div class="section" id="install-the-bonsai-ephys-package">
+<h2>Install the Bonsai <strong>Ephys</strong> package<a class="headerlink" href="#install-the-bonsai-ephys-package" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>First, click on <strong>Tools &gt; Manage Packages</strong></p></li>
+<li><p>In the package manager, search for “Ephys”</p></li>
+<li><p>Click the “Install” buttons to add both the <strong>Bonsai - Ephys Library</strong> and <strong>Bonsai - Ephys Design Library</strong>.</p></li>
+</ul>
 <a class="reference internal image-reference" href="../_images/install_ephys_packages.png"><img alt="../_images/install_ephys_packages.png" class="align-center" src="../_images/install_ephys_packages.png" style="width: 500px;" /></a>
-<ol class="arabic simple" start="3">
-<li><p>The easiest place to start is with the example workflow for ephys.</p></li>
-</ol>
+</div>
+<div class="section" id="open-the-ephys-example-workflow">
+<h2>Open the Ephys example workflow<a class="headerlink" href="#open-the-ephys-example-workflow" title="Permalink to this headline">¶</a></h2>
+<p>Search for “Ephys” in the Bonsai Gallery, and open the <strong>Bonsai - Ephys Example</strong> workflow.</p>
 <a class="reference internal image-reference" href="../_images/bonsai_ephys_example_install.png"><img alt="../_images/bonsai_ephys_example_install.png" class="align-center" src="../_images/bonsai_ephys_example_install.png" style="width: 500px;" /></a>
-<ol class="arabic simple" start="4">
-<li><p>Replace the bitfile</p></li>
-</ol>
-<p>Click on the ‘Rhd200EvalBoard’ node to select it. On the right hand side, you will see a column where you can configure the properties of that node.
-Click on the ‘…’ to replace the default rhd2000_usb3.bit file with the rhd2000_usb3.bit file that is present in the installation of the Open Ephys GUI (if you have installed the GUI from here, you should find it in the installation folder).</p>
+</div>
+<div class="section" id="replace-the-fpga-bitfile">
+<h2>Replace the FPGA bitfile<a class="headerlink" href="#replace-the-fpga-bitfile" title="Permalink to this headline">¶</a></h2>
+<p>In the Ephys example workflow, click on the <code class="code docutils literal notranslate"><span class="pre">Rhd200EvalBoard`</span></code> node to select it. On the right-hand side, you will see a column where you can configure the properties of that node.
+Click on the ‘…’ to replace the default <code class="code docutils literal notranslate"><span class="pre">rhd2000_usb3.bit</span></code> file with the <code class="code docutils literal notranslate"><span class="pre">rhd2000_usb3.bit</span></code> file that is present in your local installation of the Open Ephys GUI, or download it directly from <a class="reference external" href="https://github.com/open-ephys/plugin-GUI/blob/main/Resources/Bitfiles/rhd2000_usb3.bit">GitHub</a>.</p>
 <a class="reference internal image-reference" href="../_images/select_bitfile.png"><img alt="../_images/select_bitfile.png" class="align-center" src="../_images/select_bitfile.png" style="width: 500px;" /></a>
-<ol class="arabic simple" start="5">
-<li><p>Stream data</p></li>
-</ol>
-<p>Make sure your Open Ephys Acquisition Board and a headstage are connected. You can use the headstage without an animal to perform test recordings, just using the noise that the headstage will pick up. Click ‘Start’ to run the workflow. Double-click on each node (circle) to open the visualiser at that point in the workflow, so that you can see what each step is doing.</p>
-<ol class="arabic simple" start="6">
-<li><p>Customize Workflow</p></li>
-</ol>
+</div>
+<div class="section" id="streaming-data">
+<h2>Streaming data<a class="headerlink" href="#streaming-data" title="Permalink to this headline">¶</a></h2>
+<p>Make sure your Open Ephys Acquisition Board and a headstage are connected. You can use the headstage without an animal to perform test recordings, just using the noise that the headstage will pick up. Click the <strong>Start</strong> button to run the workflow. You can double-click on each node (circle) to open the visualiser at that point in the workflow, so that you can see how data is being transformed at each step.</p>
+</div>
+<div class="section" id="customize-the-workflow">
+<h2>Customize the workflow<a class="headerlink" href="#customize-the-workflow" title="Permalink to this headline">¶</a></h2>
 <p>The example selects only channel 1 and 2 using the ‘Select Channel’ node. Add all the channels you are interested in and run the workflow again. Use Page Up and Page Down to scroll through the pages of the visualiser.</p>
 <p>Make sure you also check and if necessary adjust the settings for the frequency filter and spike detector.</p>
-<p>You can extract more types of data from the board by right-clicking on the ‘Rhd200EvalBoard’ node. You can choose to visualise incoming TTL inputs, the auxiliary data from the headstage etc.</p>
-<ol class="arabic simple" start="7">
-<li><p>Check that your data is being saved</p></li>
-</ol>
-<p>In Bonsai, data will only be saved if there is a purple ‘sink’ node at the end of the workflow. In the example, the ephys channel data is being saved in a .bin file that you can open in, for instance, Python or MATLAB. The extracted spikes are saved as a .csv that you can open in e.g. excel.</p>
+<p>You can extract more types of data from the board by right-clicking on the <code class="code docutils literal notranslate"><span class="pre">Rhd200EvalBoard`</span></code> node. For example, you can choose to visualise TTL events coming through the Digital Input port of the Acquisition Board (right-most HDMI port, closest to the headstage inputs). You can also visualize the auxiliary data from the headstage if the headstage includes an accelerometer.</p>
+</div>
+<div class="section" id="check-that-your-data-is-being-saved">
+<h2>Check that your data is being saved<a class="headerlink" href="#check-that-your-data-is-being-saved" title="Permalink to this headline">¶</a></h2>
+<p>In Bonsai, data will only be saved if there is a purple ‘sink’ node at the end of the workflow. In the example, the ephys channel data is being saved in a .bin file that you can open in, for instance, Python or MATLAB. The extracted spikes are saved as a .csv that you can open in Excel or load using the <cite>Pandas library &lt;https://pandas.pydata.org/&gt;</cite>.</p>
 <p>If you want to record incoming TTL timestamps you can add a branch as follows:</p>
 <a class="reference internal image-reference" href="../_images/save_ttl_timestamp.png"><img alt="../_images/save_ttl_timestamp.png" class="align-center" src="../_images/save_ttl_timestamp.png" style="width: 500px;" /></a>
 <p>Before recording a real experiment, always do a trial recording to make sure your data is being saved, and that when you open it, it contains the expected number of channels etc. You can do this without an animal, just using noise recorded from the headstage.</p>
+</div>
 </div>
 
 
