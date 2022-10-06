@@ -66,10 +66,4 @@ Check that your data is being saved
 
 In Bonsai, data will only be saved if there is a purple 'sink' node at the end of the workflow. In the example, the ephys channel data is being saved in a .bin file that you can open in, for instance, Python or MATLAB. The extracted spikes are saved as a .csv that you can open in Excel or load using the `Pandas library <https://pandas.pydata.org/>`.
 
-If you want to record incoming TTL timestamps you can add a branch as follows:
-
-.. image:: ../_static/images/tutorials/Bonsai/save_ttl_timestamp.png
-  :align: center
-  :width: 500
-
 Before recording a real experiment, always do a trial recording to make sure your data is being saved, and that when you open it, it contains the expected number of channels etc. You can do this without an animal, just using noise recorded from the headstage.
