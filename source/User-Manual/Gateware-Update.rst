@@ -14,7 +14,7 @@ the Acquisition Board
 Latest version
 -------------------------
 
-The latest avilable gateware is `version 0.4 </_static/files/OpenEphysFPGA-gw04.zip>`_.
+The latest avilable gateware is :download:`version 0.4 </_static/files/OpenEphysFPGA-gw04.zip>`.
 
 .. _gwupdate_instructions:
 
