@@ -34,7 +34,7 @@ This a headstage designed by Open Ephys designed, which also uses an Intan chip.
 - It has 2 built-in LEDs for tracking purpose
 - And, most importantly: the flat, round design means that the center of mass of the headstage is closer to the head of the animal. This cuts torque in half, reducing the impact on animal. Mice with this headstage can easily lower their heads and perform most licking/nosepoke paradigms. (Imagine wearing a heavy tall hat, and how that would influence your balance.)
 
-.. figure:: ../_static/images/usermanual/headstages/image-20201209-170837.png
+.. image:: ../_static/images/usermanual/headstages/image-20201209-170837.png
   :scale: 60
   :align: center
 
