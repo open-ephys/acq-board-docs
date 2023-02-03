@@ -8,12 +8,12 @@ Devices shipped from Dec 2022 onwards use a brand-new FPGA module designed by Op
 
 These boards need a different driver and Open Ephys GUI plugin to work.
 
-Before attempting to use one, please follow the instructions below. 
+Before attempting to use this board, please follow the instructions below. 
 
 .. important:: You will need to install and use:
 
     * A different driver, **FTD3XXDriver**
-    * A different plugin, **OE FPGA Acquisition Board** for GUI v0.6 (currently Windows only)
+    * A different plugin, **OE FPGA Acquisition Board** for GUI v0.6.x (currently Windows only)
     * The :ref:`latest gateware<gwupdate_latest>`
 
 .. _newfpga_instructions:
@@ -37,7 +37,7 @@ The new FPGA uses different drivers that need to be installed before plugging th
 2. Make sure your Open Ephys GUI version is up to date
 *******************************************************
 
-The new plugin works in version v0.6 of the GUI and above.
+The new plugin works in version v0.6.x of the GUI and above.
    
    #. Download the latest version of the Open Ephys GUI `here <https://open-ephys.org/gui>`_.
    #. Double-click the downloaded executable to launch the installer.
@@ -48,7 +48,7 @@ The new plugin works in version v0.6 of the GUI and above.
 3. Install the plugin (currently Windows only)
 **********************************************
 
-You now need to install the new plugin in the Open Ephys GUI v0.6 or above.
+You now need to install the new plugin in the Open Ephys GUI v0.6.x or above.
 
    1. Within the Open Ephys GUI, select ``Plugin Installer`` from the ``File`` menu.
    
@@ -78,13 +78,15 @@ Follow the instructions on the :ref:`gwupdate` page to check your gateware versi
 
 You can now use this plugin to acquire data from your acquisition board. Usage instructions for the board can be found in this User Manual and for the plugin, in the `Rhythm Plugins page <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Rhythm-Plugins.html>`_ of the OE GUI documentation.
 
-Avoid confusing the new ``OE FPGA Acquisition Board plugin`` with the one called ``Acquisition Board`` which was used for previous versions of the acquisition board that did not have the Open Ephys FPGA. We are working on integrating them in the same plugin but for the moment, these are two separate plugins. Your new board will not work with the old plugin and vice versa.
+Avoid confusing the new ``OE FPGA Acquisition Board`` plugin with the one called ``Acquisition Board``, which was used for previous versions of the acquisition board that did not have the Open Ephys FPGA. We are working on consolidating everything into the same plugin but for the moment, these are two separate plugins. Your new board will not work with the old plugin and vice versa.
 
 .. image:: /_static/images/usermanual/newfpga/GUI-plugin-list.png
     :width: 30%
     :align: center
 
 As with any new device, test your acquisition board to make sure it is working as expected by performing checks on a short recording before using it for research. We test them before they get to you but might not have covered all the use cases and your particular hardware. 
+
+.. note:: The impedance measurement functionality of the new board is not currently working. Once a fix is ready, we will put out an updated version of the OE FPGA Acquisition Board plugin.
 
 .. _newfpga_help:
 
@@ -153,7 +155,7 @@ Until software integration is complete, the acquisition board with the new FPGA 
 
 * **Plugin initialization takes slightly longer.**
 
-It takes a little more time  than previously to initialize the plugin (every time you add the OE FPGA Acquisition Board plugin to the signal chain). This is something we are aware of and are working on improving. It also happens at runtime when using the new Bonsai node.
+It takes a little more time than previously to initialize the plugin (every time you add the OE FPGA Acquisition Board plugin to the signal chain). This is something we are aware of and are working on improving. It also happens at runtime when using the new Bonsai node.
 
 Additionally, this new FPGA module performs a self-initialization on power up for approximately 20 seconds after it is first connected to the power supply. If you try to use the OE FPGA Acquisition Board plugin during this time, you will see the following message in the console: 
 
@@ -185,7 +187,7 @@ Why and how did we make this happen?
 -------------------------------------
 Our acquisition board relies on an FPGA (Field-Programmable Gate Array) to control data acquisition and timestamp the incoming data (see the details on the :ref:`howitworks` page). The Opal Kelly FPGA module we used in previous acquisition boards was end-of-lifed all of a sudden at the end of 2021 and it immediately ran out of stock.
 
-The Open Ephys team, led by Aarón Cuevas López developed a completely new module with the scarce components available despite the ongoing silicon shortage. This module uses the same footprint as the previous one, so it can be replaced directly on the existing acquisition boards, although it uses a different FPGA, a Lattice EPC5, and its `design is open source <https://github.com/open-ephys/ECP5U85-BSE-USB>`_. Additionally, communication with the computer follows our new ONI standard for common interfaces in neuro tools (the same standard that powers our next-gen system, `ONIX <http://open-ephys.github.io/onix-docs/>`_).
+The Open Ephys team, led by Aarón Cuevas López, developed a completely new module with the scarce components available despite the ongoing silicon shortage. This module uses the same footprint as the previous one, so it can be replaced directly on the existing acquisition boards, although it uses a different FPGA, a Lattice EPC5, and its `design is open source <https://github.com/open-ephys/ECP5U85-BSE-USB>`_. Additionally, communication with the computer follows our new ONI standard for common interfaces in neuro tools (the same standard that powers our next-gen system, `ONIX <http://open-ephys.github.io/onix-docs/>`_).
 
 In under a year, this new design went into production and we started to ship to users that had been waiting eagerly for new boards and repaired boards. Software integration quickly followed, to provide users with the same functionality they know and have come to rely on for their research over the past decade.
 
