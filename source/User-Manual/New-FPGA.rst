@@ -8,13 +8,13 @@ Devices shipped from Dec 2022 onwards use a brand-new FPGA module designed by Op
 
 These boards need a different driver and Open Ephys GUI plugin to work.
 
-Before attempting to use one, please follow the installation instructions below. 
+Before attempting to use one, please follow the instructions below. 
 
 .. important:: You will need to install and use:
 
     * A different driver, **FTD3XXDriver**
     * A different plugin, **OE FPGA Acquisition Board** for GUI v0.6 (currently Windows only)
-    * The latest gateware, **v0.4**
+    * The :ref:`latest gateware<gwupdate_latest>`
 
 .. _newfpga_instructions:
 
@@ -50,12 +50,23 @@ The new plugin works in version v0.6 of the GUI and above.
 
 You now need to install the new plugin in the Open Ephys GUI v0.6 or above.
 
-   #. Within the Open Ephys GUI, select ``Plugin Installer`` from the ``File`` menu.
-   #. Find the ``OE FPGA Acquisition Board`` plugin and click ``Install``. *Always use the latest version of the plugin*
+   1. Within the Open Ephys GUI, select ``Plugin Installer`` from the ``File`` menu.
+   
+.. image:: /_static/images/usermanual/newfpga/GUI-plugin-installer-menu.png
+    :width: 30%
+    :align: center
+
+..  rst-class::  clear-both
+
+   2. Find the ``OE FPGA Acquisition Board`` plugin and click ``Install``. *Always use the latest version of the plugin*
+
+.. image:: /_static/images/usermanual/newfpga/GUI-plugin-installer-choice.png
+    :width: 80%
+    :align: center
 
 .. _newfpga_gateware:
 
-4. Make sure you have the latest gateware
+1. Make sure you have the latest gateware
 *****************************************
 
 We have released several improvements since the first batch of boards went out, so depending on when you got your board, you might not have the latest gateware.
@@ -68,6 +79,10 @@ Follow the instructions on the :ref:`gwupdate` page to check your gateware versi
 You can now use this plugin to acquire data from your acquisition board. Usage instructions for the board can be found in this User Manual and for the plugin, in the `Rhythm Plugins page <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Rhythm-Plugins.html>`_ of the OE GUI documentation.
 
 Avoid confusing the new ``OE FPGA Acquisition Board plugin`` with the one called ``Acquisition Board`` which was used for previous versions of the acquisition board that did not have the Open Ephys FPGA. We are working on integrating them in the same plugin but for the moment, these are two separate plugins. Your new board will not work with the old plugin and vice versa.
+
+.. image:: /_static/images/usermanual/newfpga/GUI-plugin-list.png
+    :width: 30%
+    :align: center
 
 As with any new device, test your acquisition board to make sure it is working as expected by performing checks on a short recording before using it for research. We test them before they get to you but might not have covered all the use cases and your particular hardware. 
 
@@ -104,15 +119,29 @@ Since this new FPGA module was developed by us, it has the voltage protection ci
 
 The LED that indicates that the FPGA module is powered used to be green on the FPGA module we used previously, but on our new one it is red.
 
+.. image:: /_static/images/usermanual/newfpga/FPGA-module-power-led.png
+    :width: 60%
+    :align: center
+
 The green LEDs on the left indicate different statuses so they can be used to troubleshoot.
 
 * **The device name is now Open Ephys FT600 USB board.**
 
 The FPGA module is no longer a development board created by Opal Kelly. Instead, we have designed it at Open Ephys based on a Lattice ECP5 FPGA. It uses an FTDI FT600 USB chip, which explains the new name.
 
-You should find it listed in ``Settings > Devices`` under “Other devices” with the name ``Open Ephys FT600 USB board``.
+You should find it listed in ``Settings > Devices`` under ``Other devices`` with the name ``Open Ephys FT600 USB board``.
 
-In the Device Manager, it is sometimes listed under ``Other devices`` as ``Open Ephys FT600 USB board`` and other times only the USB controller is shown, as ``FTDI FT600 USB 3.0 Bridge Device``. If you see a warning icon, you have to :ref:`install the driver<newfpga_driver>`.
+.. image:: /_static/images/usermanual/newfpga/Settings-device-name.png
+    :width: 50%
+    :align: center
+
+In the Device Manager, it is sometimes listed under ``Other devices`` as ``Open Ephys FT600 USB board`` and other times only the USB controller is shown, which is listed as ``FTDI FT600 USB 3.0 Bridge Device``.
+
+If you see a warning icon, you have to :ref:`install the driver<newfpga_driver>`.
+
+.. image:: /_static/images/usermanual/newfpga/Device-manager-devicename-usbcontroller.png
+    :width: 80%
+    :align: center
 
 * **It uses a different OE GUI plugin and Bonsai package.**
 
@@ -126,11 +155,13 @@ Until software integration is complete, the acquisition board with the new FPGA 
 
 It takes a little more time  than previously to initialize the plugin (every time you add the OE FPGA Acquisition Board plugin to the signal chain). This is something we are aware of and are working on improving. It also happens at runtime when using the new Bonsai node.
 
-Additionally, this new FPGA module performs a self-initialization on power up (for approximately 20 sec after it is first connected to the power supply). If you try to use the OE FPGA Acquisition Board plugin during this time, you will see the following message in the console: 
+Additionally, this new FPGA module performs a self-initialization on power up for approximately 20 seconds after it is first connected to the power supply. If you try to use the OE FPGA Acquisition Board plugin during this time, you will see the following message in the console: 
 
-And the plugin will wait until it is completed to continue loading. The GUI might appear non responsive during this time:
+.. image:: /_static/images/usermanual/newfpga/Self-init-message.png
+    :width: 95%
+    :align: center
 
-This will not appear if the node is created after the board has performed this self-initialization.
+And the plugin will wait until the self-initialization is completed to continue loading. The GUI might appear non responsive during this time. This will not appear if the node is created after the board has performed this self-initialization.
 
 * **The bitfile is stored permanently on the board. Make sure you update to the latest gateware version.**
 
@@ -189,5 +220,5 @@ The Open Ephys FPGA board makes use of `LiteDRAM <https://github.com/enjoy-digit
 ..     plugging it again and executing the updater.
 
 .. .. image:: /_static/images/usermanual/gateware/GUI-message.png
-..     :width: 80%
-..     :align: center
+..    :width: 80%
+..    :align: center
