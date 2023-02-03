@@ -34,18 +34,16 @@ This a headstage designed by Open Ephys designed, which also uses an Intan chip.
 - It has 2 built-in LEDs for tracking purpose
 - And, most importantly: the flat, round design means that the center of mass of the headstage is closer to the head of the animal. This cuts torque in half, reducing the impact on animal. Mice with this headstage can easily lower their heads and perform most licking/nosepoke paradigms. (Imagine wearing a heavy tall hat, and how that would influence your balance.)
 
-.. image:: ../_static/images/usermanual/headstages/image-20201209-170837.png
+.. figure:: ../_static/images/usermanual/headstages/image-20201209-170837.png
   :scale: 60
   :align: center
+
+*Left: Intan headstage with higher weight and torque; Right: Low-profile headstage*
 
 Low-profile headstage channel map
 ***********************************
 
 If you are using the low-profile Hirose SPI headstage, bought from Open Ephys Production site, use `this sheet <https://docs.google.com/spreadsheets/d/1WYDymxNqGRtFPxn69H9JzeMgePpXcFSPHiWJYBE0lu4/edit#gid=0>`__ to map your tetrodes to your software. It also includes the corresponding Hirose EIB (v.1.2) mapping. Using the classic Open Ephys Acquisition Board, channels will show up in software as if you sort the sheet by the Intan channel number.
-
-|
-
-*Left: Intan headstage with higher weight and torque; Right: Low-profile headstage*
 
 Samtec/Mill-Max Headstage
 ###################################
