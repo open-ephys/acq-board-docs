@@ -4,7 +4,7 @@ Gateware updates
 =========================================
 
 Here are the files and instructions to update the Open Ephys FPGA module inside
-the Acquisition Board
+the Acquisition Board.
 
 .. note:: This is only for boards using the new Open Ephys FPGA (Dec 2022 onwards).
     Older systems do not require this.
