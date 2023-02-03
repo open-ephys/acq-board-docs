@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Manual &#8212; Open Ephys Acquisition Board</title>
+    <title>Gateware updates &#8212; Open Ephys Acquisition Board</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/_static/theme_overrides.css" type="text/css" />
@@ -20,8 +20,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Quickstart guide" href="Quickstart-guide.html" />
-    <link rel="prev" title="Open Ephys Acquisition Board" href="../index.html" />
+    <link rel="next" title="Build Instructions" href="../Build-Instructions/index.html" />
+    <link rel="prev" title="Acquisition software" href="Acquisition-software.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
   </head>
@@ -44,7 +44,7 @@
         
         
         <li class="nav-item active">
-            <a class="nav-link" href="">User Manual</a>
+            <a class="nav-link" href="index.html">User Manual</a>
         </li>
         
         <li class="nav-item ">
@@ -171,8 +171,8 @@
           
         
           
-              <li class="">
-                  <a href="Gateware-Update.html">Gateware updates</a>
+              <li class="active">
+                  <a href="">Gateware updates</a>
               </li>
           
         
@@ -193,9 +193,40 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#latest-version" class="nav-link">Latest version</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#instructions" class="nav-link">Instructions</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#notes-on-mac" class="nav-link">Notes on Mac</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#determining-current-gateware-version" class="nav-link">Determining current gateware version</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#on-the-open-ephys-gui" class="nav-link">On the Open Ephys GUI</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#on-bonsai" class="nav-link">On Bonsai</a>
+        </li>
+    
+            </ul>
+        </li>
     
     </ul>
 </nav>
@@ -210,17 +241,72 @@
               
               <div>
                 
-  <div class="section" id="user-manual">
-<span id="usermanual"></span><h1>User Manual<a class="headerlink" href="#user-manual" title="Permalink to this headline">¶</a></h1>
-<p>You can follow the <a class="reference internal" href="Quickstart-guide.html#quickstartguide"><span class="std std-ref">Quickstart guide</span></a> to learn how to start collecting data right away. However, we recommend reading the <a class="reference internal" href="How-it-works.html#howitworks"><span class="std std-ref">How it works</span></a> page carefully if you’re going to use our hardware, and especially if you’re going to build it. When something goes wrong, or if your data look suspicious, knowing the basics of how the hardware works will make it easier to troubleshoot. And the more people who have a thorough understanding of the Open Ephys ecosystem, the easier it will be to support new users.</p>
-<p>We’re going to assume a basic understanding of electronic circuits. If you don’t have any hands-on experience working with electronics, check out our free course materials on extracellular electrophysiology acquisition <a class="reference external" href="https://ahleighton.github.io/OE-ephys-course/">here</a>, which also covers the basic electronics you will need. It would also be helpful to read through the documentation available on the <a class="reference external" href="https://intantech.com/products_RHD2000.html">Intan website</a> to learn more about the RHD2000 chip.</p>
+  <div class="section" id="gateware-updates">
+<span id="gwupdate"></span><h1>Gateware updates<a class="headerlink" href="#gateware-updates" title="Permalink to this headline">¶</a></h1>
+<p>Here are the files and instructions to update the Open Ephys FPGA module inside
+the Acquisition Board</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>From December 2022 the acquisition board features a new FPGA designed by Open Ephys.
-Among other differences, the new board stores the bitfile for its gateware internally.
-It is recommended to check the <a class="reference internal" href="Gateware-Update.html#gwupdate"><span class="std std-ref">Gateware updates</span></a> page to keep your board updated.</p>
+<p>This is only for boards using the new Open Ephys FPGA (Dec 2022 onwards).
+Older systems do not require this.</p>
 </div>
-<div class="toctree-wrapper compound">
+<div class="section" id="latest-version">
+<span id="gwupdate-latest"></span><h2>Latest version<a class="headerlink" href="#latest-version" title="Permalink to this headline">¶</a></h2>
+<p>The latest avilable gateware is <a class="reference external" href="/_static/files/OpenEphysFPGA-gw04.zip">version 0.4</a>.</p>
+</div>
+<div class="section" id="instructions">
+<span id="gwupdate-instructions"></span><h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Download the <a class="reference internal" href="#gwupdate-latest"><span class="std std-ref">Latest version</span></a> of the gateware</p></li>
+<li><p>Extract the contents of the file</p></li>
+<li><p>Run the updater</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>On Windows: Double click on the file <code class="docutils literal notranslate"><span class="pre">UpdateFPGA_v0_4.bat</span></code></p></li>
+<li><p>On Linux or Mac: Execute the file <code class="docutils literal notranslate"><span class="pre">UpdateFPGA_v0_4.sh</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Wait a couple of minutes for the process to finish.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The programmer might appear frozen at some percentages, but it is working.
+In the rare case that something went wrong and it got stuck for more than <strong>5 minutes</strong>
+it is safe to try again, just by unplugging the board from power and usb,
+plugging it again and executing the updater.
+However, please wait for at least 5 minutes for the programmer to run before</p>
+</div>
+<div class="section" id="notes-on-mac">
+<h3>Notes on Mac<a class="headerlink" href="#notes-on-mac" title="Permalink to this headline">¶</a></h3>
+<p>Some security features on mac might prevent the updater from running. A message
+indicating that <code class="docutils literal notranslate"><span class="pre">libftd3xx.dylib</span></code> is not signed might appear. The steps to solve
+this are:</p>
+<ol class="arabic simple">
+<li><p>Go to system settings</p></li>
+<li><p>Go to the Security and Privacy section</p></li>
+<li><p>Unlock the page by clicking on the lower-left padlock icon. It will ask for your password</p></li>
+<li><p>Near the bottom of the page, the library error will appear, click on allow</p></li>
+<li><p>Run the updater again, if a window appears, it will have an <code class="docutils literal notranslate"><span class="pre">open</span></code> option now</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="determining-current-gateware-version">
+<h2>Determining current gateware version<a class="headerlink" href="#determining-current-gateware-version" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="on-the-open-ephys-gui">
+<h3>On the Open Ephys GUI<a class="headerlink" href="#on-the-open-ephys-gui" title="Permalink to this headline">¶</a></h3>
+<p>Afer dragging the <code class="docutils literal notranslate"><span class="pre">OE</span> <span class="pre">FPGA</span> <span class="pre">Acquisition</span> <span class="pre">Board</span></code> to the signal chain, a message in the console
+will appear, with the current running gateware.</p>
+<a class="reference internal image-reference" href="../_images/GUI-message.png"><img alt="../_images/GUI-message.png" class="align-center" src="../_images/GUI-message.png" style="width: 80%;" /></a>
+</div>
+<div class="section" id="on-bonsai">
+<h3>On Bonsai<a class="headerlink" href="#on-bonsai" title="Permalink to this headline">¶</a></h3>
+<p>After creating the <code class="docutils literal notranslate"><span class="pre">Source/OpenEphys/AcquisitionBoard</span></code> node, the properties at the
+right of the window will contain a <code class="docutils literal notranslate"><span class="pre">GatewareVersion</span></code> field.</p>
+<a class="reference internal image-reference" href="../_images/Bonsai-version.png"><img alt="../_images/Bonsai-version.png" class="align-center" src="../_images/Bonsai-version.png" style="width: 30%;" /></a>
+<p>If the version does not appear or appears as <code class="docutils literal notranslate"><span class="pre">N/A</span></code> when creating the node, it will be properly
+updated after acquisition starts.</p>
+</div>
 </div>
 </div>
 
@@ -230,8 +316,8 @@ It is recommended to check the <a class="reference internal" href="Gateware-Upda
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">Open Ephys Acquisition Board</a>
-    <a class='right-next' id="next-link" href="Quickstart-guide.html" title="next page">Quickstart guide</a>
+    <a class='left-prev' id="prev-link" href="Acquisition-software.html" title="previous page">Acquisition software</a>
+    <a class='right-next' id="next-link" href="../Build-Instructions/index.html" title="next page">Build Instructions</a>
 
               </div>
               
