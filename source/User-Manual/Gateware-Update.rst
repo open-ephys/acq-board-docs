@@ -57,7 +57,7 @@ Determining current gateware version
 In the Open Ephys GUI 
 ***************************
 
-After dragging the ``OE FPGA Acquisition Board`` to the signal chain, a message in the console
+After dragging the ``OE FPGA Acquisition Board`` plugin to the signal chain, a message in the console
 will appear, with the current running gateware.
 
 .. image:: /_static/images/usermanual/gateware/GUI-message.png
