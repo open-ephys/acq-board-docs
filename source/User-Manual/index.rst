@@ -30,3 +30,4 @@ We're going to assume a basic understanding of electronic circuits. If you don't
     Computer-hardware
     Acquisition-software
     Gateware-Update
+    New-FPGA
