@@ -20,7 +20,7 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Build Instructions" href="../Build-Instructions/index.html" />
+    <link rel="next" title="New Open Ephys FPGA module" href="New-FPGA.html" />
     <link rel="prev" title="Acquisition software" href="Acquisition-software.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -176,6 +176,12 @@
               </li>
           
         
+          
+              <li class="">
+                  <a href="New-FPGA.html">New Open Ephys FPGA module</a>
+              </li>
+          
+        
       
       
       
@@ -218,11 +224,11 @@
             <a href="#determining-current-gateware-version" class="nav-link">Determining current gateware version</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h3">
-            <a href="#on-the-open-ephys-gui" class="nav-link">On the Open Ephys GUI</a>
+            <a href="#in-the-open-ephys-gui" class="nav-link">In the Open Ephys GUI</a>
         </li>
     
         <li class="nav-item toc-entry toc-h3">
-            <a href="#on-bonsai" class="nav-link">On Bonsai</a>
+            <a href="#in-bonsai" class="nav-link">In Bonsai</a>
         </li>
     
             </ul>
@@ -244,7 +250,7 @@
   <div class="section" id="gateware-updates">
 <span id="gwupdate"></span><h1>Gateware updates<a class="headerlink" href="#gateware-updates" title="Permalink to this headline">¶</a></h1>
 <p>Here are the files and instructions to update the Open Ephys FPGA module inside
-the Acquisition Board</p>
+the Acquisition Board.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only for boards using the new Open Ephys FPGA (Dec 2022 onwards).
@@ -252,7 +258,7 @@ Older systems do not require this.</p>
 </div>
 <div class="section" id="latest-version">
 <span id="gwupdate-latest"></span><h2>Latest version<a class="headerlink" href="#latest-version" title="Permalink to this headline">¶</a></h2>
-<p>The latest avilable gateware is <a class="reference download internal" download="" href="../_downloads/931dc36356f0310b4702f3fede1895f4/OpenEphysFPGA-gw04.zip"><code class="xref download docutils literal notranslate"><span class="pre">version</span> <span class="pre">0.4</span></code></a>.</p>
+<p>The latest available gateware is <a class="reference download internal" download="" href="../_downloads/931dc36356f0310b4702f3fede1895f4/OpenEphysFPGA-gw04.zip"><code class="xref download docutils literal notranslate"><span class="pre">version</span> <span class="pre">0.4</span></code></a>.</p>
 </div>
 <div class="section" id="instructions">
 <span id="gwupdate-instructions"></span><h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h2>
@@ -274,8 +280,7 @@ Older systems do not require this.</p>
 <p>The programmer might appear frozen at some percentages, but it is working.
 In the rare case that something went wrong and it got stuck for more than <strong>5 minutes</strong>
 it is safe to try again, just by unplugging the board from power and usb,
-plugging it again and executing the updater.
-However, please wait for at least 5 minutes for the programmer to run before</p>
+plugging it again and executing the updater.</p>
 </div>
 <div class="section" id="notes-on-mac">
 <h3>Notes on Mac<a class="headerlink" href="#notes-on-mac" title="Permalink to this headline">¶</a></h3>
@@ -293,14 +298,14 @@ this are:</p>
 </div>
 <div class="section" id="determining-current-gateware-version">
 <h2>Determining current gateware version<a class="headerlink" href="#determining-current-gateware-version" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="on-the-open-ephys-gui">
-<h3>On the Open Ephys GUI<a class="headerlink" href="#on-the-open-ephys-gui" title="Permalink to this headline">¶</a></h3>
-<p>Afer dragging the <code class="docutils literal notranslate"><span class="pre">OE</span> <span class="pre">FPGA</span> <span class="pre">Acquisition</span> <span class="pre">Board</span></code> to the signal chain, a message in the console
+<div class="section" id="in-the-open-ephys-gui">
+<h3>In the Open Ephys GUI<a class="headerlink" href="#in-the-open-ephys-gui" title="Permalink to this headline">¶</a></h3>
+<p>After dragging the <code class="docutils literal notranslate"><span class="pre">OE</span> <span class="pre">FPGA</span> <span class="pre">Acquisition</span> <span class="pre">Board</span></code> plugin to the signal chain, a message in the console
 will appear, with the current running gateware.</p>
 <a class="reference internal image-reference" href="../_images/GUI-message.png"><img alt="../_images/GUI-message.png" class="align-center" src="../_images/GUI-message.png" style="width: 80%;" /></a>
 </div>
-<div class="section" id="on-bonsai">
-<h3>On Bonsai<a class="headerlink" href="#on-bonsai" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="in-bonsai">
+<h3>In Bonsai<a class="headerlink" href="#in-bonsai" title="Permalink to this headline">¶</a></h3>
 <p>After creating the <code class="docutils literal notranslate"><span class="pre">Source/OpenEphys/AcquisitionBoard</span></code> node, the properties at the
 right of the window will contain a <code class="docutils literal notranslate"><span class="pre">GatewareVersion</span></code> field.</p>
 <a class="reference internal image-reference" href="../_images/Bonsai-version.png"><img alt="../_images/Bonsai-version.png" class="align-center" src="../_images/Bonsai-version.png" style="width: 30%;" /></a>
@@ -317,7 +322,7 @@ updated after acquisition starts.</p>
               <div class='prev-next-bottom'>
                 
     <a class='left-prev' id="prev-link" href="Acquisition-software.html" title="previous page">Acquisition software</a>
-    <a class='right-next' id="next-link" href="../Build-Instructions/index.html" title="next page">Build Instructions</a>
+    <a class='right-next' id="next-link" href="New-FPGA.html" title="next page">New Open Ephys FPGA module</a>
 
               </div>
               

@@ -1,0 +1,459 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Open Ephys FPGA module &#8212; Open Ephys Acquisition Board</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/_static/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Build Instructions" href="../Build-Instructions/index.html" />
+    <link rel="prev" title="Gateware updates" href="Gateware-Update.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="../index.html">
+      <img src="../_static/oe_logo_acq_board.svg" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">User Manual</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../Build-Instructions/index.html">Build Instructions</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../Tutorials/index.html">Tutorials</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../FAQ/index.html">FAQs</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://open-ephys.org">Open Ephys<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/open-ephys" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/openephys" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+        
+          
+              <li class="">
+                  <a href="Quickstart-guide.html">Quickstart guide</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="How-it-works.html">How it works</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="Acquisition-system-parts.html">Other equipment you will need</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="Electrodes.html">Compatible electrodes</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="Headstages.html">Headstages</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="Cables.html">Cables</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="Custom-cables.html">Custom cables</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="Peripheral-devices.html">Peripheral devices</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="Computer-hardware.html">Computer hardware</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="Acquisition-software.html">Acquisition software</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="Gateware-Update.html">Gateware updates</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">New Open Ephys FPGA module</a>
+              </li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#instructions-currently-windows-only" class="nav-link">Instructions (currently Windows only)</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#install-the-driver" class="nav-link">1. Install the driver</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#make-sure-your-open-ephys-gui-version-is-up-to-date" class="nav-link">2. Make sure your Open Ephys GUI version is up to date</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#install-the-plugin-currently-windows-only" class="nav-link">3. Install the plugin (currently Windows only)</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#make-sure-you-have-the-latest-gateware" class="nav-link">1. Make sure you have the latest gateware</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#test-and-use-your-board" class="nav-link">5. Test and use your board!</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#if-you-need-help-or-are-experiencing-issues" class="nav-link">If you need help or are experiencing issues</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#under-development" class="nav-link">Under development</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#differences-with-previous-boards" class="nav-link">Differences with previous boards</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#contribute" class="nav-link">Contribute</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#why-and-how-did-we-make-this-happen" class="nav-link">Why and how did we make this happen?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#external-licenses" class="nav-link">External Licenses</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="new-open-ephys-fpga-module">
+<span id="newfpga"></span><h1>New Open Ephys FPGA module<a class="headerlink" href="#new-open-ephys-fpga-module" title="Permalink to this headline">¶</a></h1>
+<p><em>Last updated: 3rd Feb 2023</em></p>
+<p>Devices shipped from Dec 2022 onwards use a brand-new FPGA module designed by Open Ephys.</p>
+<p>These boards need a different driver and Open Ephys GUI plugin to work.</p>
+<p>Before attempting to use this board, please follow the instructions below.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You will need to install and use:</p>
+<ul class="simple">
+<li><p>A different driver, <strong>FTD3XXDriver</strong></p></li>
+<li><p>A different plugin, <strong>OE FPGA Acquisition Board</strong> for GUI v0.6.x (currently Windows only)</p></li>
+<li><p>The <a class="reference internal" href="Gateware-Update.html#gwupdate-latest"><span class="std std-ref">latest gateware</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="instructions-currently-windows-only">
+<span id="newfpga-instructions"></span><h2>Instructions (currently Windows only)<a class="headerlink" href="#instructions-currently-windows-only" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="install-the-driver">
+<span id="newfpga-driver"></span><h3>1. Install the driver<a class="headerlink" href="#install-the-driver" title="Permalink to this headline">¶</a></h3>
+<p>The new FPGA uses different drivers that need to be installed before plugging the device to your computer.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Download the drivers <a class="reference external" href="https://www.ftdichip.com/Drivers/D3XX/FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe.zip">here</a>.</p></li>
+<li><p>Unzip the folder</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe</span></code></p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="make-sure-your-open-ephys-gui-version-is-up-to-date">
+<span id="newfpga-guiversion"></span><h3>2. Make sure your Open Ephys GUI version is up to date<a class="headerlink" href="#make-sure-your-open-ephys-gui-version-is-up-to-date" title="Permalink to this headline">¶</a></h3>
+<p>The new plugin works in version v0.6.x of the GUI and above.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Download the latest version of the Open Ephys GUI <a class="reference external" href="https://open-ephys.org/gui">here</a>.</p></li>
+<li><p>Double-click the downloaded executable to launch the installer.</p></li>
+<li><p>Follow the installer instructions.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="install-the-plugin-currently-windows-only">
+<span id="newfpga-plugin"></span><h3>3. Install the plugin (currently Windows only)<a class="headerlink" href="#install-the-plugin-currently-windows-only" title="Permalink to this headline">¶</a></h3>
+<p>You now need to install the new plugin in the Open Ephys GUI v0.6.x or above.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Within the Open Ephys GUI, select <code class="docutils literal notranslate"><span class="pre">Plugin</span> <span class="pre">Installer</span></code> from the <code class="docutils literal notranslate"><span class="pre">File</span></code> menu.</p></li>
+</ol>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/GUI-plugin-installer-menu.png"><img alt="../_images/GUI-plugin-installer-menu.png" class="align-center" src="../_images/GUI-plugin-installer-menu.png" style="width: 30%;" /></a>
+<ol class="clear-both arabic simple" start="2">
+<li><p>Find the <code class="docutils literal notranslate"><span class="pre">OE</span> <span class="pre">FPGA</span> <span class="pre">Acquisition</span> <span class="pre">Board</span></code> plugin and click <code class="docutils literal notranslate"><span class="pre">Install</span></code>. <em>Always use the latest version of the plugin</em></p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/GUI-plugin-installer-choice.png"><img alt="../_images/GUI-plugin-installer-choice.png" class="align-center" src="../_images/GUI-plugin-installer-choice.png" style="width: 80%;" /></a>
+</div>
+<div class="section" id="make-sure-you-have-the-latest-gateware">
+<span id="newfpga-gateware"></span><h3>1. Make sure you have the latest gateware<a class="headerlink" href="#make-sure-you-have-the-latest-gateware" title="Permalink to this headline">¶</a></h3>
+<p>We have released several improvements since the first batch of boards went out, so depending on when you got your board, you might not have the latest gateware.</p>
+<p>Follow the instructions on the <a class="reference internal" href="Gateware-Update.html#gwupdate"><span class="std std-ref">Gateware updates</span></a> page to check your gateware version and update it.</p>
+</div>
+<div class="section" id="test-and-use-your-board">
+<h3>5. Test and use your board!<a class="headerlink" href="#test-and-use-your-board" title="Permalink to this headline">¶</a></h3>
+<p>You can now use this plugin to acquire data from your acquisition board. Usage instructions for the board can be found in this User Manual and for the plugin, in the <a class="reference external" href="https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Rhythm-Plugins.html">Rhythm Plugins page</a> of the OE GUI documentation.</p>
+<p>Avoid confusing the new <code class="docutils literal notranslate"><span class="pre">OE</span> <span class="pre">FPGA</span> <span class="pre">Acquisition</span> <span class="pre">Board</span></code> plugin with the one called <code class="docutils literal notranslate"><span class="pre">Acquisition</span> <span class="pre">Board</span></code>, which was used for previous versions of the acquisition board that did not have the Open Ephys FPGA. We are working on consolidating everything into the same plugin but for the moment, these are two separate plugins. Your new board will not work with the old plugin and vice versa.</p>
+<a class="reference internal image-reference" href="../_images/GUI-plugin-list.png"><img alt="../_images/GUI-plugin-list.png" class="align-center" src="../_images/GUI-plugin-list.png" style="width: 30%;" /></a>
+<p>As with any new device, test your acquisition board to make sure it is working as expected by performing checks on a short recording before using it for research. We test them before they get to you but might not have covered all the use cases and your particular hardware.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The impedance measurement functionality of the new board is not currently working. Once a fix is ready, we will put out an updated version of the OE FPGA Acquisition Board plugin.</p>
+</div>
+</div>
+</div>
+<div class="section" id="if-you-need-help-or-are-experiencing-issues">
+<span id="newfpga-help"></span><h2>If you need help or are experiencing issues<a class="headerlink" href="#if-you-need-help-or-are-experiencing-issues" title="Permalink to this headline">¶</a></h2>
+<p>Please reach out to <em>support&#64;oeps.tech</em> with these details:</p>
+<ul class="simple">
+<li><p>tell us you have an acquisition board with the new FPGA module</p></li>
+<li><p>copy &amp; paste the complete contents of the console log (from the console window that opens at the same time as the GUI)</p></li>
+<li><p>include a screenshot or photo of the issue</p></li>
+</ul>
+</div>
+<div class="section" id="under-development">
+<span id="newfpga-development"></span><h2>Under development<a class="headerlink" href="#under-development" title="Permalink to this headline">¶</a></h2>
+<p>We will continue to work on getting the full integration of the board with the new FPGA module that the previous boards had. These functionalities are underway:</p>
+<ul class="simple">
+<li><p>New OE FPGA Acquisition board plugin for Mac and Linux. If you need to use these OS, let us know and we will compile it for you.</p></li>
+<li><p>Unified OE GUI plugin for all acquisition boards regardless of the FPGA module they have</p></li>
+</ul>
+</div>
+<div class="section" id="differences-with-previous-boards">
+<span id="newfpga-differences"></span><h2>Differences with previous boards<a class="headerlink" href="#differences-with-previous-boards" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>This board only has one power port. Always use the 5V power supply provided.</strong></p></li>
+</ul>
+<p>Since this new FPGA module was developed by us, it has the voltage protection circuitry we require for use with the acquisition board.</p>
+<ul class="simple">
+<li><p><strong>The power light inside the board is now red.</strong></p></li>
+</ul>
+<p>The LED that indicates that the FPGA module is powered used to be green on the FPGA module we used previously, but on our new one it is red.</p>
+<a class="reference internal image-reference" href="../_images/FPGA-module-power-led.png"><img alt="../_images/FPGA-module-power-led.png" class="align-center" src="../_images/FPGA-module-power-led.png" style="width: 60%;" /></a>
+<p>The green LEDs on the left indicate different statuses so they can be used to troubleshoot.</p>
+<ul class="simple">
+<li><p><strong>The device name is now Open Ephys FT600 USB board.</strong></p></li>
+</ul>
+<p>The FPGA module is no longer a development board created by Opal Kelly. Instead, we have designed it at Open Ephys based on a Lattice ECP5 FPGA. It uses an FTDI FT600 USB chip, which explains the new name.</p>
+<p>You should find it listed in <code class="docutils literal notranslate"><span class="pre">Settings</span> <span class="pre">&gt;</span> <span class="pre">Devices</span></code> under <code class="docutils literal notranslate"><span class="pre">Other</span> <span class="pre">devices</span></code> with the name <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Ephys</span> <span class="pre">FT600</span> <span class="pre">USB</span> <span class="pre">board</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/Settings-device-name.png"><img alt="../_images/Settings-device-name.png" class="align-center" src="../_images/Settings-device-name.png" style="width: 50%;" /></a>
+<p>In the Device Manager, it is sometimes listed under <code class="docutils literal notranslate"><span class="pre">Other</span> <span class="pre">devices</span></code> as <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Ephys</span> <span class="pre">FT600</span> <span class="pre">USB</span> <span class="pre">board</span></code> and other times only the USB controller is shown, which is listed as <code class="docutils literal notranslate"><span class="pre">FTDI</span> <span class="pre">FT600</span> <span class="pre">USB</span> <span class="pre">3.0</span> <span class="pre">Bridge</span> <span class="pre">Device</span></code>.</p>
+<p>If you see a warning icon, you have to <a class="reference internal" href="#newfpga-driver"><span class="std std-ref">install the driver</span></a>.</p>
+<a class="reference internal image-reference" href="../_images/Device-manager-devicename-usbcontroller.png"><img alt="../_images/Device-manager-devicename-usbcontroller.png" class="align-center" src="../_images/Device-manager-devicename-usbcontroller.png" style="width: 80%;" /></a>
+<ul class="simple">
+<li><p><strong>It uses a different OE GUI plugin and Bonsai package.</strong></p></li>
+</ul>
+<p>Until software integration is complete, the acquisition board with the new FPGA module uses a different plugin in the OE GUI and a different package in Bonsai than the previous boards.</p>
+<blockquote>
+<div><p>The OE GUI plugin is: <code class="docutils literal notranslate"><span class="pre">OE</span> <span class="pre">FPGA</span> <span class="pre">Acquisition</span> <span class="pre">Board</span></code></p>
+<p>The Bonsai package is: <code class="docutils literal notranslate"><span class="pre">Bonsai.OpenEphys</span></code></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Plugin initialization takes slightly longer.</strong></p></li>
+</ul>
+<p>It takes a little more time than previously to initialize the plugin (every time you add the OE FPGA Acquisition Board plugin to the signal chain). This is something we are aware of and are working on improving. It also happens at runtime when using the new Bonsai node.</p>
+<p>Additionally, this new FPGA module performs a self-initialization on power up for approximately 20 seconds after it is first connected to the power supply. If you try to use the OE FPGA Acquisition Board plugin during this time, you will see the following message in the console:</p>
+<a class="reference internal image-reference" href="../_images/Self-init-message.png"><img alt="../_images/Self-init-message.png" class="align-center" src="../_images/Self-init-message.png" style="width: 95%;" /></a>
+<p>And the plugin will wait until the self-initialization is completed to continue loading. The GUI might appear non responsive during this time. This will not appear if the node is created after the board has performed this self-initialization.</p>
+<ul class="simple">
+<li><p><strong>The bitfile is stored permanently on the board. Make sure you update to the latest gateware version.</strong></p></li>
+</ul>
+<p>In this new FPGA module, the bitfile is not uploaded by the OE GUI each time the board is recognized, but resides permanently on the board. This makes it easier  to use it across different software like Bonsai as it avoids bitfile path issues.</p>
+<p>However, this means that if there are any updates to the gateware you have to upload the bitfile manually. Gatware updates are not common after an initial period during which any bugs are resolved. For reference, the bitfile for the old board has changed less than 10 times in 7 years. You can update the gateware on your FPGA module by following the instructions on the <a class="reference internal" href="Gateware-Update.html#gwupdate"><span class="std std-ref">Gateware updates</span></a> page.</p>
+</div>
+<div class="section" id="contribute">
+<span id="newfpga-contribute"></span><h2>Contribute<a class="headerlink" href="#contribute" title="Permalink to this headline">¶</a></h2>
+<p>We count on user feedback to improve our devices, as we test them before they get to you but might not have covered all the use cases and your particular hardware. Always test new devices by performing checks on a short recording before using them for research.</p>
+<p>If you find any problems, please let us know and we will address them as fast as we can. We would appreciate it if you can post a GitHub Issue to the plugin repository <a class="reference external" href="https://github.com/open-ephys-plugins/rhythm-oni-plugin/issues">here</a>.</p>
+<p>While acquisition board usage is the same, we will be slowly updating the documentation to reflect these changes. You are welcome to contribute to our documentation <a class="reference external" href="https://github.com/open-ephys/acq-board-docs">here</a>.</p>
+</div>
+<div class="section" id="why-and-how-did-we-make-this-happen">
+<span id="newfpga-why"></span><h2>Why and how did we make this happen?<a class="headerlink" href="#why-and-how-did-we-make-this-happen" title="Permalink to this headline">¶</a></h2>
+<p>Our acquisition board relies on an FPGA (Field-Programmable Gate Array) to control data acquisition and timestamp the incoming data (see the details on the <a class="reference internal" href="How-it-works.html#howitworks"><span class="std std-ref">How it works</span></a> page). The Opal Kelly FPGA module we used in previous acquisition boards was end-of-lifed all of a sudden at the end of 2021 and it immediately ran out of stock.</p>
+<p>The Open Ephys team, led by Aarón Cuevas López, developed a completely new module with the scarce components available despite the ongoing silicon shortage. This module uses the same footprint as the previous one, so it can be replaced directly on the existing acquisition boards, although it uses a different FPGA, a Lattice EPC5, and its <a class="reference external" href="https://github.com/open-ephys/ECP5U85-BSE-USB">design is open source</a>. Additionally, communication with the computer follows our new ONI standard for common interfaces in neuro tools (the same standard that powers our next-gen system, <a class="reference external" href="http://open-ephys.github.io/onix-docs/">ONIX</a>).</p>
+<p>In under a year, this new design went into production and we started to ship to users that had been waiting eagerly for new boards and repaired boards. Software integration quickly followed, to provide users with the same functionality they know and have come to rely on for their research over the past decade.</p>
+</div>
+<div class="section" id="external-licenses">
+<span id="newfpga-licenses"></span><h2>External Licenses<a class="headerlink" href="#external-licenses" title="Permalink to this headline">¶</a></h2>
+<p>The Open Ephys FPGA board makes use of <a class="reference external" href="https://github.com/enjoy-digital/litedram">LiteDRAM</a> as a memory controller.</p>
+<blockquote>
+<div><p><em>Unless otherwise noted, LiteDRAM is Copyright 2012-2022 / EnjoyDigital</em>
+<em>Initial development is based on MiSoC’s LASMICON / Copyright 2007-2016 / M-Labs</em></p>
+<p><em>Redistribution and use in source and binary forms, with or without modification,</em>
+<em>are permitted provided that the following conditions are met:</em></p>
+<p><em>1. Redistributions of source code must retain the above copyright notice, this</em>
+<em>list of conditions and the following disclaimer.</em></p>
+<p><em>2. Redistributions in binary form must reproduce the above copyright notice,</em>
+<em>this list of conditions and the following disclaimer in the documentation</em>
+<em>and/or other materials provided with the distribution.</em></p>
+<p><em>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</em>
+<em>Other authors retain ownership of their contributions. If a submission can reasonably be considered independently copyrightable, it’s yours and we encourage you to claim it with appropriate copyright notices. This submission then falls under the “otherwise noted” category. All submissions are strongly encouraged to use the two-clause BSD license reproduced above.</em></p>
+</div></blockquote>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="Gateware-Update.html" title="previous page">Gateware updates</a>
+    <a class='right-next' id="next-link" href="../Build-Instructions/index.html" title="next page">Build Instructions</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2010-2023, Open Ephys &amp; Contributors.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

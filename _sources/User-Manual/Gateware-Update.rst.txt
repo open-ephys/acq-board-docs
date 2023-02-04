@@ -4,7 +4,7 @@ Gateware updates
 =========================================
 
 Here are the files and instructions to update the Open Ephys FPGA module inside
-the Acquisition Board
+the Acquisition Board.
 
 .. note:: This is only for boards using the new Open Ephys FPGA (Dec 2022 onwards).
     Older systems do not require this.
@@ -14,7 +14,7 @@ the Acquisition Board
 Latest version
 -------------------------
 
-The latest avilable gateware is :download:`version 0.4 </_static/files/OpenEphysFPGA-gw04.zip>`.
+The latest available gateware is :download:`version 0.4 </_static/files/OpenEphysFPGA-gw04.zip>`.
 
 .. _gwupdate_instructions:
 
@@ -36,7 +36,6 @@ Instructions
     In the rare case that something went wrong and it got stuck for more than **5 minutes**
     it is safe to try again, just by unplugging the board from power and usb, 
     plugging it again and executing the updater.
-    However, please wait for at least 5 minutes for the programmer to run before
 
 Notes on Mac
 *************************
@@ -55,17 +54,17 @@ this are:
 Determining current gateware version
 ---------------------------------------
 
-On the Open Ephys GUI 
+In the Open Ephys GUI 
 ***************************
 
-Afer dragging the ``OE FPGA Acquisition Board`` to the signal chain, a message in the console
+After dragging the ``OE FPGA Acquisition Board`` plugin to the signal chain, a message in the console
 will appear, with the current running gateware.
 
 .. image:: /_static/images/usermanual/gateware/GUI-message.png
     :width: 80%
     :align: center
 
-On Bonsai
+In Bonsai
 *********************************
 
 After creating the ``Source/OpenEphys/AcquisitionBoard`` node, the properties at the
