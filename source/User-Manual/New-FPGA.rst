@@ -66,7 +66,7 @@ You now need to install the new plugin in the Open Ephys GUI v0.6.x or above.
 
 .. _newfpga_gateware:
 
-1. Make sure you have the latest gateware
+4. Make sure you have the latest gateware
 *****************************************
 
 We have released several improvements since the first batch of boards went out, so depending on when you got your board, you might not have the latest gateware.
@@ -106,7 +106,7 @@ Under development
 We will continue to work on getting the full integration of the board with the new FPGA module that the previous boards had. These functionalities are underway:
 
 * New OE FPGA Acquisition board plugin for Mac and Linux. If you need to use these OS, let us know and we will compile it for you.
-* Unified OE GUI plugin for all acquisition boards regardless of the FPGA module they have
+* Unified OE GUI plugin for all acquisition boards regardless of the FPGA module they have.
 
 .. _newfpga_differences:
 
