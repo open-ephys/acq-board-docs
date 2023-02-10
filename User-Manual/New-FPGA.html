@@ -207,10 +207,20 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#instructions-currently-windows-only" class="nav-link">Instructions (currently Windows only)</a><ul class="nav section-nav flex-column">
+            <a href="#instructions" class="nav-link">Instructions</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h3">
-            <a href="#install-the-driver" class="nav-link">1. Install the driver</a>
+            <a href="#install-the-driver" class="nav-link">1. Install the driver</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#on-windows" class="nav-link">On Windows</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#on-macos" class="nav-link">On MacOS</a>
+        </li>
+    
+            </ul>
         </li>
     
         <li class="nav-item toc-entry toc-h3">
@@ -218,7 +228,7 @@
         </li>
     
         <li class="nav-item toc-entry toc-h3">
-            <a href="#install-the-plugin-currently-windows-only" class="nav-link">3. Install the plugin (currently Windows only)</a>
+            <a href="#install-the-plugin" class="nav-link">3. Install the plugin</a>
         </li>
     
         <li class="nav-item toc-entry toc-h3">
@@ -271,7 +281,7 @@
                 
   <div class="section" id="new-open-ephys-fpga-module">
 <span id="newfpga"></span><h1>New Open Ephys FPGA module<a class="headerlink" href="#new-open-ephys-fpga-module" title="Permalink to this headline">¶</a></h1>
-<p><em>Last updated: 3rd Feb 2023</em></p>
+<p><em>Last updated: 10th Feb 2023</em></p>
 <p>Devices shipped from Dec 2022 onwards use a brand-new FPGA module designed by Open Ephys.</p>
 <p>These boards need a different driver and Open Ephys GUI plugin to work.</p>
 <p>Before attempting to use this board, please follow the instructions below.</p>
@@ -284,18 +294,40 @@
 <li><p>The <a class="reference internal" href="Gateware-Update.html#gwupdate-latest"><span class="std std-ref">latest gateware</span></a></p></li>
 </ul>
 </div>
-<div class="section" id="instructions-currently-windows-only">
-<span id="newfpga-instructions"></span><h2>Instructions (currently Windows only)<a class="headerlink" href="#instructions-currently-windows-only" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="instructions">
+<span id="newfpga-instructions"></span><h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="install-the-driver">
 <span id="newfpga-driver"></span><h3>1. Install the driver<a class="headerlink" href="#install-the-driver" title="Permalink to this headline">¶</a></h3>
 <p>The new FPGA uses different drivers that need to be installed before plugging the device to your computer.</p>
+<div class="section" id="on-windows">
+<h4>On Windows<a class="headerlink" href="#on-windows" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Download the drivers <a class="reference external" href="https://www.ftdichip.com/Drivers/D3XX/FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe.zip">here</a>.</p></li>
+<li><p>Download the <a class="reference external" href="https://www.ftdichip.com/Drivers/D3XX/FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe.zip">Windows driver</a>.</p></li>
 <li><p>Unzip the folder</p></li>
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe</span></code></p></li>
 </ol>
 </div></blockquote>
+</div>
+<div class="section" id="on-macos">
+<h4>On MacOS<a class="headerlink" href="#on-macos" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Download the <a class="reference external" href="https://github.com/open-ephys-plugins/rhythm-oni-plugin/blob/main/Resources/Drivers/libftd3xx.dylib">MacOS driver</a>.</p></li>
+<li><p>Copy the file <code class="docutils literal notranslate"><span class="pre">libftd3xx.dylib</span></code> to <code class="docutils literal notranslate"><span class="pre">/usr/local/lib</span></code> (you can use <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">cp</span> <span class="pre">libftd3xx.dylib</span> <span class="pre">/usr/local/lib</span></code>)</p></li>
+</ol>
+</div></blockquote>
+<p>Some security features on mac might prevent the driver from loading.</p>
+<a class="reference internal image-reference" href="../_images/Mac-driver-security-popup.png"><img alt="../_images/Mac-driver-security-popup.png" class="align-center" src="../_images/Mac-driver-security-popup.png" style="width: 30%;" /></a>
+<p>The steps to solve this are:</p>
+<ol class="arabic simple">
+<li><p>Go to system settings</p></li>
+<li><p>Go to the Security and Privacy section</p></li>
+<li><p>Unlock the page by clicking on the lower-left padlock icon. It will ask for your password</p></li>
+<li><p>Near the bottom of the page, the library error will appear, click on allow</p></li>
+<li><p>Run the updater again, if a window appears, it will have an <code class="docutils literal notranslate"><span class="pre">open</span></code> option now</p></li>
+</ol>
+</div>
 </div>
 <div class="section" id="make-sure-your-open-ephys-gui-version-is-up-to-date">
 <span id="newfpga-guiversion"></span><h3>2. Make sure your Open Ephys GUI version is up to date<a class="headerlink" href="#make-sure-your-open-ephys-gui-version-is-up-to-date" title="Permalink to this headline">¶</a></h3>
@@ -308,8 +340,8 @@
 </ol>
 </div></blockquote>
 </div>
-<div class="section" id="install-the-plugin-currently-windows-only">
-<span id="newfpga-plugin"></span><h3>3. Install the plugin (currently Windows only)<a class="headerlink" href="#install-the-plugin-currently-windows-only" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="install-the-plugin">
+<span id="newfpga-plugin"></span><h3>3. Install the plugin<a class="headerlink" href="#install-the-plugin" title="Permalink to this headline">¶</a></h3>
 <p>You now need to install the new plugin in the Open Ephys GUI v0.6.x or above.</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -350,16 +382,18 @@
 </div>
 <div class="section" id="under-development">
 <span id="newfpga-development"></span><h2>Under development<a class="headerlink" href="#under-development" title="Permalink to this headline">¶</a></h2>
-<p>We will continue to work on getting the full integration of the board with the new FPGA module that the previous boards had. These functionalities are underway:</p>
+<p>We will continue to work on getting the full integration of the board with the new FPGA module that the previous boards had.
+We are working on a unified OE GUI plugin for all acquisition boards regardless of the FPGA module they have.</p>
+<p>We have completed:</p>
 <ul class="simple">
-<li><p>New OE FPGA Acquisition board plugin for Mac and Linux. If you need to use these OS, let us know and we will compile it for you.</p></li>
-<li><p>Unified OE GUI plugin for all acquisition boards regardless of the FPGA module they have.</p></li>
+<li><p>Making the new OE FPGA Acquisition board plugin cross-platform (Windows, MacOS and Linux).</p></li>
+<li><p>Making a new Bonsai node for this new OE FPGA Acquisition board.</p></li>
 </ul>
 </div>
 <div class="section" id="differences-with-previous-boards">
 <span id="newfpga-differences"></span><h2>Differences with previous boards<a class="headerlink" href="#differences-with-previous-boards" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><strong>This board only has one power port. Always use the 5V power supply provided.</strong></p></li>
+<li><p><strong>This board has a single power supply input located on the FPGA module itself. Always use the 5V power supply provided.</strong></p></li>
 </ul>
 <p>Since this new FPGA module was developed by us, it has the voltage protection circuitry we require for use with the acquisition board.</p>
 <ul class="simple">
