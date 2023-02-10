@@ -2,7 +2,7 @@
 
 New Open Ephys FPGA module
 =====================================================
-*Last updated: 3rd Feb 2023*
+*Last updated: 10th Feb 2023*
 
 Devices shipped from Dec 2022 onwards use a brand-new FPGA module designed by Open Ephys.
 
@@ -18,7 +18,7 @@ Before attempting to use this board, please follow the instructions below.
 
 .. _newfpga_instructions:
 
-Instructions (currently Windows only)
+Instructions
 --------------------------------------
 
 .. _newfpga_driver:
@@ -27,10 +27,33 @@ Instructions (currently Windows only)
 **********************
 
 The new FPGA uses different drivers that need to be installed before plugging the device to your computer.
+
+On Windows 
++++++++++++++
    
-   #. Download the drivers `here <https://www.ftdichip.com/Drivers/D3XX/FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe.zip>`_.
+   #. Download the `Windows driver <https://www.ftdichip.com/Drivers/D3XX/FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe.zip>`_.
    #. Unzip the folder
    #. Run ``FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe``
+
+On MacOS 
++++++++++++++
+   
+   #. Download the `MacOS driver <https://github.com/open-ephys-plugins/rhythm-oni-plugin/blob/main/Resources/Drivers/libftd3xx.dylib>`_.
+   #. Copy the file ``libftd3xx.dylib`` to ``/usr/local/lib`` (you can use ``sudo cp libftd3xx.dylib /usr/local/lib``)
+
+Some security features on mac might prevent the driver from loading.
+
+.. image:: /_static/images/usermanual/newfpga/Mac-driver-security-popup.png
+    :width: 30%
+    :align: center
+
+The steps to solve this are:
+
+#. Go to system settings
+#. Go to the Security and Privacy section
+#. Unlock the page by clicking on the lower-left padlock icon. It will ask for your password
+#. Near the bottom of the page, the library error will appear, click on allow
+#. Run the updater again, if a window appears, it will have an ``open`` option now
 
 .. _newfpga_guiversion:
 
@@ -45,7 +68,7 @@ The new plugin works in version v0.6.x of the GUI and above.
 
 .. _newfpga_plugin:
 
-3. Install the plugin (currently Windows only)
+3. Install the plugin
 **********************************************
 
 You now need to install the new plugin in the Open Ephys GUI v0.6.x or above.
@@ -103,18 +126,20 @@ Please reach out to *support@oeps.tech* with these details:
 
 Under development
 -------------------
-We will continue to work on getting the full integration of the board with the new FPGA module that the previous boards had. These functionalities are underway:
+We will continue to work on getting the full integration of the board with the new FPGA module that the previous boards had.
+We are working on a unified OE GUI plugin for all acquisition boards regardless of the FPGA module they have.
 
-* New OE FPGA Acquisition board plugin for Mac and Linux. If you need to use these OS, let us know and we will compile it for you.
-* Unified OE GUI plugin for all acquisition boards regardless of the FPGA module they have.
+We have completed:
+
+* Making the new OE FPGA Acquisition board plugin cross-platform (Windows, MacOS and Linux).
+* Making a new Bonsai node for this new OE FPGA Acquisition board.
 
 .. _newfpga_differences:
 
 Differences with previous boards
 -----------------------------------
 
-* **This board only has one power port. Always use the 5V power supply provided.**
-
+* **This board has a single power supply input located on the FPGA module itself. Always use the 5V power supply provided.**
 Since this new FPGA module was developed by us, it has the voltage protection circuitry we require for use with the acquisition board.
 
 * **The power light inside the board is now red.**
