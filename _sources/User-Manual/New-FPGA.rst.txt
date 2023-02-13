@@ -109,8 +109,6 @@ Avoid confusing the new ``OE FPGA Acquisition Board`` plugin with the one called
 
 As with any new device, test your acquisition board to make sure it is working as expected by performing checks on a short recording before using it for research. We test them before they get to you but might not have covered all the use cases and your particular hardware. 
 
-.. note:: The impedance measurement functionality of the new board is not currently working. Once a fix is ready, we will put out an updated version of the OE FPGA Acquisition Board plugin.
-
 .. _newfpga_help:
 
 If you need help or are experiencing issues
