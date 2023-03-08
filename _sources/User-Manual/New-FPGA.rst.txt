@@ -61,10 +61,8 @@ The steps to solve this are:
 *******************************************************
 
 The new plugin works in version v0.6.x of the GUI and above.
-   
-   #. Download the latest version of the Open Ephys GUI `here <https://open-ephys.org/gui>`_.
-   #. Double-click the downloaded executable to launch the installer.
-   #. Follow the installer instructions.
+
+Follow the steps to `install the latest version of the Open Ephys GUI <https://open-ephys.github.io/gui-docs/User-Manual/Installing-the-GUI.html#>`_.
 
 .. _newfpga_plugin:
 
