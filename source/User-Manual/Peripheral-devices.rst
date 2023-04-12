@@ -72,7 +72,7 @@ Analog Input
 
 **Analog inputs are used for equipment that measures continuous signals, for instance a measurement distance or intensity. This could be anything from a power meter, thermometer, a running wheel, etc.**
 
-There are eight analog inputs on the board, which use the 16-bit ADC161S262 chip from Texas Instruments. By sending this data to the acquisition board, the FPGA will timestamp the analog inputs using the same clock as the ephys data and can display the incoming data alongside your ephys.
+There are eight analog inputs on the board, which use the 16-bit ADS8325 chip from Texas Instruments. By sending this data to the acquisition board, the FPGA will timestamp the analog inputs using the same clock as the ephys data and can display the incoming data alongside your ephys.
 
 Analog inputs are always samples at the same rate and time as the neural signals and are displayed as additional channels in the LFP module, keep in mind that the input range for these signals is different form the neural signals and can be set separately.
 
