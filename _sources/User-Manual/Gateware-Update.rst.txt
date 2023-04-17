@@ -14,7 +14,7 @@ the Acquisition Board.
 Latest version
 -------------------------
 
-The latest available gateware is :download:`version 0.4 </_static/files/OpenEphysFPGA-gw04.zip>`.
+The latest available gateware is :download:`version 1.0 </_static/files/OpenEphysFPGA-gw1.0.zip>`.
 
 .. _gwupdate_instructions:
 
@@ -27,8 +27,8 @@ Instructions
 
 #. Run the updater
 
-    * On Windows: Double click on the file ``UpdateFPGA_v0_4.bat``
-    * On Linux or Mac: Execute the file ``UpdateFPGA_v0_4.sh``
+    * On Windows: Double click on the file ``UpdateFPGA_v1_0.bat``
+    * On Linux or Mac: Execute the file ``UpdateFPGA_v1_0.sh``
 
 #. Wait a couple of minutes for the process to finish.
 
