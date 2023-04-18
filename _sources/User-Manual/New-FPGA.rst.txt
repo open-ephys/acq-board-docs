@@ -13,7 +13,7 @@ Before attempting to use this board, please follow the instructions below.
 .. important:: You will need to install and use:
 
     * A different driver, **FTD3XXDriver**
-    * A different plugin, **OE FPGA Acquisition Board** for GUI v0.6.x (currently Windows only)
+    * A different plugin, **OE FPGA Acquisition Board** for GUI v0.6.x
     * The :ref:`latest gateware<gwupdate_latest>`
 
 .. _newfpga_instructions:
