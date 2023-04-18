@@ -25,6 +25,8 @@ Instructions
 
 #. Extract the contents of the file 
 
+#. Connect the acquisition board to the computer via USB 3.0 and connect it to power using the power supply provided
+
 #. Run the updater
 
     * On Windows: Double click on the file ``UpdateFPGA_v1_0.bat``
