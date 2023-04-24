@@ -262,7 +262,13 @@ Older systems do not require this.</p>
 </div>
 <div class="section" id="instructions">
 <span id="gwupdate-instructions"></span><h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not attempt to update the board gateware while the GUI or any other software using
+the board is in use. Do not open any software that uses the board while an update is in process.</p>
+</div>
 <ol class="arabic">
+<li><p>Be sure that the <a class="reference internal" href="New-FPGA.html#newfpga-driver"><span class="std std-ref">device drivers are already installed</span></a></p></li>
 <li><p>Download the <a class="reference internal" href="#gwupdate-latest"><span class="std std-ref">Latest version</span></a> of the gateware</p></li>
 <li><p>Extract the contents of the file</p></li>
 <li><p>Connect the acquisition board to the computer via USB 3.0 and connect it to power using the power supply provided</p></li>

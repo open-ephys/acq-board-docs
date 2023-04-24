@@ -21,6 +21,11 @@ The latest available gateware is :download:`version 1.0 </_static/files/OpenEphy
 Instructions
 ---------------------------
 
+.. warning:: Do not attempt to update the board gateware while the GUI or any other software using
+    the board is in use. Do not open any software that uses the board while an update is in process.
+
+#. Be sure that the :ref:`device drivers are already installed<newfpga_driver>`
+
 #. Download the :ref:`gwupdate_latest` of the gateware
 
 #. Extract the contents of the file 
