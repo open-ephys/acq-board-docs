@@ -10,11 +10,11 @@ These boards need a different driver and Open Ephys GUI plugin to work.
 
 Before attempting to use this board, please follow the instructions below. 
 
-.. important:: You will need to install and use:
+.. important:: The instructions will guide you since you will need to install and use:
 
     * A different driver, **FTD3XXDriver**
     * A different plugin, **OE FPGA Acquisition Board** for GUI v0.6.x
-    * The :ref:`latest gateware<gwupdate_latest>`
+    * The latest gateware if not already on the board
 
 .. _newfpga_instructions:
 
@@ -90,9 +90,9 @@ You now need to install the new plugin in the Open Ephys GUI v0.6.x or above.
 4. Make sure you have the latest gateware
 *****************************************
 
-We have released several improvements since the first batch of boards went out, so depending on when you got your board, you might not have the latest gateware.
+We have released several improvements since the first batch of boards went out in Dec 2022, so depending on when you got your board, you might not have the latest gateware. We always ship the boards with the latest version of the gateware and we don't make changes to the gateware often, so you will typically not need to update it.
 
-Follow the instructions on the :ref:`gwupdate` page to check your gateware version and update it.
+Follow the instructions on the :ref:`gwupdate` page to check your gateware version and update it *if necessary*.
 
 5. Test and use your board!
 *****************************
@@ -152,7 +152,7 @@ The green LEDs on the left indicate different statuses so they can be used to tr
 
 The FPGA module is no longer a development board created by Opal Kelly. Instead, we have designed it at Open Ephys based on a Lattice ECP5 FPGA. It uses an FTDI FT600 USB chip, which explains the new name.
 
-You should find it listed in ``Settings > Devices`` under ``Other devices`` with the name ``Open Ephys FT600 USB board``.
+You should find it listed in ``Settings > Devices`` under ``Bluetooth & other devices`` with the name ``Open Ephys FT600 USB board``.
 
 .. image:: /_static/images/usermanual/newfpga/Settings-device-name.png
     :width: 50%
