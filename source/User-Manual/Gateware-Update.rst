@@ -6,8 +6,7 @@ Gateware updates
 Here are the files and instructions to update the Open Ephys FPGA module inside
 the Acquisition Board.
 
-.. note:: This is only for boards using the new Open Ephys FPGA (Dec 2022 onwards).
-    Older systems do not require this.
+.. note:: This is only for boards that use the new Open Ephys FPGA (Dec 2022 onwards). We always ship the boards with the latest version of the gateware and we don’t make changes to the gateware often, so you will typically not need to update it. Previous versions of the system that use the Opal Kelly FPGA do not require this.
 
 .. _gwupdate_latest:
 
@@ -18,8 +17,34 @@ The latest available gateware is :download:`version 1.0 </_static/files/OpenEphy
 
 .. _gwupdate_instructions:
 
-Instructions
----------------------------
+Determining current gateware version
+---------------------------------------
+
+In the Open Ephys GUI 
+***************************
+
+After dragging the ``OE FPGA Acquisition Board`` plugin to the signal chain, a message in the console
+will appear, with the current running gateware.
+
+.. image:: /_static/images/usermanual/gateware/GUI-message.png
+    :width: 80%
+    :align: center
+
+In Bonsai
+*********************************
+
+After creating the ``Source/OpenEphys/AcquisitionBoard`` node, the properties at the
+right of the window will contain a ``GatewareVersion`` field.
+
+.. image:: /_static/images/usermanual/gateware/Bonsai-version.png
+    :width: 30%
+    :align: center
+
+If the version does not appear or appears as ``N/A`` when creating the node, it will be properly
+updated after acquisition starts.
+
+Instructions to update the gateware in case you don't have the latest version
+-------------------------------------------------------------------
 
 .. warning:: Do not attempt to update the board gateware while the GUI or any other software using
     the board is in use. Do not open any software that uses the board while an update is in process.
@@ -56,30 +81,3 @@ this are:
 #. Unlock the page by clicking on the lower-left padlock icon. It will ask for your password
 #. Near the bottom of the page, the library error will appear, click on allow
 #. Run the updater again, if a window appears, it will have an ``open`` option now
-
-
-Determining current gateware version
----------------------------------------
-
-In the Open Ephys GUI 
-***************************
-
-After dragging the ``OE FPGA Acquisition Board`` plugin to the signal chain, a message in the console
-will appear, with the current running gateware.
-
-.. image:: /_static/images/usermanual/gateware/GUI-message.png
-    :width: 80%
-    :align: center
-
-In Bonsai
-*********************************
-
-After creating the ``Source/OpenEphys/AcquisitionBoard`` node, the properties at the
-right of the window will contain a ``GatewareVersion`` field.
-
-.. image:: /_static/images/usermanual/gateware/Bonsai-version.png
-    :width: 30%
-    :align: center
-
-If the version does not appear or appears as ``N/A`` when creating the node, it will be properly
-updated after acquisition starts.
