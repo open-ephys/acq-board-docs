@@ -287,11 +287,11 @@
 <p>Before attempting to use this board, please follow the instructions below.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>You will need to install and use:</p>
+<p>The instructions will guide you since you will need to install and use:</p>
 <ul class="simple">
 <li><p>A different driver, <strong>FTD3XXDriver</strong></p></li>
 <li><p>A different plugin, <strong>OE FPGA Acquisition Board</strong> for GUI v0.6.x</p></li>
-<li><p>The <a class="reference internal" href="Gateware-Update.html#gwupdate-latest"><span class="std std-ref">latest gateware</span></a></p></li>
+<li><p>The latest gateware if not already on the board</p></li>
 </ul>
 </div>
 <div class="section" id="instructions">
@@ -350,8 +350,8 @@
 </div>
 <div class="section" id="make-sure-you-have-the-latest-gateware">
 <span id="newfpga-gateware"></span><h3>4. Make sure you have the latest gateware<a class="headerlink" href="#make-sure-you-have-the-latest-gateware" title="Permalink to this headline">¶</a></h3>
-<p>We have released several improvements since the first batch of boards went out, so depending on when you got your board, you might not have the latest gateware.</p>
-<p>Follow the instructions on the <a class="reference internal" href="Gateware-Update.html#gwupdate"><span class="std std-ref">Gateware updates</span></a> page to check your gateware version and update it.</p>
+<p>We have released several improvements since the first batch of boards went out in Dec 2022, so depending on when you got your board, you might not have the latest gateware. We always ship the boards with the latest version of the gateware and we don’t make changes to the gateware often, so you will typically not need to update it.</p>
+<p>Follow the instructions on the <a class="reference internal" href="Gateware-Update.html#gwupdate"><span class="std std-ref">Gateware updates</span></a> page to check your gateware version and update it <em>if necessary</em>.</p>
 </div>
 <div class="section" id="test-and-use-your-board">
 <h3>5. Test and use your board!<a class="headerlink" href="#test-and-use-your-board" title="Permalink to this headline">¶</a></h3>
@@ -396,7 +396,7 @@ We are working on a unified OE GUI plugin for all acquisition boards regardless 
 <li><p><strong>The device name is now Open Ephys FT600 USB board.</strong></p></li>
 </ul>
 <p>The FPGA module is no longer a development board created by Opal Kelly. Instead, we have designed it at Open Ephys based on a Lattice ECP5 FPGA. It uses an FTDI FT600 USB chip, which explains the new name.</p>
-<p>You should find it listed in <code class="docutils literal notranslate"><span class="pre">Settings</span> <span class="pre">&gt;</span> <span class="pre">Devices</span></code> under <code class="docutils literal notranslate"><span class="pre">Other</span> <span class="pre">devices</span></code> with the name <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Ephys</span> <span class="pre">FT600</span> <span class="pre">USB</span> <span class="pre">board</span></code>.</p>
+<p>You should find it listed in <code class="docutils literal notranslate"><span class="pre">Settings</span> <span class="pre">&gt;</span> <span class="pre">Devices</span></code> under <code class="docutils literal notranslate"><span class="pre">Bluetooth</span> <span class="pre">&amp;</span> <span class="pre">other</span> <span class="pre">devices</span></code> with the name <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Ephys</span> <span class="pre">FT600</span> <span class="pre">USB</span> <span class="pre">board</span></code>.</p>
 <a class="reference internal image-reference" href="../_images/Settings-device-name.png"><img alt="../_images/Settings-device-name.png" class="align-center" src="../_images/Settings-device-name.png" style="width: 50%;" /></a>
 <p>In the Device Manager, it is sometimes listed under <code class="docutils literal notranslate"><span class="pre">Other</span> <span class="pre">devices</span></code> as <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Ephys</span> <span class="pre">FT600</span> <span class="pre">USB</span> <span class="pre">board</span></code> and other times only the USB controller is shown, which is listed as <code class="docutils literal notranslate"><span class="pre">FTDI</span> <span class="pre">FT600</span> <span class="pre">USB</span> <span class="pre">3.0</span> <span class="pre">Bridge</span> <span class="pre">Device</span></code>.</p>
 <p>If you see a warning icon, you have to <a class="reference internal" href="#newfpga-driver"><span class="std std-ref">install the driver</span></a>.</p>
