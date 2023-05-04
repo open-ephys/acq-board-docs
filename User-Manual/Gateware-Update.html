@@ -211,16 +211,6 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#instructions" class="nav-link">Instructions</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#notes-on-mac" class="nav-link">Notes on Mac</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
             <a href="#determining-current-gateware-version" class="nav-link">Determining current gateware version</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h3">
@@ -229,6 +219,16 @@
     
         <li class="nav-item toc-entry toc-h3">
             <a href="#in-bonsai" class="nav-link">In Bonsai</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#instructions-to-update-the-gateware-in-case-you-don-t-have-the-latest-version" class="nav-link">Instructions to update the gateware in case you don’t have the latest version</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#notes-on-mac" class="nav-link">Notes on Mac</a>
         </li>
     
             </ul>
@@ -253,15 +253,31 @@
 the Acquisition Board.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is only for boards using the new Open Ephys FPGA (Dec 2022 onwards).
-Older systems do not require this.</p>
+<p>This is only for boards that use the new Open Ephys FPGA (Dec 2022 onwards). We always ship the boards with the latest version of the gateware and we don’t make changes to the gateware often, so you will typically not need to update it. Previous versions of the system that use the Opal Kelly FPGA do not require this.</p>
 </div>
 <div class="section" id="latest-version">
 <span id="gwupdate-latest"></span><h2>Latest version<a class="headerlink" href="#latest-version" title="Permalink to this headline">¶</a></h2>
 <p>The latest available gateware is <a class="reference download internal" download="" href="../_downloads/2e5f535ab9681ce2f71d1d74444e38c3/OpenEphysFPGA-gw1.0.zip"><code class="xref download docutils literal notranslate"><span class="pre">version</span> <span class="pre">1.0</span></code></a>.</p>
 </div>
-<div class="section" id="instructions">
-<span id="gwupdate-instructions"></span><h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="determining-current-gateware-version">
+<span id="gwupdate-instructions"></span><h2>Determining current gateware version<a class="headerlink" href="#determining-current-gateware-version" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="in-the-open-ephys-gui">
+<h3>In the Open Ephys GUI<a class="headerlink" href="#in-the-open-ephys-gui" title="Permalink to this headline">¶</a></h3>
+<p>After dragging the <code class="docutils literal notranslate"><span class="pre">OE</span> <span class="pre">FPGA</span> <span class="pre">Acquisition</span> <span class="pre">Board</span></code> plugin to the signal chain, a message in the console
+will appear, with the current running gateware.</p>
+<a class="reference internal image-reference" href="../_images/GUI-message.png"><img alt="../_images/GUI-message.png" class="align-center" src="../_images/GUI-message.png" style="width: 80%;" /></a>
+</div>
+<div class="section" id="in-bonsai">
+<h3>In Bonsai<a class="headerlink" href="#in-bonsai" title="Permalink to this headline">¶</a></h3>
+<p>After creating the <code class="docutils literal notranslate"><span class="pre">Source/OpenEphys/AcquisitionBoard</span></code> node, the properties at the
+right of the window will contain a <code class="docutils literal notranslate"><span class="pre">GatewareVersion</span></code> field.</p>
+<a class="reference internal image-reference" href="../_images/Bonsai-version.png"><img alt="../_images/Bonsai-version.png" class="align-center" src="../_images/Bonsai-version.png" style="width: 30%;" /></a>
+<p>If the version does not appear or appears as <code class="docutils literal notranslate"><span class="pre">N/A</span></code> when creating the node, it will be properly
+updated after acquisition starts.</p>
+</div>
+</div>
+<div class="section" id="instructions-to-update-the-gateware-in-case-you-don-t-have-the-latest-version">
+<h2>Instructions to update the gateware in case you don’t have the latest version<a class="headerlink" href="#instructions-to-update-the-gateware-in-case-you-don-t-have-the-latest-version" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not attempt to update the board gateware while the GUI or any other software using
@@ -301,23 +317,6 @@ this are:</p>
 <li><p>Near the bottom of the page, the library error will appear, click on allow</p></li>
 <li><p>Run the updater again, if a window appears, it will have an <code class="docutils literal notranslate"><span class="pre">open</span></code> option now</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="determining-current-gateware-version">
-<h2>Determining current gateware version<a class="headerlink" href="#determining-current-gateware-version" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="in-the-open-ephys-gui">
-<h3>In the Open Ephys GUI<a class="headerlink" href="#in-the-open-ephys-gui" title="Permalink to this headline">¶</a></h3>
-<p>After dragging the <code class="docutils literal notranslate"><span class="pre">OE</span> <span class="pre">FPGA</span> <span class="pre">Acquisition</span> <span class="pre">Board</span></code> plugin to the signal chain, a message in the console
-will appear, with the current running gateware.</p>
-<a class="reference internal image-reference" href="../_images/GUI-message.png"><img alt="../_images/GUI-message.png" class="align-center" src="../_images/GUI-message.png" style="width: 80%;" /></a>
-</div>
-<div class="section" id="in-bonsai">
-<h3>In Bonsai<a class="headerlink" href="#in-bonsai" title="Permalink to this headline">¶</a></h3>
-<p>After creating the <code class="docutils literal notranslate"><span class="pre">Source/OpenEphys/AcquisitionBoard</span></code> node, the properties at the
-right of the window will contain a <code class="docutils literal notranslate"><span class="pre">GatewareVersion</span></code> field.</p>
-<a class="reference internal image-reference" href="../_images/Bonsai-version.png"><img alt="../_images/Bonsai-version.png" class="align-center" src="../_images/Bonsai-version.png" style="width: 30%;" /></a>
-<p>If the version does not appear or appears as <code class="docutils literal notranslate"><span class="pre">N/A</span></code> when creating the node, it will be properly
-updated after acquisition starts.</p>
 </div>
 </div>
 </div>
