@@ -29,7 +29,7 @@ Specifications:
 
 Pinout:
 
-.. image:: ../_static/images/usermanual/io-board-populated.jpg
+.. image:: ../_static/images/usermanual/io-board-populated.png
   :align: center
   :alt: ioboardsilkscreen
   
