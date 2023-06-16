@@ -27,7 +27,12 @@ Specifications:
 
 * 4.9" x 3.6" PCB
 
+Pinout:
 
+.. image:: ../_static/images/usermanual/io-board-populated.jpg
+  :align: center
+  :alt: ioboardsilkscreen
+  
 The following diagram illustrates where I/O boards should be connected to the acquisition board for different types of inputs and outputs:
 
 |
