@@ -2,6 +2,7 @@
 
 New Open Ephys FPGA module
 =====================================================
+
 *Last updated: 10th Feb 2023*
 
 Devices shipped from Dec 2022 onwards use a brand-new FPGA module designed by Open Ephys.
@@ -135,11 +136,10 @@ We have completed:
 Differences with previous boards
 -----------------------------------
 
-* **This board has a single power supply input located on the FPGA module itself. Always use the 5V power supply provided.**
+**This board has a single power supply input located on the FPGA module itself. Always use the 5V power supply provided.**
 Since this new FPGA module was developed by us, it has the voltage protection circuitry we require for use with the acquisition board.
 
-* **The power light inside the board is now red.**
-
+**The power light inside the board is now red.**
 The LED that indicates that the FPGA module is powered used to be green on the FPGA module we used previously, but on our new one it is red.
 
 .. image:: /_static/images/usermanual/newfpga/FPGA-module-power-led.png
@@ -198,9 +198,9 @@ Contribute
 ------------
 We count on user feedback to improve our devices, as we test them before they get to you but might not have covered all the use cases and your particular hardware. Always test new devices by performing checks on a short recording before using them for research.
 
-If you find any problems, please let us know and we will address them as fast as we can. We would appreciate it if you can post a GitHub Issue to the plugin repository `here <https://github.com/open-ephys-plugins/rhythm-oni-plugin/issues>`_.
+If you find any problems, please let us know and we will address them as fast as we can. We would appreciate it if you can post a GitHub Issue to the `plugin repository <https://github.com/open-ephys-plugins/rhythm-oni-plugin/issues>`_.
 
-While acquisition board usage is the same, we will be slowly updating the documentation to reflect these changes. You are welcome to contribute to our documentation `here <https://github.com/open-ephys/acq-board-docs>`_.
+While acquisition board usage is the same, we will be slowly updating the documentation to reflect these changes. You are welcome to contribute to our documentation `hosted on GitHub <https://github.com/open-ephys/acq-board-docs>`_.
 
 .. _newfpga_why:
 

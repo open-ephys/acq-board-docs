@@ -21,7 +21,7 @@ from datetime import datetime, timezone
 
 # -- Project information -----------------------------------------------------
 
-project = "Open Ephys Acquisition Board"
+project = "Acquisition Board Docs"
 copyright = "2010-{}, Open Ephys & Contributors".format(datetime.now(timezone.utc).year)
 author = "Open Ephys & Contributors"
 
@@ -62,7 +62,7 @@ main_doc = "index"
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -80,7 +80,7 @@ todo_include_todos = True
 # a list of builtin themes.
 #
 html_theme = "pydata_sphinx_theme"
-html_logo = "_static/images/oe_logo_acq_board.svg"
+html_logo = "_static/images/oe_logo_name.svg"
 html_scaled_image_link = True
 html_title = project
 
@@ -88,6 +88,11 @@ html_title = project
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+
+html_sidebars = {
+    'index': ['search-field.html'],
+    "**": ["sidebar-nav-bs.html"]
+}
 
 html_style = "_static/theme_overrides.css"
 
@@ -178,11 +183,22 @@ epub_exclude_files = ["search.html"]
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    "github_url": "https://github.com/open-ephys",
-    "twitter_url": "https://twitter.com/openephys",
-    "external_links": [{"name": "Open Ephys", "url": "https://open-ephys.org"},],
+    'use_edit_page_button': True,
     "navigation_with_keys": True,
-    # 'search_bar_position' : "navbar",
+    "navbar_end": ["navbar-icon-links"],
+    "navbar_align": "content",
+    "footer_start": ["copyright"],
+    'icon_links': [
+        dict(name='GitHub',
+             url='https://github.com/open-ephys/commutator-docs',
+             icon='fab fa-github'),
+        dict(name='Twitter',
+             url='https://twitter.com/openephys',
+             icon='fab fa-twitter'),
+        dict(name='Discord',
+             url='https://discord.gg/WXAx2URNQU',
+             icon='fab fa-discord')
+    ],
     #'canonical_url': '',
     #'analytics_id': '',
     #'logo_only': False,
