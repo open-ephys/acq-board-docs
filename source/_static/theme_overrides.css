@@ -120,6 +120,11 @@ a.headerlink:hover {
   transition-duration: 0.2s;
 }
 
+/** Paragraph indent
+p {
+  text-indent: 1em;
+}
+
 /* text fonts and colors */
 body {
   background-color: white;
@@ -336,13 +341,6 @@ form:focus {
   margin-top: 2em;
 }
 
-/* list line spacing */
-/* ol.simple {
-  margin-bottom: 1em;
-}
-
-
-
 ul.simple {
   margin-bottom: 1em;
 }
@@ -356,13 +354,7 @@ h4,
 h5,
 h6 {
   line-height: 1.5;
-}
-
-/* List items in main area, but not in side bars */
-body > li,
-p {
-  line-height: 1.5;
-  margin: 0.3em 0;
+  margin-bottom: 0.7em;
 }
 
 /* ensure images stay within the column bounds*/
