@@ -281,7 +281,7 @@
                 
   <div class="section" id="new-open-ephys-fpga-module">
 <span id="newfpga"></span><h1>New Open Ephys FPGA module<a class="headerlink" href="#new-open-ephys-fpga-module" title="Permalink to this headline">¶</a></h1>
-<p><em>Last updated: 10th Feb 2023</em></p>
+<p><em>Last updated: 18th Jul 2023</em></p>
 <p>Devices shipped from Dec 2022 onwards use a brand-new FPGA module designed by Open Ephys.</p>
 <p>These boards need a different driver and Open Ephys GUI plugin to work.</p>
 <p>Before attempting to use this board, please follow the instructions below.</p>
@@ -374,6 +374,12 @@
 <span id="newfpga-development"></span><h2>Under development<a class="headerlink" href="#under-development" title="Permalink to this headline">¶</a></h2>
 <p>We will continue to work on getting the full integration of the board with the new FPGA module that the previous boards had.
 We are working on a unified OE GUI plugin for all acquisition boards regardless of the FPGA module they have.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Impedance measurements</p>
+</div>
+<p>Impedance measurements currently only work at 30kS/s sample rate.
+We are working on implementing impedance measurements at all available sample rates.</p>
 <p>We have completed:</p>
 <ul class="simple">
 <li><p>Making the new OE FPGA Acquisition board plugin cross-platform (Windows, MacOS and Linux).</p></li>
