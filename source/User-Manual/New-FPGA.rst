@@ -127,8 +127,8 @@ We are working on a unified OE GUI plugin for all acquisition boards regardless 
 
 .. important:: Impedance measurements
 
-Impedance measurements currently only work at 30kS/s sample rate.
-We are working on implementing impedance measurements at all available sample rates.
+   Impedance measurements currently only work at 30kS/s sample rate.
+   We are working on implementing impedance measurements at all available sample rates.
 
 We have completed:
 
