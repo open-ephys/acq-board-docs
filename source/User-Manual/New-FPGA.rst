@@ -31,7 +31,7 @@ The new FPGA uses different drivers that need to be installed before plugging th
 On Windows 
 +++++++++++++
    
-   #. Download the `Windows driver <https://www.ftdichip.com/Drivers/D3XX/FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe.zip>`_.
+   #. Download the `Windows driver <https://www.ftdichip.com/Driver/D3XX/FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe.zip>`_.
    #. Unzip the folder
    #. Run ``FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe``
 
