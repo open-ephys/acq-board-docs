@@ -44,7 +44,7 @@ If the version does not appear or appears as ``N/A`` when creating the node, it 
 updated after acquisition starts.
 
 Instructions to update the gateware in case you don't have the latest version
--------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 .. warning:: Do not attempt to update the board gateware while the GUI or any other software using
     the board is in use. Do not open any software that uses the board while an update is in process.

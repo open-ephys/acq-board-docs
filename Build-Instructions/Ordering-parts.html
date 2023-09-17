@@ -1,200 +1,436 @@
 
-
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ordering parts &#8212; Open Ephys Acquisition Board</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../_static/_static/theme_overrides.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Ordering parts &#8212; Acquisition Board Docs</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
     <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Build-Instructions/Ordering-parts';</script>
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Assembling the PCB" href="Assembling-the-PCB.html" />
-    <link rel="prev" title="Build Instructions" href="index.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <link rel="prev" title="Assembly Guide" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
-<div class="container-xl">
-
-    
-    <a class="navbar-brand" href="../index.html">
-      <img src="../_static/oe_logo_acq_board.svg" class="logo" alt="logo">
-    </a>
-    
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
-      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../User-Manual/index.html">User Manual</a>
-        </li>
-        
-        <li class="nav-item active">
-            <a class="nav-link" href="index.html">Build Instructions</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../Tutorials/index.html">Tutorials</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../FAQ/index.html">FAQs</a>
-        </li>
-        
-        
-        <li class="nav-item">
-            <a class="nav-link nav-external" href="https://open-ephys.org">Open Ephys<i class="fas fa-external-link-alt"></i></a>
-        </li>
-        
-      </ul>
-
-
-      
-
-      <ul class="navbar-nav">
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/open-ephys" target="_blank" rel="noopener">
-              <span><i class="fab fa-github-square"></i></span>
-            </a>
-          </li>
-        
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/openephys" target="_blank" rel="noopener">
-              <span><i class="fab fa-twitter-square"></i></span>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-</div>
-    </nav>
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-          <div class="col-12 col-md-3 bd-sidebar">
-
-<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form>
-
-
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-
-  <div class="bd-toc-item active">
+      <div class="navbar-item">
   
 
-  <ul class="nav bd-sidenav">
-      
-      
-      
-      
-        
-          
-              <li class="active">
-                  <a href="">Ordering parts</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Assembling-the-PCB.html">Assembling the PCB</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Putting-it-all-together.html">Putting it all together</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Assembling-the-IO-board.html">Assembling the I/O Board</a>
-              </li>
-          
-        
-      
-      
-      
-      
-      
-      
-    </ul>
-
-</nav>
-          </div>
-          
-
-          
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-              
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
-
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#download-the-files" class="nav-link">Download the files</a>
-        </li>
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#acquire-the-raw-materials-and-tools" class="nav-link">Acquire the raw materials and tools</a>
-        </li>
+      
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#order-the-pcb-and-stencil" class="nav-link">Order the PCB and Stencil</a>
-        </li>
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#case-components" class="nav-link">Case components</a>
-        </li>
+    <img src="../_static/oe_logo_name.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/oe_logo_name.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
     
-    </ul>
-</nav>
-
-
-              
-          </div>
-          
-
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
-              
-              <div>
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../User-Manual/index.html">
+                        User Manual
+                      </a>
+                    </li>
                 
-  <div class="section" id="ordering-parts">
-<span id="orderingparts"></span><h1>Ordering parts<a class="headerlink" href="#ordering-parts" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="download-the-files">
-<h2>Download the files<a class="headerlink" href="#download-the-files" title="Permalink to this headline">¶</a></h2>
-<p>Clone the <a class="reference external" href="https://github.com/open-ephys/acquisition-board">acquisition-board</a> GitHub repository, or download it as a <a class="reference external" href="https://github.com/open-ephys/acquisition-board/archive/master.zip">zip file</a>.</p>
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Assembly Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Tutorials/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../FAQ/index.html">
+                        FAQs
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://open-ephys.org/acquisition-system/acquisition-board">
+                    Purchase
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/open-ephys/acquisition-board" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/openephys" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/WXAx2URNQU" title="Discord" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-discord"></i></span>
+            <label class="sr-only">Discord</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
 </div>
-<div class="section" id="acquire-the-raw-materials-and-tools">
-<h2>Acquire the raw materials and tools<a class="headerlink" href="#acquire-the-raw-materials-and-tools" title="Permalink to this headline">¶</a></h2>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../User-Manual/index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Assembly Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Tutorials/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../FAQ/index.html">
+                        FAQs
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://open-ephys.org/acquisition-system/acquisition-board">
+                    Purchase
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/open-ephys/acquisition-board" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/openephys" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/WXAx2URNQU" title="Discord" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-discord"></i></span>
+            <label class="sr-only">Discord</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Ordering parts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Assembling-the-PCB.html">Assembling the PCB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Putting-it-all-together.html">Putting it all together</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Assembling-the-IO-board.html">Assembling the I/O Board</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Assembly Guide</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Ordering parts</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="ordering-parts">
+<span id="orderingparts"></span><h1>Ordering parts<a class="headerlink" href="#ordering-parts" title="Permalink to this heading">#</a></h1>
+<section id="download-the-files">
+<h2>Download the files<a class="headerlink" href="#download-the-files" title="Permalink to this heading">#</a></h2>
+<p>Clone the <a class="reference external" href="https://github.com/open-ephys/acquisition-board">acquisition-board</a> GitHub repository, or download it as a <a class="reference external" href="https://github.com/open-ephys/acquisition-board/archive/master.zip">zip file</a>.</p>
+</section>
+<section id="acquire-the-raw-materials-and-tools">
+<h2>Acquire the raw materials and tools<a class="headerlink" href="#acquire-the-raw-materials-and-tools" title="Permalink to this heading">#</a></h2>
 <p>Open up BOM.csv in Excel or a text editor (or <a class="reference external" href="https://docs.google.com/spreadsheet/ccc?key=0An1VoeoG8K6AdHhqNjhneGZWWkR5R2hZcDFOd243dHc#gid=0">view it on Google Docs</a>). This is a list of all the parts that are necessary to populate the acquisition board PCB. Most of them can be ordered from DigiKey, but some are only available from other distributors. The quantities (column B) are for one acquisition board, so take that into account if you’re trying to build multiple boards.</p>
 <img alt="../_images/samtec.png" src="../_images/samtec.png" />
 <p><strong>Samtec</strong> - For each board, you’ll need two of Samtec part #BTE-040-01-F-D-A. These are the connectors that interface with the FPGA. They can be ordered directly from Samtec for around $4 each, or from Opal Kelly for $10/pair. These are referred to as BRD1 on BOM.csv, and as “JP2” and “JP3” on the silkscreen layer of the acquisition board PCB.</p>
@@ -203,9 +439,9 @@
 <p><strong>DigiKey</strong> - if you’re having the board assembled for you, the fabrication company can take care of the DigiKey order. You’ll need to send them the parts from Adafruit, Samtec, and Omnetics, but they’ll order everything else based on the Bill of Materials. If you’re building it yourself, you’ll have to go to the “Fast Add” page and enter the quantities and part numbers for each line item. The resistors and capacitors are cheap, so it’s usually worth ordering 50 or 100 of each. For the more expensive parts, having 25% more than you actually need is always a good idea.</p>
 <p>Here is a link to a fully filled-out digikey cart. It includes 5-10% extra of the very cheap (&lt;$1) components, but otherwise no more than necessary for a single board.</p>
 <p><strong>Hot air station</strong> - This is necessary only if you’re building the board yourself. If you don’t have one already, the X-TRONIC Model #4040 is a great deal for only $140. We’ve used it to make multiple acquisition boards and it works superbly!</p>
-</div>
-<div class="section" id="order-the-pcb-and-stencil">
-<h2>Order the PCB and Stencil<a class="headerlink" href="#order-the-pcb-and-stencil" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="order-the-pcb-and-stencil">
+<h2>Order the PCB and Stencil<a class="headerlink" href="#order-the-pcb-and-stencil" title="Permalink to this heading">#</a></h2>
 <p>We recommend ordering your PCBs from Advanced Circuits, since that’s what we’re using, and we know they can handle our tolerances. The total cost will be about $260 for a single board, as long as you have an academic affiliation to qualify for a discount and a small run. Note that the board is just a bit too big to qualify for the $66 special on multi-layer boards that is prominently mentioned on Advanced Circuits’ home page.</p>
 <p>To place this order, you need to first upload the gerber.zip file from the github repository to www.freedfm.com, which is the automatic file checker used by Advanced Circuits. You will need to tell FreeDFM which file corresponds to each layer, and you must specify the inner layers 2 and 3 as “positive polarity”. This is shown in the screenshot below.</p>
 <p>Then enter the following specifications:</p>
@@ -235,40 +471,135 @@
 <li><p>Remember to specify the inner copper layers as ‘positive’ after uploading the gerber files</p></li>
 </ul>
 <p>If you’re going to build the board yourself, you’ll need to order a stencil and some solder paste. We recommend OSH Stencils, which are designed for small-run fabrications and are priced accordingly. You’ll need to upload the same gerber.zip file that you used to print the PCB. Then identify the top solder paste file (<em>.tsp) as the top stencil and the board outline file (</em>.oln) as the board outline. Mark all other files, including all solder mask files, as unused. You don’t need a bottom stencil because none of the components attach to the bottom of the board. The total cost should be about $21, with an option to buy a “jig” (which helps to position the stencil) for an additional $5. For the solder paste, do yourself a favor and buy SPE-0012 ZephPaste. It’s by far the best solder paste we’ve used. Just remember to keep it refrigerated!</p>
-</div>
-<div class="section" id="case-components">
-<h2>Case components<a class="headerlink" href="#case-components" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="case-components">
+<h2>Case components<a class="headerlink" href="#case-components" title="Permalink to this heading">#</a></h2>
 <p>The shape of the case is specified by an STL (stereolithography) file called acquisition-board-case.stl  (github). You can use it to have a case manufactured through a variety of methods, such as cast urethane (we recommend American Precision Prototyping), CNC machining (FirstCut), or 3D printing (Shapeways). Shapeways requires a .dae file, which is also included in the repository.</p>
 <p>To order the acrylic top, upload acquisition-board-top-text-ponoko_p1.eps to Ponoko, and select size P1 Opal Acrylic (3 mm / 0.118”). If you’re producing multiple boards, you may want to use acquisition-board-top-text-ponoko_p3.eps instead, which has 8 tops tiled onto a single piece of acrylic.</p>
 <p>You’ll also need 4 screws (92855A310) and rubber feet (9540K11) from McMaster-Carr. Having some extra M3 (2 mm) hex keys (5984A42 from McMaster) will be useful. Depending on the method of manufacturing, you may have to drill out the four screw holes in the bottom of the case. You can use a #37 drill bit, or even better, use a fluted tapping tool (M3 size, 26355A41 should work well - in a low speed electric drill) to prepare the holes.</p>
-</div>
-</div>
+</section>
+</section>
 
 
-              </div>
+                </article>
               
               
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Build Instructions</a>
-    <a class='right-next' id="next-link" href="Assembling-the-PCB.html" title="next page">Assembling the PCB</a>
-
-              </div>
               
-          </main>
-          
-
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Assembly Guide</p>
       </div>
-    </div>
+    </a>
+    <a class="right-next"
+       href="Assembling-the-PCB.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Assembling the PCB</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
 
-    <script src="../_static/js/index.js"></script>
-    <footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    <p>
-          &copy; Copyright 2010-2023, Open Ephys &amp; Contributors.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
-    </p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
   </div>
-</footer>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-files">Download the files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acquire-the-raw-materials-and-tools">Acquire the raw materials and tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#order-the-pcb-and-stencil">Order the PCB and Stencil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-components">Case components</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/open-ephys/doc-template/edit/master/source/Build-Instructions/Ordering-parts.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/Build-Instructions/Ordering-parts.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>

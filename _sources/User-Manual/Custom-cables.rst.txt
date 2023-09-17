@@ -64,6 +64,7 @@ When running two RHD chips on one cable, the voltage drop over the cable resista
 It's not required to twist the LVDS pairs for the short distances in the adapter in our experience.
 
 .. _customBNC:
+
 Making an HDMI- BNC Cable
 ----------------------------------------
 

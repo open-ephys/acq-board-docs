@@ -1,268 +1,440 @@
 
-
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peripheral devices &#8212; Open Ephys Acquisition Board</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../_static/_static/theme_overrides.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Peripheral devices &#8212; Acquisition Board Docs</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
     <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'User-Manual/Peripheral-devices';</script>
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Computer hardware" href="Computer-hardware.html" />
     <link rel="prev" title="Custom cables" href="Custom-cables.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
-<div class="container-xl">
-
-    
-    <a class="navbar-brand" href="../index.html">
-      <img src="../_static/oe_logo_acq_board.svg" class="logo" alt="logo">
-    </a>
-    
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
-      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        
-        
-        <li class="nav-item active">
-            <a class="nav-link" href="index.html">User Manual</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../Build-Instructions/index.html">Build Instructions</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../Tutorials/index.html">Tutorials</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../FAQ/index.html">FAQs</a>
-        </li>
-        
-        
-        <li class="nav-item">
-            <a class="nav-link nav-external" href="https://open-ephys.org">Open Ephys<i class="fas fa-external-link-alt"></i></a>
-        </li>
-        
-      </ul>
-
-
-      
-
-      <ul class="navbar-nav">
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/open-ephys" target="_blank" rel="noopener">
-              <span><i class="fab fa-github-square"></i></span>
-            </a>
-          </li>
-        
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/openephys" target="_blank" rel="noopener">
-              <span><i class="fab fa-twitter-square"></i></span>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-</div>
-    </nav>
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-          <div class="col-12 col-md-3 bd-sidebar">
-
-<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form>
-
-
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-
-  <div class="bd-toc-item active">
+      <div class="navbar-item">
   
 
-  <ul class="nav bd-sidenav">
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
       
+    
+    
+    <img src="../_static/oe_logo_name.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/oe_logo_name.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
       
-        
-          
-              <li class="">
-                  <a href="Quickstart-guide.html">Quickstart guide</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="How-it-works.html">How it works</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Acquisition-system-parts.html">Other equipment you will need</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Electrodes.html">Compatible electrodes</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Headstages.html">Headstages</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Cables.html">Cables</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Custom-cables.html">Custom cables</a>
-              </li>
-          
-        
-          
-              <li class="active">
-                  <a href="">Peripheral devices</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Computer-hardware.html">Computer hardware</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Acquisition-software.html">Acquisition software</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Gateware-Update.html">Gateware updates</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="New-FPGA.html">New Open Ephys FPGA module</a>
-              </li>
-          
-        
-      
-      
-      
-      
-      
-      
-      
-      
-    </ul>
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
 
-</nav>
-          </div>
-          
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Build-Instructions/index.html">
+                        Assembly Guide
+                      </a>
+                    </li>
+                
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Tutorials/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../FAQ/index.html">
+                        FAQs
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://open-ephys.org/acquisition-system/acquisition-board">
+                    Purchase
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-              
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/open-ephys/acquisition-board" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/openephys" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/WXAx2URNQU" title="Discord" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-discord"></i></span>
+            <label class="sr-only">Discord</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
 </div>
 
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#open-ephys-i-o-board" class="nav-link">Open Ephys I/O Board</a><ul class="nav section-nav flex-column">
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        User Manual
+                      </a>
+                    </li>
                 
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#testing-i-o-modules" class="nav-link">Testing I/O modules</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#analog-digital-inputs-and-outputs" class="nav-link">Analog/Digital Inputs and Outputs</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#analog-output" class="nav-link">Analog Output</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#analog-input" class="nav-link">Analog Input</a><ul class="nav section-nav flex-column">
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Build-Instructions/index.html">
+                        Assembly Guide
+                      </a>
+                    </li>
                 
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#changing-the-analog-input-range" class="nav-link">Changing the Analog Input Range</a>
-        </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Tutorials/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../FAQ/index.html">
+                        FAQs
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://open-ephys.org/acquisition-system/acquisition-board">
+                    Purchase
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
     
-            </ul>
-        </li>
     
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#digital-output" class="nav-link">Digital Output</a>
-        </li>
     
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#digital-input" class="nav-link">Digital Input</a>
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/open-ephys/acquisition-board" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#arduino-io-shield" class="nav-link">Arduino IO shield</a>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/openephys" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
         </li>
-    
-            </ul>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/WXAx2URNQU" title="Discord" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-discord"></i></span>
+            <label class="sr-only">Discord</label></a>
         </li>
+</ul></div>
+        
+      </div>
     
-    </ul>
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Quickstart-guide.html">Quickstart guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="How-it-works.html">How it works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Acquisition-system-parts.html">Other equipment you will need</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Electrodes.html">Compatible electrodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Headstages.html">Headstages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cables.html">Cables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Custom-cables.html">Custom cables</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Peripheral devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Computer-hardware.html">Computer hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Acquisition-software.html">Acquisition software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gateware-Update.html">Gateware updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="New-FPGA.html">New Open Ephys FPGA module</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">User Manual</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Peripheral devices</li>
+  </ul>
 </nav>
-
-
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
               
-          </div>
-          
-
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
-              <div>
+              
                 
-  <div class="section" id="peripheral-devices">
-<span id="peripheraldevices"></span><h1>Peripheral devices<a class="headerlink" href="#peripheral-devices" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="open-ephys-i-o-board">
-<span id="ioboard"></span><h2>Open Ephys I/O Board<a class="headerlink" href="#open-ephys-i-o-board" title="Permalink to this headline">¶</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="peripheral-devices">
+<span id="peripheraldevices"></span><h1>Peripheral devices<a class="headerlink" href="#peripheral-devices" title="Permalink to this heading">#</a></h1>
+<section id="open-ephys-i-o-board">
+<span id="ioboard"></span><h2>Open Ephys I/O Board<a class="headerlink" href="#open-ephys-i-o-board" title="Permalink to this heading">#</a></h2>
 <p>To sync your neural data with external triggers, use an I/O board to connect up to 8 digital inputs to the acquisition board. Since its internal components are completely passive, the same I/O board can be also be used to relay digital outputs, analog inputs, and analog outputs. However, it can only perform one of these functions at a time, so you will need multiple I/O boards if you want to, for instance, receive both analog and digital inputs. If you’re interested in building your own I/O Board, follow the instructions <a class="reference internal" href="../Build-Instructions/Assembling-the-IO-board.html#assemblingtheioboard"><span class="std std-ref">here</span></a>.</p>
 <img alt="ioboard" class="align-center" src="../_images/io-board.jpg" />
 <div class="admonition warning">
@@ -284,12 +456,12 @@
 <blockquote>
 <div><img alt="../_images/in_out_label.png" src="../_images/in_out_label.png" />
 </div></blockquote>
-<div class="section" id="testing-i-o-modules">
-<h3>Testing I/O modules<a class="headerlink" href="#testing-i-o-modules" title="Permalink to this headline">¶</a></h3>
+<section id="testing-i-o-modules">
+<h3>Testing I/O modules<a class="headerlink" href="#testing-i-o-modules" title="Permalink to this heading">#</a></h3>
 <p>The easiest test is to check continuity and absence of shorts with a multimeter, using two I/O breakout boards connected by an HDMI cable. Alternatively, the same test can be performed with a acquisition board by plugging the HDMI cable into the Analog In port, and testing continuity between the I/O board BNC connectors and the row of 3-pin jumpers on the aq. board.</p>
-</div>
-<div class="section" id="analog-digital-inputs-and-outputs">
-<span id="analogdigitalio"></span><h3>Analog/Digital Inputs and Outputs<a class="headerlink" href="#analog-digital-inputs-and-outputs" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="analog-digital-inputs-and-outputs">
+<span id="analogdigitalio"></span><h3>Analog/Digital Inputs and Outputs<a class="headerlink" href="#analog-digital-inputs-and-outputs" title="Permalink to this heading">#</a></h3>
 <p><strong>ADC</strong> = Analog to Digital converter. These are necessary to convert continuous signals arriving at our board into digital signals that are less sensitive to noise and can be read by the FPGA.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -298,21 +470,21 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-</div>
-<div class="section" id="analog-output">
-<span id="analogout"></span><h3>Analog Output<a class="headerlink" href="#analog-output" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="analog-output">
+<span id="analogout"></span><h3>Analog Output<a class="headerlink" href="#analog-output" title="Permalink to this heading">#</a></h3>
 <p><strong>Analog outputs are usually used to monitor headstage inputs, for instance by routing ephys channels to an audio output to detect spikes</strong></p>
 <p>There are eight analog outputs on the board, which use the 16-bit DAC8531 chip from Texas Instruments. The DACs (Digital to Analog converters) are controlled by the Rhythm interface.</p>
 <p><a class="reference external" href="https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Rhythm-FPGA.html#audio-output">If activated in the software</a> , the audio jack on the acquisition board can be used to monitor analog channels 0 and 1 (Left and Right in the audio) by plugging in headphones or speakers. (All channels can also be monitored via audio through the software, using the audio channel selector on a plugin to select the channel you’re interested in).</p>
 <p>Any of the channels can be programmed to deliver custom waveforms as well, but this functionality hasn’t been added to the GUI yet.</p>
-</div>
-<div class="section" id="analog-input">
-<span id="analogin"></span><h3>Analog Input<a class="headerlink" href="#analog-input" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="analog-input">
+<span id="analogin"></span><h3>Analog Input<a class="headerlink" href="#analog-input" title="Permalink to this heading">#</a></h3>
 <p><strong>Analog inputs are used for equipment that measures continuous signals, for instance a measurement distance or intensity. This could be anything from a power meter, thermometer, a running wheel, etc.</strong></p>
 <p>There are eight analog inputs on the board, which use the 16-bit ADS8325 chip from Texas Instruments. By sending this data to the acquisition board, the FPGA will timestamp the analog inputs using the same clock as the ephys data and can display the incoming data alongside your ephys.</p>
 <p>Analog inputs are always samples at the same rate and time as the neural signals and are displayed as additional channels in the LFP module, keep in mind that the input range for these signals is different form the neural signals and can be set separately.</p>
-<div class="section" id="changing-the-analog-input-range">
-<span id="analoginrange"></span><h4>Changing the Analog Input Range<a class="headerlink" href="#changing-the-analog-input-range" title="Permalink to this headline">¶</a></h4>
+<section id="changing-the-analog-input-range">
+<span id="analoginrange"></span><h4>Changing the Analog Input Range<a class="headerlink" href="#changing-the-analog-input-range" title="Permalink to this heading">#</a></h4>
 <p>The default setting is to have the ADCs run from -5 to +5V, although in practice the actual range is ±4.5V (up through Acquisition Board version 2.2). If you need to go up to 5V, the ADC must be switched to 0-5V mode. To switch the ADC range, open up the case of the acquisition board and move the jumpers near the ADC input HDMI (marked ‘analog input range selector’) to the two pins farther away from the edge of the board. Different channels can have different jumper settings, so make sure you record which is which! There’s no way for the software to know the setting for each channel. Channel 1 is the rightmost jumper (closer to the headstage inputs), Channel 8 is the leftmost jumper.</p>
 <p>There are three settings for the analog input:</p>
 <ul class="simple">
@@ -321,10 +493,10 @@
 <li><p>0-5V input sent through an op amp (no jumper)</p></li>
 </ul>
 <img alt="acquisition board PCB" class="align-center" src="../_images/ac_board_pcb.png" />
-</div>
-</div>
-<div class="section" id="digital-output">
-<span id="digitalout"></span><h3>Digital Output<a class="headerlink" href="#digital-output" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="digital-output">
+<span id="digitalout"></span><h3>Digital Output<a class="headerlink" href="#digital-output" title="Permalink to this heading">#</a></h3>
 <p><strong>Digital outputs are used to send high or low signals and are usually used to send pulses to trigger or synchronise device acquisition.</strong></p>
 <p>The acquisition board has eight 5V digital outputs connected to an HDMI connector. These interface with a level shifter (Texas Instruments SN74LVC4245A) to allow the 3.3V outputs of the FPGA to send 5V signals out of the acquisition board. There are eight additional outputs in the Rhythm firmware, which are connected to holes on the bottom of the board.</p>
 <div class="admonition note">
@@ -332,14 +504,14 @@
 <p>Currently, the digital outputs of the Acquisition Board are not part of the Open Ephys GUI. Because the system has been designed to optimize the transfer of data from the board via USB to the pc (rather than in the opposite direction), the delay between the software and the acquisition board is, at the moment, variable and unpredictable. The digital outputs will be added to the next major release of the Open Ephys GUI.</p>
 </div>
 <p>In the meantime, we recommend using a microcontroller to send precisely timed TTL outputs to trigger external devices, as done <a class="reference internal" href="../Tutorials/Ephys-with-behavioural-camera.html#ephyswithbehaviouralcam"><span class="std std-ref">here</span></a>. The Open Ephys GUI can communicate with microcontrollers through, for instance, the <a class="reference external" href="https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Arduino-Output.html">Arduino Output</a> node.</p>
-</div>
-<div class="section" id="digital-input">
-<span id="digitalin"></span><h3>Digital Input<a class="headerlink" href="#digital-input" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="digital-input">
+<span id="digitalin"></span><h3>Digital Input<a class="headerlink" href="#digital-input" title="Permalink to this heading">#</a></h3>
 <p><strong>Digital inputs are used to synchronize acquisition across multiple tools.</strong></p>
 <p>In contrast to the analog inputs, digital inputs can only receive ‘high’ or ‘low’ signals. Peripheral devices can send a short ‘high’ pulse every time they make a measurement. By sending that pulse to the acquisition board, the FPGA will timestamp the moment of the pulse using the same clock as the ephys data, allowing precise synchronization of the recordings. The acquisition board has eight 5V digital inputs connected to an HDMI connector. These interface with a level shifter (Texas Instruments SN74LVC4245A) to prevent 5V inputs from damaging the FPGA (which runs on a 3.3V supply). There are eight additional inputs that can be detected by the Rhythm firmware, which are connected to holes on the bottom of the board.</p>
 <p>If using the Open Ephys GUI, TTL/Din signals are displayed as shaded regions in the LFP display module, this display can be enabled/disabled individually for each of the 8 Digital input channels.</p>
-<table class="colwidths-given table" id="id1">
-<caption><span class="caption-text">HMDI channel mapping</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<table class="table" id="id1">
+<caption><span class="caption-text">HMDI channel mapping</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -377,9 +549,9 @@
 </tbody>
 </table>
 <p>There are also a variety of simple HDMI breakout boards available from various vendors - these work equivalently as I/O boards. See for instance <a class="reference external" href="https://elabbay.myshopify.com/collections/breadboard/products/elabguy-hdmi-af-bo-v1a-hdmi-type-a-female-socket-breakout-board">here</a>.</p>
-</div>
-<div class="section" id="arduino-io-shield">
-<h3>Arduino IO shield<a class="headerlink" href="#arduino-io-shield" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="arduino-io-shield">
+<h3>Arduino IO shield<a class="headerlink" href="#arduino-io-shield" title="Permalink to this heading">#</a></h3>
 <p>Some applications require to generate (or read) digital channels on the host-PC running the GUI. Most commonly, this is needed when closed-loop experiments make use of event detection on the host PC, for example with the phase-detector plugin. The design is available <a class="reference external" href="https://github.com/open-ephys/io-arduino">here</a> .</p>
 <p>The arduino shield for I/O from the host-pc can generate up to 8 channels of digital I/O. Each channel can be assigned as in or out and assigned to an event channel in the GUI.</p>
 <p>On the Arduino, this is implemented via the <a class="reference external" href="http://playground.arduino.cc/Interfacing/Firmata">Firmata firmware</a>). This makes it simple for a computer to access the state of the Arduino pins via USB.</p>
@@ -387,35 +559,139 @@
 <p>Arduino I/O is controlled directly from the Arduino Output sink in the GUI.  Currently, the I/O shield is strictly passive and makes no use of the analog pins. However, you can still access all Arduino pins through the headers.</p>
 <p>With an Arduino Uno and an OpenEphys I/O shield, the Arduino pins start at pin 6 = I/O 1, pin 7 I/O 2, and so on.</p>
 <a class="reference internal image-reference" href="../_images/shield.png"><img alt="arduino IO shield" class="align-center" src="../_images/shield.png" style="width: 250.0px; height: 423.5px;" /></a>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
-              </div>
+                </article>
               
               
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="Custom-cables.html" title="previous page">Custom cables</a>
-    <a class='right-next' id="next-link" href="Computer-hardware.html" title="next page">Computer hardware</a>
-
-              </div>
               
-          </main>
-          
-
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Custom-cables.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Custom cables</p>
       </div>
-    </div>
+    </a>
+    <a class="right-next"
+       href="Computer-hardware.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Computer hardware</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
 
-    <script src="../_static/js/index.js"></script>
-    <footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    <p>
-          &copy; Copyright 2010-2023, Open Ephys &amp; Contributors.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
-    </p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
   </div>
-</footer>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-ephys-i-o-board">Open Ephys I/O Board</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-i-o-modules">Testing I/O modules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analog-digital-inputs-and-outputs">Analog/Digital Inputs and Outputs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analog-output">Analog Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analog-input">Analog Input</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-analog-input-range">Changing the Analog Input Range</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#digital-output">Digital Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#digital-input">Digital Input</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arduino-io-shield">Arduino IO shield</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/open-ephys/doc-template/edit/master/source/User-Manual/Peripheral-devices.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/User-Manual/Peripheral-devices.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>

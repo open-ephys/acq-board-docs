@@ -1,288 +1,602 @@
 
-
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troubleshooting Noise &#8212; Open Ephys Acquisition Board</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../_static/_static/theme_overrides.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Troubleshooting Noise &#8212; Acquisition Board Docs</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
     <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/Troubleshooting-noise';</script>
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Measuring round-trip latency" href="Measuring-latency.html" />
     <link rel="prev" title="Tutorials" href="index.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
-<div class="container-xl">
-
-    
-    <a class="navbar-brand" href="../index.html">
-      <img src="../_static/oe_logo_acq_board.svg" class="logo" alt="logo">
-    </a>
-    
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
-      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../User-Manual/index.html">User Manual</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../Build-Instructions/index.html">Build Instructions</a>
-        </li>
-        
-        <li class="nav-item active">
-            <a class="nav-link" href="index.html">Tutorials</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../FAQ/index.html">FAQs</a>
-        </li>
-        
-        
-        <li class="nav-item">
-            <a class="nav-link nav-external" href="https://open-ephys.org">Open Ephys<i class="fas fa-external-link-alt"></i></a>
-        </li>
-        
-      </ul>
-
-
-      
-
-      <ul class="navbar-nav">
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/open-ephys" target="_blank" rel="noopener">
-              <span><i class="fab fa-github-square"></i></span>
-            </a>
-          </li>
-        
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/openephys" target="_blank" rel="noopener">
-              <span><i class="fab fa-twitter-square"></i></span>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-</div>
-    </nav>
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-          <div class="col-12 col-md-3 bd-sidebar">
-
-<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form>
-
-
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-
-  <div class="bd-toc-item active">
+      <div class="navbar-item">
   
 
-  <ul class="nav bd-sidenav">
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
       
+    
+    
+    <img src="../_static/oe_logo_name.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/oe_logo_name.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
       
-      
-      
-      
-      
-        
-          
-              <li class="active">
-                  <a href="">Troubleshooting Noise</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Measuring-latency.html">Measuring round-trip latency</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Multiple-boards.html">Using multiple boards</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Ephys-with-behavioural-camera.html">Synchronizing with a behavioural camera</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="bonsai-acquisition.html">Using Bonsai with the Acquisition Board</a>
-              </li>
-          
-        
-      
-      
-      
-      
-    </ul>
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../User-Manual/index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
 
-</nav>
-          </div>
-          
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Build-Instructions/index.html">
+                        Assembly Guide
+                      </a>
+                    </li>
+                
 
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../FAQ/index.html">
+                        FAQs
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://open-ephys.org/acquisition-system/acquisition-board">
+                    Purchase
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-              
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/open-ephys/acquisition-board" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/openephys" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/WXAx2URNQU" title="Discord" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-discord"></i></span>
+            <label class="sr-only">Discord</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
 </div>
 
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#gnd-vs-ref-on-the-headstage" class="nav-link">GND vs. REF on the Headstage</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#extra-shielding" class="nav-link">Extra shielding</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#line-noise-caused-by-usb-ground" class="nav-link">Line Noise caused by USB ground</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#don-t-use-ungrounded-laptops-with-no-extra-ground" class="nav-link">Don’t use ungrounded laptops with no extra ground</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#beware-of-bad-power-supplies" class="nav-link">Beware of bad power supplies</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#line-noise-caused-by-different-power-circuits" class="nav-link">Line noise caused by different power circuits</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#avoiding-ground-loops" class="nav-link">Avoiding ground loops</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#antennae" class="nav-link">Antennae</a>
-        </li>
-    
-    </ul>
-</nav>
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
 
-
-              
-          </div>
-          
-
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
-              
-              <div>
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../User-Manual/index.html">
+                        User Manual
+                      </a>
+                    </li>
                 
-  <div class="section" id="troubleshooting-noise">
-<span id="troubleshootingnoise"></span><h1>Troubleshooting Noise<a class="headerlink" href="#troubleshooting-noise" title="Permalink to this headline">¶</a></h1>
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Build-Instructions/index.html">
+                        Assembly Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../FAQ/index.html">
+                        FAQs
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://open-ephys.org/acquisition-system/acquisition-board">
+                    Purchase
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/open-ephys/acquisition-board" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/openephys" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/WXAx2URNQU" title="Discord" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-discord"></i></span>
+            <label class="sr-only">Discord</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Troubleshooting Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Measuring-latency.html">Measuring round-trip latency</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Multiple-boards.html">Using multiple boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ephys-with-behavioural-camera.html">Synchronizing with a behavioural camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bonsai-acquisition.html">Using Bonsai with the Acquisition Board</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Tutorials</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Troubleshooting Noise</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="troubleshooting-noise">
+<span id="troubleshootingnoise"></span><h1>Troubleshooting Noise<a class="headerlink" href="#troubleshooting-noise" title="Permalink to this heading">#</a></h1>
 <p>The recordings with our acquisition system will contain three parts:
 1) The biologically generated signal we are interested in
 2) Biologically generated signals we are not interested in, for instance from other regions or other activity types.
 3) Electrical signals from other sources, e.g. ‘noise’. It is good to realise that we live in an electrically noisy world.</p>
 <p>We can use filtering to extract the frequencies that are relevant to our experiment. For instance, if we want to record spikes, we will filter out slower frequencies that are more likely to be generated by synaptic inputs. Though we can get rid of some noise through filtering, noise with large amplitude or at frequencies similar to our desired signals can be a real problem.</p>
-<div class="section" id="gnd-vs-ref-on-the-headstage">
-<h2>GND vs. REF on the Headstage<a class="headerlink" href="#gnd-vs-ref-on-the-headstage" title="Permalink to this headline">¶</a></h2>
+<section id="gnd-vs-ref-on-the-headstage">
+<h2>GND vs. REF on the Headstage<a class="headerlink" href="#gnd-vs-ref-on-the-headstage" title="Permalink to this heading">#</a></h2>
 <p>The ground (GND) and reference (REF) connectors on the headstage aren’t the same thing, though most EIBs and adapters that we’ve been using do tie them together. The reference is the signal that will be subtracted from your measurement electrodes to produce the output of the headstage. The ground connector is often used with a ground pin or screw to bring the animal to the same level as the acquisition system ground, thereby getting rid of any electric potential difference offsets that may cause the headstage amplifier to saturate.
 Often, GND and REF are connected, so that fluctuations in the signal detected by the ground pin are used as a reference signal. Alternatively, the two can be separate, which is typical for EEG or EMG recordings. It’s important to understand the difference and decide whether having a connected ground and reference is the correct choice for your experiment.
 Click <a class="reference external" href="https://ahleighton.github.io/OE-ephys-course/EEA/theoryday3.html#why-do-we-need-a-ground-electrode">here</a> to learn more.
 .. ref to skillhub</p>
-</div>
-<div class="section" id="extra-shielding">
-<h2>Extra shielding<a class="headerlink" href="#extra-shielding" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="extra-shielding">
+<h2>Extra shielding<a class="headerlink" href="#extra-shielding" title="Permalink to this heading">#</a></h2>
 <p>A simple and fast solution to some otherwise unsolvable noise might be to add even a partial Faraday cage to your recording sites. This is true even with implants that already have a complete shielding - as long as part of your animal is not shielded, it can still pick up noise.</p>
-</div>
-<div class="section" id="line-noise-caused-by-usb-ground">
-<h2>Line Noise caused by USB ground<a class="headerlink" href="#line-noise-caused-by-usb-ground" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="line-noise-caused-by-usb-ground">
+<h2>Line Noise caused by USB ground<a class="headerlink" href="#line-noise-caused-by-usb-ground" title="Permalink to this heading">#</a></h2>
 <p>Sometimes, the USB cable that connects the acquisition board to the PC (which is grounded to the building ground via the power supply) isn’t good enough -  grounding the external shield of the USB cable that connects the FPGA to the computer can help.</p>
-</div>
-<div class="section" id="don-t-use-ungrounded-laptops-with-no-extra-ground">
-<h2>Don’t use ungrounded laptops with no extra ground<a class="headerlink" href="#don-t-use-ungrounded-laptops-with-no-extra-ground" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="don-t-use-ungrounded-laptops-with-no-extra-ground">
+<h2>Don’t use ungrounded laptops with no extra ground<a class="headerlink" href="#don-t-use-ungrounded-laptops-with-no-extra-ground" title="Permalink to this heading">#</a></h2>
 <p>If you’re using the acquisition board with a laptop that’s running off battery power, you will have a “floating” ground, as no part of the circuit is connected to an earth. This can cause your signals to look extremely noisy. To fix the issue, connect the ground of the acquisition board to whatever ground you’re using for your experimental setup (perhaps a wall socket or a Faraday cage). You can either do this via the BNC connector (alligator clips work well for this), or by attaching a wire to one of the two dedicated screw terminals on the side of the board. The screw terminals are preferred because someday we may do something with the BNC. If you use the BNC, ground the shell of it to the wall, not the center pin. Connecting the center pin of the BNC to ground will short your board and may fry the FPGA.</p>
-</div>
-<div class="section" id="beware-of-bad-power-supplies">
-<h2>Beware of bad power supplies<a class="headerlink" href="#beware-of-bad-power-supplies" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="beware-of-bad-power-supplies">
+<h2>Beware of bad power supplies<a class="headerlink" href="#beware-of-bad-power-supplies" title="Permalink to this heading">#</a></h2>
 <p>Sometimes, aftermarket power supplies, mostly for laptops, but also for LED lights, or any other power brick, can cause a lot of line noise - try individually turning off equipment to isolate the offending one. If 60 Hz is a president issue, it is worth trying powering the acquisition system from a high quality bench DC supply (5V) - this can significantly reduce noise in some cases.</p>
-</div>
-<div class="section" id="line-noise-caused-by-different-power-circuits">
-<h2>Line noise caused by different power circuits<a class="headerlink" href="#line-noise-caused-by-different-power-circuits" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="line-noise-caused-by-different-power-circuits">
+<h2>Line noise caused by different power circuits<a class="headerlink" href="#line-noise-caused-by-different-power-circuits" title="Permalink to this heading">#</a></h2>
 <p>Make sure that all equipment, including the recording computer, is plugged into the same circuit and grounded to the same ground. This is especially crucial in buildings with separate building and earth grounds.
 Be careful when bridging two ground circuits - sometimes they can carry a large potential difference.</p>
-</div>
-<div class="section" id="avoiding-ground-loops">
-<h2>Avoiding ground loops<a class="headerlink" href="#avoiding-ground-loops" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="avoiding-ground-loops">
+<h2>Avoiding ground loops<a class="headerlink" href="#avoiding-ground-loops" title="Permalink to this heading">#</a></h2>
 <p>Normally, we ‘ground’ equipment by attaching a single cable from the tool or shield to ground, often a conductive ground bus. This creates one low-resistance path, allowing any current to flow to ground and maintaining the grounded equipment at the same electric potential as the ground point.
 ‘Ground loops’ happen when we create a closed loop involving the ground.</p>
 <a class="reference external image-reference" href="https://tinyurl.com/ygn4urcz"><img alt="../_images/circuit-20210804-1041.png" class="align-center" src="../_images/circuit-20210804-1041.png" style="width: 304.5px; height: 480.2px;" /></a>
 <p>In this simulator, (click on image to open) we have two sources, a square-wave at 1000 Hz and a sinewave at 60 Hz. Even when they are separately connected to ground, they are connected through the fact that there is only one ground ‘point’; the upper and lower circuits are equivalent. If we connect the circuits, a loop is formed and their signals can interfere with each other. Even if these signals were not running, the physical loop of wire connecting them via ground can pick up magnetic fields (usually at utility frequency, 50 or 60Hz) and induce a current.</p>
 <p>Use a central grounding point to prevent this. Only connect each piece of equipment to this once, and do not interconnect equipment when avoidable.</p>
-</div>
-<div class="section" id="antennae">
-<h2>Antennae<a class="headerlink" href="#antennae" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="antennae">
+<h2>Antennae<a class="headerlink" href="#antennae" title="Permalink to this heading">#</a></h2>
 <p>Conductive, ungrounded parts of your setup can act as antennae when electromagnetic waves in the environment induce electron movement in that component.</p>
-</div>
-</div>
+</section>
+</section>
 
 
-              </div>
+                </article>
               
               
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Tutorials</a>
-    <a class='right-next' id="next-link" href="Measuring-latency.html" title="next page">Measuring round-trip latency</a>
-
-              </div>
               
-          </main>
-          
-
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tutorials</p>
       </div>
-    </div>
+    </a>
+    <a class="right-next"
+       href="Measuring-latency.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Measuring round-trip latency</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
 
-    <script src="../_static/js/index.js"></script>
-    <footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    <p>
-          &copy; Copyright 2010-2023, Open Ephys &amp; Contributors.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
-    </p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
   </div>
-</footer>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gnd-vs-ref-on-the-headstage">GND vs. REF on the Headstage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-shielding">Extra shielding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#line-noise-caused-by-usb-ground">Line Noise caused by USB ground</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#don-t-use-ungrounded-laptops-with-no-extra-ground">Don’t use ungrounded laptops with no extra ground</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beware-of-bad-power-supplies">Beware of bad power supplies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#line-noise-caused-by-different-power-circuits">Line noise caused by different power circuits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avoiding-ground-loops">Avoiding ground loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#antennae">Antennae</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/open-ephys/doc-template/edit/master/source/Tutorials/Troubleshooting-noise.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/Tutorials/Troubleshooting-noise.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>

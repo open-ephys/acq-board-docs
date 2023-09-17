@@ -1,278 +1,595 @@
 
-
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Using Bonsai with the Acquisition Board &#8212; Open Ephys Acquisition Board</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../_static/_static/theme_overrides.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Using Bonsai with the Acquisition Board &#8212; Acquisition Board Docs</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
     <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/bonsai-acquisition';</script>
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="FAQs" href="../FAQ/index.html" />
     <link rel="prev" title="Synchronizing with a behavioural camera" href="Ephys-with-behavioural-camera.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
-<div class="container-xl">
-
-    
-    <a class="navbar-brand" href="../index.html">
-      <img src="../_static/oe_logo_acq_board.svg" class="logo" alt="logo">
-    </a>
-    
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
-      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../User-Manual/index.html">User Manual</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../Build-Instructions/index.html">Build Instructions</a>
-        </li>
-        
-        <li class="nav-item active">
-            <a class="nav-link" href="index.html">Tutorials</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../FAQ/index.html">FAQs</a>
-        </li>
-        
-        
-        <li class="nav-item">
-            <a class="nav-link nav-external" href="https://open-ephys.org">Open Ephys<i class="fas fa-external-link-alt"></i></a>
-        </li>
-        
-      </ul>
-
-
-      
-
-      <ul class="navbar-nav">
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/open-ephys" target="_blank" rel="noopener">
-              <span><i class="fab fa-github-square"></i></span>
-            </a>
-          </li>
-        
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/openephys" target="_blank" rel="noopener">
-              <span><i class="fab fa-twitter-square"></i></span>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-</div>
-    </nav>
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-          <div class="col-12 col-md-3 bd-sidebar">
-
-<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form>
-
-
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-
-  <div class="bd-toc-item active">
+      <div class="navbar-item">
   
 
-  <ul class="nav bd-sidenav">
-      
-      
-      
-      
-      
-      
-        
-          
-              <li class="">
-                  <a href="Troubleshooting-noise.html">Troubleshooting Noise</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Measuring-latency.html">Measuring round-trip latency</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Multiple-boards.html">Using multiple boards</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="Ephys-with-behavioural-camera.html">Synchronizing with a behavioural camera</a>
-              </li>
-          
-        
-          
-              <li class="active">
-                  <a href="">Using Bonsai with the Acquisition Board</a>
-              </li>
-          
-        
-      
-      
-      
-      
-    </ul>
-
-</nav>
-          </div>
-          
-
-          
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-              
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
-
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#install-bonsai" class="nav-link">Install Bonsai</a>
-        </li>
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#install-the-bonsai-ephys-package" class="nav-link">Install the Bonsai Ephys package</a>
-        </li>
+      
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#open-the-ephys-example-workflow" class="nav-link">Open the Ephys example workflow</a>
-        </li>
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#replace-the-fpga-bitfile" class="nav-link">Replace the FPGA bitfile</a>
-        </li>
+    <img src="../_static/oe_logo_name.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/oe_logo_name.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#streaming-data" class="nav-link">Streaming data</a>
-        </li>
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#customize-the-workflow" class="nav-link">Customize the workflow</a>
-        </li>
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#check-that-your-data-is-being-saved" class="nav-link">Check that your data is being saved</a>
-        </li>
-    
-    </ul>
-</nav>
-
-
-              
-          </div>
-          
-
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
-              
-              <div>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../User-Manual/index.html">
+                        User Manual
+                      </a>
+                    </li>
                 
-  <span class="target" id="bonsaiacq"></span><div class="section" id="using-bonsai-with-the-acquisition-board">
-<h1>Using Bonsai with the Acquisition Board<a class="headerlink" href="#using-bonsai-with-the-acquisition-board" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="install-bonsai">
-<h2>Install Bonsai<a class="headerlink" href="#install-bonsai" title="Permalink to this headline">¶</a></h2>
-<p>Installers are available at <a class="reference external" href="https://bonsai-rx.org/">bonsai-rx.org</a>.</p>
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Build-Instructions/index.html">
+                        Assembly Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../FAQ/index.html">
+                        FAQs
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://open-ephys.org/acquisition-system/acquisition-board">
+                    Purchase
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/open-ephys/acquisition-board" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/openephys" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/WXAx2URNQU" title="Discord" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-discord"></i></span>
+            <label class="sr-only">Discord</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
 </div>
-<div class="section" id="install-the-bonsai-ephys-package">
-<h2>Install the Bonsai <strong>Ephys</strong> package<a class="headerlink" href="#install-the-bonsai-ephys-package" title="Permalink to this headline">¶</a></h2>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../User-Manual/index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Build-Instructions/index.html">
+                        Assembly Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../FAQ/index.html">
+                        FAQs
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://open-ephys.org/acquisition-system/acquisition-board">
+                    Purchase
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/open-ephys/acquisition-board" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/openephys" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/WXAx2URNQU" title="Discord" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-discord"></i></span>
+            <label class="sr-only">Discord</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Troubleshooting-noise.html">Troubleshooting Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Measuring-latency.html">Measuring round-trip latency</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Multiple-boards.html">Using multiple boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ephys-with-behavioural-camera.html">Synchronizing with a behavioural camera</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Using Bonsai with the Acquisition Board</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Tutorials</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Using Bonsai with the Acquisition Board</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <span class="target" id="bonsaiacq"></span><section id="using-bonsai-with-the-acquisition-board">
+<h1>Using Bonsai with the Acquisition Board<a class="headerlink" href="#using-bonsai-with-the-acquisition-board" title="Permalink to this heading">#</a></h1>
+<section id="install-bonsai">
+<h2>Install Bonsai<a class="headerlink" href="#install-bonsai" title="Permalink to this heading">#</a></h2>
+<p>Installers are available at <a class="reference external" href="https://bonsai-rx.org/">bonsai-rx.org</a>.</p>
+</section>
+<section id="install-the-bonsai-ephys-package">
+<h2>Install the Bonsai <strong>Ephys</strong> package<a class="headerlink" href="#install-the-bonsai-ephys-package" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>First, click on <strong>Tools &gt; Manage Packages</strong></p></li>
 <li><p>In the package manager, search for “Ephys”</p></li>
 <li><p>Click the “Install” buttons to add both the <strong>Bonsai - Ephys Library</strong> and <strong>Bonsai - Ephys Design Library</strong>.</p></li>
 </ul>
 <a class="reference internal image-reference" href="../_images/install_ephys_packages.png"><img alt="../_images/install_ephys_packages.png" class="align-center" src="../_images/install_ephys_packages.png" style="width: 500px;" /></a>
-</div>
-<div class="section" id="open-the-ephys-example-workflow">
-<h2>Open the Ephys example workflow<a class="headerlink" href="#open-the-ephys-example-workflow" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="open-the-ephys-example-workflow">
+<h2>Open the Ephys example workflow<a class="headerlink" href="#open-the-ephys-example-workflow" title="Permalink to this heading">#</a></h2>
 <p>Search for “Ephys” in the Bonsai Gallery, and open the <strong>Bonsai - Ephys Example</strong> workflow.</p>
 <a class="reference internal image-reference" href="../_images/bonsai_ephys_example_install.png"><img alt="../_images/bonsai_ephys_example_install.png" class="align-center" src="../_images/bonsai_ephys_example_install.png" style="width: 500px;" /></a>
-</div>
-<div class="section" id="replace-the-fpga-bitfile">
-<h2>Replace the FPGA bitfile<a class="headerlink" href="#replace-the-fpga-bitfile" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="replace-the-fpga-bitfile">
+<h2>Replace the FPGA bitfile<a class="headerlink" href="#replace-the-fpga-bitfile" title="Permalink to this heading">#</a></h2>
 <p>In the Ephys example workflow, click on the <code class="code docutils literal notranslate"><span class="pre">Rhd200EvalBoard`</span></code> node to select it. On the right-hand side, you will see a column where you can configure the properties of that node.
 Click on the ‘…’ to replace the default <code class="code docutils literal notranslate"><span class="pre">rhd2000_usb3.bit</span></code> file with the <code class="code docutils literal notranslate"><span class="pre">rhd2000_usb3.bit</span></code> file that is present in your local installation of the Open Ephys GUI, or download it directly from <a class="reference external" href="https://github.com/open-ephys/plugin-GUI/blob/main/Resources/Bitfiles/rhd2000_usb3.bit">GitHub</a>.</p>
 <a class="reference internal image-reference" href="../_images/select_bitfile.png"><img alt="../_images/select_bitfile.png" class="align-center" src="../_images/select_bitfile.png" style="width: 500px;" /></a>
-</div>
-<div class="section" id="streaming-data">
-<h2>Streaming data<a class="headerlink" href="#streaming-data" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="streaming-data">
+<h2>Streaming data<a class="headerlink" href="#streaming-data" title="Permalink to this heading">#</a></h2>
 <p>Make sure your Open Ephys Acquisition Board and a headstage are connected. You can use the headstage without an animal to perform test recordings, just using the noise that the headstage will pick up. Click the <strong>Start</strong> button to run the workflow. You can double-click on each node (circle) to open the visualiser at that point in the workflow, so that you can see how data is being transformed at each step.</p>
-</div>
-<div class="section" id="customize-the-workflow">
-<h2>Customize the workflow<a class="headerlink" href="#customize-the-workflow" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="customize-the-workflow">
+<h2>Customize the workflow<a class="headerlink" href="#customize-the-workflow" title="Permalink to this heading">#</a></h2>
 <p>The example selects only channel 1 and 2 using the ‘Select Channel’ node. Add all the channels you are interested in and run the workflow again. Use Page Up and Page Down to scroll through the pages of the visualiser.</p>
 <p>Make sure you also check and if necessary adjust the settings for the frequency filter and spike detector.</p>
 <p>You can extract more types of data from the board by right-clicking on the <code class="code docutils literal notranslate"><span class="pre">Rhd200EvalBoard`</span></code> node. For example, you can choose to visualise TTL events coming through the Digital Input port of the Acquisition Board (right-most HDMI port, closest to the headstage inputs). You can also visualize the auxiliary data from the headstage if the headstage includes an accelerometer.</p>
-</div>
-<div class="section" id="check-that-your-data-is-being-saved">
-<h2>Check that your data is being saved<a class="headerlink" href="#check-that-your-data-is-being-saved" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="check-that-your-data-is-being-saved">
+<h2>Check that your data is being saved<a class="headerlink" href="#check-that-your-data-is-being-saved" title="Permalink to this heading">#</a></h2>
 <p>In Bonsai, data will only be saved if there is a purple ‘sink’ node at the end of the workflow. In the example, the ephys channel data is being saved in a .bin file that you can open in, for instance, Python or MATLAB. The extracted spikes are saved as a .csv that you can open in Excel or load using the <cite>Pandas library &lt;https://pandas.pydata.org/&gt;</cite>.</p>
 <p>Before recording a real experiment, always do a trial recording to make sure your data is being saved, and that when you open it, it contains the expected number of channels etc. You can do this without an animal, just using noise recorded from the headstage.</p>
-</div>
-</div>
+</section>
+</section>
 
 
-              </div>
+                </article>
               
               
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="Ephys-with-behavioural-camera.html" title="previous page">Synchronizing with a behavioural camera</a>
-    <a class='right-next' id="next-link" href="../FAQ/index.html" title="next page">FAQs</a>
-
-              </div>
               
-          </main>
-          
-
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Ephys-with-behavioural-camera.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Synchronizing with a behavioural camera</p>
       </div>
-    </div>
+    </a>
+    <a class="right-next"
+       href="../FAQ/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">FAQs</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
 
-    <script src="../_static/js/index.js"></script>
-    <footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    <p>
-          &copy; Copyright 2010-2023, Open Ephys &amp; Contributors.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
-    </p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
   </div>
-</footer>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-bonsai">Install Bonsai</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-bonsai-ephys-package">Install the Bonsai <strong>Ephys</strong> package</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-ephys-example-workflow">Open the Ephys example workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#replace-the-fpga-bitfile">Replace the FPGA bitfile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#streaming-data">Streaming data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customize-the-workflow">Customize the workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-that-your-data-is-being-saved">Check that your data is being saved</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/open-ephys/doc-template/edit/master/source/Tutorials/bonsai-acquisition.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/Tutorials/bonsai-acquisition.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2010-2023, Open Ephys &amp; Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>
