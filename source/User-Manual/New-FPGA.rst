@@ -3,7 +3,7 @@
 New Open Ephys FPGA module
 =====================================================
 
-*Last updated: 10th Feb 2023*
+*Last updated: 18th Jul 2023*
 
 Devices shipped from Dec 2022 onwards use a brand-new FPGA module designed by Open Ephys.
 
@@ -32,7 +32,7 @@ The new FPGA uses different drivers that need to be installed before plugging th
 On Windows 
 +++++++++++++
    
-   #. Download the `Windows driver <https://www.ftdichip.com/Drivers/D3XX/FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe.zip>`_.
+   #. Download the `Windows driver <https://www.ftdichip.com/Driver/D3XX/FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe.zip>`_.
    #. Unzip the folder
    #. Run ``FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe``
 
@@ -125,6 +125,11 @@ Under development
 -------------------
 We will continue to work on getting the full integration of the board with the new FPGA module that the previous boards had.
 We are working on a unified OE GUI plugin for all acquisition boards regardless of the FPGA module they have.
+
+.. important::
+
+   Impedance measurements currently only work at 30kS/s sample rate.
+   We are working on implementing impedance measurements at all available sample rates.
 
 We have completed:
 
