@@ -1,107 +1,68 @@
 :notoc:
 
-*************************************************
-Open Ephys Acquisition Board
-*************************************************
+.. title:: Home
 
 .. **Date**: |today|
 
 .. **Download documentation**: `PDF Version <open-ephys-documentation.pdf>`__ | `Zipped HTML <open-ephys-documentation.zip>`__\
 
-*This is the documentation site for the Open Ephys Acquisition Board, an open-source interface for acquiring up to 512 channels of extracellular electrophysiology data over a USB connection.*
+
 
 .. image:: _static/images/acquisition-board.jpg
   :alt: Photograph of the Open Ephys acquisition board
 
 |
 
-Key Specifications
-###################
+The **Open Ephys Acquisition Board** is an open-source interface for acquiring up to 512 channels of extracellular electrophysiology data over a USB connection. 
 
-* **Headstage connectors:** 4 (up to 2 64-channel headstages per connection)
-* **Maximum channel count:** 512
-* **Data interface:** USB
-* **Analog inputs**: 8
-* **Digital inputs**: 8
-* **Supported operating systems:** macOS, Linux, and Windows
-
-Where to buy one
-###################################
-You can order an assembled Acquisition Board from `Open Ephys Production Site <https://open-ephys.org/acquisition-system/eux9baf6a5s8tid06hk1mw5aafjdz1>`_ , and headstages and cables can be purchased from Intan. You can also order an `Open Ephys Starter Kit <https://open-ephys.org/acquisition-system/starter-kit>`_, which contains everything you need to get started (except for electrodes and a computer).
+You can order an assembled Acquisition Board from `Open Ephys Production Site <https://open-ephys.org/acquisition-system/acquisition-board>`_. You can also order an `Open Ephys Starter Kit <https://open-ephys.org/acquisition-system/starter-kit>`_, which contains everything you need to get started (except for electrodes and a computer).
 
 Because all the designs are freely available, you can also build the Acquisition Board yourself. We estimate you'll spend about 2-3 days of work and about $1000. Follow the instructions :ref:`here <buildinstructions>` to learn how to build your own board.
 
-Getting Started
-#################################################
 Besides the acquisition board, you will need :ref:`these other components <acsystemparts>` to start collecting data. If you already have all of the necessary parts in your lab, follow the :ref:`quickstartguide` to learn how to start collecting data right away. Otherwise, we recommend reading through the sub-pages to help you decide which components to buy.
 
-.. raw:: html
+Key Specifications
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
-                <div class="card text-center intro-card shadow" style="width: 22rem;">
-                <img src="_static/images/oe_logo_circle.svg" class="card-img-top" alt="Open Ephys logo" height="160">
-                <div class="card-body flex-fill">
-                    <h4 class="card-title">User Manual: Quickstart Guide</h5>
-                    <p class="card-text">Read this if you're just starting out.</p>
-
-.. container:: custom-button
-
-    :ref:`Getting started >><quickstartguide>`
+* 4 headstage connections (up to 2 64-channel headstages per connection)
+* Up to 512 channels
+* USB data transmission
+* 8 analog inputs
+* 8 digital inputs
 
 .. raw:: html
-
-                </div>
-                </div>
+      
+    <br>
+    <div class="card-columns">
+        <a class="reference internal" href="User-Manual/Quickstart-guide.html"><span class="std std-ref custom-card">
+        <div class="card text-center intro-card">
+            <img src="_static/images/oe_logo_circle.svg" class="card-img-top hover-zoom" alt="Open Ephys logo" height="100">
+            <div class="card-body flex-fill">
+                <h5 class="card-title">Quickstart Guide</h5>
+                <p class="card-text">Read this if you're just starting out.</p>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
-                <div class="card text-center intro-card shadow" style="width: 22rem;">
-                <img src="_static/images/noun_macbook.svg" class="card-img-top" alt="A laptop" height="160">
-                <div class="card-body flex-fill">
-                    <h4 class="card-title">User Manual: Software Guide</h5>
-                    <p class="card-text">How to install software.</p>
-
-.. container:: custom-button
-
-    :ref:`Installation >><acquisitionsoftware>`
-
-.. raw:: html
-
-                </div>
-                </div>
+        </div>
+        <a class="reference internal" href="User-Manual/Acquisition-software.html"><span class="std std-ref custom-card">
+        <div class="card text-center intro-card">
+            <img src="_static/images/noun_macbook.svg" class="card-img-top hover-zoom" alt="A laptop" height="100">
+            <div class="card-body flex-fill">
+                <h5 class="card-title">Software Guide</h5>
+                <p class="card-text">How to install compatible software.</p>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
-                <div class="card text-center intro-card shadow" style="width: 22rem;">
-                <img src="_static/images/noun_screwdriver.svg" class="card-img-top" alt="A screwdriver" height="160">
-                <div class="card-body flex-fill">
-                    <h4 class="card-title">Assembly Instructions</h5>
-                    <p class="card-text">How to build it yourself.</p>
-
-.. container:: custom-button
-
-    :ref:`Build Instructions >><buildinstructions>`
-
-.. raw:: html
-
-                </div>
-                </div>
+        </div>
+        <a class="reference internal" href="Build-Instructions/index.html"><span class="std std-ref custom-card">
+        <div class="card text-center intro-card ">
+            <img src="_static/images/noun_screwdriver.svg" class="card-img-top" alt="A screwdriver" height="100">
+            <div class="card-body flex-fill">
+                <h5 class="card-title">Assembly instructions</h5>
+                <p class="card-text">How to build it yourself.</p>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
-                <div class="card text-center intro-card shadow" style="width: 22rem;">
-                <img src="_static/images/noun_books.svg" class="card-img-top" alt="Some books" height="160">
-                <div class="card-body flex-fill">
-                    <h4 class="card-title">Tutorials</h5>
-                    <p class="card-text">Guided tours on a variety of topics.</p>
-
-.. container:: custom-button
-
-    :ref:`Tutorials >><tutorials>`
-
-.. raw:: html
-
-                </div>
-                </div>
+        </div>
+        <a class="reference internal" href = "Tutorials/index.html"><span class="std std-ref custom-card">
+        <div class="card text-center intro-card">
+            <img src="_static/images/noun_books.svg" class="card-img-top" alt="Some books" height="100">
+            <div class="card-body flex-fill">
+                <h5 class="card-title">Tutorials</h5>
+                <p class="card-text">Guided tours on a variety of topics.</p>
             </div>
         </div>
     </div>
