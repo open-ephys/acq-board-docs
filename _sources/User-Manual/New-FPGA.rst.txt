@@ -3,7 +3,7 @@
 New Open Ephys FPGA module
 =====================================================
 
-*Last updated: 18th Jul 2023*
+*Last updated: 18th Dec 2023*
 
 Devices shipped from Dec 2022 onwards use a brand-new FPGA module designed by Open Ephys.
 
@@ -35,6 +35,8 @@ On Windows
    #. Download the `Windows driver <https://www.ftdichip.com/Driver/D3XX/FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe.zip>`_.
    #. Unzip the folder
    #. Run ``FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe``
+
+.. warning:: There is a known issue with Windows driver version 1.3.0.8. Make sure you use version 1.3.0.4 linked above. If you encounter "Error reading ONI frame: Unknown error code", follow the steps in `this GitHub issue <https://github.com/open-ephys/ECP5U85-BSE-USB/issues/3>`_ to resolve it.
 
 On MacOS 
 +++++++++++++
