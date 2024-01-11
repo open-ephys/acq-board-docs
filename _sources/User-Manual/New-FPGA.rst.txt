@@ -3,7 +3,7 @@
 New Open Ephys FPGA module
 =====================================================
 
-*Last updated: 21st Dec 2023*
+*Last updated: 11th Jan 2024*
 
 Devices shipped from Dec 2022 onwards use a brand-new FPGA module designed by Open Ephys.
 
@@ -32,9 +32,9 @@ The new FPGA uses different drivers that need to be installed before plugging th
 On Windows 
 +++++++++++++
    
-   #. Download the `Windows driver <https://www.ftdichip.com/Driver/D3XX/FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe.zip>`_.
+   #. Download the `Windows driver <https://ftdichip.com/wp-content/uploads/2024/01/FTD3XXDriver_WHQLCertified_1.3.0.8_Installer.zip>`_.
    #. Unzip the folder
-   #. Run ``FTD3XXDriver_WHQLCertified_v1.3.0.4_Installer.exe``
+   #. Run ``FTD3XXDriver_WHQLCertified_1.3.0.8_Installer.exe``
 
 On MacOS 
 +++++++++++++
