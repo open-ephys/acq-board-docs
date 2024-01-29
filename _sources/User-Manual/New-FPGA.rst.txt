@@ -98,7 +98,7 @@ Follow the instructions on the :ref:`gwupdate` page to check your gateware versi
 5. Test and use your board!
 *****************************
 
-You can now use this plugin to acquire data from your acquisition board. Usage instructions for the board can be found in this User Manual and for the plugin, in the `Rhythm Plugins page <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Rhythm-Plugins.html>`_ of the OE GUI documentation.
+You can now use this plugin to acquire data from your acquisition board. Usage instructions for the board can be found in this User Manual and for the plugin, in the `OE FPGA Acquisition Board Plugin page <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/OE-FPGA-Acquisition-Board.html>`_ of the OE GUI documentation.
 
 Avoid confusing the new ``OE FPGA Acquisition Board`` plugin with the one called ``Acquisition Board``, which was used for previous versions of the acquisition board that did not have the Open Ephys FPGA. We are working on consolidating everything into the same plugin but for the moment, these are two separate plugins. Your new board will not work with the old plugin and vice versa.
 
@@ -124,7 +124,9 @@ Please reach out to *support@oeps.tech* with these details:
 Under development
 -------------------
 We will continue to work on getting the full integration of the board with the new FPGA module that the previous boards had.
-We are working on a unified OE GUI plugin for all acquisition boards regardless of the FPGA module they have.
+
+* We are working on a unified OE GUI plugin for all acquisition boards regardless of the FPGA module they have.
+* The OE FPGA Acquisition board plugin does not currently have an associated output plugin.
 
 .. important::
 

@@ -507,7 +507,7 @@ document.write(`
 </section>
 <section id="test-and-use-your-board">
 <h3>5. Test and use your board!<a class="headerlink" href="#test-and-use-your-board" title="Permalink to this heading">#</a></h3>
-<p>You can now use this plugin to acquire data from your acquisition board. Usage instructions for the board can be found in this User Manual and for the plugin, in the <a class="reference external" href="https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Rhythm-Plugins.html">Rhythm Plugins page</a> of the OE GUI documentation.</p>
+<p>You can now use this plugin to acquire data from your acquisition board. Usage instructions for the board can be found in this User Manual and for the plugin, in the <a class="reference external" href="https://open-ephys.github.io/gui-docs/User-Manual/Plugins/OE-FPGA-Acquisition-Board.html">OE FPGA Acquisition Board Plugin page</a> of the OE GUI documentation.</p>
 <p>Avoid confusing the new <code class="docutils literal notranslate"><span class="pre">OE</span> <span class="pre">FPGA</span> <span class="pre">Acquisition</span> <span class="pre">Board</span></code> plugin with the one called <code class="docutils literal notranslate"><span class="pre">Acquisition</span> <span class="pre">Board</span></code>, which was used for previous versions of the acquisition board that did not have the Open Ephys FPGA. We are working on consolidating everything into the same plugin but for the moment, these are two separate plugins. Your new board will not work with the old plugin and vice versa.</p>
 <a class="reference internal image-reference" href="../_images/GUI-plugin-list.png"><img alt="../_images/GUI-plugin-list.png" class="align-center" src="../_images/GUI-plugin-list.png" style="width: 30%;" /></a>
 <p>As with any new device, test your acquisition board to make sure it is working as expected by performing checks on a short recording before using it for research. We test them before they get to you but might not have covered all the use cases and your particular hardware.</p>
@@ -524,8 +524,11 @@ document.write(`
 </section>
 <section id="under-development">
 <span id="newfpga-development"></span><h2>Under development<a class="headerlink" href="#under-development" title="Permalink to this heading">#</a></h2>
-<p>We will continue to work on getting the full integration of the board with the new FPGA module that the previous boards had.
-We are working on a unified OE GUI plugin for all acquisition boards regardless of the FPGA module they have.</p>
+<p>We will continue to work on getting the full integration of the board with the new FPGA module that the previous boards had.</p>
+<ul class="simple">
+<li><p>We are working on a unified OE GUI plugin for all acquisition boards regardless of the FPGA module they have.</p></li>
+<li><p>The OE FPGA Acquisition board plugin does not currently have an associated output plugin.</p></li>
+</ul>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Impedance measurements currently only work at 30kS/s sample rate.
