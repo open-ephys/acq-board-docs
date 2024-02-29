@@ -218,8 +218,8 @@ html_favicon = "_static/images/favicon.png"
 
 html_context = {
     "github_user": "open-ephys",
-    "github_repo": "doc-template",
-    "github_version": "master",
+    "github_repo": "acq-board-docs",
+    "github_version": "main",
     "doc_path": "source",
     "css_files": ["_static/theme_overrides.css",],
 }
