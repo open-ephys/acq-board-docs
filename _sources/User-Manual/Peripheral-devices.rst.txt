@@ -66,7 +66,7 @@ Analog Output
 
 There are eight analog outputs on the board, which use the 16-bit DAC8531 chip from Texas Instruments. The DACs (Digital to Analog converters) are controlled by the Rhythm interface.
 
-`If activated in the software <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Rhythm-FPGA.html#audio-output>`_ , the audio jack on the acquisition board can be used to monitor analog channels 0 and 1 (Left and Right in the audio) by plugging in headphones or speakers. (All channels can also be monitored via audio through the software, using the audio channel selector on a plugin to select the channel you're interested in).
+`If activated in the software <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/OE-FPGA-Acquisition-Board.html#audio-output>`_ , the audio jack on the acquisition board can be used to monitor analog channels 0 and 1 (Left and Right in the audio) by plugging in headphones or speakers. (All channels can also be monitored via audio through the software, using the audio channel selector on a plugin to select the channel you're interested in).
 
 Any of the channels can be programmed to deliver custom waveforms as well, but this functionality hasn't been added to the GUI yet.
 
@@ -158,7 +158,7 @@ The arduino shield for I/O from the host-pc can generate up to 8 channels of dig
 
 On the Arduino, this is implemented via the `Firmata firmware <http://playground.arduino.cc/Interfacing/Firmata>`_). This makes it simple for a computer to access the state of the Arduino pins via USB.
 
-For a similar, but much more powerful signal output device, check out the `PulsePal <https://sites.google.com/site/pulsepalwiki/home>`_) which also works seamlessly with the Open Ephys GUI.
+For a similar, but much more powerful signal output device, check out the `PulsePal <https://sanworks.io/shop/viewproduct?productID=1102>`_) which also works seamlessly with the Open Ephys GUI.
 
 Arduino I/O is controlled directly from the Arduino Output sink in the GUI.  Currently, the I/O shield is strictly passive and makes no use of the analog pins. However, you can still access all Arduino pins through the headers.
 

@@ -14,13 +14,13 @@ This `compatibility matrix <https://open-ephys.org/product-compatibility>`_ show
 
 **What are the analog and digital inputs and outputs?**
 
-`Here <_peripheraldevices>`_ is an overview of the various inputs and outputs that the board supports.
+The :ref:`peripheraldevices` page includes an overview of the various inputs and outputs that the board supports.
 
 |
 
 **How can I synchronise my electrophysiology data with a behavioural camera?**
 
-Check out this `tutorial <_ephyswithbehaviouralcam>`_.
+Check out this tutorial: :ref:`ephyswithbehaviouralcam`.
 
 |
 
