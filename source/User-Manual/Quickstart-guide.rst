@@ -69,4 +69,4 @@ There is a small DC offset (~0.4 V) on the ADCs when they're in ±5V range. This
 
 The LEDs on the acquisition board will flash during normal operation. Fast flashing of the left-most LED (analog output) is expected. The digital input LED should turn green when one of the digital input channels is high, which is useful for checking whether or not your synchronization is working.
 
-It is possible that the LEDs can create noise in your recordings for some grounding configurations. You may also want to disable them if you're performing behavioral experiments in the dark. The LEDs can be turned off by clicking the "LED" button in the `Rhythm FPGA <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Rhythm-FPGA.html>`_ plugin in the Open Ephys GUI.
+It is possible that the LEDs can create noise in your recordings for some grounding configurations. You may also want to disable them if you're performing behavioral experiments in the dark. The LEDs can be turned off by clicking the "LED" button in the `Acqusitiion Board <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/OE-FPGA-Acquisition-Board.html#>`_ plugin in the Open Ephys GUI.
