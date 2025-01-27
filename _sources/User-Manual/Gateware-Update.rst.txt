@@ -13,7 +13,7 @@ the Acquisition Board.
 Latest version
 -------------------------
 
-The latest available gateware is :download:`version 1.0 </_static/files/OpenEphysFPGA-gw1.0.zip>`.
+The latest available gateware is :download:`version 1.1 </_static/files/OpenEphysFPGA-gw1.1.zip>`.
 
 .. _gwupdate_instructions:
 
