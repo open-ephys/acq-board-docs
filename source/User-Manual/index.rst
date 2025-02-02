@@ -29,5 +29,6 @@ We're going to assume a basic understanding of electronic circuits. If you don't
     Peripheral-devices
     Computer-hardware
     Acquisition-software
+    Status-LEDs
     Gateware-Update
     New-FPGA
