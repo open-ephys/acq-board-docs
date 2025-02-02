@@ -372,6 +372,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="Peripheral-devices.html">Peripheral devices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Computer-hardware.html">Computer hardware</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Acquisition-software.html">Acquisition software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Status-LEDs.html">Status LEDs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Gateware-Update.html">Gateware updates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="New-FPGA.html">New Open Ephys FPGA module</a></li>
 </ul>
@@ -479,7 +480,7 @@ document.write(`
 <p>If any of the ADC channels are not connected (i.e., the signal pin is floating), signals from adjacent channels will bleed through. This is expected behavior.</p>
 </div>
 <p><em>LEDs</em></p>
-<p>The LEDs on the acquisition board will flash during normal operation. Fast flashing of the left-most LED (analog output) is expected. The digital input LED should turn green when one of the digital input channels is high, which is useful for checking whether or not your synchronization is working.</p>
+<p>The <a class="reference internal" href="Status-LEDs.html#statusleds"><span class="std std-ref">Status LEDs</span></a> on the acquisition board will flash during normal operation. Fast flashing of the left-most LED (analog output) is expected. The digital input LED should turn green when one of the digital input channels is high, which is useful for checking whether or not your synchronization is working.</p>
 <p>It is possible that the LEDs can create noise in your recordings for some grounding configurations. You may also want to disable them if you’re performing behavioral experiments in the dark. The LEDs can be turned off by clicking the “LED” button in the <a class="reference external" href="https://open-ephys.github.io/gui-docs/User-Manual/Plugins/OE-FPGA-Acquisition-Board.html#">Acqusitiion Board</a> plugin in the Open Ephys GUI.</p>
 </section>
 </section>

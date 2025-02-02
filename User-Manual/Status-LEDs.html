@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Other equipment you will need &#8212; Acquisition Board Docs</title>
+    <title>Status LEDs &#8212; Acquisition Board Docs</title>
   
   
   
@@ -37,12 +37,12 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'User-Manual/Acquisition-system-parts';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'User-Manual/Status-LEDs';</script>
     <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Compatible electrodes" href="Electrodes.html" />
-    <link rel="prev" title="How it works" href="How-it-works.html" />
+    <link rel="next" title="Gateware updates" href="Gateware-Update.html" />
+    <link rel="prev" title="Acquisition software" href="Acquisition-software.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -364,7 +364,7 @@ document.write(`
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Quickstart-guide.html">Quickstart guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="How-it-works.html">How it works</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Other equipment you will need</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Acquisition-system-parts.html">Other equipment you will need</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Electrodes.html">Compatible electrodes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Headstages.html">Headstages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cables.html">Cables</a></li>
@@ -372,7 +372,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="Peripheral-devices.html">Peripheral devices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Computer-hardware.html">Computer hardware</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Acquisition-software.html">Acquisition software</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Status-LEDs.html">Status LEDs</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Status LEDs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Gateware-Update.html">Gateware updates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="New-FPGA.html">New Open Ephys FPGA module</a></li>
 </ul>
@@ -415,7 +415,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">User Manual</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Other equipment you will need</li>
+    <li class="breadcrumb-item active" aria-current="page">Status LEDs</li>
   </ul>
 </nav>
 </div>
@@ -432,19 +432,55 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="other-equipment-you-will-need">
-<span id="acsystemparts"></span><h1>Other equipment you will need<a class="headerlink" href="#other-equipment-you-will-need" title="Permalink to this heading">#</a></h1>
-<p>A complete data acquisition system consists of the following hardware:</p>
+  <section id="status-leds">
+<span id="statusleds"></span><h1>Status LEDs<a class="headerlink" href="#status-leds" title="Permalink to this heading">#</a></h1>
+<p>Each acquisition board includes 8 status LEDs with specific colors and behaviors. The LEDs do not represent a diagnostic of the actual physical hardware, but rather display what the connected software and acquisition board gateware are trying to do. The LEDs are not “manually” controlled through software, however. When the software changes a hardware setting, the LEDs just reflect these settings in different ways.</p>
+<p>Before initializing the board by the corresponding plugin, the LED status should be considered undefined.</p>
+<p>The colors and behaviors are as follows:</p>
+<section id="headstage-ports">
+<h2>Headstage Ports<a class="headerlink" href="#headstage-ports" title="Permalink to this heading">#</a></h2>
+<p>The headstage port LEDs are updated by the software port scanning process. If a headstage is manually connected or disconnected, this won’t change the LED states until the next port scan.</p>
 <ul class="simple">
-<li><p>An Acquisition Board, which you can either order from the <a class="reference external" href="https://open-ephys.org/store">Open Ephys store</a> or build yourself by following the <a class="reference internal" href="../Build-Instructions/index.html#buildinstructions"><span class="std std-ref">Assembly Guide</span></a> section of this documentation.</p></li>
-<li><p>USB 3.0 cable</p></li>
-<li><p>5V power supply</p></li>
-<li><p>At least one <a class="reference internal" href="Headstages.html#headstages"><span class="std std-ref">headstage</span></a> with an Intan RHD-series chip, which you can order from the Open Ephys store or the Intan website, or build yourself. Each headstage can handle 16 to 128 channels of neural input.</p></li>
-<li><p>One <a class="reference internal" href="Cables.html#cables"><span class="std std-ref">cable</span></a> to connect each headstage to the acquistion board, which you can order from the Open Ephys store (as part of the starter kit) or the Intan website, or build yourself.</p></li>
-<li><p>(Optional) One or more <a class="reference internal" href="Peripheral-devices.html#peripheraldevices"><span class="std std-ref">I/O boards</span></a> for auxiliary (non-neural) signals. Each I/O board requires one HDMI cable to connect to the acquisition board.</p></li>
-<li><p>A <a class="reference internal" href="Computer-hardware.html#computerhardware"><span class="std std-ref">computer</span></a> to run the software and interface with the rest of the system. The recommended configuration depends on the number of channels you plan to acquire simultaneously.</p></li>
+<li><p><strong>RED</strong>: No headstage is detected in this port</p></li>
+<li><p><strong>GREEN</strong>: Headstage chip detected but acquisition is not running</p></li>
+<li><p><strong>Blinking GREEN and BLUE</strong>: Headstage detected and acquisition is running</p></li>
 </ul>
-<p>If you already have these components, follow the <a class="reference internal" href="Quickstart-guide.html#quickstartguide"><span class="std std-ref">Quickstart guide</span></a> to learn how to start collecting data right away. Otherwise, we recommend reading through the sub-pages of this documentation to help you decide which components to buy.</p>
+</section>
+<section id="digital-input">
+<h2>Digital input<a class="headerlink" href="#digital-input" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>PURPLE</strong>: Acquisition is not running</p></li>
+<li><p><strong>Briefly flashing YELLOW</strong>: A change has occured on a digitial input line while acquisition is running.</p></li>
+</ul>
+</section>
+<section id="digital-output">
+<h2>Digital output<a class="headerlink" href="#digital-output" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>PURPLE</strong>: Default state; does not change.</p></li>
+</ul>
+</section>
+<section id="analog-output">
+<h2>Analog Output<a class="headerlink" href="#analog-output" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>PURPLE</strong>: Acquisition is not running OR all DACs disabled</p></li>
+<li><p><strong>Blinking GREEN and BLUE</strong>: Some DACs are enabled and acquisition is running</p></li>
+</ul>
+</section>
+<section id="analog-input">
+<h2>Analog Input<a class="headerlink" href="#analog-input" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>PURPLE</strong>: Acquisition is not running</p></li>
+<li><p><strong>Other colors</strong>: Acquisition is running. Depends on the input channel whose absolute value is highest:</p>
+<ul>
+<li><p>If the signal is positive, the color ranges from dim white (0V) to light red (5V)</p></li>
+<li><p>If the signal is negative, the color ranges from dim white (0V) to light green (5V)</p></li>
+</ul>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
 </section>
 
 
@@ -459,20 +495,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="How-it-works.html"
+       href="Acquisition-software.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">How it works</p>
+        <p class="prev-next-title">Acquisition software</p>
       </div>
     </a>
     <a class="right-next"
-       href="Electrodes.html"
+       href="Gateware-Update.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Compatible electrodes</p>
+        <p class="prev-next-title">Gateware updates</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -489,9 +525,23 @@ document.write(`
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
   <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#headstage-ports">Headstage Ports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#digital-input">Digital input</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#digital-output">Digital output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analog-output">Analog Output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analog-input">Analog Input</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/open-ephys/acq-board-docs/edit/main/source/User-Manual/Acquisition-system-parts.rst">
+    <a href="https://github.com/open-ephys/acq-board-docs/edit/main/source/User-Manual/Status-LEDs.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -505,7 +555,7 @@ document.write(`
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">
-    <a href="../_sources/User-Manual/Acquisition-system-parts.rst.txt">
+    <a href="../_sources/User-Manual/Status-LEDs.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
