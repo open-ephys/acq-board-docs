@@ -191,7 +191,7 @@ html_theme_options = {
     "external_links": [{"name": "Purchase", "url": "https://open-ephys.org/acquisition-system/acquisition-board"},],
     'icon_links': [
         dict(name='GitHub',
-             url='https://github.com/open-ephys/acquisition-board',
+             url='https://github.com/open-ephys/acq-board-docs',
              icon='fab fa-github'),
         dict(name='Twitter',
              url='https://twitter.com/openephys',
