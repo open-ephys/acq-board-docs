@@ -36,7 +36,7 @@ Order the PCB and Stencil
 
 We recommend ordering your PCBs from Advanced Circuits, since that's what we're using, and we know they can handle our tolerances. The total cost will be about $260 for a single board, as long as you have an academic affiliation to qualify for a discount and a small run. Note that the board is just a bit too big to qualify for the $66 special on multi-layer boards that is prominently mentioned on Advanced Circuits' home page.
 
-To place this order, you need to first upload the gerber.zip file from the github repository to www.freedfm.com, which is the automatic file checker used by Advanced Circuits. You will need to tell FreeDFM which file corresponds to each layer, and you must specify the inner layers 2 and 3 as "positive polarity":
+To place this order, you need to first upload the gerber.zip file from the GitHub repository to www.freedfm.com, which is the automatic file checker used by Advanced Circuits. You will need to tell FreeDFM which file corresponds to each layer, and you must specify the inner layers 2 and 3 as "positive polarity". This is shown in the screenshot below:
 
     .. image:: ../_static/images/buildinstructions/freedfm_screenshot.png
       :alt: FreeDFM layer mapping
