@@ -106,10 +106,10 @@ Digital Output
 
 The acquisition board has eight 5V digital outputs connected to an HDMI connector. These interface with a level shifter (Texas Instruments SN74LVC4245A) to allow the 3.3V outputs of the FPGA to send 5V signals out of the acquisition board. There are eight additional outputs in the Rhythm firmware, which are connected to holes on the bottom of the board.
 
-.. note::
-  Currently, the digital outputs of the Acquisition Board are not part of the Open Ephys GUI. Because the system has been designed to optimize the transfer of data from the board via USB to the pc (rather than in the opposite direction), the delay between the software and the acquisition board is, at the moment, variable and unpredictable. The digital outputs will be added to the next major release of the Open Ephys GUI.
+You can use the Acquisition Board Outputs via the `Acq Board Output plugin <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Acq-Board-Output.html>`_. However, bear in mind that delay between the software and the acquisition board is variable and unpredictable. This is because the system has been designed to optimize the transfer of data from the board via USB to the PC (rather than in the opposite direction). 
 
-In the meantime, we recommend using a microcontroller to send precisely timed TTL outputs to trigger external devices, as done :ref:`here <ephyswithbehaviouralcam>`. The Open Ephys GUI can communicate with microcontrollers through, for instance, the `Arduino Output <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Arduino-Output.html>`_ node.
+If you need precision, we recommend using the GUI to trigger a dedicated device to send precisely timed TTL outputs to trigger other external devices.
+The device dedicated to sending TTLs could be a, Arduino-based microcontroller, for instance, via the `Arduino Output <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Arduino-Output.html>`_ node. Or a specialist device like the Pulse Pal, via the `Pulse Pal <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Pulse-Pal.html>`_ node.
 
 .. _digitalin:
 
