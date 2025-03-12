@@ -46,7 +46,7 @@ The current cable SPI standard (see here) specifies two MISO lines, so it's poss
 To make one yourself, follow the same steps as for the fine wire tether above, but fold over the pieces of wire and deinsulate both ends and the point where they fold. This way it's easy to solder two wires to each pin on the omnetics connector on the acquisition board side of the adapter. For the MISO lines use regular wires.
 Keep track of the identity of the wires by tracing them back to the acquisition board side connector.
 
-.. image:: ../_static/images/usermanual/cables/Yadapter.jpg
+.. image:: ../_static/images/usermanual/cables/Yadapter.png
   :align: center
 
 Side A on the headstage end MISO1 <-> MISO1 on the aq. board end.
