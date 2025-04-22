@@ -3,7 +3,7 @@
    :format: html
 
 ***********************************
-Compatible electrodes
+Compatible Electrodes
 ***********************************
 .. will refer to skillhub for more general info on electrodes
 

@@ -3,7 +3,7 @@
    :format: html
 
 ***********************************
-Acquisition software
+Acquisition Software
 ***********************************
 
 To process, record, and visualize data from the Acquisition Board, we recommend using one of the following applications:

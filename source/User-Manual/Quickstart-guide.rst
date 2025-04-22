@@ -3,7 +3,7 @@
    :format: html
 
 ***********************************
-Quickstart guide
+Quickstart Guide
 ***********************************
 
 Connecting the USB cable and power supply

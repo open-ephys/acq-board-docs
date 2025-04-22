@@ -27,3 +27,4 @@ For the instructions in this section, we'll make it clear which steps are only n
     Assembling-the-PCB
     Putting-it-all-together
     Assembling-the-IO-board
+    Custom-cables

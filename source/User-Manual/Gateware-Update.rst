@@ -1,6 +1,6 @@
 .. _gwupdate:
 
-Gateware updates
+Gateware Updates
 =========================================
 
 Here are the files and instructions to update the Open Ephys FPGA module inside

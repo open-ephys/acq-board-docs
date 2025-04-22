@@ -73,6 +73,6 @@ Key Specifications
     :titlesonly:
 
     User-Manual/index
-    Build-Instructions/index
+    Hardware-Guide/index
     Tutorials/index
-    FAQ/index
+    Build-Instructions/index

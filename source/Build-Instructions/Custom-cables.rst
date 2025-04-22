@@ -1,7 +1,7 @@
 .. _custom_cables:
 
 ***********************************
-Custom cables
+Custom Cables
 ***********************************
 
 Some of the required cables can be built in the lab:
@@ -65,7 +65,7 @@ It's not required to twist the LVDS pairs for the short distances in the adapter
 
 .. _customBNC:
 
-Making an HDMI- BNC Cable
+Making an HDMI-BNC Cable
 ----------------------------------------
 
 If all you need are a few channels of input or output, and you either don't have the IO board PCB or think you won't need all the channels, you can make a BNC to HDMI cable pretty easily from any (passive!) HDMI cable and some BNC cable or plug.
