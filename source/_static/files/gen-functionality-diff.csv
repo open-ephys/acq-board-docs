@@ -1,0 +1,9 @@
+**Acquisition Board Generation**,**Channel Count**,**3D Capabilities**,**Analog Inputs**,**Harp Enabled**,**Power Light**
+"| Gen 0.
+| The original",256,No 3D capabilities,±5V or 0–5V,Not Harp enabled,Green
+"| Gen 1.
+| More channels",512,No 3D capabilities,±5V or 0–5V,Not Harp enabled,Green
+"| Gen 2.
+| FPGA reborn",512,No 3D capabilities,±5V or 0–5V,"Yes, through Harp timestamp generator (for Acquisition Board) on any HDMI port",Red
+"| Gen 3.
+| Now in 3D",512,With 3D capabilities,±5V,"Yes, integrated using dedicated Harp Clk Out port",Red
