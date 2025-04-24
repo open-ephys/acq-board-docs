@@ -6,6 +6,12 @@
 Quickstart Guide
 ***********************************
 
+.. figure:: /_static/images/usermanual/quickstart/complete_system.jpg
+   :width: 70%
+   :align: center
+
+   An example acquisition system using the Acquisition Board, a low-profile headstage and a commutator, and without peripherals.
+
 Connecting the USB cable and power supply
 -------------------------------------------
 
@@ -13,9 +19,9 @@ Connecting the USB cable and power supply
 
 Connect the USB cable to a USB port on your computer. If possible, using a USB 3.0-compatible port is recommended (often indicated by a blue color). USB cables longer than 2 meters are not recommended.
 
-.. warning:: Make sure you're using a 5V DC power supply! The latest version of the Acquisition Board includes over-voltage protection, but it's always safest to use the power jack on the Acquisition Board. Do not use the power supply on the FPGA, next to the USB port. The acquisition board power jack has extra protections to avoid damage to the system that the FPGA plug lacks.
+.. warning:: Make sure you're using a 5V DC power supply! If your board has more than one power supply input jack, use the one on the main board and not on the FPGA module, as the main board has over-voltage protection circuitry.
 
-.. image:: ../_static/images/usermanual/quickstart/power_usb.jpg
+.. image:: ../_static/images/usermanual/generations/acq_board_back_gen3.png
     :width: 70%
     :align: center
 

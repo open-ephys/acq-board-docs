@@ -26,23 +26,23 @@ These details will help you identify what board generation you have.
 Identifying Acquisition Board Generations
 ***************************************************************
 
-.. figure:: /_static/images/usermanual/generations/gen1_back.png
-   :scale: 80%
+.. figure:: /_static/images/usermanual/generations/acq_board_back_gen1.png
+   :width: 70%
    :align: center
 
    Gen 1 Acquisition Boards have two power supply inputs, one on the Opal Kelly XEM6310-LX45 FPGA module and one on the main board.
 
-.. figure:: /_static/images/usermanual/generations/gen2_back.png
-   :scale: 80%
+.. figure:: /_static/images/usermanual/generations/acq_board_back_gen2.png
+   :width: 70%
    :align: center
 
    Gen 2 Acquisition Boards have a single power supply input on the Open Ephys FT600 USB board FPGA module. 
 
-.. figure:: /_static/images/usermanual/generations/gen2_back.png
-   :scale: 80%
+.. figure:: /_static/images/usermanual/generations/acq_board_back_gen3.png
+   :width: 70%
    :align: center
 
-   Gen 3 Acquisition Boards have a single power supply input on the Open Ephys FT600 USB board FPGA module and a Harp input. The case has the 3d logo on the top.
+   Gen 3 Acquisition Boards have a single power supply input on the Open Ephys FT600 USB board FPGA module and a Harp Clk output. The case has the 3d logo on the top.
 
 Drivers, Gateware and Software Compatibility
 ------------------------------------------------------

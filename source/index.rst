@@ -8,10 +8,10 @@
 
 
 
-.. image:: _static/images/acquisition-board.jpg
-  :alt: Photograph of the Open Ephys acquisition board
-
-|
+.. image:: _static/images/acquisition-board.png
+  :width: 80%
+  :align: center
+  :alt: Photograph of the Open Ephys Acquisition Board
 
 The **Open Ephys Acquisition Board** is an open-source interface for acquiring up to 512 channels of extracellular electrophysiology data over a USB connection. 
 
@@ -28,6 +28,8 @@ Key Specifications
 * USB data transmission
 * 8 analog inputs
 * 8 digital inputs
+* 3D capabilities (from 3rd Generation onwards)
+* Harp compatibility (from 2nd Generation onwards)
 
 .. raw:: html
       
