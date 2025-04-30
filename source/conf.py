@@ -42,7 +42,8 @@ release = "0.0.0"
 # ones.
 extensions = [
     "sphinx.ext.todo",
-    "sphinx.ext.githubpages"
+    "sphinx.ext.githubpages",
+    "sphinx_design"
     # "contributors",  # custom pandas extension
 ]
 
@@ -94,7 +95,7 @@ html_sidebars = {
     "**": ["sidebar-nav-bs.html"]
 }
 
-html_style = "_static/theme_overrides.css"
+html_style = "theme_overrides.css"
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -221,7 +222,7 @@ html_context = {
     "github_repo": "acq-board-docs",
     "github_version": "main",
     "doc_path": "source",
-    "css_files": ["_static/theme_overrides.css",],
+    # "css_files": ["_static/theme_overrides.css",],
 }
 
 # Option for linkcheck

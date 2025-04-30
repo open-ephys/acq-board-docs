@@ -432,3 +432,9 @@ strong {
 .col-lg-6 {
   margin-top: 2em;
 }
+
+section[id="acquisition-board-generation-differences"] td[colspan="5"] 
+{
+  width: 100%;
+  text-align: center;
+}

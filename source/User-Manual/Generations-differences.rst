@@ -3,69 +3,81 @@
 Differences Between Generations
 =========================================
 
-Over the years, the Acquisition Board original design has been had modifications and improvements.
+The Acquisition Board design has evolved over the years to add features and replace obsoleted parts.
 
-Different combinations of the Acquisition Board main board and the FPGA module make up different Acquisition Board generations. 
+Although newer generations are backwards compatible and all generations generally work in the same
+way, there are some important distinctions to consider. This page contains about information about
+these distinctions.
 
-Even though newer generations are backwards compatible and all generations generally work in the same way, there are some differences worth keeping in mind.
-
-
-Hardware Differences
--------------------------
-
-These details will help you identify what board generation you have.
-
-.. csv-table:: 
-   :file: /_static/files/gen-hardware-diff.csv
-   :widths: 16, 14, 14, 14, 14, 14, 14
-   :header-rows: 1
-   :stub-columns: 1
-   
-.. _genids:
-
-Identifying Acquisition Board Generations
+Identify Your Acquisition Board
 ***************************************************************
 
-.. figure:: /_static/images/usermanual/generations/acq_board_back_gen1.png
-   :width: 70%
-   :align: center
+Navigate the following tab set to identify which acquisition board you have. 
 
-   Gen 1 Acquisition Boards have two power supply inputs, one on the Opal Kelly XEM6310-LX45 FPGA module and one on the main board.
+..  tab-set::
 
-.. figure:: /_static/images/usermanual/generations/acq_board_back_gen2.png
-   :width: 70%
-   :align: center
+    .. tab-item:: Gen 3
 
-   Gen 2 Acquisition Boards have a single power supply input on the Open Ephys FT600 USB board FPGA module. 
+        .. figure:: /_static/images/usermanual/generations/acq_board_back_gen3.png
 
-.. figure:: /_static/images/usermanual/generations/acq_board_back_gen3.png
-   :width: 70%
-   :align: center
+        Gen 3 Acquisition Boards have a single power supply input on the Open Ephys FT600 USB
+        board FPGA module and a Harp Clk output. The case has the 3d logo on the top.
 
-   Gen 3 Acquisition Boards have a single power supply input on the Open Ephys FT600 USB board FPGA module and a Harp Clk output. The case has the 3d logo on the top.
+    .. tab-item:: Gen 2
 
-Drivers, Gateware and Software Compatibility
-------------------------------------------------------
+        .. figure:: /_static/images/usermanual/generations/acq_board_back_gen2.png
 
-Different board generations use different drivers, have different software compatibility and use different gateware.
+        Gen 2 Acquisition Boards have a single power supply input on the Open Ephys FT600 USB
+        board FPGA module.         
+        
+    .. tab-item:: Gen 1
 
-.. csv-table:: 
-   :file: /_static/files/gen-driver-gateware-software-diff.csv
-   :widths: 16, 14, 14, 14, 14
-   :header-rows: 1
-   :stub-columns: 1
-   
+        ..  figure:: /_static/images/usermanual/generations/acq_board_back_gen1.png
 
-Functionality Differences
-------------------------------------------------------
+        Gen 1 Acquisition Boards have two power supply inputs, one on the Opal Kelly
+        XEM6310-LX45 FPGA module and one on the main board.
 
-Board generations have functionality differences.
+Acquisition Board Generation Differences
+****************************************
 
-.. csv-table:: 
-   :file: /_static/files/gen-functionality-diff.csv
-   :widths: 16, 14, 14, 14, 14, 14
-   :header-rows: 1
-   :stub-columns: 1
-   
+This table summarizes the difference across generations:
+
+..  csv-table:: 
+    :file: /_static/files/gen-data.csv
+    :widths: 1, 1, 1, 1, 1
+    :header-rows: 1
+    :stub-columns: 1
+
+|
+|
+|
+
+.. Proposal for organizing the above table: 
+.. - features
+.. - software compatibility
+.. - latest gateware and drivers
+.. - visual differences
+.. - hardware differences
+
++------------------------------+-------------+-------------+-------+-------+
+| Acquisition Board Generation | Gen 0       | Gen 1       | Gen 2 | Gen 3 |
++==============================+=============+=============+=======+=======+
+| *Features*                                                               |
++------------------------------+-------------+-------------+-------+-------+
+| **Channel Count**            | 256         | 512         | 512   | 512   |
++------------------------------+-------------+-------------+-------+-------+
+| **Commutator Capable**       | No          | No          | No    | Yes   |
++------------------------------+-------------+-------------+-------+-------+
+| **Streams Orientation Data** | No          | No          | No    | Yes   |
++------------------------------+-------------+-------------+-------+-------+
+| **Analog Inputs**            | ±5V or 0–5V | ±5V or 0–5V | ±5V   |       |
++------------------------------+-------------+-------------+-------+-------+
+| *Software Compatibility*                                                 |
++------------------------------+-------------+-------------+-------+-------+
+| **Open Ephys GUI**           | Yes         | Yes         | Yes   | v1.0+ |
++------------------------------+-------------+-------------+-------+-------+
+| ...                          | ...         | ...         | ...   | ...   |
++------------------------------+-------------+-------------+-------+-------+
 
 .. could add some styling to these tables using https://stackoverflow.com/questions/79112627/in-sphinx-how-do-i-style-a-csv-table
+

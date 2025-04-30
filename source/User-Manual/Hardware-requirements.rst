@@ -14,8 +14,8 @@ Hardware Requirements
 
 .. _acsystemparts:
 
-Acquisition System Components
-###################################
+Minimal Components for a Complete Acquisition System 
+#####################################################
 
 A complete data acquisition system consists of the following hardware:
 
@@ -38,11 +38,18 @@ If you already have these components, follow the :ref:`quickstartguide` to learn
 .. _computerhardwere:
 
 Acquisition Computer
-###################################
+======================
 
 A computer with the following specifications is recommended for experiments that use the acquisition board:
 
-* **Operating system** - the acquisition board works equally well on macOS, Windows, and Linux (all distros).
+*   **Operating system**: Depends on which software you want to use:
+    
+    *   Open Ephys GUI: compatible with macOS, Windows, and Linux (all distros)
+    
+    *   Bonsai: compatible with Windows
+        
+        ..  attention::
+            The Bonsai.Ephys Bonsai package does not support all generations of the acquisition board. Visit the :doc:`Generations-differences` page to figure out if your acquisition board is compatible with Bonsai.
 
 * **Processor** - A 4-core, 3.0+ GHz processor is fine for 32-channel recordings, but you'll want more cores and more speed as you scale up. Having a faster processor will allow you to build more complex signal chains without worrying about CPU overload. The GUI uses multithreading for data acquisition and recording, so having more cores is also helpful.
 
@@ -52,4 +59,4 @@ A computer with the following specifications is recommended for experiments that
 
 * **Graphics card** - a good graphics card is not critical for data acquisition. However, consider upgrading your graphics card to speed up offline analysis steps (such as spike sorting).
 
-* **Connections** - At least one USB 3.0 port
+* **Ports** - At least one USB 3.0 port
