@@ -6,14 +6,29 @@ Gateware Updates
 Here are the files and instructions to update the Open Ephys FPGA module inside
 the Acquisition Board.
 
-.. note:: This is only for boards that use the new Open Ephys FPGA (Dec 2022 onwards). We always ship the boards with the latest version of the gateware and we don’t make changes to the gateware often, so you will typically not need to update it. Previous versions of the system that use the Opal Kelly FPGA do not require this.
+.. note:: This is only for boards that use the new Open Ephys FPGA module - Generation 2 onwards. See :ref:`this section <genids>` to identify what generation board you have. We always ship the boards with the latest version of the gateware and we don’t make changes to the gateware often, so you will typically not need to update it. Previous generations of the Acquisition Board that use the Opal Kelly FPGA do not require this.
 
 .. _gwupdate_latest:
 
-Latest version
+Latest versions
 -------------------------
 
-The latest available gateware is :download:`version 1.1 </_static/files/OpenEphysFPGA-gw1.1.zip>`.
+The latest gateware version depends on the Acquisition Board generation. See :ref:`this section <genids>` to identify what generation board you have.
+
+.. list-table::
+   :widths: 15 25 60
+   :header-rows: 1
+
+   * - Generation
+     - Version
+     - Release Date
+   * - Gen 2
+     - :download:`version 1.1 </_static/files/OpenEphysFPGA-gw1.1.zip>`
+     - 2024.10.15
+   * - Gen 3
+     - version 1.5.1
+     - 2025.04.29
+
 
 .. _gwupdate_instructions:
 

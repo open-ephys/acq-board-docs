@@ -21,20 +21,7 @@ We're going to assume a basic understanding of electronic circuits. If you don't
 
     Quickstart-guide
     Hardware-requirements
+    Driver-installation
     Acquisition-software
     Generations-differences
     Gateware-Update
-
-.. toport
-    Status-LEDs
-    Electrodes
-    Headstages
-    Cables
-
-    Peripheral-devices
-
-.. ported
-    Custom-cables
-    New-FPGA
-    How-it-works
-
