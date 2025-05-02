@@ -19,6 +19,7 @@ We're going to assume a basic understanding of electronic circuits. If you don't
     Electrodes
     Cables
     Headstages
+    Commutators
     How-it-works
     Status-LEDs
     Peripheral-devices

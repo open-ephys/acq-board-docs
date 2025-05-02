@@ -66,13 +66,3 @@ This is an HDMI Type A to HDMI Type A cable. Note that the input is not an actua
 If you just need one or two channels in a hurry, you can :ref:`make a quick adapter cable<customBNC>` with pretty little effort.
 
 There are also a variety of simple HDMI breakout boards available from various vendors - these work equivalently as I/O boards. See for instance `here <https://elabbay.myshopify.com/collections/breadboard/products/elabguy-hdmi-af-bo-v1a-hdmi-type-a-female-socket-breakout-board>`_.
-
-.. _5comm:
-
-5. Commutators
-####################################################
-Rotary commutators prevent cables from becoming twisted as the animal moves around. Available commutators that work with SPI cables are:
-
-- Adafruit 12-wire commutator (https://www.adafruit.com/product/1196) $20
-
-- Doric - assisted electrical rotary joints (https://neuro.doriclenses.com/collections/electrical-rotary-joints)

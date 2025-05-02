@@ -27,7 +27,9 @@ A complete data acquisition system consists of the following hardware:
 
 * At least one :ref:`headstage <headstages>` with an Intan RHD-series chip, which you can order from the Open Ephys store or the Intan website, or build yourself. Each headstage can handle 16 to 128 channels of neural input.
 
-* One :ref:`cable <cables>` to connect each headstage to the acquistion board, which you can order from the Open Ephys store (as part of the starter kit) or the Intan website, or build yourself.
+* One :ref:`SPI tether <cables>` to connect each headstage to the acquistion board, which you can order from the Open Ephys store (as part of the starter kit) or the Intan website, or build yourself.
+
+* (Optional) A :ref:`SPI commutator <commutators>` to prevent tether twisting, such as our torque-free SPI Commutator, which you can order from the Open Ephys store. You need a 3D compatible headstage and a 3rd Generation Acquisition Board to make it work. If you use a commutator, you need an additional SPI tether.
 
 * (Optional) One or more :ref:`I/O boards <peripheraldevices>` for auxiliary (non-neural) signals. Each I/O board requires one HDMI cable to connect to the acquisition board.
 

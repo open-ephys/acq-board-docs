@@ -83,6 +83,8 @@ Accelerometer
 A 3-axis accelerometer on the headstage can be used to synchronize electrophysiological data with headstage movement. These signals can be
 calibrated to yield precise acceleration as per `this application note  <https://intantech.com/files/Intan_RHD2000_accelerometer_calibration.pdf>`_.
 
+.. _3dcap:
+
 3D capabilites
 ----------------
 
