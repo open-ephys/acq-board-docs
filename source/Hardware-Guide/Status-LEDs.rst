@@ -6,7 +6,7 @@
 Status LEDs
 ***********************************
 
-Each acquisition board includes 8 status LEDs with specific colors and behaviors. The LEDs do not represent a diagnostic of the actual physical hardware, but rather display what the connected software and acquisition board gateware are trying to do. The LEDs are not "manually" controlled through software, however. When the software changes a hardware setting, the LEDs just reflect these settings in different ways.
+Each acquisition board includes 8 status LEDs with specific colors and behaviors. The LEDs do not represent a diagnostic of the actual physical hardware, but rather display what the connected software and acquisition board gateware are trying to do. When the software changes a hardware setting, the LEDs just reflect these settings in different ways.
 
 Before initializing the board by the corresponding plugin, the LED status should be considered undefined.
 
