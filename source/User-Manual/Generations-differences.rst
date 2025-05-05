@@ -3,6 +3,9 @@
 Differences Between Generations
 =========================================
 
+link to :ref:`Features <blah1>`.
+
+
 The Acquisition Board design has evolved over the years to add features and replace obsoleted parts.
 
 Although newer generations are backwards compatible and all generations generally work in the same
@@ -62,6 +65,8 @@ This table summarizes the difference across generations:
 +------------------------------+-------------+-------------+-------+-------+
 | Acquisition Board Generation | Gen 0       | Gen 1       | Gen 2 | Gen 3 |
 +==============================+=============+=============+=======+=======+
+| ..  _blah1:                                                              |
+|                                                                          |
 | *Features*                                                               |
 +------------------------------+-------------+-------------+-------+-------+
 | **Channel Count**            | 256         | 512         | 512   | 512   |
