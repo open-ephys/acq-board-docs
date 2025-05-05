@@ -81,6 +81,10 @@ There are eight analog inputs on the board, which use the 16-bit ADS8325 chip fr
 
 Analog inputs are always samples at the same rate and time as the neural signals and are displayed as additional channels in the LFP module, keep in mind that the input range for these signals is different form the neural signals and can be set separately.
 
+There is a small DC offset (~0.4 V) on the ADCs when they're in ±5V range. This offset is taken into account by the Open Ephys GUI, but since the offset can be slightly different for each channel, the traces may not be exactly centered around zero. Be sure to measure the "zero" value for each channel if you're doing any analysis that depends on absolute DC values and applying a high-pass filter is not possible.
+
+.. note:: If any of the ADC channels are not connected (i.e., the signal pin is floating), signals from adjacent channels will bleed through. This is expected behavior.
+
 .. _analoginrange:
 
 Changing the Analog Input Range
