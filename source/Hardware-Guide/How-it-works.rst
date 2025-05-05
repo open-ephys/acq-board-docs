@@ -8,7 +8,9 @@ Acquisition Board
 
 This page provides some additional details about how the Acquisition Board works "under the hood", rather than how the end user should interact with it. We recommend reading this page carefully before using the Acquisition Board, and especially if you're going to build it. When something goes wrong, or if your data look suspicious, knowing the basics of how the hardware works will make it easier to troubleshoot. And the more people who have a thorough understanding of the Open Ephys ecosystem, the easier it will be to support new users.
 
-The following material assumes a basic understanding of electronic circuits. If you don't have any hands-on experience working with electronics, you can follow the Open Ephys course on extracellular electrophysiology `here <https://ahleighton.github.io/OE-ephys-course/>`_. It would also be helpful to read through the documentation available on the Intan website, as almost everything related to the RHD2000 chips is relevant to the data you will collect with the Acquisition Board.
+The following material assumes a basic understanding of electronic circuits. If you don't have any hands-on experience working with electronics, you can follow the `Open Ephys course on extracellular electrophysiology acquisition <https://open-ephys.github.io/ephys-course>`_. It would also be helpful to read through the documentation available on the Intan website, as almost everything related to the `RHD2000 chips <https://intantech.com/products_RHD2000.html>`_ is relevant to the data you will collect with the Acquisition Board.
+
+the documentation available on the 
 
 .. image:: ../_static/images/usermanual/ac_board_pcb.png
 

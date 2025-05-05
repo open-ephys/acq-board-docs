@@ -16,9 +16,6 @@ To start using the Acquisition Board, you'll need the following cables:
 
 :ref:`iohdmi`
 
-:ref:`5comm`
-
-
 .. image:: ../_static/images/usermanual/cables/all_cables.png
   :width: 70%
   :align: center

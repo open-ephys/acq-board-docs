@@ -17,7 +17,8 @@ GND vs. REF on the Headstage
 ###################################
 The ground (GND) and reference (REF) connectors on the headstage aren't the same thing, though most EIBs and adapters that we've been using do tie them together. The reference is the signal that will be subtracted from your measurement electrodes to produce the output of the headstage. The ground connector is often used with a ground pin or screw to bring the animal to the same level as the acquisition system ground, thereby getting rid of any electric potential difference offsets that may cause the headstage amplifier to saturate.
 Often, GND and REF are connected, so that fluctuations in the signal detected by the ground pin are used as a reference signal. Alternatively, the two can be separate, which is typical for EEG or EMG recordings. It's important to understand the difference and decide whether having a connected ground and reference is the correct choice for your experiment.
-Click `here <https://ahleighton.github.io/OE-ephys-course/EEA/theoryday3.html#why-do-we-need-a-ground-electrode>`_ to learn more.
+Click `here <https://open-ephys.github.io/ephys-course/EEA/theoryday3.html#why-do-we-need-a-ground-electrode>`_ to learn more.
+
 .. ref to skillhub
 
 Extra shielding
