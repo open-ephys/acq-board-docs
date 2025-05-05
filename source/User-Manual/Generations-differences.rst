@@ -3,15 +3,17 @@
 Differences Between Generations
 =========================================
 
-Over the years, the Acquisition Board original design has been had modifications and improvements.
+The Acquisition Board design has evolved over the years to add features and improvements.
 
 Different combinations of the Acquisition Board main board and the FPGA module make up different Acquisition Board generations. 
 
-Even though newer generations are backwards compatible and all generations generally work in the same way, there are some differences worth keeping in mind.
+Although newer generations are backwards compatible and all generations generally work in the same
+way, there are some important distinctions to consider. This page contains about information about
+these distinctions.
 
 .. _genids:
 
-Identifying Acquisition Board Generations
+Identify Your Acquisition Board
 ***************************************************************
 
 .. list-table::
@@ -33,8 +35,6 @@ Identifying Acquisition Board Generations
 Hardware Differences
 -------------------------
 
-These details will help you identify what board generation you have.
-
 .. csv-table:: 
    :file: /_static/files/gen-hardware-diff.csv
    :widths: 16, 14, 14, 14, 14, 14, 14
@@ -45,8 +45,6 @@ These details will help you identify what board generation you have.
 Drivers, Gateware and Software Compatibility
 ------------------------------------------------------
 
-Different board generations use different drivers, have different software compatibility and use different gateware.
-
 .. csv-table:: 
    :file: /_static/files/gen-driver-gateware-software-diff.csv
    :widths: 16, 14, 14, 14, 14
@@ -56,8 +54,6 @@ Different board generations use different drivers, have different software compa
 
 Functionality Differences
 ------------------------------------------------------
-
-Board generations have functionality differences.
 
 .. csv-table:: 
    :file: /_static/files/gen-functionality-diff.csv
