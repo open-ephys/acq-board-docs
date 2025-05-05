@@ -19,18 +19,28 @@ The filtering, amplification, and digitization of neural data is handled by Inta
 
 The data is transmitted from each Intan chip to the FPGA on the Acquisition Board via a serial protocol that also handles configuration of the chip (mainly setting of the bandpass filters) and transmits some extra data such as temperature, supply voltage at the headstage, and in the case of many headstages, accelerometer data. The headstages are connected using standardized SPI cables using 12-pin Omnetics connectors (part #PZN-12).
 
-FPGA
+FPGA module
 ###################################
 
-The heart of the acquisition board is the FPGA, or "Field-Programmable Gate Array." This part makes up about half the cost of an acquisition board, so it better do something crucial. From a high-level perspective, the FPGA combines data from everything that's connected to the acquisition board, attaches a common timestamp, and sends it to the computer via USB. It effectively acts as a "dumb pipe," shuttling data between peripheral devices (such as headstages and I/O boards) and the computer, where more sophisticated processing can take place. However, this doesn't even come close to taking advantage of all of the FPGA's capabilities. An FPGA is sort of a cross between a microcontroller (like an Arduino) and a circuit composed of interconnected transistors. It can be reconfigured on the fly, but the modules that are uploaded all run in parallel, rather than being called consecutively inside a loop. That means the FPGA can be really fast and its timing can be very precise. This is essential for collecting data at 30 kHz per channel across each of an Intan chip's 32 or 64 channels.
+The heart of the acquisition board is the FPGA, or "Field-Programmable Gate Array". This part makes up about half the cost of an acquisition board, so it better do something crucial. From a high-level perspective, the FPGA combines data from everything that's connected to the acquisition board, attaches a common timestamp, and sends it to the computer via USB. It effectively acts as a "dumb pipe," shuttling data between peripheral devices (such as headstages and I/O boards) and the computer, where more sophisticated processing can take place. However, this doesn't even come close to taking advantage of all of the FPGA's capabilities. An FPGA is sort of a cross between a microcontroller (like an Arduino) and a circuit composed of interconnected transistors. It can be reconfigured on the fly, but the instructions that are uploaded all run in parallel, rather than being called consecutively inside a loop. That means the FPGA can be really fast and its timing can be very precise. This is essential for collecting data at 30 kHz per channel across each of an Intan chip's 32 or 64 channels.
 
-.. image:: ../_static/images/usermanual/xem6310.jpg
+.. figure::../_static/images/usermanual/xem6310.jpg
+   :width: 70%
+   :align: center
 
-For the original acquisition board, we chose to use the Opal Kelly XEM6310 USB 3.0 board because of the terrific programming interface provided by Opal Kelly. If we just soldered the bare FPGA (Xilinx Spartan-6) to the acquisition board, it would have driven down costs significantly, but would have required some serious programming chops to get it to play nicely with the computer. Since we're already at such a low price point, our most precious resource is time, rather than money.
+   The Opal Kelly XEM6310 used in earlier generations of the Open Ephys Acquisition Board. 
 
-After Opal Kelly deprecated the XEM6310, we switched to using a custom FPGA board designed and manufactured by the Open Ephys team. The Open Ephys FPGA boards are used for all Acquisition Boards Gen 2 and above.
+For the original acquisition board, we chose to use the Opal Kelly XEM6310 USB 3.0 FPGA development module, because of the terrific programming interface provided by Opal Kelly. If we just soldered the bare FPGA (Xilinx Spartan-6) to the acquisition board, it would have driven down costs significantly, but would have required some serious programming chops to get it to play nicely with the computer. Since we're already at such a low price point, our most precious resource is time, rather than money.
 
-The FPGA itself is programmed in a language called Verilog. Verilog is a type of "hardware description language," because it specifies the actions of registers and logic gates, rather than functions and variables. Verilog is compiled to a "bitfile," which must be uploaded to the FPGA each time it's used. Compiling the bitfile can take several minutes, but uploading it occurs almost instantaneously. The Verilog code that runs on the acquisition board FPGA is our custom version of the "Rhythm" interface developed by Intan. We had to change a few things in order to communicate with our analog-to-digital converters (we're using Texas Instruments ADCs, rather than Analog Devices) and control the 8 LEDs on the board. If you're interested, you can take a look at the `source code <https://github.com/open-ephys/rhythm>`_ (but this is not recommended unless you have some prior Verilog experience).
+.. figure:: ../_static/images/usermanual/OEPS6560OpenEphysFPGA.jpg
+   :width: 70%
+   :align: center
+
+   The Open Ephys FT600 USB board FPGA module developed by the Open Ephys team. 
+
+After Opal Kelly suddenly end-of-lifed the XEM6310 at the end of 2021, we switched to using a custom FPGA module designed and manufactured by the Open Ephys team. This module uses the same footprint as the previous Opal Kelly one, so it can be replaced directly on the existing acquisition boards, although it uses a different FPGA, a Lattice EPC5, and its `design is open source <https://github.com/open-ephys/ECP5U85-BSE-USB>`_. Additionally, communication with the computer follows our new ONI standard for common interfaces in neuro tools (the same standard that powers our next-gen system, `ONIX <http://open-ephys.github.io/onix-docs/>`_). The Open Ephys FPGA modules are used for all Acquisition Boards Gen 2 and above.
+
+The FPGA itself is programmed in a language called Verilog. Verilog is a type of "hardware description language," because it specifies the actions of registers and logic gates, rather than functions and variables. Verilog is compiled to a "bitfile," which must be uploaded to the FPGA each time it's used. Compiling the bitfile can take several minutes, but uploading it occurs almost instantaneously. In the original Opal Kelly module, the bitfile is uploaded by the OE GUI each time the board is recognized, while in the new Open Ephys FPGA module, the bitfile resides permanently on the board. This makes it easier  to use it across different software like Bonsai as it avoids bitfile path issues. The Verilog code that runs on the acquisition board FPGA is our custom version of the "Rhythm" interface developed by Intan. We had to change a few things in order to communicate with our analog-to-digital converters (we're using Texas Instruments ADCs, rather than Analog Devices) and control the 8 LEDs on the board. If you're interested, you can take a look at the `source code <https://github.com/open-ephys/rhythm>`_ (but this is not recommended unless you have some prior Verilog experience).
 
 Analog and Digital I/O
 ###################################
@@ -57,3 +67,25 @@ Other Features
 *BNC clock output:* The connector is a great way to ground your board if you're running it off battery power! You would do this by connecting the outer shield of this connector (NOT the center pin) to an appropriate ground – a large metal rack, a piece of copper sunk deep into the wall, or even the ground plug of a 3-prong outlet.
 
 *I2C bus:* Each of the four HDMI ports includes 2 channels that are connected to an I2C bus. This will provide a convenient way to expand the functionality of the acquisition board through custom I/O boards. However, the I2C functionality hasn't yet been added to the FPGA firmware.
+
+.. _newfpga_licenses:
+
+External Licenses
+---------------------------
+The Open Ephys FPGA board makes use of `LiteDRAM <https://github.com/enjoy-digital/litedram>`_ as a memory controller.
+
+   *Unless otherwise noted, LiteDRAM is Copyright 2012-2022 / EnjoyDigital*
+   *Initial development is based on MiSoC's LASMICON / Copyright 2007-2016 / M-Labs*
+
+   *Redistribution and use in source and binary forms, with or without modification,*
+   *are permitted provided that the following conditions are met:*
+
+   *1. Redistributions of source code must retain the above copyright notice, this*
+   *list of conditions and the following disclaimer.*
+
+   *2. Redistributions in binary form must reproduce the above copyright notice,*
+   *this list of conditions and the following disclaimer in the documentation*
+   *and/or other materials provided with the distribution.*
+
+   *THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.*
+   *Other authors retain ownership of their contributions. If a submission can reasonably be considered independently copyrightable, it's yours and we encourage you to claim it with appropriate copyright notices. This submission then falls under the "otherwise noted" category. All submissions are strongly encouraged to use the two-clause BSD license reproduced above.*
