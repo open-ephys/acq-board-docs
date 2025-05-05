@@ -6,8 +6,8 @@
 Quickstart Guide
 ***********************************
 
-.. figure:: /_static/images/usermanual/quickstart/complete_system.jpg
-   :width: 70%
+.. figure:: ../_static/images/usermanual/quickstart/complete_system.jpg
+   :width: 80%
    :align: center
 
    An example acquisition system using the Acquisition Board, a low-profile headstage and a commutator, and without peripherals.
@@ -78,10 +78,16 @@ Connect the acquisition board to power using the original 5V, 2A power adapter p
 Operation in the Open Ephys GUI
 -------------------------------------------
 
-This section provides a quick start with the Open Ephys GUI to help you get started with your new system. In-depth `GUI documentation <https://open-ephys.github.io/gui-docs/>`_ is available and we highly recommend you familiarize yourself with it before starting experiments.
+This section provides the basic steps needed in the Open Ephys GUI to get started with your new system. In-depth `GUI documentation <https://open-ephys.github.io/gui-docs/>`_ is available and we highly recommend you familiarize yourself with it before starting experiments.
+
+.. figure:: ../_static/images/usermanual/quickstart/GUI_1.0_3D.png
+   :width: 70%
+   :align: center
+
+   An example signal chain in the Open Ephys GUI to acquire data with the Acquisition Board.
 
 1. With the Acquisition Board plugged in, powered and connected to hardware as explained above, open the Open Ephys GUI.
-2. Load the default Acquisition Board configuration, or drag at least the following processors onto the Signal Chain to build your own:
+2. Load the default configuration for the Acquisition Board from the pop-up, or build your own by dragging at least the following processors onto the Signal Chain:
    
    - An `Acquisition Board processor <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Acquisition-Board.html>`_
 
@@ -92,14 +98,10 @@ This section provides a quick start with the Open Ephys GUI to help you get star
    .. - (optional) An OE Commutator processor 
 
 3. Click the Play button to start data acquisition. Click Record to record.
-4. Have fun experimenting!
-
-.. image:: ../_static/images/usermanual/quickstart/GUI_1.0_3D.png
-    :width: 70%
-    :align: center
-
-|
+   
 The :ref:`statusleds` on the acquisition board will flash during normal operation. You can disable the Status LEDs if you'd like to perform experiments in the dark, or if they introduce noise in your recordings, by clicking the "LED" button in the Acquisition Board processor in the Open Ephys GUI.
+
+4. Have fun experimenting!
 
 Powering off the system
 -------------------------------------------
