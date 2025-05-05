@@ -9,6 +9,26 @@ Different combinations of the Acquisition Board main board and the FPGA module m
 
 Even though newer generations are backwards compatible and all generations generally work in the same way, there are some differences worth keeping in mind.
 
+.. _genids:
+
+Identifying Acquisition Board Generations
+***************************************************************
+
+.. list-table::
+   :widths: 40 60
+   :align: center
+
+   * - .. figure:: /_static/images/usermanual/generations/acq_board_back_gen3.png
+          :align: center
+     - **Gen 3** Acquisition Boards have a single power supply input on the Open Ephys FT600 USB board FPGA module and a Harp Clk output. The case has the 3d logo on the top.
+   * - .. figure:: /_static/images/usermanual/generations/acq_board_back_gen2.png
+          :align: center
+     - **Gen 2** Acquisition Boards have a single power supply input on the Open Ephys FT600 USB board FPGA module. 
+   * - .. figure:: /_static/images/usermanual/generations/acq_board_back_gen1.png
+          :align: center
+     - **Gen 1** Acquisition Boards have two power supply inputs, one on the Opal Kelly XEM6310-LX45 FPGA module and one on the main board. 
+  
+
 
 Hardware Differences
 -------------------------
@@ -21,28 +41,6 @@ These details will help you identify what board generation you have.
    :header-rows: 1
    :stub-columns: 1
    
-.. _genids:
-
-Identifying Acquisition Board Generations
-***************************************************************
-
-.. figure:: /_static/images/usermanual/generations/acq_board_back_gen1.png
-   :width: 70%
-   :align: center
-
-   Gen 1 Acquisition Boards have two power supply inputs, one on the Opal Kelly XEM6310-LX45 FPGA module and one on the main board.
-
-.. figure:: /_static/images/usermanual/generations/acq_board_back_gen2.png
-   :width: 70%
-   :align: center
-
-   Gen 2 Acquisition Boards have a single power supply input on the Open Ephys FT600 USB board FPGA module. 
-
-.. figure:: /_static/images/usermanual/generations/acq_board_back_gen3.png
-   :width: 70%
-   :align: center
-
-   Gen 3 Acquisition Boards have a single power supply input on the Open Ephys FT600 USB board FPGA module and a Harp Clk output. The case has the 3d logo on the top.
 
 Drivers, Gateware and Software Compatibility
 ------------------------------------------------------
