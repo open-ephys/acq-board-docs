@@ -35,15 +35,19 @@ Identify Your Acquisition Board
 Hardware Differences
 -------------------------
 
+This table can help you understand the hardware differences that define each generation.
+
 .. csv-table:: 
    :file: /_static/files/gen-hardware-diff.csv
-   :widths: 16, 14, 14, 14, 14, 14, 14
+   :widths: 16, 14, 14, 14, 14
    :header-rows: 1
    :stub-columns: 1
    
 
 Drivers, Gateware and Software Compatibility
 ------------------------------------------------------
+
+Different generations may require different drivers, gateware and software versions to operate, as per the table below.
 
 .. csv-table:: 
    :file: /_static/files/gen-driver-gateware-software-diff.csv
@@ -55,9 +59,11 @@ Drivers, Gateware and Software Compatibility
 Functionality Differences
 ------------------------------------------------------
 
+This table is meant to guide you in regards to functionalities across generations and differences you might notice during operation.
+
 .. csv-table:: 
    :file: /_static/files/gen-functionality-diff.csv
-   :widths: 16, 14, 14, 14, 14, 14
+   :widths: 16, 14, 14, 14, 14
    :header-rows: 1
    :stub-columns: 1
    

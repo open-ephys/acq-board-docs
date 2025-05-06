@@ -1,10 +1,11 @@
-**Acquisition Board Generation**,"| Gen 0.
-| The original","| Gen 1.
-| More channels","| Gen 2.
-| FPGA reborn","| Gen 3.
-| Now in 3D"
-**Channel Count**,256,512,512,512
-**3D Capabilities**,No 3D capabilities,No 3D capabilities,No 3D capabilities,With 3D capabilities
-**Analog Inputs**,±5V or 0–5V,±5V or 0–5V,±5V or 0–5V,±5V
-**Harp Enabled**,Not Harp enabled,Not Harp enabled,"Yes, through Harp timestamp generator (for Acquisition Board) on any HDMI port","Yes, integrated using dedicated Harp Clk Out port"
-**Power Light**,Green,Green,Red,Red
+**Acquisition Board Generation**,"| Gen 3.
+| Get 3D data","| Gen 2.
+| OE FPGA module","| Gen 1.
+| More channels","| Gen 0.
+| The original"
+**Channel Count**,512,512,512,256
+**Streams Orientation Data**,"Yes, using :ref:`headstages with 3D capabilities <3dcap>`",No 3D capabilities,No 3D capabilities,No 3D capabilities
+**Compatible with Open Ephys SPI commutator**,Yes,No 3D capabilities,No 3D capabilities,No 3D capabilities
+**Analog Inputs**,±5V,±5V or 0–5V,±5V or 0–5V,±5V or 0–5V
+**Harp Enabled**,"Yes, integrated using dedicated Harp Clk Out port","Yes, through Harp timestamp generator (for Acquisition Board) on any HDMI port",Not Harp enabled,Not Harp enabled
+**Power Light**,Red,Red,Green,Green

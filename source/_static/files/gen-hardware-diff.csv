@@ -1,11 +1,15 @@
-**Acquisition Board Generation**,"| Gen 0.
-| The original","| Gen 1.
-| More channels","| Gen 2.
-| FPGA reborn","| Gen 3.
-| Now in 3D"
-**Release Date**,Original design from 2010. Some boards shipped in 2022 due to shortage,Main version produced by OEPS from 2016 until Dec 2022.,Dec 2022,May 2025
-**Case**,Open Ephys logo,Open Ephys logo,Open Ephys logo,Open Ephys and 3d logos
-**Main Board Version**,Up to v2.2,v2.3,v2.3-2.4,v3
-**FPGA Module**,Opal Kelly XEM6010-LX45,Opal Kelly XEM6310-LX45,Open Ephys FT600 USB board,Open Ephys FT600 USB board
-**USB Connection**,USB2.0,USB3.0,USB3.0,USB3.0
-**Power Supply**,One on the main board and one on the FPGA module.,One on the main board and one on the FPGA module.,Only one on the FPGA module.,Only one on the FPGA module.
+**Acquisition Board Generation**,"| Gen 3.
+| Get 3D data","| Gen 2.
+| OE FPGA module","| Gen 1.
+| More channels","| Gen 0.
+| The original"
+**Release Date**,May 2025,Dec 2022,Main version produced by OEPS from 2016 until Dec 2022.,Original design from 2010. Some boards shipped in 2022 due to shortage
+**Case**,Open Ephys and 3d logos,Open Ephys logo,Open Ephys logo,Open Ephys logo
+**Main Board Version**,v3,v2.3-2.4,v2.3,Up to v2.2
+**FPGA Module**,"Open Ephys
+| FT600 USB board","Open Ephys
+| FT600 USB board","Opal Kelly
+| XEM6310-LX45","Opal Kelly
+| XEM6310-LX45"
+**USB Connection**,USB3.0,USB3.0,USB3.0,USB2.0
+**Power Supply**,Only one on the FPGA module.,Only one on the FPGA module.,One on the main board and one on the FPGA module.,One on the main board and one on the FPGA module.

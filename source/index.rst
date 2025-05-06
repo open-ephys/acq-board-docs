@@ -17,9 +17,9 @@ The **Open Ephys Acquisition Board** is an open-source interface for acquiring u
 
 You can order an assembled Acquisition Board from `Open Ephys Production Site <https://open-ephys.org/acquisition-system/acquisition-board>`_. You can also order an `Open Ephys Starter Kit <https://open-ephys.org/acquisition-system/starter-kit>`_, which contains everything you need to get started (except for electrodes and a computer).
 
-Because all the designs are freely available, you can also build the Acquisition Board yourself. We estimate you'll spend about 2-3 days of work and about $1000. Follow the instructions :ref:`here <buildinstructions>` to learn how to build your own board.
+Because all the designs are freely available, you can also build the Acquisition Board yourself. We estimate you'll spend about 2-3 days of work and about $1000. Follow the instructions `here <buildinstructions>` to learn how to build your own board.
 
-Besides the acquisition board, you will need :ref:`these other components <acsystemparts>` to start collecting data. If you already have all of the necessary parts in your lab, follow the :ref:`quickstartguide` to learn how to start collecting data right away. Otherwise, we recommend reading through the sub-pages to help you decide which components to buy.
+Besides the acquisition board, you will need `these other components <acsystemparts>` to start collecting data. If you already have all of the necessary parts in your lab, follow the `quickstartguide` to learn how to start collecting data right away. Otherwise, we recommend reading through the sub-pages to help you decide which components to buy.
 
 Key Specifications
 
