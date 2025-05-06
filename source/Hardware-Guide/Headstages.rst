@@ -97,12 +97,66 @@ Additionally, the information from this sensor can drive our torque-free SPI com
 .. important:: 3D capabilities cannot be used when operating the headstage combined with a dual headstage adapter. 
 
 
-Channel Mapping
-++++++++++++++++++++++++++++++++
+Channel Maps
+######################################
 
 Headstage manufacturers provide a diagram to indicate which contact on the headstage electrode connector is wired to which recording channel in the Intan chip.
 
-For our headstages, use `this sheet <https://docs.google.com/spreadsheets/d/1WYDymxNqGRtFPxn69H9JzeMgePpXcFSPHiWJYBE0lu4/edit#gid=0>`__ to map each electrode recording channel on your probe or electrode interface board to the data acquisition software.
+You can find the corresponding channel pinout and sensor axes for our SPI headstages below. The numbers on the images correspond to the Intan chip numbers which start at 0. In the Open Ephys GUI, numbering starts at 1, so add one to each number on the image.
+
+You can also use `this sheet <https://docs.google.com/spreadsheets/d/1WYDymxNqGRtFPxn69H9JzeMgePpXcFSPHiWJYBE0lu4/edit#gid=0>`__ to map each electrode recording channel on your electrode interface board to the data acquisition software.
+
+.. list-table::
+   :class: borderless
+   :widths: 50 50
+
+   * - .. figure :: /_static/images/channelmaps/OEPS-6570_channel_map_label.jpg
+
+          Channel pinout for OEPS-6570 Low-profile SPI Headstage 64ch (Hirose)
+
+     - .. figure :: /_static/images/channelmaps/OEPS-6570_axes.jpg
+
+          Sensor axes for OEPS-6570 Low-profile SPI Headstage 64ch (Hirose)
+
+   * - .. figure :: /_static/images/channelmaps/OEPS-6571_channel_map_label.jpg
+   
+         Channel pinout for OEPS-6571 Low-profile SPI Headstage 64ch with 3D (Hirose)
+
+     - .. figure :: /_static/images/channelmaps/OEPS-6571_axes.jpg
+
+          Sensor axes for OEPS-6571 Low-profile SPI Headstage 64ch with 3D (Hirose)
+
+   * - .. figure :: /_static/images/channelmaps/OEPS-6573_channel_map_label.jpg
+   
+         Channel pinout for OEPS-6573 - SPI Headstage 32ch (Omnetics)
+
+     - .. figure :: /_static/images/channelmaps/OEPS-6573_axes.jpg
+
+          Sensor axes for OEPS-6573 - SPI Headstage 32ch (Omnetics)
+
+   * - .. figure :: /_static/images/channelmaps/OEPS-6576_channel_map_label.jpg
+   
+         Channel pinout for OEPS-6576 - SPI Headstage 32ch with 3D (Omnetics)
+
+     - .. figure :: /_static/images/channelmaps/OEPS-6576_axes.jpg
+
+          Sensor axes for OEPS-6576 - SPI Headstage 32ch with 3D (Omnetics)
+   
+   * - .. figure :: /_static/images/channelmaps/OEPS-6574_channel_map_label.jpg
+   
+         Channel pinout for OEPS-6574 - SPI Headstage 16ch bipolar (Omnetics)
+
+     - .. figure :: /_static/images/channelmaps/OEPS-6574_axes.jpg
+
+          Sensor axes for OEPS-6574 - SPI Headstage 16ch bipolar (Omnetics)
+   
+   * - .. figure :: /_static/images/channelmaps/OEPS-6577_channel_map_label.jpg
+   
+         Channel pinout for OEPS-6577 - SPI Headstage 16ch bipolar with 3D (Omnetics)
+
+     - .. figure :: /_static/images/channelmaps/OEPS-6577_axes.jpg
+
+          Sensor axes for OEPS-6577 - SPI Headstage 16ch bipolar with 3D (Omnetics)
 
 Compatibility with other acquisition systems
 ##############################################
