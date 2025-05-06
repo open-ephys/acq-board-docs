@@ -43,16 +43,21 @@ Intan cables
 
 `Details are available on the Intan website <https://intantech.com/RHD_SPI_cables.html?tabSelect=RHDSPIcables&yPos=100>`_. Intan cables are available as standard or ultra-thin, and the choice will depend on how much cable mass (and subsequent weight and torque) will influence your experiments, as well as how long you need your cable to be.
 
+.. _dual-hs-adapter:
+
 Dual-headstage adapter
 ***********************************
+
+..  attention:: 
+    3D capabilities are disabled when a 3D headstage share a port with another headstage. 
 
 The `dual-headstage adapter <https://intantech.com/RHD_SPI_cables.html?tabSelect=RHDdual&yPos=100>`_ takes advantage of the 2 headstage-computer data lines in the SPI cable and exposes each line to a separate Omnetics connector, so that you can run two headstages off one cable. If you plan to use this adapter with daisy-chained cables resulting in a cable longer than 1.8 meters, be sure to `read the documentation <https://intantech.com/files/Intan_RHD2000_dual_headstage_adapter.pdf>`_ to make the necessary adjustments to the resistors on the adapter, or you risk corrupting your data. You can also make dual headstage adapters :ref:`yourself <custom_cables>`.
 
 .. _3usb:
 
-3. USB cable
+3. USB 3.0 cable
 ####################################################
-To connect the Acquisition Board to a computer, use a USB-3 cable with a Micro-B USB3 connector on the Acquisition Board end.
+To connect the Acquisition Board to a computer, use a USB 3.0 cable with a Micro-B USB 3.0 connector on the Acquisition Board end.
 
 .. _iohdmi:
 

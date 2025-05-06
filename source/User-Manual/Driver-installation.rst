@@ -19,7 +19,7 @@ Acquisition Boards with an OE FPGA module (Open Ephys FT600 USB board) require t
 On Windows 
 ********************
    
-#. Download the `Windows driver <https://ftdichip.com/wp-content/uploads/2024/01/FTD3XXDriver_WHQLCertified_1.3.0.8_Installer.zip>`_.
+#. Download the `Windows driver <https://ftdichip.com/wp-content/uploads/2024/01/FTD3XXDriver_WHQLCertified_1.3.0.8_Installer.zip>`__.
 #. Unzip the folder
 #. Run ``FTD3XXDriver_WHQLCertified_1.3.0.8_Installer.exe``
 
@@ -51,7 +51,7 @@ Acquisition Boards with an Opal Kelly FPGA module require the **FrontPanelUSB Dr
 On Windows 
 ********************
    
-#. Download the `Windows driver <https://github.com/open-ephys/plugin-GUI/blob/main/Resources/DLLs/FrontPanelUSB-DriverOnly-4.5.5.exe>`_.
+#. Download the `Windows driver <https://github.com/open-ephys/plugin-GUI/blob/main/Resources/DLLs/FrontPanelUSB-DriverOnly-4.5.5.exe>`__.
 #. Unzip the folder
 #. Run ``FrontPanelUSB-DriverOnly-4.5.5.exe``
 

@@ -56,7 +56,7 @@ right of the window will contain a ``GatewareVersion`` field.
 If the version does not appear or appears as ``N/A`` when creating the node, it will be properly
 updated after acquisition starts.
 
-Instructions to update the gateware in case you don't have the latest version
+Updating gateware
 --------------------------------------------------------------------------------
 
 .. warning:: Do not attempt to update the board gateware while the GUI or any other software using
@@ -72,8 +72,8 @@ Instructions to update the gateware in case you don't have the latest version
 
 #. Run the updater
 
-    * On Windows: Double click on the file ``UpdateFPGA_v1_0.bat``
-    * On Linux or Mac: Execute the file ``UpdateFPGA_v1_0.sh``
+   * On Windows: Double click on the file ``UpdateFPGA_v1_0.bat``
+   * On Linux or Mac: Execute the file ``UpdateFPGA_v1_0.sh``
 
 #. Wait a couple of minutes for the process to finish.
 

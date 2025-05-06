@@ -6,16 +6,16 @@
 Commutators
 ***********************************
 
-Commutators make a rotary electrical connection which maintains power and data transmission between a moving and a stationary cable. They are used to prevent tether twisting during freely moving recordings of animals, since the animals move while wearing a headstage which remains connected to a stationary acquisition system.
+Commutators maintain a robust electrical connection between a rotating cable and a stationary cable. They are commonly used in neuroscience to prevent tether twisting during freely moving recordings of animals, since the animals move while wearing a headstage which is connected to a stationary acquisition system. 
 
-Commutators are placed overhead the behavioral arena, and two SPI tethers are required for the connection: one from the headstage to the commutator, and one from the commutator to the Acquisition Board.
+Commutators compatible with the Acquisition Board require a 12-pin connection for the SPI tethers. Most tethers have a polarized nano connector which mates directly with the connector on the SPI cables, but you can also interface with bare wires using an `RHD SPI cable adapter board <https://intantech.com/RHD_SPI_cables.html?tabSelect=RHDSPIadapter&yPos=48.88888931274414>`_. Because the commutator is an interconnect between the headstage and the Acquisition Board, a second tether is required: one from the headstage to the commutator, and one from the commutator to the Acquisition Board.
 
-Commutators compatible with the Acquisition Board require a 12-pin connection for the SPI tethers. Most will have PZN-12 polarized nano connector which mate directly with the connector on the SPI cables, and to interface with bare wires you can use an `RHD SPI cable adapter board <https://intantech.com/RHD_SPI_cables.html?tabSelect=RHDSPIadapter&yPos=48.88888931274414>`_.
+Typically, commutators are placed above the behavioral arena.
 
-Our torque-free SPI Commutator
-###################################
+Open Ephys Torque-Free SPI Commutator
+#########################################
 
-Our torque-free SPI Commutator is a motorized commutator that works by correcting tether position using moment-to-moment information about the animal’s rotational state, instead of relying on tether torque measurement, which is used in conventional active commutators.
+Our torque-free SPI Commutator is a motorized commutator that corrects tether orientation using moment-to-moment information about the animal’s rotational state, instead of relying on tether torque measurement used in conventional active commutators. With these conventional commutators, measuring torque requires that the tether exerts torque on a sensor which necessarily means that torque is also exerted on the animal's head (Newton's Third Law). Open Ephys commutators rotate the tether before it's able to accumulate sufficient twist to induce torque on the animal head thereby reducing the mechanical load on the animal. This promotes more naturalistic animal behaviors. 
 
 .. figure:: ../_static/images/usermanual/commutators/OEPS-7761SPIC.jpg
    :width: 60%
@@ -23,6 +23,6 @@ Our torque-free SPI Commutator is a motorized commutator that works by correctin
 
    Open Ephys Torque-free Commutator - SPI
 
-The inertial-measurement units (IMUs) embedded on :ref:`our 3D capable headstages <3dcap>` in combination with the 3rd Gen Acquisition Board provide real-time measurements of animal orientation which drive the commutator to compensate automatically. This precludes the need for the animal to tug on the tether to engage the commutator and thus promotes natural animal behavior.
+The inertial-measurement units (IMUs) embedded on :ref:`our 3D capable headstages <3dcap>` in combination with the 3rd Gen Acquisition Board provide real-time measurements of animal orientation which drive the commutator to compensate automatically. 
 
-This commutator can also receive commands from other real-time measurements of animal orientation such as video-based pose-estimation methods (e.g. DeepLabCut or SLEAP), which would the way to use it to commutate headstages without 3D capabilities. Please refer to the `Commutators documentation site <https://open-ephys.github.io/commutator-docs/>`_ for further information.
+This commutator can also receive commands from other real-time measurements of animal orientation such as video-based pose-estimation methods (e.g. DeepLabCut or SLEAP) to commutate headstage without 3D capabilities. Please refer to the `Commutators documentation site <https://open-ephys.github.io/commutator-docs/>`_ for further information.

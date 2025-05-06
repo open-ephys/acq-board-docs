@@ -24,9 +24,9 @@ Connecting the headstages
 
 *Required components: RHD headstage, SPI cable*
 
-There are four headstage ports on the front of the Acquisition Board. You can use any combination of the four (but you might as well start with input "A"). The connectors on the SPI cables are very small, so sometimes they can be tricky to insert. Make sure all contacts on both connectors are properly aligned before you apply pressure, otherwise you might break the connectors.
+There are four headstage ports on the front of the Acquisition Board. You can use any combination of the four (but you might as well start with input "A"). The connectors on the SPI cables are very small, so sometimes they can be tricky to insert. Make sure all contacts on both connectors are properly aligned before you apply pressure, otherwise you might break the connectors. When disconnecting, pull straight out from base of the connector. 
 
-Then, plug the opposite end of each SPI cable into a headstage. You can use a series of daisy-chained SPI cables, or a dual headstage adapter, for different configurations. You can read more about SPI cables :ref:`here <2headstage>`.
+Then, plug the opposite end of each SPI cable into a headstage. There are several more ways to configure this connection. For example, you can daisy-chain SPI cables to extend the tether or use a :ref:`dual headstage adapter <dual-hs-adapter>` to connect two headstages to the same port. You can read more about SPI cables and these configurations :ref:`here <2headstage>`.
 
 .. image:: ../_static/images/usermanual/quickstart/spi_cable.jpg
     :width: 70%
@@ -87,7 +87,7 @@ This section provides the basic steps needed in the Open Ephys GUI to get starte
    An example signal chain in the Open Ephys GUI to acquire data with the Acquisition Board.
 
 1. With the Acquisition Board plugged in, powered and connected to hardware as explained above, open the Open Ephys GUI.
-2. Load the default configuration for the Acquisition Board from the pop-up, or build your own by dragging at least the following processors onto the Signal Chain:
+2. Load the default configuration for the Acquisition Board from the pop-up, or build your own by dragging at least the following processors from the left onto the Signal Chain at the bottom:
    
    - An `Acquisition Board processor <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Acquisition-Board.html>`_
 
@@ -99,7 +99,7 @@ This section provides the basic steps needed in the Open Ephys GUI to get starte
 
 3. Click the Play button to start data acquisition. Click Record to record.
    
-The :ref:`statusleds` on the acquisition board will flash during normal operation. You can disable the Status LEDs if you'd like to perform experiments in the dark, or if they introduce noise in your recordings, by clicking the "LED" button in the Acquisition Board processor in the Open Ephys GUI.
+   The :ref:`statusleds` on the acquisition board will flash during normal operation. You can disable the Status LEDs if you'd like to perform experiments in the dark, or if they introduce noise in your recordings, by clicking the "LED" button in the Acquisition Board processor in the Open Ephys GUI.
 
 4. Have fun experimenting!
 
