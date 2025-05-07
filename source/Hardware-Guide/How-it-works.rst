@@ -10,8 +10,6 @@ This page provides some additional details about how the Acquisition Board works
 
 The following material assumes a basic understanding of electronic circuits. If you don't have any hands-on experience working with electronics, you can follow the `Open Ephys course on extracellular electrophysiology acquisition <https://open-ephys.github.io/ephys-course>`_. It would also be helpful to read through the documentation available on the Intan website, as almost everything related to the `RHD2000 chips <https://intantech.com/products_RHD2000.html>`_ is relevant to the data you will collect with the Acquisition Board.
 
-the documentation available on the 
-
 .. image:: ../_static/images/usermanual/ac_board_pcb.png
 
 Neural data acquisition
