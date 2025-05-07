@@ -21,6 +21,6 @@ Tetrode recordings with the Open Ephys Acquisition Board require matching the he
 
 Silicon probes
 ###################################
-Silicon probes can be used with the Open Ephys Acquisition Board and an Intan Headstage if they have a 16-channel, 32-channel, or dual 32-channel Omnetics connector, or an adaptor to these Omnetics connector. Alternatively, probes using a Hirose connector can be used with the `Open Ephys Low-profile Headstage <https://open-ephys.org/acquisition-system/low-profile-spi-headstage-64ch>`_.
+Silicon probes can be used with the Open Ephys Acquisition Board and an Intan Headstage if they have a 16-channel, 32-channel, or dual 32-channel Omnetics connector, or an adaptor to these Omnetics connector. Alternatively, probes using a Hirose connector can be used with the `Open Ephys Low-profile Headstage <https://open-ephys.org/acquisition-system/oeps-6570-6571?rq=low%20profile%20spi%20headstage>`_.
 
 .. note:: Certain fully integrated silicon probes, such as Neuropixels, are not compatible with the Acquisition Board. This is because they use custom cables and a custom data transmission protocol. Neuropixels require a separate data acquisition system, such as the PXI-based system supplied by imec or `ONIX <https://open-ephys.github.io/onix-docs/>`_ from Open Ephys.
