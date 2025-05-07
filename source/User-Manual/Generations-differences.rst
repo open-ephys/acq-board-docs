@@ -22,7 +22,7 @@ Identify Your Acquisition Board
 
    * - .. figure:: /_static/images/usermanual/generations/acq_board_back_gen3.png
           :align: center
-     - **Gen 3** Acquisition Boards have a single power supply input on the Open Ephys FT600 USB board FPGA module and a Harp Clk output. The case has the 3d logo on the top.
+     - **Gen 3** Acquisition Boards have a single power supply input on the Open Ephys FT600 USB board FPGA module and a Harp Clk Out port. The case has the 3d logo on the top.
    * - .. figure:: /_static/images/usermanual/generations/acq_board_back_gen2.png
           :align: center
      - **Gen 2** Acquisition Boards have a single power supply input on the Open Ephys FT600 USB board FPGA module. 

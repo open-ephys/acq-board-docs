@@ -44,10 +44,51 @@ Our Open Ephys FPGA module uses the same footprint as the previous Opal Kelly on
 
 The FPGA itself is programmed in a language called Verilog. Verilog is a type of "hardware description language," because it specifies the actions of registers and logic gates, rather than functions and variables. Verilog is compiled to a "bitfile," which must be uploaded to the FPGA each time it's used. Compiling the bitfile can take several minutes, but uploading it occurs almost instantaneously. In the original Opal Kelly module, the bitfile is uploaded by the OE GUI each time the board is recognized, while in the new Open Ephys FPGA module, the bitfile resides permanently on the board. The gateware on Open Ephys FPGA modules can be updated by following :doc:`these instructions </User-Manual/Gateware-Update>`. An onboard bitfile makes it easier to use the acquisition board across different software like Bonsai as it avoids bitfile path issues. The Verilog code that runs on the acquisition board FPGA is our custom version of the "Rhythm" interface developed by Intan. We had to change a few things in order to communicate with our analog-to-digital converters (we're using Texas Instruments ADCs, rather than Analog Devices) and control the 8 LEDs on the board. If you're interested, you can take a look at the `source code <https://github.com/open-ephys/rhythm>`_ (but this is not recommended unless you have some prior Verilog experience).
 
-Analog and Digital I/O
+Analog and Digital I/O Ports
 ###################################
 
-See :ref:`peripheraldevices`.
+The acquisition board provides access to 8 analog inputs, 8 digital inputs, 8 analog outputs and 8 digital outputs via the four I/O Ports at the front of the board. See :ref:`peripheraldevices` for details.
+
+Additionally, each of the four HDMI ports includes 2 channels that are connected to an I2C bus. This provides a convenient way to expand the functionality of the acquisition board through custom I/O boards and gateware modifications.
+
+Harp Clock Output
+###################################
+
+Acquisition Boards Gen 2 and above can generate Harp timestamps to synchronize `Harp behavioral devices <https://harp-tech.org/articles/about.html>`_.
+
+To use this functionality, connect the Clk In port of a Harp device to the Clk Out port at the back of the acquisition board using a 3.5 mm Stereo Jack Plug to Plug cable. The Harp status LED on the acquisition board will blink every 2 seconds to indicate the devices are synchronized. This means the timestamps of samples acquired by the Harp device will be on the same time base as the Acquisition Board recorded samples, so no post-hoc time alignment is necessary.
+
+.. figure:: /_static/images/usermanual/harp_clk_out.png
+   :width: 70%
+   :align: center
+
+   Gen 3 Acquisition Boards have a Harp Clk Out port at the back of the board to synchronize Harp behavioral devices. 
+    
+Additional Harp devices with Clk Out ports can be daisy-chained to the first connected device to propagate the Harp timestamp. If you need to synchronize many devices, you might want to provide the Acquisition Board Harp timestamp to a `Harp Timestamp Generator <https://harp-tech.org/api/Harp.TimestampGeneratorGen3.html>`_ instead, since this device has six Clk Out ports.
+
+..  attention::  The Harp Clk Out implementation on Gen 2 Acquisition Boards requires additional components. See :ref:`this section <genids>` to identify what generation board you have. 
+
+.. figure:: /_static/images/usermanual/harp_clk_out_gen2.jpg
+   :width: 70%
+   :align: center
+   
+   Gen 2 Acquisition Boards require a Harp Timestamp Generator (for Acquisition Board) to be plugged in any of the HDMI I/O ports to provide a Harp timestamp, since they don't have a dedicated Harp Clk Out port.
+
+Acquisition Board Clock Output
+###################################
+
+.. figure:: /_static/images/usermanual/clk_out.png
+   :width: 70%
+   :align: center
+   
+   The BNC connector at the back of the board gives access to the Clock Output. 
+
+The acquisition board sends out a TTL via the BNC connector at the back of the board every time a sample is acquired. This can be used to sync the acquisition board with external hardware. The clock output is set to 1 by default, and can be configured for other clock divisions using the "Clock Divider" functionality of the `Acquisition Board processor in the Open Ephys GUI  <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Acquisition-Board.html>`_.
+
+Status LEDs
+###################################
+
+The eight WS2812B :ref:`statusleds` can be controlled via a single digital line, and don't require any external parts except for a 0.1 µF bypass capacitor.
 
 Power Supply
 ###################################
@@ -60,15 +101,6 @@ Below is a schematic of all the voltage levels on the board. The main ones have 
 
 .. image:: ../_static/images/usermanual/powersupply.png
   :alt: Details of the internal voltages
-
-Other Features
-###################################
-
-*LEDs:* The eight WS2812B :ref:`statusleds` can be controlled via a single digital line, and don't require any external parts except for a 0.1 µF bypass capacitor.
-
-*BNC clock output:* The connector is a great way to ground your board if you're running it off battery power! You would do this by connecting the outer shield of this connector (NOT the center pin) to an appropriate ground – a large metal rack, a piece of copper sunk deep into the wall, or even the ground plug of a 3-prong outlet.
-
-*I2C bus:* Each of the four HDMI ports includes 2 channels that are connected to an I2C bus. This will provide a convenient way to expand the functionality of the acquisition board through custom I/O boards. However, the I2C functionality hasn't yet been added to the FPGA firmware.
 
 .. _newfpga_licenses:
 
