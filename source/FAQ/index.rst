@@ -1,3 +1,5 @@
+:orphan:
+
 .. _faq:
 .. role:: raw-html-m2r(raw)
    :format: html
@@ -26,7 +28,7 @@ Check out this tutorial: :ref:`ephyswithbehaviouralcam`.
 
 **Where can I learn more about electrophysiology acquisition?**
 
-Open Ephys has developed a course on extracellular electrophysiology. You can follow the course through a Cajal Advanced Neuroscience training, or go through `the materials on your own <https://ahleighton.github.io/OE-ephys-course/>`_.
+Open Ephys has developed a course on extracellular electrophysiology. You can follow the course through a Cajal Advanced Neuroscience training, or go through `the materials on your own <https://open-ephys.github.io/ephys-course/>`_.
 
 |
 

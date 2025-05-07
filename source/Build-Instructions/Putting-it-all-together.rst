@@ -6,12 +6,13 @@
 Putting it all together
 ***********************************
 
-Installing the FPGA
+Installing the FPGA module
 ###################################
 
-If your acquisition board did not come with an FPGA, or if you built it yourself, you'll have to buy and install your own. We recommend using the XEM6310-LX45 ($499.95), which transmits data via USB 3.0, and supports up to 512 channels of simultaneous data acquisition. The board is also compatible with the Opal Kelly 6010-LX45 FPGA module ($399.95), which uses USB 2.0 and can handle up to 128 channels.
+If your acquisition board did not come with an FPGA, or if you built it yourself, you'll have to buy and install your own.
+You can get an Open Ephys FPGA module from our store.
 
-Required components: Opal Kelly FPGA, heatsink
+Required components: FPGA module, heatsink
 
 Tools: M3 hex key or Phillips screwdriver, depending on your specific board
 
@@ -39,7 +40,7 @@ Tools: M3 hex key or Phillips screwdriver, depending on your specific board
 Assembling the case
 ###################################
 
-#. Place the circuit board back into the case, and replace the four screws. To insert the board, first carefully slide the four small headstage connectors through their opening in the case, hold the board at an angle for this step. The HDMI connectors should now easily fit into their openings. Dont force the board in at this stage, if there's too much resistance, the alignment is likely wrong and you risk bending the pins on the omnetics connectors. Once the front edge is in the housing, just push the board in using the front as a hinge. The Opal Kelly board should easily fit into the four guide posts in the case now.
+#. Place the circuit board back into the case, and replace the four screws. To insert the board, first carefully slide the four small headstage connectors through their opening in the case, hold the board at an angle for this step. The HDMI connectors should now easily fit into their openings. Dont force the board in at this stage, if there's too much resistance, the alignment is likely wrong and you risk bending the pins on the omnetics connectors. Once the front edge is in the housing, just push the board in using the front as a hinge. The FPGA module should easily fit into the four guide posts in the case now.
 
 If you've ordered the case in a color other than white, you'll need to paint the top surface so the glue isn't visible. We recommend Montana Gold spray paint in Shock White, but any bright white paint will do. Make sure to tape the edges so you don't get paint on the sides.
 

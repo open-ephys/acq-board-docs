@@ -34,7 +34,10 @@ The following general lab supplies are necessary for assembly:
 Obtaining the PCB
 ###################################
 
-The easiest (and cheapest) way is to order the I/O board PCB it through the `Open Ephys store <https://open-ephys.org/acquisition-system/io-board-pcb>`__. However, if you made any changes to the design, you can follow the instructions below to order bare PCBs boards using Sunstone's `ValueProto <https://www.sunstone.com/pcb-products/pcb-manufacturing/valueproto>`__ service. If you have success with another company, please let us know!
+The easiest (and cheapest) way is to order the I/O board PCB it through the `Open Ephys store
+<https://open-ephys.org/acquisition-system/io-board-pcb>`__. However, if you made any changes to the
+design, you can follow the instructions below to order bare PCBs boards from any PCB fab house. If
+you have success with another company, please let us know!
 
 #. Clone the `io-board <https://github.com/open-ephys/io-board>`__ repository on GitHub (or download it as a ZIP file).
 
@@ -66,8 +69,7 @@ The easiest (and cheapest) way is to order the I/O board PCB it through the `Ope
 
 #. After looking at the information about drill sizes (nothing to worry about), agree to the terms and conditions and proceed to checkout.
 
-With Sunstone, the cost should be about $80 for one board, or about $240 for four boards.
-
+With Sunstone, for example, the cost should be about $80 for one board, or about $240 for four boards.
 
 Putting it together
 ###################################

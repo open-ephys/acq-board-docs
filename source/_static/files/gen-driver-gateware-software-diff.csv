@@ -1,0 +1,15 @@
+**Acquisition Board Generation**,"| Gen 3.
+| Get 3D data","| Gen 2.
+| OE FPGA module","| Gen 1.
+| More channels","| Gen 0.
+| The original"
+**Drivers**,`FTD3XXDriver <https://github.com/open-ephys/plugin-GUI/blob/main/Resources/DLLs/FTD3XXDriver_WHQLCertified_1.3.0.8_Installer.exe>`__ ,`FTD3XXDriver <https://github.com/open-ephys/plugin-GUI/blob/main/Resources/DLLs/FTD3XXDriver_WHQLCertified_1.3.0.8_Installer.exe>`__ ,`FrontPanelUSB <https://github.com/open-ephys/plugin-GUI/blob/main/Resources/DLLs/FrontPanelUSB-DriverOnly-4.5.5.exe>`__ ,`FrontPanelUSB <https://github.com/open-ephys/plugin-GUI/blob/main/Resources/DLLs/FrontPanelUSB-DriverOnly-4.5.5.exe>`__ 
+**Latest Gateware**,"| :download:`version 1.5.1 </_static/files/OpenEphysFPGA-gw1.5.1.zip>`
+| Stored onboard","| :download:`version 1.5.1 </_static/files/OpenEphysFPGA-gw1.5.1.zip>`
+| Stored onboard","| `rhd2000_usb3.bit <https://github.com/open-ephys-plugins/rhythm-plugins/blob/main/Resources/rhd2000_usb3.bit>`__
+| Distributed with the Open Ephys GUI","| `rhd2000.bit <https://github.com/open-ephys-plugins/rhythm-plugins/blob/main/Resources/rhd2000.bit>`__
+| Distributed with the Open Ephys GUI"
+**Open Ephys GUI Compatibility**,Open Ephys GUI 1.0 and above with plugin Acquisition Board,"Open Ephys GUI 1.0 and above with plugin Acquisition Board
+
+Open Ephys 0.6.x with plugin OE Acquisition Board",All Open Ephys GUI versions using the Acquisition Board plugin,All Open Ephys GUI versions using the Acquisition Board plugin
+**Bonsai Compatibility**,Not supported yet,Bonsai.OpenEphys with pending improvements,Bonsai.Ephys,Bonsai.Ephys

@@ -188,7 +188,7 @@ html_theme_options = {
     "navbar_end": ["navbar-icon-links"],
     "navbar_align": "content",
     "footer_start": ["copyright"],
-    "external_links": [{"name": "Purchase", "url": "https://open-ephys.org/acquisition-system/acquisition-board"},],
+    "external_links": [{"name": "Purchase", "url": "https://open-ephys.org/acquisition-system/oeps-9029?rq=acquisition%20board"},],
     'icon_links': [
         dict(name='GitHub',
              url='https://github.com/open-ephys/acq-board-docs',

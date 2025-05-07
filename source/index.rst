@@ -8,14 +8,14 @@
 
 
 
-.. image:: _static/images/acquisition-board.jpg
-  :alt: Photograph of the Open Ephys acquisition board
-
-|
+.. image:: _static/images/acquisition-board.png
+  :width: 80%
+  :align: center
+  :alt: Photograph of the Open Ephys Acquisition Board
 
 The **Open Ephys Acquisition Board** is an open-source interface for acquiring up to 512 channels of extracellular electrophysiology data over a USB connection. 
 
-You can order an assembled Acquisition Board from `Open Ephys Production Site <https://open-ephys.org/acquisition-system/acquisition-board>`_. You can also order an `Open Ephys Starter Kit <https://open-ephys.org/acquisition-system/starter-kit>`_, which contains everything you need to get started (except for electrodes and a computer).
+You can order an assembled Acquisition Board from `Open Ephys Production Site <https://open-ephys.org/acquisition-system/oeps-9029?rq=acquisition%20board>`_. You can also order an `Open Ephys Starter Kit <https://open-ephys.org/acquisition-system/starter-kit>`_, which contains everything you need to get started (except for electrodes and a computer).
 
 Because all the designs are freely available, you can also build the Acquisition Board yourself. We estimate you'll spend about 2-3 days of work and about $1000. Follow the instructions :ref:`here <buildinstructions>` to learn how to build your own board.
 
@@ -28,6 +28,8 @@ Key Specifications
 * USB data transmission
 * 8 analog inputs
 * 8 digital inputs
+* 3D capabilities (from 3rd Generation onwards)
+* Harp compatibility (from 2nd Generation onwards)
 
 .. raw:: html
       
@@ -73,6 +75,6 @@ Key Specifications
     :titlesonly:
 
     User-Manual/index
-    Build-Instructions/index
+    Hardware-Guide/index
     Tutorials/index
-    FAQ/index
+    Build-Instructions/index

@@ -3,16 +3,14 @@
    :format: html
 
 ***********************************
-User Manual
+Getting Started
 ***********************************
 
-You can follow the :ref:`quickstartguide` to learn how to start collecting data right away. However, we recommend reading the :ref:`howitworks` page carefully if you're going to use our hardware, and especially if you're going to build it. When something goes wrong, or if your data look suspicious, knowing the basics of how the hardware works will make it easier to troubleshoot. And the more people who have a thorough understanding of the Open Ephys ecosystem, the easier it will be to support new users.
+You can follow the :ref:`quickstartguide` to learn how to start collecting data right away. However, we recommend reading the :ref:`hardwareguide` page carefully if you're going to use our hardware, and especially if you're going to :ref:`build it <buildinstructions>`. When something goes wrong, or if your data look suspicious, knowing the basics of how the hardware works makes it easier to troubleshoot. And the more people who have a thorough understanding of the Open Ephys ecosystem, the easier it is to support new users.
 
-We're going to assume a basic understanding of electronic circuits. If you don't have any hands-on experience working with electronics, check out our free course materials on extracellular electrophysiology acquisition `here <https://ahleighton.github.io/OE-ephys-course/>`_, which also covers the basic electronics you will need. It would also be helpful to read through the documentation available on the `Intan website <https://intantech.com/products_RHD2000.html>`_ to learn more about the RHD2000 chip.
+We recommend checking out our `course materials on extracellular electrophysiology acquisition <https://open-ephys.github.io/ephys-course/>`_, which goes into the fundamentals of how tiny extracellular voltages are detected, amplified and digitized in these kinds of digital multichannel acquisition systems.
 
-.. note:: From December 2022 the acquisition board features a new FPGA designed by Open Ephys.
-   Among other differences, the new board stores the bitfile for its gateware internally.
-   It is recommended to check the :ref:`gwupdate` page to keep your board updated.
+Different Acquisition Board generations function differently. The :doc:`/User-Manual/Generations-differences` section points out the different hardware, drivers, gateware, software compatibility and functionality aspects that vary. Being aware of the differences will help you navigate these docs.
 
 .. toctree::
     :hidden:
@@ -20,15 +18,8 @@ We're going to assume a basic understanding of electronic circuits. If you don't
     :titlesonly:
 
     Quickstart-guide
-    How-it-works
-    Acquisition-system-parts
-    Electrodes
-    Headstages
-    Cables
-    Custom-cables
-    Peripheral-devices
-    Computer-hardware
+    Hardware-requirements
+    Driver-installation
     Acquisition-software
-    Status-LEDs
+    Generations-differences
     Gateware-Update
-    New-FPGA
