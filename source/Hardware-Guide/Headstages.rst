@@ -127,7 +127,7 @@ You can also use `this sheet <https://docs.google.com/spreadsheets/d/1WYDymxNqGR
 
      - .. figure :: /_static/images/channelmaps/OEPS-6570_axes.jpg
 
-          Sensor axes for OEPS-6570 Low-profile SPI Headstage 64ch (Hirose)
+          Accelerometer axes for OEPS-6570 Low-profile SPI Headstage 64ch (Hirose)
 
    * - .. figure :: /_static/images/channelmaps/OEPS-6571_channel_map_label.jpg
    
@@ -135,7 +135,7 @@ You can also use `this sheet <https://docs.google.com/spreadsheets/d/1WYDymxNqGR
 
      - .. figure :: /_static/images/channelmaps/OEPS-6571_axes.jpg
 
-          Sensor axes for OEPS-6571 Low-profile SPI Headstage 64ch with 3D (Hirose)
+          IMU axes for OEPS-6571 Low-profile SPI Headstage 64ch with 3D (Hirose)
 
    * - .. figure :: /_static/images/channelmaps/OEPS-6573_channel_map_label.jpg
    
@@ -143,7 +143,7 @@ You can also use `this sheet <https://docs.google.com/spreadsheets/d/1WYDymxNqGR
 
      - .. figure :: /_static/images/channelmaps/OEPS-6573_axes.jpg
 
-          Sensor axes for OEPS-6573 - SPI Headstage 32ch (Omnetics)
+          Accelerometer axes for OEPS-6573 - SPI Headstage 32ch (Omnetics)
 
    * - .. figure :: /_static/images/channelmaps/OEPS-6576_channel_map_label.jpg
    
@@ -151,7 +151,7 @@ You can also use `this sheet <https://docs.google.com/spreadsheets/d/1WYDymxNqGR
 
      - .. figure :: /_static/images/channelmaps/OEPS-6576_axes.jpg
 
-          Sensor axes for OEPS-6576 - SPI Headstage 32ch with 3D (Omnetics)
+          IMU axes for OEPS-6576 - SPI Headstage 32ch with 3D (Omnetics)
    
    * - .. figure :: /_static/images/channelmaps/OEPS-6574_channel_map_label.jpg
    
@@ -159,7 +159,7 @@ You can also use `this sheet <https://docs.google.com/spreadsheets/d/1WYDymxNqGR
 
      - .. figure :: /_static/images/channelmaps/OEPS-6574_axes.jpg
 
-          Sensor axes for OEPS-6574 - SPI Headstage 16ch bipolar (Omnetics)
+          Accelerometer axes for OEPS-6574 - SPI Headstage 16ch bipolar (Omnetics)
    
    * - .. figure :: /_static/images/channelmaps/OEPS-6577_channel_map_label.jpg
    
@@ -167,7 +167,7 @@ You can also use `this sheet <https://docs.google.com/spreadsheets/d/1WYDymxNqGR
 
      - .. figure :: /_static/images/channelmaps/OEPS-6577_axes.jpg
 
-          Sensor axes for OEPS-6577 - SPI Headstage 16ch bipolar with 3D (Omnetics)
+          IMU axes for OEPS-6577 - SPI Headstage 16ch bipolar with 3D (Omnetics)
 
 Compatibility with other acquisition systems
 ##############################################
