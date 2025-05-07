@@ -14,6 +14,10 @@ The **Open Ephys GUI** is an open-source, plugin-based application built specifi
 
 2. Bonsai
 ###################################
+
+.. attention:: 
+   Different generations of the acquisition board have varying degrees of support in Bonsai. Check the :ref:`software compatibility` table to confirm your acquisition board is supported in Bonsai.
+   
 Alternatively, you can use **Bonsai**, available for download `here <https://bonsai-rx.org/>`_. Bonsai is a visual reactive programming language, that can be used to acquire data from many different tools, including the Open Ephys Acquisition Board. You can insert a 'Rhd2000EvalBoard' Node into your Bonsai workflow. Right-click on this node to select what data to visualise (e.g. Ephys, inputs, Auxiliary channels) and add a MatrixWriter (configuring the path to end in '.bin') to save your data.
 
 

@@ -48,11 +48,14 @@ Dual-headstage adapter
 
 The `dual-headstage adapter <https://intantech.com/RHD_SPI_cables.html?tabSelect=RHDdual&yPos=100>`_ takes advantage of the 2 headstage-computer data lines in the SPI cable and exposes each line to a separate Omnetics connector, so that you can run two headstages off one cable. If you plan to use this adapter with daisy-chained cables resulting in a cable longer than 1.8 meters, be sure to `read the documentation <https://intantech.com/files/Intan_RHD2000_dual_headstage_adapter.pdf>`_ to make the necessary adjustments to the resistors on the adapter, or you risk corrupting your data. You can also make dual headstage adapters :ref:`yourself <custom_cables>`.
 
+..  attention:: 
+    3D capabilities are disabled when a 3D capable headstage shares a port with another headstage. 
+
 .. _3usb:
 
-3. USB cable
+3. USB 3.0 cable
 ####################################################
-To connect the Acquisition Board to a computer, use a USB-3 cable with a Micro-B USB3 connector on the Acquisition Board end.
+To connect the Acquisition Board to a computer, use a USB 3.0 to Micro-B USB 3.0 cable.
 
 .. _iohdmi:
 

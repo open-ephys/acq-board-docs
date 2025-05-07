@@ -12,31 +12,40 @@ The Acquisition Board works with industry standard Intan RHD recording chips to 
 Headstages compatible with the Acquisition Board need to have:
 
 - `Intan RHD2000-series bioamplifier chips <https://intantech.com/files/Intan_RHD2000_series_datasheet.pdf>`_ (up to two 64ch chips per headstage)
-- the Serial Peripheral Interface (SPI) protocol implemented in a 12-wire SPI connection as per the `Intan specification <https://intantech.com/files/Intan_RHD2000_SPI_cable.pdf>`_.
+- the Serial Peripheral Interface (SPI) protocol implemented in a 12-wire SPI connection per the `Intan specification <https://intantech.com/files/Intan_RHD2000_SPI_cable.pdf>`_.
 
-In addition to these requirements, headstages vary and can be characterized by a number of features.
+Beyond these requirements, headstages vary and can be characterized by a number of features. The choice will depend on the equipment you have and the experiments you want to perform.
 
-- Type of electrode inputs on the RHD2000-series chip (unipolar or bipolar)
-- Number of neuronal recording channels (16, 32, 64, 128...)
-- Electrode connector (Omnetics, Hirose, Molex, etc)
-- Additional sensors (3-axis accelerometer for motion detection, 9-axis inertial measurement unit for 3D capabilities)
-- Shape (standard, low-profile, compact, etc)
+- **Type of electrode inputs on the RHD2000-series chip (unipolar or bipolar)**
 
-The relative importance of each will depend on the equipment you have and the experiments you want to perform.
-For example:
+   *if you intend to acquire local field potentials and single units using a common reference, you'd use a unipolar headstage, but if you have impedance matched pairs of electrodes for EMG or EEG acquisition, you'd use a headstage with bipolar inputs.*
 
-- the number of channels you'd like to record from and the type of probe or electrode array you intend to use will define the channel count
-- the connector on the probe or electrode interface board (EIB) needs to be compatible with that on the headstage, or use a corresponding adapter
-- to reduce torque for freely-behaving tetrode recordings, a low-profile headstage is more suitable than a standard upright one
-- if you intend to acquire local field potentials and single units using a common reference, you'd use a unipolar headstage, but if you have impedance matched pairs of electrodes for EMG or EEG acquisition, you'd use a headstage with bipolar inputs.
-- if you want to record absolute head orientation (pitch, yaw, roll) or drive our torque-free commutator, you need 3D capabilities
+- **Number of neuronal recording channels (16, 32, 64, 128...)**
+   
+   *the number of channels you'd like to record from and the type of probe or electrode array you intend to use will define the channel count*
 
-Our headstages
+- **Electrode connector (Omnetics, Hirose, Molex, etc)**
+   
+   *the connector on the probe or electrode interface board (EIB) needs to be compatible with that on the headstage, or use a corresponding adapter*
+   
+- **Additional sensors (3-axis accelerometer for motion detection, 9-axis inertial measurement unit for 3D capabilities)**
+   
+   *if you want to record absolute head orientation (pitch, yaw, roll) or drive our torque-free commutator, you need 3D capabilities*
+
+- **Shape (standard, low-profile, compact, etc)**
+   
+   *a low-profile headstage is more suitable to reduce torque than a standard upright one, and specifically designed for freely-behaving tetrode recordings with the ShuttleDrive*
+
+Open Ephys headstages
 ###################################
 
-We produce a variety of headstages compatible with the Acquisition Board: 32 and 64 ch, unipolar and bipolar, standard and low-profile, with accelerometer or 3D capabilities. Check out the range of headstages available `on our store  <https://open-ephys.org/acquisition-system>`_.
+We produce a variety of headstages compatible with the Acquisition Board: 32 and 64 ch, unipolar and bipolar, standard and low-profile, with accelerometer or 3D capabilities. Check out the range of headstages available `on the Open Ephys store <https://open-ephys.org/acquisition-system>`_, which includes:
 
-Our range includes the Low-profile SPI Headstages 64ch that sit flat on the head for reduced torque, the standard profile SPI headstages 32 ch unipolar for Omnetics-based silicon probes, and the standard profile SPI headstages 16 ch bipolar optimal for recordings with electrodes of similar impedance, such as those used for EMG. We have two variants of each of these headstages: you can choose between a 3D capable variant for recording absolute head orientation and driving our torque-free SPI commutator or a variant with just a 3-axis accelerometer that allows basic motion detection.
+- The low-profile SPI Headstages 64ch that sit flat on the head for reduced torque
+- The standard profile SPI headstages 32 ch unipolar for Omnetics-based silicon probes
+- The standard profile SPI headstages 16 ch bipolar optimal for recordings with electrodes of similar impedance, such as those used for EMG. 
+
+For each of the above options, there are two variants: a 3D capable variant for recording absolute head orientation and driving our torque-free SPI commutator and a variant with a 3-axis accelerometer that allows basic motion detection.
 
 Low-profile vs standard headstages
 +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -49,7 +58,7 @@ The low-profile SPI Headstage was designed by Open Ephys specifically to reduce 
 
    Low-profile SPI Headstage 64ch (Hirose) with 3D
 
-The flat, round design means that the center of mass of the headstage is closer to the head of the animal. This cuts torque in half, reducing the impact on animal. Mice with this headstage can easily lower their heads and perform most licking/nosepoke paradigms. (Imagine wearing a heavy tall hat, and how that would influence your balance.)
+The flat, round design means that the center of mass of the headstage is closer to the head of the animal, reducing the mechanical load. Mice with this headstage can easily lower their heads and perform most licking/nosepoke paradigms. (Imagine wearing a heavy tall hat, and how that would influence your balance.)
 
 .. figure:: ../_static/images/usermanual/headstages/image-20201209-170837.png
    :width: 50%
@@ -77,24 +86,26 @@ Our headstages can have either a 3-axis accelerometer or 9-axis inertial measure
 
    Left: Open Ephys SPI 32ch headstage with accelerometer; Right: Open Ephys SPI 32ch headstage with 3D capabilities
 
+.. _acc:
+
 Accelerometer
 ----------------
 
 A 3-axis accelerometer on the headstage can be used to synchronize electrophysiological data with headstage movement. These signals can be
-calibrated to yield precise acceleration as per `this application note  <https://intantech.com/files/Intan_RHD2000_accelerometer_calibration.pdf>`_.
+calibrated to yield precise acceleration per `this application note  <https://intantech.com/files/Intan_RHD2000_accelerometer_calibration.pdf>`_.
 
 .. _3dcap:
 
-3D capabilites
+3D capabilities
 ----------------
 
 Our 3D capable headstages are unique in that they can accurately monitor absolute head orientation thanks to an embedded 9-axis inertial measurement unit (IMU). This technology senses rotational movements (pitch, yaw, and roll) which can be used to correlate neural activity with behavioral states.
 
 Additionally, the information from this sensor can drive our torque-free SPI commutator for twist-free naturalistic recordings.
 
-.. important:: 3D capabilities require an Open Ephys Acquisition Board (3rd Generation) to work.
-
-.. important:: 3D capabilities cannot be used when operating the headstage combined with a dual headstage adapter. 
+.. important::
+   - 3D capabilities require an Open Ephys Acquisition Board (3rd Generation) to work.
+   - 3D capabilities cannot be used when operating the headstage combined with a dual headstage adapter. 
 
 
 Channel Maps

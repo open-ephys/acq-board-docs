@@ -10,7 +10,7 @@ You can follow the :ref:`quickstartguide` to learn how to start collecting data 
 
 We recommend checking out our `course materials on extracellular electrophysiology acquisition <https://open-ephys.github.io/ephys-course/>`_, which goes into the fundamentals of how tiny extracellular voltages are detected, amplified and digitized in these kinds of digital multichannel acquisition systems.
 
-Different Acquisition Board generations function differently. The :ref:`<gendiffs>` section points out the different hardware, drivers, gateware, software compatibility and functionality aspects that vary. Being aware of the differences will help you navigate these docs.
+Different Acquisition Board generations function differently. The :doc:`/User-Manual/Generations-differences` section points out the different hardware, drivers, gateware, software compatibility and functionality aspects that vary. Being aware of the differences will help you navigate these docs.
 
 .. toctree::
     :hidden:

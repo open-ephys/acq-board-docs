@@ -43,6 +43,7 @@ This table can help you understand the hardware differences that define each gen
    :header-rows: 1
    :stub-columns: 1
    
+.. _software compatibility:
 
 Drivers, Gateware and Software Compatibility
 ------------------------------------------------------
