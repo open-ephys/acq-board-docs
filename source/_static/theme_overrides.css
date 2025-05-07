@@ -432,3 +432,8 @@ strong {
 .col-lg-6 {
   margin-top: 2em;
 }
+
+.remove-white-space-in-definition-list * {
+  margin-top: 0;
+  margin-bottom: 0;
+}

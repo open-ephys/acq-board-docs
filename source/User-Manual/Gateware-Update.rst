@@ -62,7 +62,7 @@ Updating gateware
 .. warning:: Do not attempt to update the board gateware while the GUI or any other software using
     the board is in use. Do not open any software that uses the board while an update is in process.
 
-#. Be sure that the :ref:`device drivers are already installed<newfpga_driver>`
+#. Be sure that the correct :doc:`device drivers are already installed</User-Manual/Driver-installation>`
 
 #. Download the :ref:`gwupdate_latest` of the gateware
 

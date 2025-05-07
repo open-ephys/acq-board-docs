@@ -43,6 +43,8 @@ Intan cables
 
 `Details are available on the Intan website <https://intantech.com/RHD_SPI_cables.html?tabSelect=RHDSPIcables&yPos=100>`_. Intan cables are available as standard or ultra-thin, and the choice will depend on how much cable mass (and subsequent weight and torque) will influence your experiments, as well as how long you need your cable to be.
 
+.. _dual-hs-adapter:
+
 Dual-headstage adapter
 ***********************************
 

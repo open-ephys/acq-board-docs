@@ -14,27 +14,26 @@ Headstages compatible with the Acquisition Board need to have:
 - `Intan RHD2000-series bioamplifier chips <https://intantech.com/files/Intan_RHD2000_series_datasheet.pdf>`_ (up to two 64ch chips per headstage)
 - the Serial Peripheral Interface (SPI) protocol implemented in a 12-wire SPI connection per the `Intan specification <https://intantech.com/files/Intan_RHD2000_SPI_cable.pdf>`_.
 
-Beyond these requirements, headstages vary and can be characterized by a number of features. The choice will depend on the equipment you have and the experiments you want to perform.
+Beyond these requirements, headstages vary and can be characterized by a number of features. The choice will depend on the equipment you have and the experiments you want to perform. The list below covers the feature-space of SPI-compatible Open Ephys headstages.
 
-- **Type of electrode inputs on the RHD2000-series chip (unipolar or bipolar)**
+..  rst-class:: remove-white-space-in-definition-list
 
-   *if you intend to acquire local field potentials and single units using a common reference, you'd use a unipolar headstage, but if you have impedance matched pairs of electrodes for EMG or EEG acquisition, you'd use a headstage with bipolar inputs.*
-
-- **Number of neuronal recording channels (16, 32, 64, 128...)**
-   
-   *the number of channels you'd like to record from and the type of probe or electrode array you intend to use will define the channel count*
-
-- **Electrode connector (Omnetics, Hirose, Molex, etc)**
-   
-   *the connector on the probe or electrode interface board (EIB) needs to be compatible with that on the headstage, or use a corresponding adapter*
-   
-- **Additional sensors (3-axis accelerometer for motion detection, 9-axis inertial measurement unit for 3D capabilities)**
-   
-   *if you want to record absolute head orientation (pitch, yaw, roll) or drive our torque-free commutator, you need 3D capabilities*
-
-- **Shape (standard, low-profile, compact, etc)**
-   
-   *a low-profile headstage is more suitable to reduce torque than a standard upright one, and specifically designed for freely-behaving tetrode recordings with the ShuttleDrive*
+    Type of electrode inputs on the RHD2000-series chip (unipolar, bipolar)
+        If you intend to acquire local field potentials and single units using a common reference,
+        you'd use a unipolar headstage. If you have impedance matched pairs of electrodes for EMG or
+        EEG acquisition, you'd use a headstage with bipolar inputs.
+    Number of neuronal recording channels (16, 32, 64, 128...)
+        The number of channels you'd like to record from and the type of probe or electrode array
+        you intend to use will define the channel count.
+    Electrode connector (Omnetics, Hirose, Molex, etc.)
+        The connector on the probe or electrode interface board (EIB) needs to be compatible with
+        that on the headstage or have a compatible EIB adapter.
+    Additional sensors (3-axis accelerometer for motion detection, 9-axis inertial measurement unit for 3D capabilities)
+        If you want to record absolute head orientation (pitch, yaw, roll) or drive our torque-free
+        commutator, you need 3D capabilities.
+    Shape (standard, low-profile, compact, etc)
+        A low-profile headstage is more suitable to reduce torque than a standard upright one, and
+        specifically designed for freely-behaving tetrode recordings with the ShuttleDrive.
 
 Open Ephys headstages
 ###################################

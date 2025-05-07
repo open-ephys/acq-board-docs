@@ -28,7 +28,7 @@ There are four headstage ports on the front of the Acquisition Board. You can us
 
 Then, plug the opposite end of each SPI cable into a headstage. There are several more ways to configure this connection. For example, you can daisy-chain SPI cables to extend the tether or use a :ref:`dual headstage adapter <dual-hs-adapter>` to connect two headstages to the same port. You can read more about SPI cables and these configurations :ref:`here <2headstage>`.
 
-.. image:: ../_static/images/usermanual/quickstart/spi_cable.jpg
+..  image:: ../_static/images/usermanual/quickstart/spi_cable.jpg
     :width: 70%
     :align: center
 
