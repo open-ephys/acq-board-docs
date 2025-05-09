@@ -6,10 +6,10 @@
 **Release Date**,May 2025,Dec 2022,Main version produced by OEPS from 2016 until Dec 2022.,Original design from 2010. Some boards shipped in 2022 due to shortage
 **Case**,Open Ephys and 3d logos,Open Ephys logo,Open Ephys logo,Open Ephys logo
 **Main Board Version**,v3,v2.3-2.4,v2.3,Up to v2.2
-**FPGA Module**,"Open Ephys
-| FT600 USB board","Open Ephys
-| FT600 USB board","Opal Kelly
-| XEM6310-LX45","Opal Kelly
+**FPGA Module**,"| Open Ephys
+| FT600 USB board","| Open Ephys
+| FT600 USB board","| Opal Kelly
+| XEM6310-LX45","| Opal Kelly
 | XEM6310-LX45"
 **USB Connection**,USB3.0,USB3.0,USB3.0,USB2.0
 **Power Supply**,Only one on the FPGA module.,Only one on the FPGA module.,One on the main board and one on the FPGA module.,One on the main board and one on the FPGA module.
