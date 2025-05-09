@@ -11,7 +11,7 @@
 | Distributed with the Open Ephys GUI"
 **Open Ephys GUI Compatibility**,"Open Ephys GUI 1.0 and above using Acquisition Board plugin
 
-Backwards compatible with GUI version 0.6.x using OE Acquisition Board plugin (except 3D capabilities)","Open Ephys GUI 1.0 and above using Acquisition Board plugin
+Backwards compatible with GUI version 0.6.x using OE Acquisition Board plugin (except no 3D capabilities)","Open Ephys GUI 1.0 and above using Acquisition Board plugin
 
 Open Ephys 0.6.x using OE Acquisition Board plugin",All Open Ephys GUI versions using Acquisition Board plugin,All Open Ephys GUI versions using Acquisition Board plugin
 **Bonsai Compatibility**,Not supported yet,Bonsai.OpenEphys with pending improvements,Bonsai.Ephys,Bonsai.Ephys
