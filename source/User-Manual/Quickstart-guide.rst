@@ -95,7 +95,7 @@ This section provides the basic steps needed in the Open Ephys GUI to get starte
   
    - A `Record Node <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Record-Node.html>`_
   
-   .. - (optional) An OE Commutator processor 
+   - (optional) A `Commutator Control processor <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Commutator-Control.html>`_ (downloaded using the Plugin Installer) to use the Open Ephys torque-free SPI Commutator
 
 3. Click the Play button to start data acquisition. Click Record to record.
    
