@@ -95,8 +95,8 @@ calibrated to yield precise acceleration per `this application note  <https://in
 
 .. _3dcap:
 
-3D capabilities
-----------------
+Inertial Measurement Unit (IMU)
+--------------------------------------
 
 Our 3D capable headstages are unique in that they can accurately monitor absolute head orientation thanks to an embedded 9-axis inertial measurement unit (IMU). This technology senses rotational movements (pitch, yaw, and roll) which can be used to correlate neural activity with behavioral states.
 
