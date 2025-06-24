@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SETTINGS>
+  <INFO>
+    <VERSION>1.0.0-alpha.4</VERSION>
+    <PLUGIN_API_VERSION>10</PLUGIN_API_VERSION>
+    <DATE>24 Jun 2025 16:04:40</DATE>
+    <OS>Windows 11</OS>
+    <MACHINE name="open-ephys-workstation" cpu_model="12th Gen Intel(R) Core(TM) i9-12900K"
+             cpu_num_cores="24"/>
+  </INFO>
+  <SIGNALCHAIN>
+    <PROCESSOR name="Acquisition Board" insertionPoint="0" pluginName="Acquisition Board"
+               type="4" index="0" libraryName="Acquisition Board" libraryVersion="1.0.0"
+               processorType="2" nodeId="100">
+      <PROCESSOR_PARAMETERS/>
+      <STREAM name="acquisition_board" description="Continuous and event data from an Open Ephys Acquisition Board"
+              sample_rate="0.0" channel_count="16">
+        <PARAMETERS/>
+      </STREAM>
+      <CUSTOM_PARAMETERS/>
+      <EDITOR isCollapsed="0" isDrawerOpen="0" displayName="Acquisition Board"
+              activeStream="0" Type="Visualizer" tabText="Acq Board" SampleRate="0"
+              LowCut="0.1067253621401625" HighCut="89.37806065831884" AUXsOn="0"
+              ADCsOn="0" AudioOutputL="-1" AudioOutputR="-1" NoiseSlicer="0"
+              TTLFastSettle="0" DAC_TTL="0" DAC_HPF="0" DSPOffset="0" DSPCutoffFreq="0.1457129257077072"
+              LEDs="1" ClockDivideRatio="1" Channel_Naming_Scheme="0">
+        <TAB Active="1"/>
+        <WINDOW Active="0"/>
+        <HSOPTIONS index="0" hs1_full_channels="0" hs2_full_channels="0"/>
+        <HSOPTIONS index="1" hs1_full_channels="0" hs2_full_channels="0"/>
+        <HSOPTIONS index="2" hs1_full_channels="0" hs2_full_channels="0"/>
+        <HSOPTIONS index="3" hs1_full_channels="0" hs2_full_channels="0"/>
+        <VISUALIZER_PARAMETERS/>
+        <CUSTOM_PARAMETERS/>
+      </EDITOR>
+    </PROCESSOR>
+    <PROCESSOR name="Commutator Control" insertionPoint="1" pluginName="Commutator Control"
+               type="1" index="10" libraryName="Commutator Control" libraryVersion="1.0.0"
+               processorType="3" nodeId="102">
+      <PROCESSOR_PARAMETERS current_stream="10008" serial_name="COM8"/>
+      <STREAM name="acquisition_board" description="Continuous and event data from an Open Ephys Acquisition Board"
+              sample_rate="0.0" channel_count="16">
+        <PARAMETERS/>
+      </STREAM>
+      <CUSTOM_PARAMETERS/>
+      <EDITOR isCollapsed="0" isDrawerOpen="0" displayName="Commutator Control"
+              activeStream="0" COM_PORT="" OVERRIDE_STATUS="0" OVERRIDE_AXIS="+Z"/>
+    </PROCESSOR>
+  </SIGNALCHAIN>
+  <CONTROLPANEL isOpen="0" recordPath="C:\Users\open-ephys\Documents\Open Ephys"
+                recordEngine="BINARY" clockMode="0" clockReferenceTime="0" forceNewDirectory="0"/>
+  <AUDIOEDITOR isMuted="0" volume="50.0" noiseGate="0.0"/>
+  <FILENAMECONFIG>
+    <PREPEND state="0" value=""/>
+    <MAIN state="1" value="YYYY-MM-DD_HH-MM-SS"/>
+    <APPEND state="0" value=""/>
+  </FILENAMECONFIG>
+  <EDITORVIEWPORT selectedTab="0" scroll="0"/>
+  <GRAPHVIEWER>
+    <NODE id="100" isProcessorInfoVisible="0">
+      <STREAM key="100|acquisition_board" isStreamVisible="0" isParamsVisible="0"/>
+    </NODE>
+    <NODE id="102" isProcessorInfoVisible="0">
+      <STREAM key="100|acquisition_board" isStreamVisible="0" isParamsVisible="0"/>
+    </NODE>
+  </GRAPHVIEWER>
+  <DATAVIEWPORT>
+    <TABBEDCOMPONENT index="0" selectedTabNodeId="1">
+      <TAB nodeId="0"/>
+      <TAB nodeId="1"/>
+      <TAB nodeId="100"/>
+    </TABBEDCOMPONENT>
+  </DATAVIEWPORT>
+  <PROCESSORLIST>
+    <COLOUR ID="801" R="50" G="50" B="50"/>
+    <COLOUR ID="804" R="241" G="90" B="41"/>
+    <COLOUR ID="802" R="0" G="174" B="239"/>
+    <COLOUR ID="803" R="0" G="166" B="81"/>
+    <COLOUR ID="805" R="90" G="110" B="110"/>
+    <COLOUR ID="806" R="255" G="0" B="0"/>
+    <COLOUR ID="807" R="0" G="0" B="0"/>
+  </PROCESSORLIST>
+  <UICOMPONENT isProcessorListOpen="0" isEditorViewportOpen="1" consoleOpenInWindow="0"/>
+  <AUDIO sampleRate="48000.0" bufferSize="1024" deviceType="Windows Audio"/>
+  <MESSAGES/>
+</SETTINGS>
