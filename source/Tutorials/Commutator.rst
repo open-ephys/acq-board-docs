@@ -12,11 +12,11 @@ torque on the animal. This is mitigated by using a commutator, a device that unt
 the animal moves around while maintaining electrical continuity between the animal and data
 acquisition system. This encourages more naturalistic behaviors.
 
-This tutorial demonstrates how to automate commutation using the Open Ephys GUI, a 3D-capable
+This tutorial demonstrates how to automate commutation using an Open Ephys Acquisition Board, the Open Ephys GUI, a 3D-capable
 headstage, and an Open Ephys SPI commutator. 
 
-Connect the Hardware
-#####################
+Connect the Acquisition Board and the Commutator
+###################################################
 
 #.  Refer to the :doc:`/Hardware-Guide/Cables` page to make the following acquisition board connections:
 
@@ -72,8 +72,13 @@ Build the Signal Chain for the Open Ephys GUI
 #.  Click the ▶ play button in the top-right corner of the GUI. The commutator should now follow the
     rotation of the headstage around the axis of the tether.
 
-.. raw:: html
 
-  <center><video width="560" height="340" controls>
-  <source src="../../../_static/videos/SPI_commutator.mp4" type="video/mp4">
-  </video></center>
+    .. raw:: html
+
+      <center><video width="560" height="340" controls>
+      <source src="../../../_static/videos/SPI_commutator.mp4" type="video/mp4">
+      </video></center>
+
+
+#.  Continue `building the signal chain
+    <https://open-ephys.github.io/gui-docs/User-Manual/Building-a-signal-chain.html>`_ with the plugins you need to get the functionality you want.
