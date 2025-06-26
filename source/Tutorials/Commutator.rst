@@ -72,3 +72,8 @@ Build the Signal Chain for the Open Ephys GUI
 #.  Click the ▶ play button in the top-right corner of the GUI. The commutator should now follow the
     rotation of the headstage around the axis of the tether.
 
+.. raw:: html
+
+  <center><video width="560" height="340" controls>
+  <source src="../../../_static/videos/SPI_commutator.mp4" type="video/mp4">
+  </video></center>
