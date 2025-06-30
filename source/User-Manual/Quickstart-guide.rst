@@ -45,7 +45,7 @@ The I/O ports on the Acquisition Board are as follows:
     :width: 70%
     :align: center
 
-.. note:: Other external hardware interfacing with the acquisition system can be directly connected to the PC for operation. Follow the connection guide for the specific piece of hardware. In the case of our SPI commutator, connect it to USB and connect the two SPI cables. You can find more information in its `connection guide <https://open-ephys.github.io/commutator-docs/index.html>`_.
+.. note:: Other external hardware interfacing with the acquisition system can be directly connected to the PC for operation. Follow the connection guide for the specific piece of hardware. In the case of our SPI commutator, connect it to USB and connect the two SPI cables. You can find more information in its `connection guide <https://open-ephys.github.io/commutator-docs/user-guide/mount-connect.html?commutator=spi#connecting>`_.
 
 Grounding your system
 -------------------------------------------
@@ -95,7 +95,8 @@ This section provides the basic steps needed in the Open Ephys GUI to get starte
   
    - A `Record Node <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Record-Node.html>`_
   
-   .. - (optional) An OE Commutator processor 
+   - (optional) An `OE Commutator processor <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Commutator-Control.html>`_
+     (downloaded using the Plugin Installer) to use the Open Ephys torque-free SPI Commutator
 
 3. Click the Play button to start data acquisition. Click Record to record.
    
