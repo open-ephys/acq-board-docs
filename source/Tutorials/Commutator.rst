@@ -76,7 +76,7 @@ Build the Signal Chain for the Open Ephys GUI
     .. raw:: html
 
       <center><video width="560" height="340" controls>
-      <source src="../../../_static/videos/SPI_commutator.mp4" type="video/mp4">
+      <source src="../_static/videos/SPI_commutator.mp4" type="video/mp4">
       </video></center>
 
 
