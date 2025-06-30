@@ -19,14 +19,13 @@ Acquisition Boards with an OE FPGA module (Open Ephys FT600 USB board) require t
 On Windows 
 ********************
    
-#. Download the `Windows driver <https://ftdichip.com/wp-content/uploads/2024/01/FTD3XXDriver_WHQLCertified_1.3.0.8_Installer.zip>`__.
-#. Unzip the folder
-#. Run ``FTD3XXDriver_WHQLCertified_1.3.0.8_Installer.exe``
+#. Download the `Windows driver <https://github.com/open-ephys/plugin-GUI/raw/refs/heads/main/Resources/DLLs/FTD3XXDriver_WHQLCertified_1.3.0.10_Installer.exe>`__.
+#. Run ``FTD3XXDriver_WHQLCertified_1.3.0.10_Installer.exe``
 
 On MacOS 
 ********************
    
-#. Download the `MacOS driver <https://github.com/open-ephys-plugins/rhythm-oni-plugin/blob/main/Resources/Drivers/libftd3xx.dylib>`__.
+#. Download the `MacOS driver <https://github.com/open-ephys-plugins/rhythm-oni-plugin/raw/refs/heads/main/Resources/Drivers/libftd3xx.dylib>`__.
 #. Copy the file ``libftd3xx.dylib`` to ``/usr/local/lib`` (you can use ``sudo cp libftd3xx.dylib /usr/local/lib``)
 
 Some security features on mac might prevent the driver from loading.
