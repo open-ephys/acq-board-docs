@@ -25,8 +25,8 @@ See :ref:`this section <genids>` to identify what generation board you have.
      - Version
      - Release Date
    * - Gen 2 and 3
-     - :download:`version 1.5.1 </_static/files/OpenEphysFPGA-gw1.5.1.zip>`
-     - 2025.04.28
+     - :download:`version 1.5.3 </_static/files/OpenEphysFPGA-AcqV3V2-v1.5.3.zip>`
+     - 2025.05.29
 
 .. _gwupdate_instructions:
 
