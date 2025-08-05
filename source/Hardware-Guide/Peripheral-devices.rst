@@ -77,11 +77,11 @@ Analog Input
 
 **Analog inputs are used for equipment that measures continuous signals, for instance a measurement distance or intensity. This could be anything from a power meter, thermometer, a running wheel, etc.**
 
-There are eight analog inputs on the board, which use the 16-bit ADS8325 chip from Texas Instruments. By sending this data to the acquisition board, the FPGA will timestamp the analog inputs using the same clock as the ephys data and can display the incoming data alongside your ephys.
+There are eight analog inputs on the board, each of which use the 12-bit ADC121S021 chip from Texas Instruments. By sending this data to the acquisition board, the FPGA will timestamp the analog inputs using the same clock as the ephys data and can display the incoming data alongside your ephys.
 
 Analog inputs are always samples at the same rate and time as the neural signals and are displayed as additional channels in the LFP module, keep in mind that the input range for these signals is different form the neural signals and can be set separately.
 
-There is a small DC offset (~0.4 V) on the ADCs when they're in ±5V range. This offset is taken into account by the Open Ephys GUI, but since the offset can be slightly different for each channel, the traces may not be exactly centered around zero. Be sure to measure the "zero" value for each channel if you're doing any analysis that depends on absolute DC values and applying a high-pass filter is not possible.
+.. warning:: For older versions of the acquisition board (Gen 1 and below), there is a ~0.4 V DC offset on the ADCs when they're in ±5V range. This offset is taken into account by the Open Ephys GUI, but since the offset can be slightly different for each channel, the traces may not be exactly centered around zero. Be sure to measure the "zero" value for each channel if you're doing any analysis that depends on absolute DC values and applying a high-pass filter is not possible.
 
 .. note:: If any of the ADC channels are not connected (i.e., the signal pin is floating), signals from adjacent channels will bleed through. This is expected behavior.
 
@@ -89,6 +89,9 @@ There is a small DC offset (~0.4 V) on the ADCs when they're in ±5V range. This
 
 Changing the Analog Input Range
 =============================================
+
+..important:: The input range for the 3rd generation acquisition board is fixed at ±5V and ADC inputs can use the entire 10V span. The information below pertains to previous versions of the acquisition board.
+
 The default setting is to have the ADCs run from -5 to +5V, although in practice the actual range is ±4.5V (up through Acquisition Board version 2.2). If you need to go up to 5V, the ADC must be switched to 0-5V mode. To switch the ADC range, open up the case of the acquisition board and move the jumpers near the ADC input HDMI (marked 'analog input range selector') to the two pins farther away from the edge of the board. Different channels can have different jumper settings, so make sure you record which is which! There's no way for the software to know the setting for each channel. Channel 1 is the rightmost jumper (closer to the headstage inputs), Channel 8 is the leftmost jumper.
 
 There are three settings for the analog input:
