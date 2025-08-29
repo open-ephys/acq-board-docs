@@ -66,7 +66,7 @@ Analog Output
 
 There are eight analog outputs on the board, which use the 16-bit DAC8531 chip from Texas Instruments. The DACs (Digital to Analog converters) are controlled by the Rhythm interface.
 
-`If activated in the software <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/OE-FPGA-Acquisition-Board.html#audio-output>`_ , the audio jack on the acquisition board can be used to monitor analog channels 0 and 1 (Left and Right in the audio) by plugging in headphones or speakers. (All channels can also be monitored via audio through the software, using the audio channel selector on a plugin to select the channel you're interested in).
+`If activated in the software <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Acquisition-Board.html#audio-output>`_ , the audio jack on the acquisition board can be used to monitor analog channels 0 and 1 (Left and Right in the audio) by plugging in headphones or speakers. (All channels can also be monitored via audio through the software, using the audio channel selector on a plugin to select the channel you're interested in).
 
 Any of the channels can be programmed to deliver custom waveforms as well, but this functionality hasn't been added to the GUI yet.
 
