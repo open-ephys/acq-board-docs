@@ -12,7 +12,6 @@ Tutorials
 
     Troubleshooting-noise
     Measuring-latency
-    Commutator
     Multiple-boards
     Ephys-with-behavioural-camera
     bonsai-acquisition
