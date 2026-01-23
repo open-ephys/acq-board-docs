@@ -23,3 +23,4 @@ Different Acquisition Board generations function differently. The :doc:`/User-Ma
     Acquisition-software
     Generations-differences
     Gateware-Update
+    Troubleshooting
