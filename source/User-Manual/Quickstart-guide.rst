@@ -104,6 +104,8 @@ This section provides the basic steps needed in the Open Ephys GUI to get starte
 
 4. Have fun experimenting!
 
+If you run into issues, follow the :doc:`Troubleshooting`.
+
 Powering off the system
 -------------------------------------------
 

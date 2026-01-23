@@ -55,7 +55,7 @@ Go to :code:`Start Menu > Settings > Devices > Bluetooth & other devices` or to 
 3. Check that the board is detected by the software
 ******************************************************************
 
-If you encounter the error message "No device found" in the Open Ephys GUI.
+If you encounter the error message "No device found" in the Open Ephys GUI:
 
 .. image:: /_static/images/usermanual/troubleshoot/board_not_found.png
     :width: 40%
