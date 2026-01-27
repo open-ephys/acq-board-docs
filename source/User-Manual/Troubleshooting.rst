@@ -36,22 +36,64 @@ Initial troubleshooting steps
 
 .. _isitrecognized:
 
-2. Check that the board is recognized by the Operating System
-******************************************************************
+2. Check that the board is recognized properly by the Operating System
+*******************************************************************************
 .. what about OS other than Win?
 
 After making sure to follow step :ref:`isitconnected`, the Acquisition Board should be recognized by the Operating System.
 
-Go to :code:`Start Menu > Settings > Devices > Bluetooth & other devices` or to the Device Manager, and check that the board is listed as *Connected to USB3.0*.
+..  tab-set::
+    :sync-group: os
 
-.. image:: /_static/images/usermanual/troubleshoot/board_recognized.png
-    :width: 60%
-    :align: center
+    ..  tab-item:: Windows
 
+        **Check that the board is recognized by the OS, connected to USB3.0 and drivers are installed:**
 
-- If the board is not listed, troubleshoot the USB connection by checking different USB ports, USB cables and computers to rule out a hardware issue.
+        Go to :code:`Start Menu > Settings > Devices > Bluetooth & other devices` or to the Device Manager, and check that the board is listed as *Connected to USB3.0*, with no additional warnings.
 
-- If there is a warning about drivers issues, :ref:`re-install the drivers <drivers>`.
+        .. image:: /_static/images/usermanual/troubleshoot/board_recognized.png
+            :width: 60%
+            :align: center
+
+        - If the board is not listed, troubleshoot the USB connection by checking different USB ports, USB cables and computers to rule out a hardware issue.
+        - If the board is listed as connected to USB 2.0, then connect the board to a 3.0 USB port.
+        - If there is a warning about drivers issues, :ref:`re-install the drivers <drivers>`.
+
+    ..  tab-item:: Linux
+        
+        **Check that the board is recognized by the OS:**
+
+        1. Open a terminal. Root permissions are not required.
+        2. Enter :code:`lsusb -d 0403:601e`. The output should list the board, including the Bus and Device numbers. These numbers change every time the board is re-connected:
+
+        .. code-block:: console
+
+            $ lsusb -d 0403:601e
+            Bus 002 Device 004: ID 0403:601e Future Technology Devices International, Ltd Open Ephys FT600 USB board
+
+        - If the board is not listed, troubleshoot the USB connection by checking different USB ports, USB cables and computers to rule out a hardware issue.
+
+        **Check that the board is connected to USB3.0:**
+
+        3. Enter :code:`-v -d 0403:601e | grep "bcdUSB"`. The output should be 3.x for USB3. Ignore any other messages that might appear when running this command:
+
+        .. code-block:: console
+
+            $ -v -d 0403:601e | grep "bcdUSB"
+            bcdUSB              3.10 
+
+        - If the output says 2.x, then connect the board to a 3.0 USB port.
+
+        **Check that the board permissions are properly configured:**
+
+        4. Enter :code:`ls -l /dev/bus/usb/XXX/YYY` where XXX is the Bus number and YYY the Device number. The output should start with :code:`crw-rw-rw-`.
+
+        .. code-block:: console
+
+            $ ls -l /dev/bus/usb/002/004
+            crw-rw-rw- 1 root root 189, 132 Jan 23 22:00 /dev/bus/usb/002/004    
+
+        - If the output is something other than :code:`crw-rw-rw-`, then :ref:`re-configure the board permissions <drivers>`.
 
 .. _isitfound:
 
@@ -66,7 +108,7 @@ If you encounter the error message "No device found" in the Open Ephys GUI:
 
 Make sure to follow step :ref:`isitconnected` and step :ref:`isitrecognized`. Then,
 
-1. :ref:`Install the latest version of the drivers <drivers>`.
+1. :ref:`Re-install the latest version of the drivers/re-set the board permissions <drivers>`.
 2. Update the Acquisition Board plugin to the latest version. Start from an empty signal chain (go to :code:`Edit > Clear signal chain` or press :code:`Ctrl + backspace`). Then, go to :code:`File > Plugin Installer` or press :code:`Ctrl + P` to access the `Plugin Installer <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/index.html#plugin-installer>`_, find the Acquisition Board plugin and click "Upgrade".
 3. :ref:`Update the gateware <drivers>`.
 
