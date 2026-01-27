@@ -10,7 +10,7 @@ To process, record, and visualize data from the Acquisition Board, we recommend 
 
 1. The Open Ephys GUI
 ###################################
-The **Open Ephys GUI** is an open-source, plugin-based application built specifically for acquiring extracellular electrophysiology data, available for download `from the Open Ephys website <https://open-ephys.org/gui>`_. The GUI has its own `documentation site <https://open-ephys.github.io/gui-docs/>`_.
+The **Open Ephys GUI** is an open-source, plugin-based application built specifically for acquiring extracellular electrophysiology data, available for download `from the Open Ephys website <https://open-ephys.org/gui>`_. The GUI has its own `documentation site <https://open-ephys.github.io/gui-docs/>`_. Install the Open Ephys GUI will install the Acquisition Board drivers/configure board permissions, so it is the most straightforward way to get started.
 
 2. Bonsai
 ###################################

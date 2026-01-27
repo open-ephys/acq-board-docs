@@ -19,8 +19,8 @@ Different Acquisition Board generations function differently. The :doc:`/User-Ma
 
     Quickstart-guide
     Hardware-requirements
-    Driver-installation
     Acquisition-software
+    Driver-installation
     Generations-differences
     Gateware-Update
     Troubleshooting
