@@ -163,7 +163,7 @@ Some applications require to generate (or read) digital channels on the host-PC 
 
 The arduino shield for I/O from the host-pc can generate up to 8 channels of digital I/O. Each channel can be assigned as in or out and assigned to an event channel in the GUI.
 
-On the Arduino, this is implemented via the `Firmata firmware <http://playground.arduino.cc/Interfacing/Firmata>`_). This makes it simple for a computer to access the state of the Arduino pins via USB.
+On the Arduino, this is implemented via the `Firmata firmware <https://github.com/firmata/arduino>`_). This makes it simple for a computer to access the state of the Arduino pins via USB.
 
 For a similar, but much more powerful signal output device, check out the `PulsePal <https://sanworks.io/shop/viewproduct?productID=1102>`_) which also works seamlessly with the Open Ephys GUI.
 

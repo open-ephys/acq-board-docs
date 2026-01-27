@@ -23,7 +23,7 @@ On Windows
 On MacOS 
 ********************
    
-#. Download the `MacOS driver <https://github.com/open-ephys-plugins/rhythm-oni-plugin/raw/refs/heads/main/Resources/Drivers/libftd3xx.dylib>`__.
+#. Download the `MacOS driver <https://github.com/open-ephys-plugins/acquisition-board/blob/main/Resources/Drivers/libftd3xx.dylib>`__.
 #. Copy the file ``libftd3xx.dylib`` to ``/usr/local/lib`` (you can use ``sudo cp libftd3xx.dylib /usr/local/lib``)
 
 Some security features on mac might prevent the driver from loading.
