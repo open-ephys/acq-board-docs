@@ -19,6 +19,8 @@ The best way to start acquiring data with the Acquisition Board is by using the 
 
 The Open Ephys GUI installation includes the drivers required to use this board. If you run into issues, you can install the drivers separately by following :ref:`this page <drivers>`.
 
+The board works via USB, so make sure you :ref:`configure the USB settings <usb-config>` to avoid suspension due to power management.
+
 Connecting the headstages
 -------------------------------------------
 
