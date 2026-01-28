@@ -64,7 +64,7 @@ After making sure to follow step :ref:`isitconnected`, the Acquisition Board sho
         **Check that the board is recognized by the OS:**
 
         1. Open a terminal. Root permissions are not required.
-        2. Enter :code:`lsusb -d 0403:601e`. The output should list the board, including the Bus and Device numbers. These numbers change every time the board is re-connected:
+        2. Enter :code:`lsusb -d 0403:601e`. The output should list the board, including the Bus and Device numbers required to talk to the board. These numbers change every time the board is re-connected:
 
         .. code-block:: console
 
@@ -75,18 +75,18 @@ After making sure to follow step :ref:`isitconnected`, the Acquisition Board sho
 
         **Check that the board is connected to USB3.0:**
 
-        3. Enter :code:`-v -d 0403:601e | grep "bcdUSB"`. The output should be 3.x for USB3. Ignore any other messages that might appear when running this command:
+        3. Enter :code:`lsusb -v -d 0403:601e | grep "bcdUSB"`. The output should be 3.x for USB3. Ignore any other messages that might appear when running this command:
 
         .. code-block:: console
 
-            $ -v -d 0403:601e | grep "bcdUSB"
+            $ lsusb -v -d 0403:601e | grep "bcdUSB"
             bcdUSB              3.10 
 
         - If the output says 2.x, then connect the board to a 3.0 USB port.
 
         **Check that the board permissions are properly configured:**
 
-        4. Enter :code:`ls -l /dev/bus/usb/XXX/YYY` where XXX is the Bus number and YYY the Device number. The output should start with :code:`crw-rw-rw-`.
+        4. Enter :code:`ls -l /dev/bus/usb/XXX/YYY` where XXX is the Bus number and YYY the Device number found in step 2 above. The output should start with :code:`crw-rw-rw-`.
 
         .. code-block:: console
 
@@ -121,7 +121,7 @@ The PC's power management both in laptops and desktops can interfere with USB co
 
 Always ensure that the USB settings are configured to avoid suspension.
 
-On desktops, go to :code:`Control Panel > Hardware and Sound > Power Options > Edit Plan Settings`, and into the Advanced Power Settings. 
+On Windows desktops, go to :code:`Control Panel > Hardware and Sound > Power Options > Edit Plan Settings`, and into the Advanced Power Settings. 
 
 .. image:: /_static/images/usermanual/troubleshoot/power-settings.png
     :width: 80%
@@ -133,7 +133,7 @@ Change the settings for the power plan that you are using to ensure that the USB
     :width: 40%
     :align: center
 
-On laptops, a similar option to disable the USB battery saver is available under :code:`Settings > Bluetooth & Devices > USB`
+On Windows laptops, a similar option to disable the USB battery saver is available under :code:`Settings > Bluetooth & Devices > USB`
 
 .. image:: /_static/images/usermanual/troubleshoot/usb-settings-laptop.png
     :width: 70%

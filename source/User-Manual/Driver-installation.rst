@@ -47,7 +47,7 @@ Linux does not require a driver, but the board permissions need to be configured
 
 #. Open a terminal and set your working directory to the main folder of the GUI source code.
 
-#. Enter :code:`sudo Resources/Scripts/cp 40-open-ephys.rules /etc/udev/rules.d` followed by your password.
+#. Enter :code:`sudo cp Resources/Scripts/40-open-ephys.rules /etc/udev/rules.d`. The console might then ask for your password.
 
 #. Enter :code:`service udev restart` on Ubuntu/Debian or :code:`sudo udevadm control --reload-rules` on Fedora/CentOS/Gentoo to allow the GUI to communicate with the Open Ephys acquisition board.
 
