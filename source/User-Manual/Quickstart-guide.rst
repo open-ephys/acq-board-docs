@@ -19,6 +19,8 @@ The best way to start acquiring data with the Acquisition Board is by using the 
 
 The Open Ephys GUI installation includes the drivers required to use this board. If you run into issues, you can install the drivers separately by following :ref:`this page <drivers>`.
 
+The board works via USB, so make sure you :ref:`configure the USB settings <usb-config>` to avoid suspension due to power management.
+
 Connecting the headstages
 -------------------------------------------
 
@@ -103,6 +105,8 @@ This section provides the basic steps needed in the Open Ephys GUI to get starte
    The :ref:`statusleds` on the acquisition board will flash during normal operation. You can disable the Status LEDs if you'd like to perform experiments in the dark, or if they introduce noise in your recordings, by clicking the "LED" button in the Acquisition Board processor in the Open Ephys GUI.
 
 4. Have fun experimenting!
+
+If you run into issues, follow the :doc:`Troubleshooting`.
 
 Powering off the system
 -------------------------------------------

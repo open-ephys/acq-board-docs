@@ -62,15 +62,15 @@ Updating gateware
 .. warning:: Do not attempt to update the board gateware while the GUI or any other software using
     the board is in use. Do not open any software that uses the board while an update is in process.
 
-#. Be sure that the correct :doc:`device drivers are already installed</User-Manual/Driver-installation>`
+#. Make sure that the correct and latest :doc:`device drivers are installed </User-Manual/Driver-installation>`
 
-#. Download the :ref:`gwupdate_latest` of the gateware
+#. Connect the acquisition board to the computer via USB 3.0 and connect it to power using the power supply provided.
 
-#. Extract the contents of the file 
+#. Confirm that the device is recognized by the operating system. If not, follow the :ref:`Troubleshooting Guide <isitrecognized>`. 
 
-#. Connect the acquisition board to the computer via USB 3.0 and connect it to power using the power supply provided
+#. Download the :ref:`gwupdate_latest` of the gateware and extract the contents of the file.
 
-#. Run the updater
+#. Run the updater:
 
    * On Windows: Double click on the file ``UpdateFPGA_v1_0.bat``
    * On Linux or Mac: Execute the file ``UpdateFPGA_v1_0.sh``

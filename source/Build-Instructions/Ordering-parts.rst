@@ -14,7 +14,7 @@ Clone the `acquisition-board <https://github.com/open-ephys/acquisition-board>`_
 Acquire the raw materials and tools
 ###################################
 
-Open up BOM.csv in Excel or a text editor (or `view it on Google Docs <https://docs.google.com/spreadsheet/ccc?key=0An1VoeoG8K6AdHhqNjhneGZWWkR5R2hZcDFOd243dHc#gid=0>`__). This is a list of all the parts that are necessary to populate the acquisition board PCB. Most of them can be ordered from DigiKey, but some are only available from other distributors. The quantities (column B) are for one acquisition board, so take that into account if you're trying to build multiple boards.
+Open up BOM.csv in Excel or a text editor (or `view it on Google Docs <https://docs.google.com/spreadsheets/d/1ywzGieWArYGw0-nE7zoQLTEWNAr0ZzdUiqCSY4VL7uM/edit>`__). This is a list of all the parts that are necessary to populate the acquisition board PCB. Most of them can be ordered from DigiKey, but some are only available from other distributors. The quantities (column B) are for one acquisition board, so take that into account if you're trying to build multiple boards.
 
 .. image:: ../_static/images/buildinstructions/samtec.png
 

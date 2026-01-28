@@ -10,7 +10,7 @@ FAQs
 
 **What products are compatible with the Acquisition Board?**
 
-This `compatibility matrix <https://open-ephys.org/product-compatibility>`_ shows compatible products sold through the Open Ephys store. Any RHD2000-series headstages sold by Intan will work with the Acquisition Board.
+Besides our own :ref:`headstages`, any RHD2000-series headstage with an SPI protocol and 12-pin polarized nano-connector such as those sold by Intan will work with the Acquisition Board.
 
 |
 

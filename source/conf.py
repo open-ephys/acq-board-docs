@@ -42,7 +42,8 @@ release = "0.0.0"
 # ones.
 extensions = [
     "sphinx.ext.todo",
-    "sphinx.ext.githubpages"
+    "sphinx.ext.githubpages",
+    "sphinx_design"
     # "contributors",  # custom pandas extension
 ]
 
@@ -88,6 +89,7 @@ html_title = project
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+html_css_files = ['theme_overrides.css']
 
 html_sidebars = {
     'index': ['search-field.html'],
@@ -221,8 +223,8 @@ html_context = {
     "github_repo": "acq-board-docs",
     "github_version": "main",
     "doc_path": "source",
-    "css_files": ["_static/theme_overrides.css",],
 }
 
 # Option for linkcheck
 linkcheck_anchors = False
+
