@@ -152,4 +152,4 @@ How to ask for help
 - Details of your hardware setup including you Acquisition Board generation and all hardware connections.
 - A photo, screenshot or screen capture showing the issue.
 - A description of what happened as the issue occurred.
-- For software issues, please send the complete contents of the console log. In the Open Ephys GUI, go to :code:`View > Console` or press :code:`Shift + C` to toggle the console window into view and click "Copy All" on the top right. If the GUI crashed and the console window shut down, then please send the corresponding activity log file from the following folder: :code:`C:/ProgramData/Open Ephys/configs-api8`. 
+- For software issues, please send the complete contents of the console log. In the Open Ephys GUI, go to :code:`View > Console` or press :code:`Shift + C` to toggle the console window into view and click "Copy All" on the top right. If the GUI crashed and the console window shut down, then please send the corresponding activity `log file  <https://open-ephys.github.io/gui-docs/User-Manual/Exploring-the-user-interface.html#log-files>`_. 
