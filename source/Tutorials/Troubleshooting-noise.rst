@@ -50,7 +50,7 @@ Normally, we 'ground' equipment by attaching a single cable from the tool or shi
 .. image:: ../_static/images/tutorials/circuit-20210804-1041.png
     :align: center
     :scale: 70
-    :target: https://tinyurl.com/ygn4urcz
+    :target: https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWEAmB0FksgHGAbAOyRHLKR4gDMAnCEgCyV0CmAtGGAFABK499IdhTD9BeAZBTh4UhJPnoeVbAKHLV4qOBB5JSMEgUJOAJz4D62c+DDItmU+qp3KKm3ckOA5tY52RAvjyUJw+roG2TkFakI4Bgvgo9JJqnrEA7kmeFMgE-hSxAB7SFKzUngRWrNgEIALIAgDKAA4AlgDWzADOnMWUyYLYtMkQ1RT1AgByAPatXcycmfFq8ZYhmeEJFJuUHo6barl2qdJw+267kkfOwZhnGxdkTpR4VhnWlx9uRVQDDbUjFByOpJEAzOYLYqYHL0YSVJLDUEtDrdRZZKgIOzXSiYkJmeKfBqST5pUJA8ZrVDjagFPHPV7kuprUn40SbKlMt7SJQ7J7svL2HR6cCGKCKXgEp7xa5XU6y4FGTjTaQ6CTgUjUN6wOAQGDwXVSTBUJU2VX2DVa-Viq0QfwQSgmyKaTwW606t2QW2GlycIA
 
 In this simulator, (click on the image to open) we have two sources, a square-wave at 1000 Hz and a sinewave at 60 Hz. Even when they are separately connected to ground, they are connected through the fact that there is only one ground 'point'; the upper and lower circuits are equivalent. If we connect the circuits, a loop is formed and their signals can interfere with each other. Even if these signals were not running, the physical loop of wire connecting them via ground can pick up magnetic fields (usually at utility frequency, 50 or 60Hz) and induce a current.
 
