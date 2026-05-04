@@ -52,7 +52,7 @@ Normally, we 'ground' equipment by attaching a single cable from the tool or shi
     :scale: 70
     :target: https://tinyurl.com/ygn4urcz
 
-In this simulator, (click on image to open) we have two sources, a square-wave at 1000 Hz and a sinewave at 60 Hz. Even when they are separately connected to ground, they are connected through the fact that there is only one ground 'point'; the upper and lower circuits are equivalent. If we connect the circuits, a loop is formed and their signals can interfere with each other. Even if these signals were not running, the physical loop of wire connecting them via ground can pick up magnetic fields (usually at utility frequency, 50 or 60Hz) and induce a current.
+In this simulator, (click on the image to open) we have two sources, a square-wave at 1000 Hz and a sinewave at 60 Hz. Even when they are separately connected to ground, they are connected through the fact that there is only one ground 'point'; the upper and lower circuits are equivalent. If we connect the circuits, a loop is formed and their signals can interfere with each other. Even if these signals were not running, the physical loop of wire connecting them via ground can pick up magnetic fields (usually at utility frequency, 50 or 60Hz) and induce a current.
 
 Use a central grounding point to prevent this. Only connect each piece of equipment to this once, and do not interconnect equipment when avoidable.
 
