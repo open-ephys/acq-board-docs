@@ -228,3 +228,6 @@ html_context = {
 # Option for linkcheck
 linkcheck_anchors = False
 
+linkcheck_ignore = [
+  'https://www.falstad.com/*'
+]
