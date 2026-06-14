@@ -6,7 +6,7 @@ Gateware Updates
 Here are the files and instructions to update the Open Ephys FPGA module inside
 the Acquisition Board.
 
-.. note:: This is only for boards that use the new Open Ephys FPGA module. We always ship the boards with the latest version of the gateware and we don’t make changes to the gateware often, so you will typically not need to update it. Previous generations of the Acquisition Board that use the Opal Kelly FPGA do not require this.
+.. note:: This is only for boards that use the new Open Ephys FPGA module. We always ship the boards with the latest version of the gateware and we don’t make changes to the gateware often, so you will typically not need to update it. Previous generations of the Acquisition Board that use the Opal Kelly FPGA do not require this. For information about gateware source code availability, see the :ref:`FPGA module section <howitworks>`.
 
 .. _gwupdate_latest:
 

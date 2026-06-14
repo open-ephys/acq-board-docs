@@ -22,25 +22,33 @@ The data is transmitted from each Intan chip to the FPGA on the Acquisition Boar
 FPGA module
 ###################################
 
-The brain of the acquisition board is the FPGA, or "Field-Programmable Gate Array". This part makes up about half the cost of an acquisition board, so it better do something crucial. From a high-level perspective, the FPGA combines data from everything that's connected to the acquisition board, attaches a common timestamp, and sends it to the computer via USB. It effectively acts as a "dumb pipe," shuttling data between peripheral devices (such as headstages and I/O boards) and the computer, where more sophisticated processing can take place. An FPGA is sort of a cross between a microcontroller (like ones on Arduino boards) and an integrated circuit (IC) composed of interconnected transistors. As opposed to an IC, an FPGA can be reconfigured on the fly. The instructions, called "gateware", that are uploaded to the FPGA all run in parallel, rather than being called consecutively inside a loop like in a microcontroller. That means the FPGA can be really fast and its timing can be very precise. This is essential for collecting data at 30 kHz per channel across each of an Intan chip's 32 or 64 channels. 
+The brain of the acquisition board is the FPGA, or "Field-Programmable Gate Array". This part makes up about half the cost of an acquisition board, so it better do something crucial. From a high-level perspective, the FPGA combines data from everything that's connected to the acquisition board, attaches a common timestamp, and sends it to the computer via USB. It effectively acts as a "dumb pipe," shuttling data between peripheral devices (such as headstages and I/O boards) and the computer, where more sophisticated processing can take place. An FPGA is sort of a cross between a microcontroller (like ones on Arduino boards) and an integrated circuit (IC) composed of interconnected transistors. As opposed to an IC, an FPGA can be reconfigured on the fly. The instructions, called "gateware", that are uploaded to the FPGA all run in parallel, rather than being called consecutively inside a loop like in a microcontroller. That means the FPGA can be really fast and its timing can be very precise. This is essential for collecting data at 30 kHz per channel across each of an Intan chip's 32 or 64 channels.
 
 .. figure:: /_static/images/usermanual/xem6310.jpg
    :width: 70%
    :align: center
 
-   The Opal Kelly XEM6310 used in earlier generations of the Open Ephys Acquisition Board. 
+   The Opal Kelly XEM6310 used in earlier generations of the Open Ephys Acquisition Board.
 
-For the original acquisition board, we chose to use the Opal Kelly XEM6310 USB 3.0 FPGA development module with the Xilinx Spartan-6 FPGA because of the terrific programming interface provided by Opal Kelly. After Opal Kelly suddenly end-of-lifed the XEM6310 at the end of 2021, we switched to using a custom FPGA module designed and manufactured by the Open Ephys team. 
+For the original acquisition board, we chose to use the Opal Kelly XEM6310 USB 3.0 FPGA development module with the Xilinx Spartan-6 FPGA. After Opal Kelly suddenly end-of-lifed the XEM6310 at the end of 2021, we switched to using a custom FPGA module designed and manufactured by the Open Ephys team.
 
 .. figure:: ../_static/images/usermanual/OEPS6560OpenEphysFPGA.jpg
    :width: 70%
    :align: center
 
-   The Open Ephys FT600 USB board FPGA module developed by the Open Ephys team. 
+   The Open Ephys FT600 USB board FPGA module developed by the Open Ephys team.
 
 Our Open Ephys FPGA module uses the same footprint as the previous Opal Kelly one so it can be replaced directly on the existing acquisition boards, although it uses a different FPGA, a Lattice EPC5. Its `design is open source <https://github.com/open-ephys/ECP5U85-BSE-USB>`_ and PC communication is compliant with the our `ONI standard <https://open-ephys.github.io/ONI/>`_ for common interfaces in neuro tools, which is the same standard that powers our more advanced system `ONIX <https://open-ephys.github.io/onix-docs/>`_. The Open Ephys FPGA modules are used for all Acquisition Boards Gen 2 and above.
 
-The FPGA itself is programmed in a language called Verilog. Verilog is a type of "hardware description language," because it specifies the actions of registers and logic gates, rather than functions and variables. Verilog is compiled to a "bitfile," which must be uploaded to the FPGA each time it's used. Compiling the bitfile can take several minutes, but uploading it occurs almost instantaneously. In the original Opal Kelly module, the bitfile is uploaded by the OE GUI each time the board is recognized, while in the new Open Ephys FPGA module, the bitfile resides permanently on the board. The gateware on Open Ephys FPGA modules can be updated by following :doc:`these instructions </User-Manual/Gateware-Update>`. An onboard bitfile makes it easier to use the acquisition board across different software like Bonsai as it avoids bitfile path issues. The Verilog code that runs on the acquisition board FPGA is our custom version of the "Rhythm" interface developed by Intan. We had to change a few things in order to communicate with our analog-to-digital converters (we're using Texas Instruments ADCs, rather than Analog Devices) and control the 8 LEDs on the board. If you're interested, you can take a look at the `source code <https://github.com/open-ephys/rhythm>`_ (but this is not recommended unless you have some prior Verilog experience).
+The FPGA itself is programmed in a language called Verilog. Verilog is a type of "hardware description language," because it specifies the actions of registers and logic gates, rather than functions and variables. Verilog is compiled to a "bitfile," which must be uploaded to the FPGA each time it's used. Compiling the bitfile can take several minutes, but uploading it occurs almost instantaneously. In the original Opal Kelly module, the bitfile is uploaded by the OE GUI each time the board is recognized, while in the new Open Ephys FPGA module, the bitfile resides permanently on the board. The gateware on Open Ephys FPGA modules can be updated by following :doc:`these instructions </User-Manual/Gateware-Update>`. An onboard bitfile makes it easier to use the acquisition board across different software like Bonsai as it avoids bitfile path issues.
+
+For Gen 1 boards using the Opal Kelly module, the gateware is a custom version of the `"Rhythm" interface <https://github.com/open-ephys/rhythm>`_ developed by Intan, modified to communicate with Texas Instruments ADCs and control the 8 onboard LEDs. This source code is publicly available, though prior Verilog experience is needed to work with it.
+
+For Gen 2 and above (Open Ephys FPGA module), the gateware is a new ONI-compliant implementation written by the Open Ephys team. Gateware is shared directly with academic labs for non-commercial purposes. Hardware sales are Open Ephys's primary means of funding ongoing development and support, and this arrangement allows us to share access with the research community while maintaining project sustainability. Academic researchers who need access to the gateware can `contact Open Ephys <https://open-ephys.org/contact>`_ directly.
+
+.. admonition:: Programming third party FPGA modules
+
+   Labs that want to reduce per-unit costs by fabricating their own acquisition boards, or by band together with other labs for a shared production run, can use Open Ephys's gateware programming service. We will load the gateware onto Open Ephys FPGA modules produced by third-party manufacturers, after which those modules receive future gateware updates through the same :doc:`update process </User-Manual/Gateware-Update>` as boards purchased directly from Open Ephys. If you are interested, `get in touch <https://open-ephys.org/contact>`_.
 
 Analog and Digital I/O Ports
 ###################################
@@ -60,16 +68,16 @@ To use this functionality, connect the Clk In port of a Harp device to the Clk O
    :width: 70%
    :align: center
 
-   Gen 3 Acquisition Boards have a Harp Clk Out port at the back of the board to synchronize Harp behavioral devices. 
-    
+   Gen 3 Acquisition Boards have a Harp Clk Out port at the back of the board to synchronize Harp behavioral devices.
+
 Additional Harp devices with Clk Out ports can be daisy-chained to the first connected device to propagate the Harp timestamp. If you need to synchronize many devices, you might want to provide the Acquisition Board Harp timestamp to a `Harp Timestamp Generator <https://harp-tech.org/api/Harp.TimestampGeneratorGen3.html>`_ instead, since this device has six Clk Out ports.
 
-..  attention::  The Harp Clk Out implementation on Gen 2 Acquisition Boards requires additional components. See :ref:`this section <genids>` to identify what generation board you have. 
+..  attention::  The Harp Clk Out implementation on Gen 2 Acquisition Boards requires additional components. See :ref:`this section <genids>` to identify what generation board you have.
 
 .. figure:: /_static/images/usermanual/harp_clk_out_gen2.jpg
    :width: 70%
    :align: center
-   
+
    Gen 2 Acquisition Boards require a Harp Timestamp Generator (for Acquisition Board) to be plugged in any of the HDMI I/O ports to provide a Harp timestamp, since they don't have a dedicated Harp Clk Out port.
 
 Acquisition Board Clock Output
@@ -78,8 +86,8 @@ Acquisition Board Clock Output
 .. figure:: /_static/images/usermanual/clk_out.png
    :width: 70%
    :align: center
-   
-   The BNC connector at the back of the board gives access to the Clock Output. 
+
+   The BNC connector at the back of the board gives access to the Clock Output.
 
 The acquisition board sends out a TTL via the BNC connector at the back of the board every time a sample is acquired. This can be used to sync the acquisition board with external hardware. The clock output is set to 1 by default, and can be configured for other clock divisions using the "Clock Divider" functionality of the `Acquisition Board processor in the Open Ephys GUI  <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Acquisition-Board.html>`_.
 
@@ -93,7 +101,7 @@ Power Supply
 
 The acquisition board runs on a 5V DC power supply. DO NOT use any other type of power supply, as it could permanently damage the board.
 
-Since consumer-grade wall socket power supplies tend to be rather noisy, we have added our own 5V regulators on the board. There are a few other regulators for different functions, such as powering the headstages and creating a –5V rail for the op amps. 
+Since consumer-grade wall socket power supplies tend to be rather noisy, we have added our own 5V regulators on the board. There are a few other regulators for different functions, such as powering the headstages and creating a –5V rail for the op amps.
 
 Below is a schematic of all the voltage levels on the board. The main ones have test holes labeled on the bottom of the board, so you can check the voltage without opening up the case.
 
