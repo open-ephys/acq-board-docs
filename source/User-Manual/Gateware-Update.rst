@@ -43,7 +43,6 @@ See :ref:`this section <genids>` to identify what generation board you have.
 .. warning:: Version 2.0.0 and higher of the firmware require a version 2.0 or higher
     of the `acquisition board plugin <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Acquisition-Board.html>`__
     for the `Open Ephys GUI <https://open-ephys.github.io/gui-docs/index.html>`__.
-    Older versions of the plugin might appear to freeze if an old firmware is installed.
 
 .. _gwupdate_instructions:
 
