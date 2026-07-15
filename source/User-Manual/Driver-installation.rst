@@ -17,8 +17,8 @@ Acquisition Boards with an OE FPGA module (Open Ephys FT600 USB board) require t
 On Windows 
 ********************
    
-#. Download the `Windows driver <https://github.com/open-ephys/plugin-GUI/raw/refs/heads/main/Resources/DLLs/FTD3XXDriver_WHQLCertified_1.3.0.10_Installer.exe>`__.
-#. Run ``FTD3XXDriver_WHQLCertified_1.3.0.10_Installer.exe``
+#. Download the `Windows driver <https://github.com/open-ephys-plugins/ftdi-drivers/raw/refs/heads/main/installers/FTDI_DriverInstaller_1.4.0.1_x64.exe>`__.
+#. Run ``FTDI_DriverInstaller_1.4.0.1_x64.exe``
 
 On MacOS 
 ********************

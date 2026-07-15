@@ -6,14 +6,17 @@ Gateware Updates
 Here are the files and instructions to update the Open Ephys FPGA module inside
 the Acquisition Board.
 
-.. note:: This is only for boards that use the new Open Ephys FPGA module. We always ship the boards with the latest version of the gateware and we don’t make changes to the gateware often, so you will typically not need to update it. Previous generations of the Acquisition Board that use the Opal Kelly FPGA do not require this.
+.. note:: This is only for boards that use the new Open Ephys FPGA module. We always ship the boards 
+    with the latest version of the gateware and we don’t make changes to the gateware often, so you 
+    will typically not need to update it. Generations 0 and 1 of the Acquisition Board, which use the Opal Kelly FPGA,
+    do not require this.
 
 .. _gwupdate_latest:
 
 Latest version
 -------------------------
 
-The latest gateware version for Acquisition Board 2nd and 3rd Generation.
+The latest gateware version for Acquisition Board 2nd and 3rd Generation. Select the updater for your operating system.
 
 See :ref:`this section <genids>` to identify what generation board you have.
 
@@ -21,12 +24,26 @@ See :ref:`this section <genids>` to identify what generation board you have.
    :widths: 15 25 60
    :header-rows: 1
 
-   * - Generation
+   * - Operating System
      - Version
      - Release Date
-   * - Gen 2 and 3
-     - :download:`version 1.5.3 </_static/files/OpenEphysFPGA-gw1.5.3.zip>`
-     - 2025.05.29
+   * - Windows
+     - :download:`version 2.0.0 </_static/files/OpenEphysFPGA-gw2.0-win64.zip>`
+     - 2026.07.16
+   * - Linux
+     - :download:`version 2.0.0 </_static/files/OpenEphysFPGA-gw2.0-linux.tar.gz>`
+     - 2026.07.16
+   * - MacOS
+     - :download:`version 2.0.0 </_static/files/OpenEphysFPGA-gw2.0-macOS.tar.gz>`
+     - 2026.07.16
+
+.. note:: To run this updater on Windows, driver version 1.4.0.1 or greater is required.
+    Instructions are available on the :ref:`driver installation page<drivers>`.
+
+.. warning:: Version 2.0.0 and higher of the firmware require a version 2.0 or higher
+    of the `acquisition board plugin <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Acquisition-Board.html>`__
+    for the `Open Ephys GUI <https://open-ephys.github.io/gui-docs/index.html>`__.
+    Older versions of the plugin might appear to freeze if an old firmware is installed.
 
 .. _gwupdate_instructions:
 
@@ -68,12 +85,12 @@ Updating gateware
 
 #. Confirm that the device is recognized by the operating system. If not, follow the :ref:`Troubleshooting Guide <isitrecognized>`. 
 
-#. Download the :ref:`gwupdate_latest` of the gateware and extract the contents of the file.
+#. Download the :ref:`gwupdate_latest` of the gateware for your operating system and extract the contents of the file.
 
 #. Run the updater:
 
-   * On Windows: Double click on the file ``UpdateFPGA_v1_0.bat``
-   * On Linux or Mac: Execute the file ``UpdateFPGA_v1_0.sh``
+   * On Windows: Double click on the file ``UpdateFPGA.bat``
+   * On Linux or Mac: Execute the file ``UpdateFPGA.sh``
 
 #. Wait a couple of minutes for the process to finish.
 
