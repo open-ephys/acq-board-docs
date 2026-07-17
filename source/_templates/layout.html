@@ -1,0 +1,9 @@
+{% extends "!layout.html" %}
+
+{% block docs_navbar %}
+  {{ super() }}
+
+  <div class="custom-announcement">
+    <a href="{{ pathto('User-Manual/Generations-differences.html#genids') }}">Acquisition Boards Gen 2 and 3</a> with <a href="{{ pathto('User-Manual/Gateware-Update') }}">gateware v2</a> require <a href="{{ pathto('User-Manual/Driver-installation') }}">FTDI driver 1.4.0.1</a> and are supported by <a href="https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Acquisition-Board.html#installing-and-upgrading">Acquisition Board plugin v2+</a>.
+  </div>
+{% endblock %}
