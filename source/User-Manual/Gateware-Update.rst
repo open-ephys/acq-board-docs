@@ -74,7 +74,7 @@ Updating gateware
 .. warning:: Do not attempt to update the board gateware while the GUI or any other software using
     the board is in use. Do not open any software that uses the board while an update is in process.
 
-#. Make sure that the correct and latest :doc:`device drivers are installed </User-Manual/Driver-installation>`
+#. Make sure that the correct and latest :doc:`device drivers are installed </User-Manual/Driver-installation>`.
 
 #. Connect the acquisition board to the computer via USB 3.0 and connect it to power using the power supply provided.
 
@@ -101,8 +101,8 @@ Some security features on mac might prevent the updater from running. A message
 indicating that ``libftd3xx.dylib`` is not signed might appear. The steps to solve
 this are:
 
-#. Go to system settings
-#. Go to the Security and Privacy section
-#. Unlock the page by clicking on the lower-left padlock icon. It will ask for your password
-#. Near the bottom of the page, the library error will appear, click on allow
-#. Run the updater again, if a window appears, it will have an ``open`` option now
+#. Go to system settings.
+#. Go to the Security and Privacy section.
+#. Unlock the page by clicking on the lower-left padlock icon. It will ask for your password.
+#. Near the bottom of the page, the library error will appear, click on allow.
+#. Run the updater again, if a window appears, it will have an ``open`` option now.
