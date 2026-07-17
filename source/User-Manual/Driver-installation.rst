@@ -9,6 +9,8 @@ Drivers are distributed with the Open Ephys GUI, so you will usually be able to 
 
 Make sure you have the drivers installed correctly before using the Acquisition Board.
 
+.. _drivers_gen2plus:
+
 Driver installation for Generations 2 and above
 -----------------------------------------------------------------------------------
 
@@ -52,6 +54,8 @@ Linux does not require a driver, but the board permissions need to be configured
 #. Enter :code:`service udev restart` on Ubuntu/Debian or :code:`sudo udevadm control --reload-rules` on Fedora/CentOS/Gentoo to allow the GUI to communicate with the Open Ephys acquisition board.
 
 The changes will take effect the next time the Acquisition Board is connected to USB.
+
+.. _drivers_gen0and1:
 
 Driver installation for Generations 0 and 1
 -----------------------------------------------------------------------------------
