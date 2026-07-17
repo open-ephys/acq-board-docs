@@ -6,7 +6,7 @@ Gateware Updates
 Here are the files and instructions to update the Open Ephys FPGA module inside
 the Acquisition Board.
 
-.. note:: This is only for boards that use the new Open Ephys FPGA module. We always ship the boards 
+.. note:: This is only for newer generation acquisition boards that use the Open Ephys FPGA module. We always ship the boards 
     with the latest version of the gateware and we don’t make changes to the gateware often, so you 
     will typically not need to update it. Generations 0 and 1 of the Acquisition Board, which use the Opal Kelly FPGA,
     do not require this.
@@ -37,12 +37,10 @@ See :ref:`this section <genids>` to identify what generation board you have.
      - :download:`version 2.0.0 </_static/files/OpenEphysFPGA-gw2.0-macOS.tar.gz>`
      - 2026.07.16
 
-.. note:: To run this updater on Windows, driver version 1.4.0.1 or greater is required.
-    Instructions are available on the :ref:`driver installation page<drivers>`.
+.. important::
 
-.. important:: Version 2.0.0 and higher of the gateware require a version 2.0 or higher
-    of the `acquisition board plugin <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Acquisition-Board.html>`__
-    for the `Open Ephys GUI <https://open-ephys.github.io/gui-docs/index.html>`__.
+   - Gateware v2.0.0+ and its updater require **FTD3XXDriver v1.4.0.1 or greater on Windows**. Instructions to install the latest drivers are available on the :ref:`driver installation page<drivers>`.
+   - Gateware v2.0.0+ requires **Acquisition Board plugin v2.0.0 or greater** for the `Open Ephys GUI <https://open-ephys.github.io/gui-docs/index.html>`__. Instructions on how to install and update plugins are available on the `Open Ephys GUI documentation site <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/index.html#plugin-installer>`__.
 
 .. _gwupdate_instructions:
 
