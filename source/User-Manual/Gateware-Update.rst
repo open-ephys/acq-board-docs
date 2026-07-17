@@ -4,7 +4,7 @@ Gateware Updates
 =========================================
 
 Here are the files and instructions to update the Open Ephys FPGA module inside
-the Acquisition Board.
+the Acquisition Board Gen 2 and 3. See :ref:`Identify Your Acquisition Board <genids>` to identify what generation board you have.
 
 .. note:: This is only for newer generation acquisition boards that use the Open Ephys FPGA module. We always ship the boards 
     with the latest version of the gateware and we don’t make changes to the gateware often, so you 
@@ -16,9 +16,7 @@ the Acquisition Board.
 Latest version
 -------------------------
 
-The latest gateware version for Acquisition Board 2nd and 3rd Generation. Select the updater for your operating system.
-
-See :ref:`this section <genids>` to identify what generation board you have.
+The latest gateware releases for 2nd and 3rd Generation Acquisition Boards are available below. Download the updater for your operating system.
 
 .. list-table::
    :widths: 15 25 60
