@@ -98,7 +98,7 @@ This section provides the basic steps needed in the Open Ephys GUI to get starte
    - A `Record Node <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Record-Node.html>`_
   
    - (optional) An `OE Commutator processor <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Commutator-Control.html>`_
-     (downloaded using the Plugin Installer) to use the Open Ephys torque-free SPI Commutator. For more info on this, visit the `Commutator Tutorial <https://open-ephys.github.io/gui-docs/Tutorials/Commutator.html?acquisition-hardware=acquisition-board>`_ in the Open Ephys GUI docs.
+     (downloaded using the `Plugin Installer <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/index.html#plugin-installer>`_) to use the Open Ephys torque-free SPI Commutator. For more info on this, visit the `Commutator Tutorial <https://open-ephys.github.io/gui-docs/Tutorials/Commutator.html?acquisition-hardware=acquisition-board>`_ in the Open Ephys GUI docs.
 
 3. Click the Play button to start data acquisition. Click Record to record.
    
@@ -106,7 +106,7 @@ This section provides the basic steps needed in the Open Ephys GUI to get starte
 
 4. Have fun experimenting!
 
-If you run into issues, follow the :doc:`Troubleshooting`.
+If you run into issues, follow the :doc:`Troubleshooting`. It is recommended that you keep the gateware updated to the latest version, as explained in the :ref:`gwupdate` section.
 
 Powering off the system
 -------------------------------------------
