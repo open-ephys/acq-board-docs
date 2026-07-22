@@ -14,15 +14,15 @@ General recommendations
 ###################################
 
 - Know what generation of the Acquisition Board you have and which FPGA module it uses. See the :ref:`Differences Between Generations section <genids>` to identify this.
-- Keep the software and plugins/packages that run the Acquisition Board updated to the latest version. Check the software documentation for information on how to achieve this.
+- Keep the software and plugins/packages that run the Acquisition Board updated to the latest version. Check the software documentation for information on how to achieve this and follow those recommendations. In particular, for the `Open Ephys GUI Plugin Installer <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/index.html#plugin-installer>`_, remember to start with a fresh GUI session before installing any plugins: go to :code:`Edit > Clear signal chain` and then close the GUI. Launch the GUI again and install the Acquisition Board plugin.
 - Keep the gateware of your Acquisition Board updated to the latest version. The :ref:`gwupdate` section explains how to do this for the Open Ephys FPGA module in Gen2 and above. Previous generations of the acquisition board use a gateware bitfile distributed with the Open Ephys GUI which is no longer revised.
 - Keep an eye out for warnings and errors in the software console during operation.
 - :ref:`Configure the USB settings <usb-config>` to avoid suspension due to power management, which interferes with USB communication.
 
-.. important:: If you are a Windows user, have just installed version 1.1.0 of the Open Ephys GUI and are experiencing issues with the Acquisition Board, check that you have updated the drivers, plugin and gateware to the latest versions as explained in the troubleshooting steps below.
-    
-    If, after checking that everything is up to date, the Acquisition Board is still not recognized, then copy and paste the following into the File Explorer: :code:`%localappdata%\\Open Ephys\\shared-api10`, press enter to navigate to the folder, and delete the file :code:`libonidriver_ft600.dll`. Then, re-install the latest version of the Acquisition Board plugin.
+.. important:: If you are a Windows user, have just installed version 1.1.x of the Open Ephys GUI and are experiencing issues with the Acquisition Board, check that you have updated the drivers, plugin and gateware to the latest versions as explained in the troubleshooting steps below.
 
+    If, after checking that everything is up to date, the Acquisition Board is still not recognized, then use the Plugin Installer to delete the Acquisition Board plugin, go to :code:`Edit > Clear signal chain` and then close the GUI. Launch the GUI again and re-install the Acquisition Board plugin.
+    
 .. _initial-troubleshooting:
 
 Initial troubleshooting steps
