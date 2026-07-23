@@ -15,9 +15,9 @@ Quickstart Guide
 Installation
 -------------------------------------------
 
-The best way to start acquiring data with the Acquisition Board is by using the Open Ephys GUI. Follow the `Open Ephys GUI installation guide <https://open-ephys.github.io/gui-docs/User-Manual/Installing-the-GUI.html>`_.
+The best way to start acquiring data with the Acquisition Board is by using the Open Ephys GUI. Follow the recommended options in the `Open Ephys GUI installation guide <https://open-ephys.github.io/gui-docs/User-Manual/Installing-the-GUI.html>`_.
 
-The Open Ephys GUI installation includes the drivers required to use this board. If you run into issues, you can install the drivers separately by following :ref:`this page <drivers>`.
+The Open Ephys GUI installation in Windows includes the drivers required to use this board. You might be required to restart your computer to finish the installation. If you run into issues installing the drivers, you can install them separately by following :ref:`this page <drivers>`.
 
 The board works via USB, so make sure you :ref:`configure the USB settings <usb-config>` to avoid suspension due to power management.
 
@@ -89,7 +89,13 @@ This section provides the basic steps needed in the Open Ephys GUI to get starte
    An example signal chain in the Open Ephys GUI to acquire data with the Acquisition Board.
 
 1. With the Acquisition Board plugged in, powered and connected to hardware as explained above, open the Open Ephys GUI.
-2. Load the default configuration for the Acquisition Board from the pop-up, or build your own by dragging at least the following processors from the Processors list on the left of the GUI onto the Signal Chain at the bottom:
+2. Load the default configuration for the Acquisition Board from the pop-up:
+ 
+   .. figure:: ../_static/images/usermanual/quickstart/default-config.png
+      :width: 50%
+      :align: center
+
+   or build your own by dragging at least the following processors from the Processors list on the left of the GUI onto the Signal Chain at the bottom:
    
    - An `Acquisition Board processor <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Acquisition-Board.html>`_
 
@@ -97,8 +103,9 @@ This section provides the basic steps needed in the Open Ephys GUI to get starte
   
    - A `Record Node <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Record-Node.html>`_
   
-   - (optional) An `OE Commutator processor <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Commutator-Control.html>`_
-     (downloaded using the Plugin Installer) to use the Open Ephys torque-free SPI Commutator. For more info on this, visit the `Commutator Tutorial <https://open-ephys.github.io/gui-docs/Tutorials/Commutator.html?acquisition-hardware=acquisition-board>`_ in the Open Ephys GUI docs.
+   - (optional) An `OE Commutator processor <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Commutator-Control.html>`_ to use the Open Ephys torque-free SPI Commutator. For more info on this, visit the `Commutator Tutorial <https://open-ephys.github.io/gui-docs/Tutorials/Commutator.html?acquisition-hardware=acquisition-board>`_ in the Open Ephys GUI docs.
+    
+.. note:: You can install any plugins that are not installed by default using the `Plugin Installer <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/index.html#plugin-installer>`_.
 
 3. Click the Play button to start data acquisition. Click Record to record.
    
@@ -107,6 +114,8 @@ This section provides the basic steps needed in the Open Ephys GUI to get starte
 4. Have fun experimenting!
 
 If you run into issues, follow the :doc:`Troubleshooting`.
+
+It is recommended that you ensure the gateware is updated to the latest version, as explained in the :ref:`gwupdate` section.
 
 Powering off the system
 -------------------------------------------

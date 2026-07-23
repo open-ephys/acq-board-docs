@@ -19,10 +19,8 @@ General recommendations
 - Keep an eye out for warnings and errors in the software console during operation.
 - :ref:`Configure the USB settings <usb-config>` to avoid suspension due to power management, which interferes with USB communication.
 
-.. important:: If you are a Windows user, have just installed version 1.1.0 of the Open Ephys GUI and are experiencing issues with the Acquisition Board, check that you have updated the drivers, plugin and gateware to the latest versions as explained in the troubleshooting steps below.
+.. important:: If you are a Windows user, have just installed version 1.1.x of the Open Ephys GUI and are experiencing issues with the Acquisition Board, check that you have updated the drivers, plugin and gateware to the latest versions as explained in the troubleshooting steps below.
     
-    If, after checking that everything is up to date, the Acquisition Board is still not recognized, then copy and paste the following into the File Explorer: :code:`%localappdata%\\Open Ephys\\shared-api10`, press enter to navigate to the folder, and delete the file :code:`libonidriver_ft600.dll`. Then, re-install the latest version of the Acquisition Board plugin.
-
 .. _initial-troubleshooting:
 
 Initial troubleshooting steps
@@ -113,10 +111,8 @@ If you encounter the error message "No device found" in the Open Ephys GUI:
 Make sure to follow step :ref:`isitconnected` and step :ref:`isitrecognized`. Then,
 
 1. :ref:`Re-install the latest version of the drivers/re-set the board permissions <drivers>`.
-2. Update the Acquisition Board plugin to the latest version. Start from an empty signal chain (go to :code:`Edit > Clear signal chain` or press :code:`Ctrl + backspace`). Then, go to :code:`File > Plugin Installer` or press :code:`Ctrl + P` to access the `Plugin Installer <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/index.html#plugin-installer>`_, find the Acquisition Board plugin and click "Upgrade".
+2. Update the Acquisition Board plugin to the latest version. Start from an empty signal chain: go to :code:`Edit > Clear signal chain` or press :code:`Ctrl + backspace`. Then, go to :code:`File > Plugin Installer` or press :code:`Ctrl + P` to access the `Plugin Installer <https://open-ephys.github.io/gui-docs/User-Manual/Plugins/index.html#plugin-installer>`_, find the Acquisition Board plugin and click the Upgrade button in the "Action" column.
 3. :ref:`Update the gateware <drivers>`.
-
-If you have previously installed version 1.x of the GUI and are an Open Ephys Acquisition Board user, you need to copy and paste the following into the File Explorer: :code:`%localappdata%\\Open Ephys\\shared-api10`, press enter to navigate to the folder, and delete the file :code:`libonidriver_ft600.dll`. Then, follow the instructions below to install the latest version of the GUI.
 
 .. _usb-config:
 
