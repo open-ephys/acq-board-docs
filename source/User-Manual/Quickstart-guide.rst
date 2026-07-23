@@ -17,21 +17,7 @@ Installation
 
 The best way to start acquiring data with the Acquisition Board is by using the Open Ephys GUI. Follow the recommended options in the `Open Ephys GUI installation guide <https://open-ephys.github.io/gui-docs/User-Manual/Installing-the-GUI.html>`_.
 
-The Open Ephys GUI installation in Windows includes the drivers required to use this board. 
-During the GUI installation process, you will notice a separate driver installer window pops up.
-Make sure to click the white Install button in the driver installer window:
-
-.. figure:: ../_static/images/usermanual/quickstart/FTDI_Install.png
-   :width: 60%
-   :align: center
-
-Wait for the installation to complete successfully and close the driver installer window so that the GUI installer can finish successfully:
-
-.. figure:: ../_static/images/usermanual/quickstart/FTDI_Success.png
-   :width: 60%
-   :align: center
-
-If you run into issues installing the drivers, you can install them separately by following :ref:`this page <drivers>`.
+The Open Ephys GUI installation in Windows includes the drivers required to use this board. You might be required to restart your computer to finish the installation. If you run into issues installing the drivers, you can install them separately by following :ref:`this page <drivers>`.
 
 The board works via USB, so make sure you :ref:`configure the USB settings <usb-config>` to avoid suspension due to power management.
 
@@ -128,6 +114,7 @@ This section provides the basic steps needed in the Open Ephys GUI to get starte
 4. Have fun experimenting!
 
 If you run into issues, follow the :doc:`Troubleshooting`.
+
 It is recommended that you ensure the gateware is updated to the latest version, as explained in the :ref:`gwupdate` section.
 
 Powering off the system
