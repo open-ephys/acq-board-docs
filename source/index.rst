@@ -8,7 +8,7 @@
 
 
 
-.. image:: _static/images/acquisition-board.png
+.. image:: _static/images/acquisition-board-gen3.jpg
   :width: 80%
   :align: center
   :alt: Photograph of the Open Ephys Acquisition Board
